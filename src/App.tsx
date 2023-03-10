@@ -1,7 +1,7 @@
 import { useState } from 'react';
 import './App.css';
 import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
-import Login from './components/login';
+import Login from './components/Login';
 import Home from './components/home';
 import Indexmax from './components/indexmax';
 import Testimonials from './components/testimonials';
