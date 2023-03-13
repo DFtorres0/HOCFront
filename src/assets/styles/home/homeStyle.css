@@ -1,0 +1,128 @@
+html,
+body {
+  font-family: "Open Sans", sans-serif;
+  text-rendering: optimizeLegibility !important;
+  color: #000000;
+  width: 100%;
+  height: 100%;
+}
+/* Navigation */
+#header .intro {
+  background-image: url(../../img/head.jpg);
+  height: auto;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-color: #e5e5e5;
+  background-size: cover;
+}
+
+#header .intro-text {
+  padding-top: 250px;
+  padding-bottom: 200px;
+}
+
+#header .section-title.center {
+  padding: 0px 0 0px 0;
+}
+
+#header h1,
+.h1,
+h2,
+.h2,
+h3,
+.h3 {
+  margin-top: 20px;
+  margin-bottom: 10px;
+}
+#header .intro h1 {
+  color: rgba(255, 255, 255, 0.9);
+  font-size: 64px;
+  font-weight: 600;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  margin-bottom: 20px;
+}
+#header .intro p {
+  color: rgba(255, 255, 255, 0.8);
+  font-size: 22px;
+  margin-bottom: 40px;
+  margin-top: 20px;
+  margin-left: 500;
+}
+#header .intro-text {
+  padding-top: 250px;
+  padding-bottom: 200px;
+}
+
+#header h2 {
+  margin: 0 0 20px 0;
+  font-weight: 400;
+  font-size: 36px;
+  color: #414a52;
+}
+#header h3,
+h4 {
+  font-size: 18px;
+  font-weight: 300;
+  letter-spacing: 1px;
+}
+#header h5 {
+  text-transform: uppercase;
+  font-weight: 700;
+  line-height: 20px;
+}
+
+#header button {
+  overflow: visible;
+  text-transform: none;
+  cursor: pointer;
+  margin: 0;
+  font: inherit;
+  color: inherit;
+}
+#header button[disabled],
+html input[disabled] {
+  cursor: default;
+}
+#header button::-moz-focus-inner {
+  padding: 0;
+  border: 0;
+}
+#header p.intro {
+  font-size: 16px;
+  margin: 12px 0 0;
+  line-height: 24px;
+}
+
+#header .btn-custom {
+  text-transform: uppercase;
+  color: #ffffff;
+  background-color: #414a52;
+  border: 0;
+  padding: 14px 20px;
+  margin: 0;
+  font-size: 16px;
+  border-radius: 0;
+  margin-top: 20px;
+  transition: all 0.3s;
+}
+#header .btn-custom:hover,
+.btn-custom:focus,
+.btn-custom.focus,
+.btn-custom:active,
+.btn-custom.active {
+  color: #26f900;
+  background-color: #414a52;
+}
+#header .btn-default {
+  text-transform: uppercase;
+  color: #ffffff;
+  background-color: #414a52;
+  border: 0;
+  padding: 14px 20px;
+  margin: 0;
+  font-size: 16px;
+  border-radius: 0;
+  margin-top: 20px;
+  transition: all 0.3s;
+}

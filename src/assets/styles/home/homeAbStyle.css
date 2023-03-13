@@ -1,0 +1,121 @@
+#about {
+  padding: 50px 0;
+  text-align: left;
+  /* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#54d0dd+0,54d0dd+0,54d0dd+0,7fdce6+0,54d0dd+100 */
+  background: rgb(0, 0, 0); /* Old browsers */
+  background: -moz-linear-gradient(
+    top,
+    rgba(0, 0, 0) 0%,
+    rgba(0, 0, 0) 0%,
+    rgba(0, 0, 0, 0) 0%,
+    rgba(0, 0, 0, 0) 0%,
+    rgba(0, 0, 0, 1) 100%
+  ); /* FF3.6-15 */
+  background: -webkit-linear-gradient(
+    top,
+    rgba(0, 0, 0, 0) 0%,
+    rgba(0, 0, 0, 0) 0%,
+    rgba(0, 0, 0, 0) 0%,
+    rgba(0, 0, 0, 0) 0%,
+    rgba(0, 0, 0, 0) 100%
+  ); /* Chrome10-25,Safari5.1-6 */
+  background: linear-gradient(
+    to bottom,
+    rgba(176, 176, 176) 0%,
+    rgba(176, 176, 176) 0%,
+    rgba(176, 176, 176) 0%,
+    rgba(176, 176, 176) 0%,
+    rgba(176, 176, 176) 100%
+  ); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#54d0dd', endColorstr='#54d0dd', GradientType=0 ); /* IE6-9 */
+}
+#about .about-text {
+  margin-left: 10px; /*espacio entre imagen y texto*/
+}
+p::selection {
+  /*con los dos puntos decimos que es un pseudoelemnto*/
+  background: #2ff312; /*asi cambiamos el color cuand selecionamos texto*/
+}
+h3::selection {
+  background: #2ff312; /*asi cambiamos el color cuand selecionamos texto*/
+}
+
+#about .list {
+    margin-top: 20px;
+    margin-bottom: 10px;
+}
+
+#about h2 {
+  color: #504f4f;
+}
+
+#about hr {
+  align-self: center;
+  width: 70px;
+  margin-top: 40px;
+  margin-bottom: 40px;
+  position: relative;
+  left: 50%;
+  margin-left: -35px;
+  border: 0;
+  border-top: 3px solid #444343;
+}
+
+#about .btn-default {
+  text-transform: uppercase;
+  color: #ffffff;
+  background-color: #414a52;
+  border: 0;
+  padding: 14px 20px;
+  margin: 0;
+  font-size: 16px;
+  border-radius: 0;
+  margin-top: 20px;
+  transition: all 0.3s;
+}
+
+#about .btn-lg:hover,
+.btn-lg:focus,
+.btn-lg.focus,
+.btn-lg:active,
+.btn-lg.active {
+  color: #26f900;
+  background-color: #414a52;
+}
+
+#about img {
+  float: right;
+  display: block;
+  max-width: 100%;
+  height: auto;
+}
+
+#about .row {
+  margin-right: -15px;
+  margin-left: -15px;
+}
+
+#about p {
+  margin-bottom: 30px;
+  padding-bottom: 20px;
+  margin: 0 0 10px;
+  line-height: 21px;
+  font-size: 15px;
+}
+
+#about .col-xs-12,
+.col-md-6 {
+  position: relative;
+  min-height: 1px;
+  padding-right: 15px;
+  padding-left: 15px;
+  float: left;
+}
+
+#about .col-xs-12 {
+  width: 100%;
+}
+
+#about .col-md-6 {
+  width: 50%;
+}

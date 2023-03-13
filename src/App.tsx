@@ -1,8 +1,7 @@
 import { useState } from 'react';
-import './App.css';
 import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
-import Login from './components/Login';
-import Home from './components/home';
+import Login from './components/login';
+import Home from './components/home/home';
 import Indexmax from './components/indexmax';
 import Testimonials from './components/testimonials';
 import Tutorials from './components/tutorials';

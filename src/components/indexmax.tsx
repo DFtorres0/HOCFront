@@ -3,13 +3,6 @@ import reactLogo from "../assets/react.svg";
 import "../App.css";
 import { Link } from "react-router-dom";
 import React, { Component } from 'react';
-import {
-  Navbar,
-  Container,  
-  NavbarBrand,
-  NavbarToggler,
-  Collapse
-} from "react-bootstrap";
 
 function Indexmax() {
   const [count, setCount] = useState(0);
