@@ -1,10 +1,10 @@
 import { useState } from "react";
 import "../App.css";
 import { Button, Form, FormGroup } from "react-bootstrap";
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faPlus } from '@fortawesome/free-solid-svg-icons';
 import "../assets/styles/loginForm.css";
 import "bootstrap/dist/css/bootstrap.min.css";
+import { FaFacebookF } from "react-icons/fa";
+import { BsTwitter } from "react-icons/bs";
 import { Link } from "react-router-dom";
 import { Container, Row, Col,  } from "react-bootstrap";
 
@@ -60,14 +60,12 @@ function Login(): JSX.Element {
               className="mb-4 w-100 "
               size="lg"
               style={{ backgroundColor: "#3b5998" }}>
-              <Button className="mx-2" />
-               Continue with facebook
+              <FaFacebookF/> Continue with facebook
             </Button>
 
             <Button
               className="mb-4 w-100" size="lg" style={{ backgroundColor: "#55acee" }}>
-              <Button className="mx-2" />
-               Continue with twitters
+              <BsTwitter/>Continue with twitters
             </Button>
           </div>
         </Col>
