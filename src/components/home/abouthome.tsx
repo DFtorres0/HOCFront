@@ -28,7 +28,7 @@ const About = () => {
               <h4>Nos especializamos en los siguientes servicios</h4>
               
               <ListGroup className="list" variant="flush">
-                <ListGroup.Item variant="dark">Diseño de Pagina Web RESPONSIVE DESIGN adaptable a cualquier dispositivo (celular,tablets,ordenadores).</ListGroup.Item>
+                <ListGroup.Item variant="dark">Diseño de Pagina Web RESPONSIVE DESIGN adaptable a cualquier dispositivo (celular, tablets, ordenadores).</ListGroup.Item>
                 <ListGroup.Item variant="dark">Activacion de Windows, Office y diferentes programas.</ListGroup.Item>
                 <ListGroup.Item variant="dark">Modificacion de Aplicaciones SO Android.</ListGroup.Item>
                 <ListGroup.Item variant="dark">Cualquier tipo de Suscripción.</ListGroup.Item>

@@ -1,10 +1,10 @@
-import { useState } from "react";
 import "../../assets/styles/home/homeStyle.css";
-import { Link } from "react-router-dom";
-import Navigation from "./navigationhome";
-import Header from "./headerhome";
-import About from "./abouthome";
-import {Container, Button } from "react-bootstrap";
+import Navigation from "./NavigationHome";
+import Header from "./HeaderHome";
+import About from "./AboutHome";
+import Portfolio from "./HomePortfolio";
+import Contact from "./ContactHome";
+import Footer from "./FooterHome";
 
 function Home() {
 
@@ -13,6 +13,9 @@ function Home() {
       <Navigation/>
       <Header/>
       <About/>
+      <Portfolio/>
+      <Contact/>
+      <Footer/>
     </div>
   );
 }

@@ -1,0 +1,111 @@
+#contact {
+  padding: 120px 0 60px 0;
+  /* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#54d0dd+0,54d0dd+0,54d0dd+0,7fdce6+0,54d0dd+100 */
+  background: rgb(0, 0, 0); /* Old browsers */
+  background: -moz-linear-gradient(
+    top,
+    rgba(0, 0, 0, 0) 0%,
+    rgba(0, 0, 0, 0) 0%,
+    rgba(0, 0, 0, 0) 0%,
+    rgba(0, 0, 0, 0) 0%,
+    rgba(84, 208, 221, 1) 100%
+  ); /* FF3.6-15 */
+  background: -webkit-linear-gradient(
+    top,
+    rgba(84, 208, 221, 1) 0%,
+    rgba(84, 208, 221, 1) 0%,
+    rgba(84, 208, 221, 1) 0%,
+    rgba(127, 220, 230, 1) 0%,
+    rgba(84, 208, 221, 1) 100%
+  ); /* Chrome10-25,Safari5.1-6 */
+  background: linear-gradient(
+    to bottom,
+    rgba(0, 0, 0, 0) 0%,
+    rgba(0, 0, 0, 0) 0%,
+    rgba(0, 0, 0, 0) 0%,
+    rgba(0, 0, 0, 0) 0%,
+    rgba(35, 225, 0, 1) 100%
+  ); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#54d0dd', endColorstr='#54d0dd', GradientType=0 ); /* IE6-9 */
+}
+#contact form {
+  padding: 30px 0;
+}
+#contact .text-danger {
+  color: #cc0033;
+  text-align: left;
+}
+#contact label {
+  font-size: 12px;
+  font-weight: 400;
+  font-family: "Open Sans", sans-serif;
+  float: left;
+}
+#contact .form-control {
+  display: block;
+  width: 100%;
+  padding: 6px 12px;
+  font-size: 14px;
+  line-height: 1.42857143;
+  color: #222;
+  background-color: rgba(255, 255, 255, 0.8);
+  background-image: none;
+  border: 1px solid transparent;
+  border-radius: 0;
+  -webkit-box-shadow: none;
+  box-shadow: none;
+  -webkit-transition: none;
+  -o-transition: none;
+  transition: none;
+}
+#contact .form-control:focus {
+  border-color: #4b8d98;
+  outline: 0;
+  -webkit-box-shadow: transparent;
+  box-shadow: transparent;
+}
+#contact .form-control::-webkit-input-placeholder {
+  color: #2c3e50;
+}
+#contact .form-control:-moz-placeholder {
+  color: #2c3e50;
+}
+#contact .form-control::-moz-placeholder {
+  color: #2c3e50;
+}
+#contact .form-control:-ms-input-placeholder {
+  color: #2c3e50;
+}
+#contact .social {
+  margin-top: 80px;
+}
+#contact .social ul li {
+  display: inline-block;
+  margin: 0 20px;
+}
+#contact .social i.fa {
+  font-size: 26px;
+  padding: 4px;
+  color: #343b42;
+  transition: all 0.3s;
+}
+#contact .social i.fa:hover {
+  color: #fff;
+}
+.btn:active,
+.btn.active {
+  background-image: none;
+  outline: 0;
+  -webkit-box-shadow: none;
+  box-shadow: none;
+}
+#contact a:focus,
+.btn:focus,
+.btn:active:focus,
+.btn.active:focus,
+.btn.focus,
+.btn:active.focus,
+.btn.active.focus {
+  outline: none;
+  outline-offset: none;
+}
