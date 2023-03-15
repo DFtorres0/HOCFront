@@ -1,4 +1,4 @@
-import "../../assets/styles/home/homeNavStyle.css";
+import "../../assets/styles/home/HomeNavStyle.css";
 import { Navbar, Container, ListGroup } from "react-bootstrap";
 
 import { BsCodeSlash } from "react-icons/bs";

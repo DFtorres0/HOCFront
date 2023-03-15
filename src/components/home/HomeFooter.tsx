@@ -1,6 +1,4 @@
 import "../../assets/styles/home/HomeFtStyle.css";
-import { Link } from "react-router-dom";
-import { Container, Button } from "react-bootstrap";
 
 const Footer = () => {
   return (

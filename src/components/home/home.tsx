@@ -1,10 +1,9 @@
-import "../../assets/styles/home/homeStyle.css";
-import Navigation from "./NavigationHome";
-import Header from "./HeaderHome";
-import About from "./AboutHome";
+import Navigation from "./HomeNavigation";
+import Header from "./HomeHeader";
+import About from "./HomeAbout";
 import Portfolio from "./HomePortfolio";
-import Contact from "./ContactHome";
-import Footer from "./FooterHome";
+import Contact from "./HomeContact";
+import Footer from "./HomeFooter";
 
 function Home() {
 

@@ -1,4 +1,4 @@
-import "../../assets/styles/home/homeAbStyle.css";
+import "../../assets/styles/home/HomeAbStyle.css";
 import image from "../../assets/img/bg-header3.jpeg";
 import { ListGroup, ListGroupItem } from "react-bootstrap";
 
