@@ -30,13 +30,10 @@ const Navigation = () => {
               </a>
             </li>
             <li>
-              <a className="page-scroll">📋Portafolio™</a>
+              <a href="#portfolio" className="page-scroll">📋Portafolio™</a>
             </li>
             <li>
-              <a className="page-scroll">🛍Compras</a>
-            </li>
-            <li>
-              <a className="page-scroll">📲Contactanos</a>
+              <a href="#contact" className="page-scroll">📲Contactanos</a>
             </li>
           </ListGroup>
         </div>

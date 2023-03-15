@@ -1,0 +1,169 @@
+#portfolio {
+  padding: 60px 0;
+  /* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#54d0dd+0,54d0dd+0,54d0dd+0,71777d+0,414a52+100 */
+  background: rgb(84, 208, 221); /* Old browsers */
+  background: -moz-linear-gradient(
+    top,
+    rgba(84, 208, 221, 1) 0%,
+    rgba(84, 208, 221, 1) 0%,
+    rgba(84, 208, 221, 1) 0%,
+    rgba(113, 119, 125, 1) 0%,
+    rgba(65, 74, 82, 1) 100%
+  ); /* FF3.6-15 */
+  background: -webkit-linear-gradient(
+    top,
+    rgba(84, 208, 221, 1) 0%,
+    rgba(84, 208, 221, 1) 0%,
+    rgba(84, 208, 221, 1) 0%,
+    rgba(113, 119, 125, 1) 0%,
+    rgba(65, 74, 82, 1) 100%
+  ); /* Chrome10-25,Safari5.1-6 */
+  background: linear-gradient(
+    to bottom,
+    rgba(84, 208, 221, 1) 0%,
+    rgba(84, 208, 221, 1) 0%,
+    rgba(84, 208, 221, 1) 0%,
+    rgba(113, 119, 125, 1) 0%,
+    rgba(65, 74, 82, 1) 100%
+  ); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#54d0dd', endColorstr='#414a52', GradientType=0 ); /* IE6-9 */
+}
+
+#portfolio h2 {
+  color: #181818;
+}
+
+#portfolio hr {
+  align-self: center;
+  width: 70px;
+  margin-top: 40px;
+  margin-bottom: 40px;
+  position: relative;
+  left: 50%;
+  margin-left: -35px;
+  border: 0;
+  border-top: 3px solid #141414;
+}
+
+#portfolio .categories {
+  padding-bottom: 30px;
+  text-align: center;
+}
+
+#portfolio .cat {
+  display: inline-block;
+}
+
+#portfolio .row {
+    margin: 12px;
+}
+
+#portfolio .card {
+  display: inline-block;
+  margin: 10px;
+  width: 20rem;
+  padding: 0px;
+  cursor: pointer;
+}
+
+#portfolio .type Button {
+  -webkit-transition-duration: 0.5s;
+  -moz-transition-duration: 0.5s;
+  transition-duration: 0.5s;
+}
+
+#portfolio .isotope-item {
+  margin-right: -1px;
+  -webkit-backface-visibility: hidden;
+  backface-visibility: hidden;
+}
+
+#portfolio .isotope {
+  -webkit-backface-visibility: hidden;
+  backface-visibility: hidden;
+  -webkit-transition-property: height, width;
+  -moz-transition-property: height, width;
+  transition-property: height, width;
+}
+
+#portfolio .isotope .isotope-item {
+  -webkit-backface-visibility: hidden;
+  backface-visibility: hidden;
+  -webkit-transition-property: -webkit-transform, opacity;
+  -moz-transition-property: -moz-transform, opacity;
+  transition-property: transform, opacity;
+}
+
+#portfolio .portfolio-item {
+  margin: 15px 0;
+  -webkit-transition: all 0.5s ease-out;
+  -moz-transition: all 0.5s ease-out;
+  -ms-transition: all 0.5s ease-out;
+  -o-transition: all 0.5s ease-out;
+  transition: all 0.5s ease-out;
+}
+
+#portfolio .portfolio-item:hover {
+  -webkit-transform: scale(1.1);
+  -moz-transform: scale(1.1);
+  -ms-transform: scale(1.1);
+  -o-transform: scale(1.1);
+  transform: scale(1.1);
+}
+
+#portfolio .portfolio-item .hover-bg {
+  height: 195px;
+  overflow: hidden;
+  position: relative;
+}
+
+#portfolio .hover-bg .hover-text {
+  position: absolute;
+  text-align: center;
+  margin: 0 auto;
+  color: #ffffff;
+  background: rgba(0, 0, 0, 0.66);
+  padding: 30% 0 0 0;
+  height: 100%;
+  width: 100%;
+  opacity: 0;
+  transition: all 0.5s;
+}
+
+#portfolio .hover-bg .hover-text > h4 {
+  text-transform: uppercase;
+  opacity: 0;
+  color: #fff;
+  -webkit-transform: translateY(100%);
+  transform: translateY(100%);
+  transition: all 0.3s;
+}
+
+#portfolio .hover-bg:hover .hover-text > h4 {
+  opacity: 1;
+  -webkit-transform: translateY(0);
+  transform: translateY(0);
+}
+
+#portfolio .hover-bg .hover-text > i {
+  opacity: 0;
+  -webkit-transform: translateY(0);
+  transform: translateY(0);
+  transition: all 0.3s;
+}
+
+#portfolio .hover-bg:hover .hover-text > i {
+  opacity: 1;
+  -webkit-transform: translateY(100%);
+  transform: translateY(100%);
+}
+
+#portfolio .hover-bg:hover .hover-text {
+  opacity: 1;
+}
+
+#portfolio i.fa {
+  font-size: 20px;
+  padding: 5px;
+  color: #e87e04;
+}
