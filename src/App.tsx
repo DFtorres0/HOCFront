@@ -2,8 +2,8 @@ import { useState } from 'react';
 import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
 import Login from './components/Login';
 import Home from './components/home/Home';
-import Testimonials from './components/max/Testimonials/Testimonials';
-import Tutorials from './components/max/Tutorials/Tutorials';
+import Testimonials from './components/max/testimonials/Testimonials';
+import Tutorials from './components/max/tutorials/Tutorials';
 import Indexmax from './components/max/indexmax/Indexmax';
 
 
