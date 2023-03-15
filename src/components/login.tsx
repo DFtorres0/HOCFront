@@ -1,12 +1,11 @@
 import { useState } from "react";
-import "../App.css";
 import { Button, Form, FormGroup } from "react-bootstrap";
 import "../assets/styles/loginForm.css";
 import "bootstrap/dist/css/bootstrap.min.css";
 import { FaFacebookF } from "react-icons/fa";
 import { BsTwitter } from "react-icons/bs";
 import { Link } from "react-router-dom";
-import { Container, Row, Col,  } from "react-bootstrap";
+import { Container, Row, Col } from "react-bootstrap";
 
 function Login(): JSX.Element {
   return (
@@ -33,8 +32,7 @@ function Login(): JSX.Element {
                 <input
                   type="password"
                   className="form-control"
-                  required
-                ></input>
+                  required></input>
               </div>
               <div className="form-group form-check mb-2">
                 <input type="checkbox" className="form-check-input"></input>
@@ -60,12 +58,15 @@ function Login(): JSX.Element {
               className="mb-4 w-100 "
               size="lg"
               style={{ backgroundColor: "#3b5998" }}>
-              <FaFacebookF/> Continue with facebook
+              <FaFacebookF /> Continue with facebook
             </Button>
 
             <Button
-              className="mb-4 w-100" size="lg" style={{ backgroundColor: "#55acee" }}>
-              <BsTwitter/>Continue with twitters
+              className="mb-4 w-100"
+              size="lg"
+              style={{ backgroundColor: "#55acee" }}>
+              <BsTwitter />
+              Continue with twitters
             </Button>
           </div>
         </Col>

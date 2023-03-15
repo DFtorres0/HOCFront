@@ -1,0 +1,78 @@
+
+  .my-container {
+  max-width: 1000px; /* Ancho máximo del contenedor */
+  margin: 0 auto; /* Centrar el contenedor en la página */
+}
+
+.my-row {
+  margin: 0 auto;
+  padding: 0;
+  display: flex;
+  flex-wrap: wrap;
+  margin-top: 2rem;
+  margin-left: -5px;
+  margin-right: -5px;
+  justify-content: center;
+  
+}
+
+
+.my-card {
+  height: 150px; 
+  width: 150px; 
+  background-color: #ffffff; 
+  margin: 8px;
+  padding: 2px;
+  border: none;
+  
+}
+.my-card:hover {
+  transform: scale(1.1);
+  transition: transform 0.3s ease;
+  box-shadow: 2px 2px 5px 0px #333;
+  
+}
+.my-icon-1{
+  font-size: 60px ;
+  color: orange ;
+}
+.my-icon-2{
+  font-size: 60px ;
+  color: rgb(64, 6, 224) ;
+}
+.my-icon-3{
+  font-size: 60px ;
+  color: rgb(255, 8, 8) ;
+}
+.my-icon-4{
+  font-size: 50px ;
+  Margin:5px;
+  color: rgb(255, 251, 0) ;
+}
+.my-icon-5{
+  font-size: 60px ;
+  color: rgb(11, 21, 165) ;
+}
+.my-icon-6{
+  font-size: 50px ;
+  Margin:5px;
+  color: rgb(17, 88, 17) ;
+}
+.my-text-icon{
+  margin:5px;
+  color:rgb(0, 0, 0);
+}
+
+.my-text{
+  text-align: left;
+  margin-Left: 10%;
+}
+.transparent {
+  background-color: transparent !important;
+  box-shadow: none;
+}
+
+.colored {
+  background-color: #383838 !important;
+  box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.2);
+}
