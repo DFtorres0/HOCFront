@@ -1,9 +1,9 @@
 import { useState } from "react";
-import reactLogo from "../assets/react.svg";
-import "../App.css";
+import reactLogo from "../../../assets/react.svg";
+import "../../../App.css";
 import { Link } from "react-router-dom";
 
-function Testimonials() {
+function Tutorials() {
   const [count, setCount] = useState(0);
 
   return (
@@ -22,7 +22,7 @@ function Testimonials() {
           count is {count}
         </button>
         <br />
-        <a>Testimonials</a>
+        <a>Tutorials</a>
         <br />
         <Link to="/">Login</Link>
       </div>
@@ -33,4 +33,4 @@ function Testimonials() {
   );
 }
 
-export default Testimonials;
+export default Tutorials;

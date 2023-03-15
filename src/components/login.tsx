@@ -65,8 +65,7 @@ function Login(): JSX.Element {
               className="mb-4 w-100"
               size="lg"
               style={{ backgroundColor: "#55acee" }}>
-              <BsTwitter />
-              Continue with twitters
+              <BsTwitter />  Continue with twitter
             </Button>
           </div>
         </Col>
