@@ -1,6 +1,6 @@
 import { useState } from "react";
 import { Navbar, Container,Nav, ListGroup } from "react-bootstrap";
-import "../../assets/styles/indexmax/indexmaxS.css";
+import "../../../assets/styles/indexmax/indexmaxS.css";
 import { BsCodeSlash } from "react-icons/bs";
 
 const NavigationMax = () => {
@@ -29,13 +29,13 @@ const NavigationMax = () => {
           <Navbar.Collapse id="responsive-navbar-nav"></Navbar.Collapse>
           <Nav className="ml-auto">
             <Nav.Link href="#features" className="Header-NavbarLink">
-              Inicio
+             <h4> Inicio</h4>
             </Nav.Link>
             <Nav.Link href="#features" className="Header-NavbarLink">
-              Clases
+            <h4> Clases</h4>
             </Nav.Link>
             <Nav.Link href="#features" className="Header-NavbarLink">
-              Foros
+            <h4> Foros</h4>
             </Nav.Link>
           </Nav>
         </Container>
