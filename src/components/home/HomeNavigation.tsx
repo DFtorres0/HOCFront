@@ -1,11 +1,24 @@
 import "../../assets/styles/home/HomeNavStyle.css";
 import { Navbar, Container, ListGroup } from "react-bootstrap";
-
+import { useState } from "react";
 import { BsCodeSlash } from "react-icons/bs";
 
 const Navigation = () => {
+  const [navbarClass, setNavbarClass] = useState('transparent');
+
+  const handleScroll = () => {
+    const currentPosition = window.pageYOffset;
+    if (currentPosition > 0 && navbarClass === 'transparent') {
+      setNavbarClass('colored');
+    } else if (currentPosition === 0 && navbarClass === 'colored') {
+      setNavbarClass('transparent');
+    }
+  };
+
+  window.addEventListener('scroll', handleScroll);
+
   return (
-    <Navbar fixed="top" id="menu" className="navbar-default">
+    <Navbar fixed="top" id="menu" className={`navbar-default ${navbarClass}`}>
       <Container>
         <div className="navbar-header">
           <a
