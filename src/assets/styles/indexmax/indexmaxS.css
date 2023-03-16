@@ -12,16 +12,18 @@ body {
   position: relative ;
   z-index: 0 ;
 }
-.Header-img{
-  background-image: url(../src/assets/images/bg_3.jpg);
+#image{ 
+  background-image:linear-gradient(rgba(0,0,0,0.4),rgba(0,0,0,0.3)), url(../src/assets/images/bg_3.jpg);
   background-position: center ;
   width: 100%;
   position: relative;
   background-size: cover;
-  height: 100vh;       
+  height: 100vh;   
 }
 .Header-Navbar.Link{
   margin-right: 30px;
+  color:#ffffff;
+  font: size 80px;
 }
 .my-text{
   text-align: left;

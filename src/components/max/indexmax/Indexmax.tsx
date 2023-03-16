@@ -1,17 +1,21 @@
-import Headermax from "./headermax";
-import Aboutmax from "./aboutmax";
-import NavegationMax from "./NavegationMax";
+import FooterMax from "../templates/FooterMax";
+import HeaderMax from "../templates/HeaderMax";
+import NavegationMax from "../templates/NavegationMax";
+import AboutMax from "./AboutMax";
+import ClassMax from "./ClassMax";
+import Classmax from "./ClassMax";
 
-
-function Indexmax() {
+function IndexMax() {
 
   return (
     <div>
       <NavegationMax/>
-      <Headermax/>
-      <Aboutmax/>
+      <HeaderMax/>
+      <ClassMax/>
+      <AboutMax/>
+      <FooterMax/>
     </div>
   );
 }
 
-export default Indexmax;
+export default IndexMax;

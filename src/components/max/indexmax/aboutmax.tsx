@@ -9,7 +9,7 @@ import { SiLinkedin } from "react-icons/si";
 import { SiTwitter } from "react-icons/si";
 import { SiFacebook } from "react-icons/si";
 import { Container, Row, Col, Card } from "react-bootstrap";
-const Aboutmax = () => {
+const AboutMax = () => {
   return (
     <div>
       <div
@@ -72,7 +72,6 @@ const Aboutmax = () => {
           </Col>
         </Row>
       </div>
-
       <div>
         <div
           className="row mb-5 align-items-center"
@@ -113,59 +112,10 @@ const Aboutmax = () => {
           </div>
         </div>
       </div>
-      <footer color="primary" className="text-Black text-center text-lg-left">
-        <Container className="p-4">
-          <Row>
-            <Col lg="6" md="12" className="mb-4 mb-md-0">
-              <h5 className="text-uppercase">Siguenos:</h5>
-
-              <p>
-                Si quieres estar enterado de nuestras ultimas tutorias, clases,
-                practicas proyectos siguenos:😎
-              </p>
-            </Col>
-
-            <Col lg="3" md="6" className="mb-4 mb-md-0">
-              <h5 className="text-uppercase">Links</h5>
-
-              <ul className="list-unstyled mb-0">
-                <li>
-                  <a href="#!" className="text-white">
-                    Link 1
-                  </a>
-                </li>
-                <li>
-                  <a href="#!" className="text-white">
-                    Link 2
-                  </a>
-                </li>
-                <li>
-                  <a href="#!" className="text-white">
-                    Link 3
-                  </a>
-                </li>
-                <li>
-                  <a href="#!" className="text-white">
-                    Link 4
-                  </a>
-                </li>
-              </ul>
-            </Col>
-          </Row>
-        </Container>
-
-        <div
-          className="text-center p-3"
-          style={{ backgroundColor: "rgba(0, 0, 0, 0.2)" }}
-        >
-          Copyright © 2021 . Diseñado Por:
-          <a className="text-dark" href="">
-            Home of Code ™.
-          </a>
-        </div>
-      </footer>
+      
+      
     </div>
   );
 };
 
-export default Aboutmax;
+export default AboutMax;
