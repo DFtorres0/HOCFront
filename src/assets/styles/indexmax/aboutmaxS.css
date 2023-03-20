@@ -1,5 +1,5 @@
 
-  .my-container {
+#Max .my-container {
   max-width: 1000px; /* Ancho del contenedor */
   margin: 0 auto; 
 }
@@ -24,6 +24,7 @@
   margin: 8px;
   padding: 2px;
   border: none;
+  margin-left: 20% ;
   
 }
 .my-card:hover {
@@ -75,4 +76,8 @@
 .colored {
   background-color: #383838 !important;
   box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.2);
+}
+.my-icon-share{
+  color: rgb(52, 84, 155);
+  width: 40px
 }

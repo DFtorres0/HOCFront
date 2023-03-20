@@ -3,7 +3,10 @@ import "../../../assets/styles/indexmax/aboutmaxS.css";
 
 const FooterMax = () => {
     return (
-        <footer color="primary" className="text-Black text-center text-lg-left">
+        <footer color="primary" className="text-Black text-center text-lg-left" style={{
+          marginTop: "10%",
+          
+        }}>
         <Container className="p-4">
           <Row>
             <Col lg="6" md="12" className="mb-4 mb-md-0">

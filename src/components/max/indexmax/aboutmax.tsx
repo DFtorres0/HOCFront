@@ -23,8 +23,8 @@ const AboutMax = () => {
       <div className="my-container">
         <Row className="my-row row-cols-md-7 g-0">
           <Col>
-            <Card className="my-card">
-              <Card.Body>
+            <Card className="my-card" >
+              <Card.Body  >
                 <DiIllustrator className="my-icon-1" />
                 <Card.Title className="my-text-icon">Illustrator</Card.Title>
               </Card.Body>
@@ -99,13 +99,15 @@ const AboutMax = () => {
           <div className="col-lg-6 text-lg-right">
             <div className="d-inline-flex align-items-center ml-auto">
               <span className="mr-4">Compartir: </span>
-              <a href="" className="me-4 text-reset">
+              <a href="" className="me-4 my-icon-share" style={{
+          marginLeft: "10%",
+        }}>
                 <SiTwitter />
               </a>
-              <a href="" className="me-4 text-reset">
+              <a href="" className="me-4 my-icon-share">
                 <SiFacebook />
               </a>
-              <a href="" className="me-4 text-reset">
+              <a href="" className="my-icon-share">
                 <SiLinkedin />
               </a>
             </div>

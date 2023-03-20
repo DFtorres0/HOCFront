@@ -31,7 +31,7 @@ const NavigationMax = () => {
             <Nav.Link href="#features" className="Header-NavbarLink">
              <h4> Inicio</h4>
             </Nav.Link>
-            <Nav.Link href="#features" className="Header-NavbarLink">
+            <Nav.Link href="/Tutorials" className="Header-NavbarLink">
             <h4> Clases</h4>
             </Nav.Link>
             <Nav.Link href="#features" className="Header-NavbarLink">
