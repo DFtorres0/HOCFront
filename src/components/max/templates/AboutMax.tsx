@@ -1,13 +1,8 @@
 import "../../../assets/styles/indexmax/aboutmaxS.css";
-import { DiIllustrator } from "react-icons/di";
+import { DiIllustrator, DiPhotoshop, DiAngularSimple } from "react-icons/di";
 import { DiReact } from "react-icons/di";
-import { DiPhotoshop } from "react-icons/di";
-import { DiAngularSimple } from "react-icons/di";
-import { SiJavascript } from "react-icons/si";
-import { SiVuedotjs } from "react-icons/si";
-import { SiLinkedin } from "react-icons/si";
-import { SiTwitter } from "react-icons/si";
-import { SiFacebook } from "react-icons/si";
+import { } from "react-icons/di";
+import { SiJavascript, SiVuedotjs, SiLinkedin, SiTwitter, SiFacebook } from "react-icons/si";
 import { Row, Col, Card } from "react-bootstrap";
 const AboutMax = () => {
   return (
@@ -100,7 +95,7 @@ const AboutMax = () => {
             <div className="d-inline-flex align-items-center ml-auto">
               <span className="mr-4">Compartir: </span>
               <a
-                href=""
+                href="/home"
                 className="me-4 my-icon-share"
                 style={{
                   marginLeft: "10%",
@@ -108,10 +103,10 @@ const AboutMax = () => {
               >
                 <SiTwitter />
               </a>
-              <a href="" className="me-4 my-icon-share">
+              <a href="/home" className="me-4 my-icon-share">
                 <SiFacebook />
               </a>
-              <a href="" className="my-icon-share">
+              <a href="/home" className="my-icon-share">
                 <SiLinkedin />
               </a>
             </div>

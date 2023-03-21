@@ -1,4 +1,4 @@
-import { Container, Row, Col, Card } from "react-bootstrap";
+import { Container, Row, Col } from "react-bootstrap";
 import "../../../assets/styles/indexmax/aboutmaxS.css";
 
 const FooterMax = () => {

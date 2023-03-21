@@ -1,5 +1,5 @@
 import "../../../assets/styles/indexmax/indexmaxS.css";
-import { Navbar, Container, Nav, Row, Col } from "react-bootstrap";
+import { Navbar } from "react-bootstrap";
 
 const HeaderMax = ({text}:{text:String}) => {
   return (
