@@ -5,6 +5,7 @@
 * npm install bootstrap
 * npm install react-bootstrap bootstrap
 * npm install react-icons --save
+### Install compression and oprimize dependecies
 * npm i vite-plugin-compression2 -D
 * npm install sharp --save-dev
 * npm install svgo --save-dev
