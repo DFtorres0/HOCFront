@@ -6,3 +6,4 @@
 * npm install react-bootstrap bootstrap
 * npm install react-icons --save
 * npm install webpack webpack-cli --save-dev
+* npm i --save-dev webpack webpack-cli
