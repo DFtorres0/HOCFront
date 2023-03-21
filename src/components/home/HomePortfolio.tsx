@@ -3,7 +3,6 @@ import {
   Container,
   Button,
   ButtonGroup,
-  CardGroup,
   Card,
   Col,
   Row,
@@ -107,7 +106,7 @@ const Portfolio = () => {
               <Card.Header>{curso.name}</Card.Header>
               <Card.Body>
                 <Card.Title>
-                  <Card.Img variant="bottom" src={ImgAngular} />
+                  <Card.Img variant="bottom" style={{height: '100%', width: '100%'}} src={ImgAngular} />
                 </Card.Title>
               </Card.Body>
             </Card>

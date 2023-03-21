@@ -1,7 +1,6 @@
 import "../../../assets/styles/indexmax/aboutmaxS.css";
 import { DiIllustrator, DiPhotoshop, DiAngularSimple } from "react-icons/di";
 import { DiReact } from "react-icons/di";
-import { } from "react-icons/di";
 import { SiJavascript, SiVuedotjs, SiLinkedin, SiTwitter, SiFacebook } from "react-icons/si";
 import { Row, Col, Card } from "react-bootstrap";
 const AboutMax = () => {

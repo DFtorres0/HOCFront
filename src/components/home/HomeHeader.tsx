@@ -1,6 +1,6 @@
 import "../../assets/styles/home/HomeHdStyle.css";
 import { Link } from "react-router-dom";
-import { Container, Button } from "react-bootstrap";
+import { Container } from "react-bootstrap";
 
 const Header = () => {
   return (

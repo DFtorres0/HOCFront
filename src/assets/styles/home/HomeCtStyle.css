@@ -63,21 +63,6 @@
   color: #383838;
 }
 
-#contact .contact-box {
-  align-items: center;
-  align-content: center;
-}
-
-#contact .text-danger {
-  color: #cc0033;
-  text-align: center;
-}
-
-#contact .mb-3 {
-  padding: 0;
-  margin: 0;
-}
-
 #contact .form-control {
   display: flex;
   width: 60%;
@@ -98,39 +83,25 @@
   transition: none;
 }
 
-#contact .form-control:focus {
-  border-color: #4b8d98;
-  outline: 0;
-  -webkit-box-shadow: transparent;
-  box-shadow: transparent;
-}
-#contact .form-control::-webkit-input-placeholder {
-  color: #2c3e50;
-}
-#contact .form-control:-moz-placeholder {
-  color: #2c3e50;
-}
-#contact .form-control::-moz-placeholder {
-  color: #2c3e50;
-}
-#contact .form-control:-ms-input-placeholder {
-  color: #2c3e50;
-}
 #contact .social {
   margin-top: 80px;
 }
+#contact ul {
+  padding: 0;
+}
 #contact .social ul li {
   display: inline-block;
-  margin: 0 20px;
-}
-#contact .social i.fa {
+  padding: 0 25px;
   font-size: 26px;
-  padding: 4px;
   color: #343b42;
   transition: all 0.3s;
 }
-#contact .social i.fa:hover {
-  color: #fff;
+#contact a {
+  color: #343b42;
+}
+#contact a:hover, a:focus, a:active {
+  color: #e3e3e4;
+  transition: all 0.3s;
 }
 #contact .btn:active,
 .btn.active {
@@ -148,4 +119,13 @@
 .btn.active.focus {
   outline: none;
   outline-offset: none;
+}
+
+#contact .btn-default:hover,
+.btn-default:focus,
+.btn-default.focus,
+.btn-default:active,
+.btn-default.active {
+  color: #26f900;
+  background-color: #414a52;
 }

@@ -1,6 +1,6 @@
 import "../../assets/styles/home/HomeAbStyle.css";
 import image from "../../assets/img/bg-header3.jpeg";
-import { ListGroup, ListGroupItem } from "react-bootstrap";
+import { ListGroup } from "react-bootstrap";
 
 const About = () => {
   return (
@@ -12,7 +12,7 @@ const About = () => {
         </div>
         <div className="row">
           <div className="col-xs-12 col-md-6">
-            <img src={image} className="img-responsive" />
+            <img style={{height: 'auto', width: 'auto'}} src={image} />
           </div>
           <div className="col-xs-12 col-md-6">
             <div className="about-text">

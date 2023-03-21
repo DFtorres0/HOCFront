@@ -40,27 +40,3 @@ a {
   line-height: 20px;
   cursor: pointer;
 }
-
-@media (min-width: 768px) {
-  #menu .navbar-right .dropdown-menu {
-    right: 0;
-    left: auto;
-  }
-  #menu .navbar-right .dropdown-menu-left {
-    right: auto;
-    left: 0;
-  }
-}
-
-@media (min-width: 768px) {
-  #menu .navbar-left {
-    float: left !important;
-  }
-  #menu .navbar-right {
-    float: right !important;
-    margin-right: -15px;
-  }
-  #menu .navbar-right ~ .navbar-right {
-    margin-right: 0;
-  }
-}

@@ -1,4 +1,5 @@
 import { Button, Container, Form } from "react-bootstrap";
+import { FaCodepen, FaFacebookF, FaGithub, FaTwitter } from "react-icons/fa";
 import "../../assets/styles/home/HomeCtStyle.css";
 
 const Contact = () => {
@@ -27,23 +28,23 @@ const Contact = () => {
         <div className="social">
           <ul>
             <li>
-              <a href="#">
-                <i className="fa fa-facebook"></i>
+              <a href="#header">
+                <FaFacebookF />
               </a>
             </li>
             <li>
               <a href="https://twitter.com/daniel_dmngz">
-                <i className="fa fa-twitter"></i>
+                <FaTwitter />
               </a>
             </li>
             <li>
-              <a href="#">
-                <i className="fa fa-github"></i>
+              <a href="#header">
+                <FaGithub />
               </a>
             </li>
             <li>
-              <a href="#">
-                <i className="fa fa-codepen"></i>
+              <a href="#header">
+                <FaCodepen />
               </a>
             </li>
           </ul>

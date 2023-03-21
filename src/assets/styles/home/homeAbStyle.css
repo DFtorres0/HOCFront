@@ -45,10 +45,6 @@ h3::selection {
     margin-bottom: 10px;
 }
 
-#about h2 {
-  color: #504f4f;
-}
-
 #about hr {
   align-self: center;
   width: 70px;
@@ -87,35 +83,6 @@ h3::selection {
   float: right;
   display: block;
   max-width: 100%;
+  width: auto;
   height: auto;
-}
-
-#about .row {
-  margin-right: -15px;
-  margin-left: -15px;
-}
-
-#about p {
-  margin-bottom: 30px;
-  padding-bottom: 20px;
-  margin: 0 0 10px;
-  line-height: 21px;
-  font-size: 15px;
-}
-
-#about .col-xs-12,
-.col-md-6 {
-  position: relative;
-  min-height: 1px;
-  padding-right: 15px;
-  padding-left: 15px;
-  float: left;
-}
-
-#about .col-xs-12 {
-  width: 100%;
-}
-
-#about .col-md-6 {
-  width: 50%;
 }
