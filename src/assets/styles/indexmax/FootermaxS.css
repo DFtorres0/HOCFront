@@ -1,0 +1,8 @@
+#T-text{
+    text-align: left;
+}
+#T-text .T1{
+    margin-top: 5%;
+    max-width: 250px;
+    color: rgb(85, 85, 85);
+}

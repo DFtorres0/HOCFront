@@ -1,9 +1,8 @@
-
-#Max .my-container {
-  max-width: 1000px; /* Ancho del contenedor */
-  margin: 0 auto; 
+.my-container {
+  max-width: 1000px;
+  /* Ancho del contenedor */
+  margin: 0 auto;
 }
-
 .my-row {
   margin: 0 auto;
   padding: 0;
@@ -13,71 +12,72 @@
   margin-left: -5px;
   margin-right: -5px;
   justify-content: center;
-  
 }
-
-
-.my-card {
-  height: 150px; 
-  width: 150px; 
-  background-color: #ffffff; 
+.card {
+  height: 130px;
+  width: 130px;
   margin: 8px;
-  padding: 2px;
+  background-color: #ffffff;
+  padding: 0;
   border: none;
-  margin-left: 20% ;
-  
 }
-.my-card:hover {
+.card:hover {
   transform: scale(1.1);
   transition: transform 0.3s ease;
   box-shadow: 2px 2px 5px 0px #333;
-  
 }
-.my-icon-1{
-  font-size: 60px ;
-  color: orange ;
+.my-icon-1 {
+  font-size: 60px;
+  color: orange;
 }
-.my-icon-2{
-  font-size: 60px ;
-  color: rgb(64, 6, 224) ;
+.my-icon-2 {
+  font-size: 60px;
+  color: rgb(64, 6, 224);
 }
-.my-icon-3{
-  font-size: 60px ;
-  color: rgb(255, 8, 8) ;
+.my-icon-3 {
+  font-size: 60px;
+  color: rgb(255, 8, 8);
 }
-.my-icon-4{
-  font-size: 50px ;
-  Margin:5px;
-  color: rgb(255, 251, 0) ;
+.my-icon-4 {
+  font-size: 50px;
+  Margin: 5px;
+  color: rgb(255, 251, 0);
 }
-.my-icon-5{
-  font-size: 60px ;
-  color: rgb(11, 21, 165) ;
+.my-icon-5 {
+  font-size: 60px;
+  color: rgb(11, 21, 165);
 }
-.my-icon-6{
-  font-size: 50px ;
-  Margin:5px;
-  color: rgb(17, 88, 17) ;
+.my-icon-6 {
+  font-size: 50px;
+  Margin: 5px;
+  color: rgb(17, 88, 17);
 }
-.my-text-icon{
-  margin:5px;
-  color:rgb(0, 0, 0);
+.my-card-text {
+  margin: 5px;
+  font-size: 15px;
+  color: rgb(0, 0, 0);
 }
-
-.my-text{
+.my-text {
   text-align: left;
   margin-Left: 10%;
+  color: rgb(31, 121, 255);
+  font-weight: bold;
+}
+.my-textT {
+  text-align: left;
+  margin-Left: 10%;
+  color: #383838;
+  font-size: medium;
 }
 .transparent {
   background-color: transparent !important;
   box-shadow: none;
 }
-
 .colored {
   background-color: #383838 !important;
   box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.2);
 }
-.my-icon-share{
-  color: rgb(52, 84, 155);
+.my-icon-share {
+  color: rgb(31, 121, 255);
   width: 40px
 }

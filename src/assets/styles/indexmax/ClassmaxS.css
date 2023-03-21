@@ -1,0 +1,73 @@
+.my-module {
+  position: absolute;
+  bottom: -100px;
+  left: 50%;
+  transform: translateX(-50%);
+  display: flex;
+  justify-content: space-between;
+  width: 80%;
+}
+.my-text-block {
+  background-color: white;
+  width: 64%;
+  height: 280px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.my-text-block-1 {
+  background-color: white;
+  width: 34%;
+  height: 280px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+#image-col {
+  text-align: left;
+  margin-top: 5px;
+  width: auto;
+  height: auto;
+}
+#image-col .imageP2 {
+  width: 250px;
+  height: auto;
+  margin: 15px;
+}
+#image-col .imageP1 {
+  width: 70px;
+  height: auto;
+  margin: 5px;
+}
+#my-text {
+  text-align: left;
+  padding: 0;
+}
+#my-text .T1 {
+  transform: translate(-5%, 50px);
+  margin-top: 10px;
+  color: rgb(94, 94, 94);
+}
+#my-text .T1t {
+  transform: translate(-5%, 50px);
+  margin-top: 10px;
+  color: rgb(0, 0, 0);
+}
+#my-text .T1c {
+  transform: translate(-5%, 60px);
+  font-size: 10px;
+  color: blue;
+}
+#my-text .T2 {
+  margin-top: 5px;
+  transform: translate(-45%, 20%);
+}
+#my-text .T2T {
+  transform: translate(-45%, 15PX);
+  font-size: 12px;
+  color: blue;
+}
+.my-icontT {
+  transform: translate(-15px, 60px);
+  color: rgb(248, 167, 45);
+}
