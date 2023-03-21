@@ -1,13 +1,15 @@
-import TestHeader from "./TestHeader";
-//import Aboutmax from "./aboutmax";
+import FooterMax from "../templates/FooterMax";
+import HeaderMax from "../templates/HeaderMax";
+import NavigationMax from "../templates/NavegationMax";
 
 
 function Testimonials() {
 
   return (
     <div id="Max">
-      <TestHeader/>
-      
+      <NavigationMax/>
+      <HeaderMax text={"💬Foros"}/>
+      <FooterMax/>
     </div>
   );
 }

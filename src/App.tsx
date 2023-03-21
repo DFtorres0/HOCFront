@@ -4,7 +4,7 @@ import Login from './components/Login';
 import Home from './components/home/Home';
 import Testimonials from './components/max/testimonials/Testimonials';
 import Tutorials from './components/max/tutorials/Tutorials';
-import Indexmax from './components/max/indexmax/Indexmax';
+import Indexmax from './components/max/indexmax/IndexMax';
 
 
 function App() {

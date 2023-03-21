@@ -1,17 +1,19 @@
 import { useState } from "react";
 import { Navbar, Container,Nav, ListGroup } from "react-bootstrap";
 import "../../../assets/styles/indexmax/indexmaxS.css";
-import { BsCodeSlash } from "react-icons/bs";
 
 const NavigationMax = () => {
   const [navbarClass, setNavbarClass] = useState('transparent');
+  const [height, setHeight] = useState('10');
 
   const handleScroll = () => {
     const currentPosition = window.pageYOffset;
     if (currentPosition > 0 && navbarClass === 'transparent') {
       setNavbarClass('colored');
+      setHeight('7');
     } else if (currentPosition === 0 && navbarClass === 'colored') {
       setNavbarClass('transparent');
+      setHeight('10');
     }
   };
 
@@ -20,22 +22,26 @@ const NavigationMax = () => {
     <Navbar
         className={navbarClass}
         fixed="top"
-        bg="transparent"
         variant="dark"
+        style={{height: `${height}%`}}
+        id="navbarMax"
       >
         <Container>
           <Navbar.Brand href="/home">Home of Code</Navbar.Brand>
           <Navbar.Toggle aria-controls="responsive-navbar-nav" />
           <Navbar.Collapse id="responsive-navbar-nav"></Navbar.Collapse>
           <Nav className="ml-auto">
-            <Nav.Link href="#features" className="Header-NavbarLink">
+            <Nav.Link href="/indexmax" className="navlink">
              <h4> Inicio</h4>
+             <hr/>
             </Nav.Link>
-            <Nav.Link href="/Tutorials" className="Header-NavbarLink">
-            <h4> Clases</h4>
+            <Nav.Link href="/tutorials" className="navlink">
+            <h4> 📓 Clases</h4>
+             <hr/>
             </Nav.Link>
-            <Nav.Link href="#features" className="Header-NavbarLink">
-            <h4> Foros</h4>
+            <Nav.Link href="/testimonials" className="navlink">
+            <h4> 💬 Foros</h4>
+             <hr/>
             </Nav.Link>
           </Nav>
         </Container>

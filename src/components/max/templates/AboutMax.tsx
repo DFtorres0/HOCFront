@@ -8,7 +8,7 @@ import { SiVuedotjs } from "react-icons/si";
 import { SiLinkedin } from "react-icons/si";
 import { SiTwitter } from "react-icons/si";
 import { SiFacebook } from "react-icons/si";
-import { Container, Row, Col, Card } from "react-bootstrap";
+import { Row, Col, Card } from "react-bootstrap";
 const AboutMax = () => {
   return (
     <div>
@@ -23,8 +23,8 @@ const AboutMax = () => {
       <div className="my-container">
         <Row className="my-row row-cols-md-7 g-0">
           <Col>
-            <Card className="my-card" >
-              <Card.Body  >
+            <Card className="my-card">
+              <Card.Body>
                 <DiIllustrator className="my-icon-1" />
                 <Card.Title className="my-text-icon">Illustrator</Card.Title>
               </Card.Body>
@@ -99,9 +99,13 @@ const AboutMax = () => {
           <div className="col-lg-6 text-lg-right">
             <div className="d-inline-flex align-items-center ml-auto">
               <span className="mr-4">Compartir: </span>
-              <a href="" className="me-4 my-icon-share" style={{
-          marginLeft: "10%",
-        }}>
+              <a
+                href=""
+                className="me-4 my-icon-share"
+                style={{
+                  marginLeft: "10%",
+                }}
+              >
                 <SiTwitter />
               </a>
               <a href="" className="me-4 my-icon-share">
@@ -114,8 +118,6 @@ const AboutMax = () => {
           </div>
         </div>
       </div>
-      
-      
     </div>
   );
 };

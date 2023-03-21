@@ -1,4 +1,3 @@
-
 body {
   background-color: #ffffff;
 }
@@ -7,9 +6,24 @@ body {
   width: 100%;
   z-index: 1;
 }
+.navlink {
+  color: #ffffff;
+  padding-top: 10%;
+  margin: 10px;
+  margin-bottom: 0;
+}
+#navbarMax {
+  transition: all 0.8s;
+}
+.navlink hr {
+  color: #ffffff;
+  border-top: 3px solid #ffffff;
+  margin-top: 0;
+}
+
 .Header-Navbar-1{
   padding: 0;
-  margin: 0;
+  margin-top: 0;
   position: relative ;
   z-index: 0 ;
 }
@@ -19,11 +33,13 @@ body {
   width: 100%;
   position: relative;
   background-size: cover;
-  height: 100vh;   
+  height: 80vh;   
 }
 #imageP{
   text-align: left;
   margin-top: 5px;
+  width: auto;
+  height: auto;
 }
 #imageP .imageP2{
   width: 250px ;
@@ -35,11 +51,6 @@ body {
   height: auto ;
   margin: 5px ;
 
-}
-.Header-Navbar.Link{
-  margin-right: 30px;
-  color:#ffffff;
-  font: size 80px; 
 }
 #my-text{
   text-align: left;
