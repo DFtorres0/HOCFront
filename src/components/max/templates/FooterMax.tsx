@@ -1,5 +1,6 @@
 import { Container, Row, Col } from "react-bootstrap";
-import "../../../assets/styles/indexmax/aboutmaxS.css";
+import "../../../assets/styles/indexmax/FootermaxS.css";
+
 
 const FooterMax = () => {
   return (
@@ -12,31 +13,31 @@ const FooterMax = () => {
     >
       <Container className="p-4">
         <Row>
-          <Col lg="6" md="12" className="mb-4 mb-md-0">
-            <h5 className="text-uppercase">Siguenos:</h5>
+          <Col id="T-text" lg="4" md="12" className=" mb-md-0">
+            <p >Siguenos:</p>
 
-            <p>
+            <p className="T1">
               Si quieres estar enterado de nuestras ultimas tutorias, clases,
               practicas proyectos siguenos:😎
             </p>
           </Col>
 
-          <Col lg="3" md="6" className="mb-4 mb-md-0">
-            <h5 className="text-uppercase">Links Rapidos :🚀</h5>
+          <Col id="T-text" lg="3" md="6" className="mb-4 mb-md-0 mx-1">
+            <p>Links Rapidos :🚀</p>
 
             <ul className="list-unstyled mb-0">
               <li>
-                <a href="/indexmax" className="text-black">
+                <a rel="preload" href="/indexmax" className="text-black">
                   Inicio
                 </a>
               </li>
               <li>
-                <a href="/tutorials" className="text-black">
+                <a rel="preload" href="/tutorials" className="text-black">
                   📓 Clases
                 </a>
               </li>
               <li>
-                <a href="/testimonials" className="text-black">
+                <a rel="preload" href="/testimonials" className="text-black">
                   💬 Foro
                 </a>
               </li>
@@ -46,8 +47,7 @@ const FooterMax = () => {
       </Container>
 
       <div
-        className="text-center p-3"
-        style={{ backgroundColor: "rgba(0, 0, 0, 0)" }}
+        style={{ backgroundColor: "rgba(0, 0, 0, 0)", margin: "10%" }}
       >
         Copyright © 2023 . Diseñado Por:
         <a className="text-dark" href="/home">

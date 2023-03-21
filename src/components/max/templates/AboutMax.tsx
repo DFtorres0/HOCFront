@@ -1,9 +1,28 @@
 import "../../../assets/styles/indexmax/aboutmaxS.css";
-import { DiIllustrator, DiPhotoshop, DiAngularSimple } from "react-icons/di";
-import { DiReact } from "react-icons/di";
+import { DiIllustrator, DiPhotoshop, DiAngularSimple, DiReact } from "react-icons/di";
 import { SiJavascript, SiVuedotjs, SiLinkedin, SiTwitter, SiFacebook } from "react-icons/si";
 import { Row, Col, Card } from "react-bootstrap";
+import { IconType } from "react-icons/lib";
+import { useState } from "react";
+
+const Topics = [
+  { id: 0, name: "Illustrator" , icon: <DiIllustrator className="my-icon-1"/> },
+  { id: 1, name: "Photoshop", icon: <DiPhotoshop className="my-icon-2"/>},
+  { id: 2, name: "Angular", icon: <DiAngularSimple className="my-icon-3"/> },
+  { id: 3, name: "JavaScript", icon: <SiJavascript className="my-icon-4"/> },
+  { id: 4, name: "React", icon: <DiReact className="my-icon-5"/> },
+  { id: 5, name: "Vue", icon: <SiVuedotjs className="my-icon-6"/> },
+];
+
+interface courseInterface {
+  id: number;
+  name: string;
+  icon: JSX.Element;
+}
+
 const AboutMax = () => {
+
+  const [courses, setCourses] = useState<courseInterface[]>([...Topics]);
   return (
     <div>
       <div
@@ -11,60 +30,24 @@ const AboutMax = () => {
           marginTop: "20%",
         }}
       >
-        <h5 className="my-text">TUTORIAL DE CURSOS!💎</h5>
+        <h5 className="my-textT">TUTORIAL DE CURSOS!💎</h5>
         <h2 className="my-text">Busca tu tema de interes:</h2>
-      </div>
+      </div >
       <div className="my-container">
-        <Row className="my-row row-cols-md-7 g-0">
+      <Row className="row">
+        {courses.map((Topics) => (
           <Col>
-            <Card className="my-card">
-              <Card.Body>
-                <DiIllustrator className="my-icon-1" />
-                <Card.Title className="my-text-icon">Illustrator</Card.Title>
+            <Card
+              className="card" style={{padding: "0"}}>
+              <Card.Body>{Topics.icon}
+                <Card.Title className="my-card-text">
+                  {Topics.name}
+                </Card.Title>
               </Card.Body>
             </Card>
           </Col>
-          <Col>
-            <Card className="my-card">
-              <Card.Body>
-                <DiPhotoshop className="my-icon-2" />
-                <Card.Title className="my-text-icon">Photoshop</Card.Title>
-              </Card.Body>
-            </Card>
-          </Col>
-          <Col>
-            <Card className="my-card">
-              <Card.Body>
-                <DiAngularSimple className="my-icon-3" />
-                <Card.Title className="my-text-icon">Angular</Card.Title>
-              </Card.Body>
-            </Card>
-          </Col>
-          <Col>
-            <Card className="my-card">
-              <Card.Body>
-                <SiJavascript className="my-icon-4" />
-                <Card.Title className="my-text-icon">JavaScript</Card.Title>
-              </Card.Body>
-            </Card>
-          </Col>
-          <Col>
-            <Card className="my-card">
-              <Card.Body>
-                <DiReact className="my-icon-5" />
-                <Card.Title className="my-text-icon">React</Card.Title>
-              </Card.Body>
-            </Card>
-          </Col>
-          <Col>
-            <Card className="my-card">
-              <Card.Body>
-                <SiVuedotjs className="my-icon-6" />
-                <Card.Title className="my-text-icon">Vue</Card.Title>
-              </Card.Body>
-            </Card>
-          </Col>
-        </Row>
+        ))}
+      </Row>
       </div>
       <div>
         <div
@@ -93,7 +76,7 @@ const AboutMax = () => {
           <div className="col-lg-6 text-lg-right">
             <div className="d-inline-flex align-items-center ml-auto">
               <span className="mr-4">Compartir: </span>
-              <a
+              <a rel="preload"
                 href="/home"
                 className="me-4 my-icon-share"
                 style={{
@@ -102,7 +85,7 @@ const AboutMax = () => {
               >
                 <SiTwitter />
               </a>
-              <a href="/home" className="me-4 my-icon-share">
+              <a rel="preload" href="/home" className="me-4 my-icon-share">
                 <SiFacebook />
               </a>
               <a href="/home" className="my-icon-share">

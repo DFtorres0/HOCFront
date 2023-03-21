@@ -1,0 +1,22 @@
+.Header-Navbar-1{
+    padding: 0;
+    margin-top: 0;
+    position: relative ;
+    z-index: 0 ;
+  }
+.my-text-T{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    font-display: swap
+  }
+#image{ 
+    background-image:linear-gradient(rgba(0,0,0,0.4),rgba(0,0,0,0.3)), url(../src/assets/images/bg_3.jpg);
+    background-position: center ;
+    width: 100%;
+    position: relative;
+    background-size: cover;
+    height: 80vh;   
+  } 

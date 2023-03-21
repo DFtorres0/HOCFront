@@ -30,7 +30,7 @@ const NavigationMax = () => {
           <Navbar.Brand href="/home">Home of Code</Navbar.Brand>
           <Navbar.Toggle aria-controls="responsive-navbar-nav" />
           <Navbar.Collapse id="responsive-navbar-nav"></Navbar.Collapse>
-          <Nav className="ml-auto">
+          <Nav>
             <Nav.Link href="/indexmax" className="navlink">
              <h4> Inicio</h4>
              <hr/>
