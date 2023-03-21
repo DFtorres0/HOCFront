@@ -1,5 +1,5 @@
 # Home of Code Front-end project
-- Install project dependencies
+## Install project dependencies
 * npm install
 * npm install react-router-dom
 * npm install bootstrap
