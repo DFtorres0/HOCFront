@@ -1,6 +1,6 @@
 import { Container, Row, Col } from "react-bootstrap";
 import "../../../assets/styles/indexmax/FootermaxS.css";
-
+import {SiLinkedin, SiTwitter, SiFacebook } from "react-icons/si";
 
 const FooterMax = () => {
   return (
@@ -19,6 +19,17 @@ const FooterMax = () => {
             <p className="T1">
               Si quieres estar enterado de nuestras ultimas tutorias, clases,
               practicas proyectos siguenos:😎
+            </p>
+            <p>
+              <a href="/home" className="me-4 my-icon-share">
+            <SiTwitter />
+              </a>
+              <a  href="/home" className="me-4 my-icon-share">
+                <SiFacebook />
+              </a>
+              <a href="/home" className="my-icon-share">
+                <SiLinkedin />
+                </a>
             </p>
           </Col>
 

@@ -12,7 +12,7 @@ const Classmax = () => {
             <img className="imageP2" src="../src/assets/images/img_1.jpg" loading="lazy" />
           </Col>
           <Col md id="my-text">
-            <h6 className="T1c">CLASE</h6>
+            <a href="/home" ><h6 className="T1c">CLASE</h6></a>
             <h3 className="T1t">Aprende hoy React Native</h3>
             <h6 className="T1">
               Aprende desde 0 framework's y domina y mundo de posibilidades en
@@ -31,7 +31,7 @@ const Classmax = () => {
               <img className="imageP1" src="../src/assets/images/img_2.jpg" loading="lazy" />
             </Col>
             <Col id="my-text" >
-              <h6 className="T2T">TUTORIA DE JAVASCRIPT</h6>
+              <a href="/home" ><h6 className="T2T">TUTORIA DE JAVASCRIPT</h6></a>
               <h6 className="T2">Practica JavaScript Hoy!</h6>
             </Col>
           </Row>
@@ -40,7 +40,7 @@ const Classmax = () => {
               <img className="imageP1" src="../src/assets/images/img_3.jpg" loading="lazy" />
             </Col>
             <Col id="my-text">
-              <h6 className="T2T">TUTORIA DE VUE</h6>
+              <a href="/home" ><h6 className="T2T">TUTORIA DE VUE</h6></a>
               <h6 className="T2">Practica Vue hoy mismo</h6>
             </Col>
           </Row>
@@ -49,7 +49,7 @@ const Classmax = () => {
               <img className="imageP1" src="../src/assets/images/img_4.jpg" loading="lazy" />
             </Col>
             <Col  id="my-text">
-              <h6 className="T2T">ILUSTRATOR</h6>
+              <a href="/home" ><h6 className="T2T">ILUSTRATOR</h6></a>
               <h6 className="T2">
                 Aprende a crear tus propias imagenes con Ilustrator🌄!
               </h6>

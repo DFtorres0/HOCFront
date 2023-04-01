@@ -3,6 +3,7 @@ import NavigationMax from "../templates/NavegationMax";
 import HeaderMax from "../templates/HeaderMax";
 import FooterMax from "../templates/FooterMax";
 import AboutMax from "../templates/AboutMax";
+import TutorialsBody from "./TutorialsBody";
 
 function Tutorials() {
 
@@ -11,6 +12,7 @@ function Tutorials() {
       <NavigationMax/>
       <HeaderMax text={"Tus Tutorias, Clases y Practicas📚en un solo lugar:"}/>
       <AboutMax/>
+      <TutorialsBody/>
       <FooterMax/>
     </div>
   );
