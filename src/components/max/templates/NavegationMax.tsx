@@ -43,6 +43,10 @@ const NavigationMax = () => {
             <h4> 💬 Foros</h4>
              <hr/>
             </Nav.Link>
+            <Nav.Link href="/Courses" className="navlink">
+            <h4> 💬 cursos</h4>
+             <hr/>
+            </Nav.Link>
           </Nav>
         </Container>
       </Navbar>

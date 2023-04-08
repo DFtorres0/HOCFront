@@ -10,19 +10,22 @@ import {
 } from "react-bootstrap";
 import ImgAngular from "../../assets/img/portfolio/AngularJS.png";
 import { useState } from "react";
+import { DiAngularSimple, DiReact,DiMysql } from "react-icons/di";
+import { SiJavascript, SiPython,SiOracle } from "react-icons/si";
 
 const cursos = [
-  { id: 0, name: "Angular", modalShow: false },
-  { id: 1, name: "React", modalShow: false },
-  { id: 2, name: "JavaScript", modalShow: false },
-  { id: 3, name: "Python", modalShow: false },
-  { id: 4, name: "SQL", modalShow: false },
-  { id: 5, name: "Oracle", modalShow: false },
+  { id: 0, name: "Angular",icon: <DiAngularSimple className="my-iconP-1"/>, modalShow: false },
+  { id: 1, name: "React",icon: <DiReact className="my-iconP-2"/> , modalShow: false },
+  { id: 2, name: "JavaScript",icon: <SiJavascript className="my-iconP-3"/>, modalShow: false },
+  { id: 3, name: "Python",icon: <SiPython className="my-iconP-4"/>, modalShow: false },
+  { id: 4, name: "SQL",icon: <DiMysql className="my-iconP-5"/>, modalShow: false },
+  { id: 5, name: "Oracle",icon: <SiOracle className="my-iconP-1"/>, modalShow: false },
 ];
 
 interface courseInterface {
   id: number;
   name: string;
+  icon: JSX.Element;
   modalShow: boolean;
 }
 
@@ -42,9 +45,7 @@ const Portfolio = () => {
           <Modal.Title>{course.name}</Modal.Title>
         </Modal.Header>
         <Modal.Body>
-          <Card.Title>
-            <Card.Img variant="bottom" src={ImgAngular} />
-          </Card.Title>
+        {course.icon}
         </Modal.Body>
         <Modal.Footer>
           <Button variant="secondary" onClick={() => handleSetModal(course.id, false)}>
@@ -61,6 +62,7 @@ const Portfolio = () => {
         return {
           id: course.id,
           name: course.name,
+          icon: course.icon,
           modalShow: show,
         };
       }
@@ -105,9 +107,7 @@ const Portfolio = () => {
             >
               <Card.Header>{curso.name}</Card.Header>
               <Card.Body>
-                <Card.Title>
-                  <Card.Img variant="bottom" style={{height: '100%', width: '100%'}} src={ImgAngular} />
-                </Card.Title>
+              {curso.icon}
               </Card.Body>
             </Card>
             <ModalComponent course={curso} />

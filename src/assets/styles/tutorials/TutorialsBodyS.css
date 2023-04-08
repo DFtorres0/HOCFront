@@ -1,0 +1,31 @@
+.cardT {
+    height: 18rem;
+    width: 40rem;
+    margin-left: 130px;
+    margin: 20px;
+    margin-left: 10%;
+    background-color: #ffffff;
+    padding: 0;
+    border: none;
+}
+
+.cardT:hover {
+    transform: scale(1.1);
+    transition: transform 0.3s ease;
+    box-shadow: 2px 2px 5px 0px #333;
+}
+
+.my-iconT-1 {
+    font-size: 20px;
+}
+
+.image-T {
+    width: 250px;
+    height: 250px;
+    margin: 20px;
+}
+.image-T-1{
+    width: 280px;
+    height: 160px;
+    margin: 5px;
+}

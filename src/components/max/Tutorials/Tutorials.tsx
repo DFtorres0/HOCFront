@@ -5,6 +5,7 @@ import FooterMax from "../templates/FooterMax";
 import AboutMax from "../templates/AboutMax";
 import TutorialsBody from "./TutorialsBody";
 
+
 function Tutorials() {
 
   return (

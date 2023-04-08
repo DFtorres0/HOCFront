@@ -73,3 +73,24 @@
   padding: 5px;
   color: #e87e04;
 }
+.my-iconP-1 {
+  font-size: 70px;
+  color: rgb(211, 3, 3);
+}
+.my-iconP-2 {
+  font-size: 70px;
+  color: rgb(3, 2, 51);
+}
+.my-iconP-3 {
+  font-size: 60px;
+  color: rgb(216, 185, 8);
+}
+.my-iconP-4 {
+  font-size: 60px;
+  color: rgb(8, 63, 216);
+}
+.my-iconP-5 {
+  font-size: 70px;
+  color: rgb(235, 234, 230);
+}
+
