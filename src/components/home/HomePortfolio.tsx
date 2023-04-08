@@ -95,11 +95,10 @@ const Portfolio = () => {
         </ButtonGroup>
       </div>
       <Row className="row">
-        {courses.map((curso) => (
-          <Col>
+        {courses.map((curso, courseIndex) => (
+          <Col key={courseIndex}>
             <Card
               bg="secondary"
-              key={curso.id}
               className="card"
               onClick={() => handleSetModal(curso.id, true)}
             >
