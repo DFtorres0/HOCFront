@@ -43,7 +43,8 @@ const Portfolio = () => {
         </Modal.Header>
         <Modal.Body>
           <Card.Title>
-            <Card.Img variant="bottom" src={ImgAngular} />
+          
+            <Card.Img variant="bottom" src={ImgAngular} alt="boton"/>
           </Card.Title>
         </Modal.Body>
         <Modal.Footer>
@@ -106,7 +107,7 @@ const Portfolio = () => {
               <Card.Header>{curso.name}</Card.Header>
               <Card.Body>
                 <Card.Title>
-                  <Card.Img variant="bottom" style={{height: '100%', width: '100%'}} src={ImgAngular} />
+                  <Card.Img variant="bottom" style={{height: '100%', width: '100%'}} src={ImgAngular} alt="imagen_angular"/>
                 </Card.Title>
               </Card.Body>
             </Card>

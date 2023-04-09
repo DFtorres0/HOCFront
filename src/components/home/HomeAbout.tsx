@@ -12,7 +12,7 @@ const About = () => {
         </div>
         <div className="row">
           <div className="col-xs-12 col-md-6">
-            <img style={{height: 'auto', width: 'auto'}} src={image} />
+            <img style={{height: 'auto', width: 'auto'}} src={image} alt="anonymous" />
           </div>
           <div className="col-xs-12 col-md-6">
             <div className="about-text">

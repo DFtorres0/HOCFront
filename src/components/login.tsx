@@ -16,27 +16,25 @@ function Login(): JSX.Element {
               <h4 className="mt-1 mb-5 pb-1">Login</h4>
             </div>
             <p>Please login to your account</p>
-            <div></div>
-            <form className="needs-validation">
+                <form className="needs-validation">
               <div className="form-group was-validated mb-4">
-                <label htmlFor="Email" className="form-label">
+                  <label htmlFor="Email" className="form-label">
                   Email Address
-                </label>
-                <input type="Email" className="form-control" required></input>
-              </div>
+                <input type="Email" className="form-control" required></input></label>
+                </div>
+              
               <div className="form-group was-validated mb-4">
                 <label htmlFor="password" className="form-label">
-                  Password
-                </label>
-                <input
+                Password
+                 <input
                   type="password"
                   className="form-control"
-                  required></input>
+                  required></input></label>
               </div>
               <div className="form-group form-check mb-2">
-                <input type="checkbox" className="form-check-input"></input>
-                <label htmlFor="check" className="form-check-label">
-                  Remember me
+              <label htmlFor="check" className="form-check-label">
+              Remember me
+              <input type="checkbox" className="form-check-input"></input>                  
                 </label>
               </div>
               <Link to="/home">
@@ -45,7 +43,8 @@ function Login(): JSX.Element {
                 </Button>
               </Link>
             </form>
-          </div>
+            </div>
+         
           <div className="d-flex flex-row align-items-center justify-content-center pb-4 mb-4">
             <p className="mb-0">Don't have an account?</p>
             <Button className="mx-2" color="danger">
@@ -63,7 +62,7 @@ function Login(): JSX.Element {
             <Button
               className="mb-4 w-100"
               size="lg"
-              style={{ backgroundColor: "#55acee" }}>
+              style={{ backgroundColor: "#007EADs" }}>
               <BsTwitter />  Continue with twitter
             </Button>
           </div>
