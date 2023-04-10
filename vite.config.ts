@@ -30,7 +30,7 @@ export default defineConfig({
         MainCSCompiler: resolve(__dirname, 'src/components/classes/mainContent/mainCSections/MainCSCompiler.tsx'),
         MainCSDescription: resolve(__dirname, 'src/components/classes/mainContent/mainCSections/MainCSDescription.tsx'),
         MainCSNavbar: resolve(__dirname, 'src/components/classes/mainContent/mainCSections/MainCSNavbar.tsx'),
-        MainCSResource: resolve(__dirname, 'src/components/classes/mainContent/mainCSections/MainCSResource.tsx'),
+        MainCSResources: resolve(__dirname, 'src/components/classes/mainContent/mainCSections/MainCSResources.tsx'),
         Home: resolve(__dirname, 'src/components/home/Home.tsx'),
         HomeAbout: resolve(__dirname, 'src/components/home/HomeAbout.tsx'),
         HomeContact: resolve(__dirname, 'src/components/home/HomeContact.tsx'),
