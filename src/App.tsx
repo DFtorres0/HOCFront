@@ -6,6 +6,21 @@ import Tutorials from './components/max/tutorials/Tutorials';
 import IndexMax from './components/max/indexmax/IndexMax';
 import Classes from "./components/classes/Classes";
 
+import { initializeApp } from "firebase/app";
+import { getAnalytics } from "firebase/analytics";
+
+const firebaseConfig = {
+  apiKey: "AIzaSyBWKRmXmg90tCk7kuIYI4FGl-_86ensMiM",
+  authDomain: "house-code.firebaseapp.com",
+  projectId: "house-code",
+  storageBucket: "house-code.appspot.com",
+  messagingSenderId: "829337627544",
+  appId: "1:829337627544:web:54e35bc5732ed2df1159ed",
+  measurementId: "G-7P33F63ZN9"
+};
+
+const app = initializeApp(firebaseConfig);
+const analytics = getAnalytics(app);
 
 function App() {
   return (
@@ -22,4 +37,4 @@ function App() {
   )
 }
 
-export default App
+export {App, app, analytics}
