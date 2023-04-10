@@ -1,5 +1,5 @@
 import "../../../App.css";
-import NavigationMax from "../templates/NavegationMax";
+import NavigationMax from "../templates/NavigationMax";
 import HeaderMax from "../templates/HeaderMax";
 import FooterMax from "../templates/FooterMax";
 import AboutMax from "../templates/AboutMax";

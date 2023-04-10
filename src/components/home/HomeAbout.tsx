@@ -2,7 +2,7 @@ import "../../assets/styles/home/HomeAbStyle.css";
 import image from "../../assets/img/bg-header3.jpeg";
 import { ListGroup } from "react-bootstrap";
 
-const About = () => {
+const HomeAbout = () => {
   return (
     <div id="about">
       <div className="container">
@@ -49,4 +49,4 @@ const About = () => {
   );
 };
 
-export default About;
+export default HomeAbout;

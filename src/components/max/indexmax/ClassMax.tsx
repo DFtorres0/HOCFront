@@ -3,7 +3,7 @@ import { SiJavascript } from "react-icons/si";
 import "../../../assets/styles/indexmax/ClassMaxS.css";
 import { Row, Col } from "react-bootstrap";
 
-const Classmax = () => {
+const ClassMax = () => {
   return (
     <div className="my-module">
       <div className="my-text-block">
@@ -61,4 +61,4 @@ const Classmax = () => {
   );
 };
 
-export default Classmax;
+export default ClassMax;

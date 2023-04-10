@@ -1,6 +1,6 @@
 import "../../assets/styles/home/HomeFtStyle.css";
 
-const Footer = () => {
+const HomeFooter = () => {
   return (
     <div id="footer">
       <div className="container text-center">
@@ -25,4 +25,4 @@ const Footer = () => {
   );
 };
 
-export default Footer;
+export default HomeFooter;

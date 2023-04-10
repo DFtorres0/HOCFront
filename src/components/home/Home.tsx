@@ -1,20 +1,20 @@
-import Navigation from "./HomeNavigation";
-import Header from "./HomeHeader";
-import About from "./HomeAbout";
-import Portfolio from "./HomePortfolio";
-import Contact from "./HomeContact";
-import Footer from "./HomeFooter";
+import HomeNavigation from "./HomeNavigation";
+import HomeHeader from "./HomeHeader";
+import HomeAbout from "./HomeAbout";
+import HomePortfolio from "./HomePortfolio";
+import HomeContact from "./HomeContact";
+import HomeFooter from "./HomeFooter";
 
 function Home() {
 
   return (
     <div>
-      <Navigation/>
-      <Header/>
-      <About/>
-      <Portfolio/>
-      <Contact/>
-      <Footer/>
+      <HomeNavigation/>
+      <HomeHeader/>
+      <HomeAbout/>
+      <HomePortfolio/>
+      <HomeContact/>
+      <HomeFooter/>
     </div>
   );
 }

@@ -1,6 +1,6 @@
 import FooterMax from "../templates/FooterMax";
 import HeaderMax from "../templates/HeaderMax";
-import NavegationMax from "../templates/NavegationMax";
+import NavegationMax from "../templates/NavigationMax";
 import AboutMax from "../templates/AboutMax";
 import ClassMax from "./ClassMax";
 

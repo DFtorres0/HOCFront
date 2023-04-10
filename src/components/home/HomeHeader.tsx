@@ -2,7 +2,7 @@ import "../../assets/styles/home/HomeHdStyle.css";
 import { Link } from "react-router-dom";
 import { Container } from "react-bootstrap";
 
-const Header = () => {
+const HomeHeader = () => {
   return (
     <div id="header">
       <div className="intro">
@@ -18,4 +18,4 @@ const Header = () => {
   );
 };
 
-export default Header;
+export default HomeHeader;

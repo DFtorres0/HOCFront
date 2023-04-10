@@ -3,7 +3,7 @@ import { Navbar, Container, ListGroup } from "react-bootstrap";
 import { useState } from "react";
 import { BsCodeSlash } from "react-icons/bs";
 
-const Navigation = () => {
+const HomeNavigation = () => {
   const [navbarClass, setNavbarClass] = useState("transparent");
   const [height, setHeight] = useState("10");
 
@@ -64,4 +64,4 @@ const Navigation = () => {
   );
 };
 
-export default Navigation;
+export default HomeNavigation;

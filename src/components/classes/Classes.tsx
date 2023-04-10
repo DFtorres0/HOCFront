@@ -1,5 +1,5 @@
-import NavegationMax from "../max/templates/NavegationMax";
-import SideNav from "./SideNav";
+import NavegationMax from "../max/templates/NavigationMax";
+import SideNav from "./ClassSideNav";
 import MainContent from "./mainContent/MainContent";
 
 function Classes() {

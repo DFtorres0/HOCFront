@@ -2,7 +2,7 @@ import { Button, Container, Form } from "react-bootstrap";
 import { FaCodepen, FaFacebookF, FaGithub, FaTwitter } from "react-icons/fa";
 import "../../assets/styles/home/HomeCtStyle.css";
 
-const Contact = () => {
+const HomeContact = () => {
   return (
     <div id="contact" className="text-center">
       <div className="section-title center">
@@ -54,4 +54,4 @@ const Contact = () => {
   );
 };
 
-export default Contact;
+export default HomeContact;

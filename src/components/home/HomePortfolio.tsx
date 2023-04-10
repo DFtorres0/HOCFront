@@ -29,7 +29,7 @@ interface courseInterface {
   modalShow: boolean;
 }
 
-const Portfolio = () => {
+const HomePortfolio = () => {
   const [courses, setCourses] = useState<courseInterface[]>([...cursos]);
 
   const ModalComponent = ({ course }: { course: courseInterface }) => {
@@ -117,4 +117,4 @@ const Portfolio = () => {
   );
 };
 
-export default Portfolio;
+export default HomePortfolio;

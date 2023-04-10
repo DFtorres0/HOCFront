@@ -1,8 +1,6 @@
 import FooterMax from "../templates/FooterMax";
 import HeaderMax from "../templates/HeaderMax";
-import NavigationMax from "../templates/NavegationMax";
-
-
+import NavigationMax from "../templates/NavigationMax";
 
 function Testimonials() {
 

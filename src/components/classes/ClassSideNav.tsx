@@ -207,7 +207,7 @@ const courseContent = [
   ],
 ];
 
-const SideNav = () => {
+const ClassSideNav = () => {
   const [navClass, setNavClass] = useState("close");
 
   const handleToggleNav = () => {
@@ -253,4 +253,4 @@ const SideNav = () => {
   );
 };
 
-export default SideNav;
+export default ClassSideNav;
