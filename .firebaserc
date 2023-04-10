@@ -1,5 +1,8 @@
 {
   "projects": {
-    "default": "home-of-code"
-  }
+    "default": "home-of-code",
+    "Home of code": "home-of-code"
+  },
+  "targets": {},
+  "etags": {}
 }
