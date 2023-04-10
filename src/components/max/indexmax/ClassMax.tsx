@@ -1,6 +1,6 @@
 import { DiReact } from "react-icons/di";
 import { SiJavascript } from "react-icons/si";
-import "../../../assets/styles/indexmax/ClassmaxS.css";
+import "../../../assets/styles/indexmax/ClassMaxS.css";
 import { Row, Col } from "react-bootstrap";
 
 const Classmax = () => {

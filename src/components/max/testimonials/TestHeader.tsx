@@ -1,6 +1,6 @@
 import { DiReact } from "react-icons/di";
 import { SiJavascript } from "react-icons/si";
-import "../../../assets/styles/indexmax/indexmaxS.css";
+import "../../../assets/styles/indexmax/IndexMaxS.css";
 import { Navbar, Container, Nav, Row, Col } from "react-bootstrap";
 import { useState } from "react";
 

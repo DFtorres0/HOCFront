@@ -1,5 +1,5 @@
 import { Container, Row, Col } from "react-bootstrap";
-import "../../../assets/styles/indexmax/FootermaxS.css";
+import "../../../assets/styles/indexmax/FooterMaxS.css";
 import {SiLinkedin, SiTwitter, SiFacebook } from "react-icons/si";
 
 const FooterMax = () => {

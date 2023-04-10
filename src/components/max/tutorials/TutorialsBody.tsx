@@ -1,4 +1,4 @@
-import "../../../assets/styles/indexmax/ClassmaxS.css";
+import "../../../assets/styles/indexmax/ClassMaxS.css";
 import "../../../assets/styles/tutorials/TutorialsBodyS.css";
 import { DiIllustrator, DiPhotoshop, DiAngularSimple } from "react-icons/di";
 import { SiJavascript,  } from "react-icons/si";

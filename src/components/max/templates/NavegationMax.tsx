@@ -1,6 +1,6 @@
 import { useState } from "react";
 import { Navbar, Container,Nav, ListGroup } from "react-bootstrap";
-import "../../../assets/styles/indexmax/indexmaxS.css";
+import "../../../assets/styles/indexmax/IndexMaxS.css";
 
 const NavigationMax = () => {
   const [navbarClass, setNavbarClass] = useState('transparent');
