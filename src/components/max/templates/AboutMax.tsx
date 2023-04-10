@@ -77,7 +77,7 @@ const AboutMax = () => {
             <div className="d-inline-flex align-items-center ml-auto">
               <span className="mr-4">Compartir: </span>
               <a rel="preload"
-                href="/home"
+                href="/home" 
                 className="me-4 my-icon-share"
                 style={{
                   marginLeft: "10%",
