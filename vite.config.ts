@@ -19,7 +19,7 @@ export default defineConfig({
         index: resolve(__dirname, 'index.html'),
         main: resolve(__dirname, 'src/main.tsx'),
         App: resolve(__dirname, 'src/App.tsx'),
-        Login: resolve(__dirname, 'src/components/login.tsx'),
+        Login: resolve(__dirname, 'src/components/Login.tsx'),
         Classes: resolve(__dirname, 'src/components/classes/Classes.tsx'),
         ClassComments: resolve(__dirname, 'src/components/classes/ClassComments.tsx'),
         ClassSideNav: resolve(__dirname, 'src/components/classes/ClassSideNav.tsx'),
