@@ -10,13 +10,13 @@ import { initializeApp } from "firebase/app";
 import { getAnalytics } from "firebase/analytics";
 
 const firebaseConfig = {
-  apiKey: "AIzaSyBWKRmXmg90tCk7kuIYI4FGl-_86ensMiM",
-  authDomain: "house-code.firebaseapp.com",
-  projectId: "house-code",
-  storageBucket: "house-code.appspot.com",
-  messagingSenderId: "829337627544",
-  appId: "1:829337627544:web:54e35bc5732ed2df1159ed",
-  measurementId: "G-7P33F63ZN9"
+  apiKey: "AIzaSyC-y8LYoMEH4BMbWHWi0Drl2pNigl_L7PY",
+  authDomain: "home-of-code.firebaseapp.com",
+  projectId: "home-of-code",
+  storageBucket: "home-of-code.appspot.com",
+  messagingSenderId: "1063074137923",
+  appId: "1:1063074137923:web:11c62c7f4cbd6173acd1f6",
+  measurementId: "G-6GL4DK84FV"
 };
 
 const app = initializeApp(firebaseConfig);
