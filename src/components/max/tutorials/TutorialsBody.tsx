@@ -10,29 +10,29 @@ const Curso = [
     id: 0, title: "Aprende hoy mismo React",
     text: "El nuevo framework mas utilizado en el mundo descubre todo lo que puedes hacer! Un mundo de oportunidades 🌐",
     icon: <DiIllustrator className="my-iconT-1" />,
-    image: <img src="../src/assets/images/img_1.jpg" alt="computador 1" className="image-T" />,
-    image1: <img src="../src/assets/images/img_1_horizontal.jpg" alt="computador 1" className="image-T-1" />
+    image: <img src="../src/assets/images/img_1.webp" alt="computador 1" className="image-T" />,
+    image1: <img src="../src/assets/images/img_1_horizontal.webp" alt="computador 1" className="image-T-1" />
   },
   {
     id: 1, title: "Aprende hoy mismo Angular 💎",
     text: "Las empresas mas grandes de la industria Tech usan Angular. Para aprender hay que emprender ! Comienza hoy mismo ha cambiar el mundo 🌎",
     icon: <DiPhotoshop className="my-iconT-1" />,
-    image: <img src="../src/assets/images/img_2.jpg" alt="computador 1" className="image-T" />,
-    image1: <img src="../src/assets/images/img_2_horizontal.jpg" alt="computador 1" className="image-T-1" />
+    image: <img src="../src/assets/images/img_2.webp" alt="computador 1" className="image-T" />,
+    image1: <img src="../src/assets/images/img_2_horizontal.webp" alt="computador 1" className="image-T-1" />
   },
   {
     id: 2, title: "Aprende hoy mismo Photoshop",
     text: "Si quieres aprender a dominar el 100% del FRONT-END , utliza herramientas como Photoshop Para modificar y hacer tus propias imagenes logos, iconos, banners etc.",
     icon: <DiAngularSimple className="my-iconT-1" />,
-    image: <img src="../src/assets/images/img_3.jpg" alt="computador 1" className="image-T" />,
-    image1: <img src="../src/assets/images/img_3_horizontal.jpg" alt="computador 1" className="image-T-1" />
+    image: <img src="../src/assets/images/img_3.webp" alt="computador 1" className="image-T" />,
+    image1: <img src="../src/assets/images/img_3_horizontal.webp" alt="computador 1" className="image-T-1" />
   },
   {
     id: 3, title: "Aprende hoy mismo Illustrator",
     text: "Hecha a volvar tu imaginacion! y vectoriza crea modifica tus imagenes en diferentes formatos integralas a tus proyectos. Y RECUERDA TODO ENTRA POR LOS OJOS 👁",
     icon: <SiJavascript className="my-iconT-1" />,
-    image: <img src="../src/assets/images/img_4.jpg" alt="computador 1" className="image-T" />,
-    image1: <img src="../src/assets/images/img_4_horizontal.jpg" alt="computador 1" className="image-T-1" />
+    image: <img src="../src/assets/images/img_4.webp" alt="computador 1" className="image-T" />,
+    image1: <img src="../src/assets/images/img_4_horizontal.webp" alt="computador 1" className="image-T-1" />
   },
 ];
 

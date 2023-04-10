@@ -8,7 +8,6 @@ import {
   Row,
   Modal,
 } from "react-bootstrap";
-import ImgAngular from "../../assets/img/portfolio/AngularJS.png";
 import { useState } from "react";
 import { DiAngularSimple, DiReact,DiMysql } from "react-icons/di";
 import { SiJavascript, SiPython,SiOracle } from "react-icons/si";
