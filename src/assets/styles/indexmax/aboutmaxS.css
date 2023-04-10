@@ -40,7 +40,7 @@
 }
 .my-icon-4 {
   font-size: 50px;
-  Margin: 5px;
+  margin: 5px;
   color: rgb(255, 251, 0);
 }
 .my-icon-5 {
@@ -49,7 +49,7 @@
 }
 .my-icon-6 {
   font-size: 50px;
-  Margin: 5px;
+  margin: 5px;
   color: rgb(17, 88, 17);
 }
 .my-card-text {
@@ -59,13 +59,13 @@
 }
 .my-text {
   text-align: left;
-  margin-Left: 10%;
+  margin-left: 10%;
   color: rgb(31, 121, 255);
   font-weight: bold;
 }
 .my-textT {
   text-align: left;
-  margin-Left: 10%;
+  margin-left: 10%;
   color: #383838;
   font-size: medium;
 }
