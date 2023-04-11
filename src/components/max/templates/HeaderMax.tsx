@@ -1,19 +1,16 @@
 import "../../../assets/styles/indexmax/HeaderMaxS.css";
 import { Navbar } from "react-bootstrap";
 
-const HeaderMax = ({text}:{text:String}) => {
+const HeaderMax = ({ text }: { text: String }) => {
   return (
-    <header>
+    <div id="headermax">
       <Navbar className="Header-Navbar-1" fixed="top">
-        <div id="image">
+        <div className="image"></div>
+        <div className="my-text-T">
+          <h1 style={{ color: "#fff" }}>{text}</h1>
         </div>
-          <div className="my-text-T">
-            <h1 style={{ color: "#fff" }}>
-              {text}
-            </h1>
-          </div>
       </Navbar>
-    </header>
+    </div>
   );
 };
 

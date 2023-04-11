@@ -9,16 +9,46 @@ import {
   Modal,
 } from "react-bootstrap";
 import { useState } from "react";
-import { DiAngularSimple, DiReact,DiMysql } from "react-icons/di";
-import { SiJavascript, SiPython,SiOracle } from "react-icons/si";
+import { DiAngularSimple, DiReact, DiMysql } from "react-icons/di";
+import { SiJavascript, SiPython, SiOracle } from "react-icons/si";
 
 const cursos = [
-  { id: 0, name: "Angular",icon: <DiAngularSimple className="my-iconP-1"/>, modalShow: false },
-  { id: 1, name: "React",icon: <DiReact className="my-iconP-2"/> , modalShow: false },
-  { id: 2, name: "JavaScript",icon: <SiJavascript className="my-iconP-3"/>, modalShow: false },
-  { id: 3, name: "Python",icon: <SiPython className="my-iconP-4"/>, modalShow: false },
-  { id: 4, name: "SQL",icon: <DiMysql className="my-iconP-5"/>, modalShow: false },
-  { id: 5, name: "Oracle",icon: <SiOracle className="my-iconP-1"/>, modalShow: false },
+  {
+    id: 0,
+    name: "Angular",
+    icon: <DiAngularSimple className="my-iconP-1" />,
+    modalShow: false,
+  },
+  {
+    id: 1,
+    name: "React",
+    icon: <DiReact className="my-iconP-2" />,
+    modalShow: false,
+  },
+  {
+    id: 2,
+    name: "JavaScript",
+    icon: <SiJavascript className="my-iconP-3" />,
+    modalShow: false,
+  },
+  {
+    id: 3,
+    name: "Python",
+    icon: <SiPython className="my-iconP-4" />,
+    modalShow: false,
+  },
+  {
+    id: 4,
+    name: "SQL",
+    icon: <DiMysql className="my-iconP-5" />,
+    modalShow: false,
+  },
+  {
+    id: 5,
+    name: "Oracle",
+    icon: <SiOracle className="my-iconP-1" />,
+    modalShow: false,
+  },
 ];
 
 interface courseInterface {
@@ -44,10 +74,15 @@ const HomePortfolio = () => {
           <Modal.Title>{course.name}</Modal.Title>
         </Modal.Header>
         <Modal.Body>
-        {course.icon}
+          <Card.Title>
+            {course.icon}
+          </Card.Title>
         </Modal.Body>
         <Modal.Footer>
-          <Button variant="secondary" onClick={() => handleSetModal(course.id, false)}>
+          <Button
+            variant="secondary"
+            onClick={() => handleSetModal(course.id, false)}
+          >
             Cerrar
           </Button>
         </Modal.Footer>
@@ -105,7 +140,9 @@ const HomePortfolio = () => {
             >
               <Card.Header>{curso.name}</Card.Header>
               <Card.Body>
-              {curso.icon}
+                <Card.Title>
+                  {curso.icon}
+                </Card.Title>
               </Card.Body>
             </Card>
             <ModalComponent course={curso} />

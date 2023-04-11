@@ -1,4 +1,4 @@
-import { Button, Container, Form } from "react-bootstrap";
+import { Button, Container, Form, InputGroup } from "react-bootstrap";
 import { FaCodepen, FaFacebookF, FaGithub, FaTwitter } from "react-icons/fa";
 import "../../assets/styles/home/HomeCtStyle.css";
 
@@ -13,11 +13,14 @@ const HomeContact = () => {
         <Container>
           <Form action="https://wa.me/573165363587" method="get">
             <Form.Group className="mb-3" controlId="form">
-              <Form.Control
-                className="form-control"
-                type="text"
-                placeholder="Dime como quieres tu proxima Pagina web o como te puedo ayudar!"
-              />
+              <InputGroup>
+                <Form.Control
+                  as="textarea"
+                  className="form-control"
+                  type="text"
+                  placeholder="Dime como quieres tu proxima Pagina web o como te puedo ayudar!"
+                />
+              </InputGroup>
             </Form.Group>
             <Button className="btn btn-default btn-lg" type="submit">
               <div>💻 Enviar!</div>
