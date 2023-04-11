@@ -55,7 +55,7 @@ const TestHeader = () => {
               <Row className="g-2">
                 <Col md>
                   <img
-                    src="../src/assets/images/img_1.webp"
+                    src="/images/img_1.webp"
                     style={{
                       width: "250px",
                       height: "auto",
@@ -80,7 +80,7 @@ const TestHeader = () => {
                 <Row>
                   <Col md>
                     <img
-                      src="../src/assets/images/img_2.webp"
+                      src="/images/img_2.webp"
                       style={{
                         width: "80px",
                         height: "auto",
@@ -96,7 +96,7 @@ const TestHeader = () => {
                 <Row>
                   <Col md>
                     <img
-                      src="../src/assets/images/img_3.webp"
+                      src="/images/img_3.webp"
                       style={{
                         width: "80px",
                         height: "auto",
@@ -112,7 +112,7 @@ const TestHeader = () => {
                 <Row>
                   <Col md>
                     <img
-                      src="../src/assets/images/img_4.webp"
+                      src="/images/img_4.webp"
                       style={{
                         width: "80px",
                         height: "auto",

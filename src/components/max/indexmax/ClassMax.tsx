@@ -9,7 +9,7 @@ const ClassMax = () => {
       <div className="my-text-block">
         <Row className="g-2">
           <Col md id="image-col">
-             <img className="imageP2" src="../src/assets/images/img_1.webp" loading="lazy" alt="imagen"/>
+             <img className="imageP2" src="/images/img_1.webp" loading="lazy" alt="imagen"/>
           </Col>
           <Col md id="my-text">
             <a href="/home" ><h6 className="T1c">CLASE</h6></a>
@@ -28,7 +28,7 @@ const ClassMax = () => {
         <Row className="g-2" >
           <Row>
             <Col id="image-col">
-              <img className="imageP1" src="../src/assets/images/img_2.webp" loading="lazy" alt="imagen" />
+              <img className="imageP1" src="/images/img_2.webp" loading="lazy" alt="imagen" />
             </Col>
             <Col id="my-text" >
               <a href="/home" ><h6 className="T2T">TUTORIA DE JAVASCRIPT</h6></a>
@@ -37,7 +37,7 @@ const ClassMax = () => {
           </Row>
           <Row>
             <Col  id="image-col">
-              <img className="imageP1" src="../src/assets/images/img_3.webp" loading="lazy"alt="imagen" />
+              <img className="imageP1" src="/images/img_3.webp" loading="lazy"alt="imagen" />
             </Col>
             <Col id="my-text">
               <a href="/home" ><h6 className="T2T">TUTORIA DE VUE</h6></a>
@@ -46,7 +46,7 @@ const ClassMax = () => {
           </Row>
           <Row>
             <Col  id="image-col">
-              <img className="imageP1" src="../src/assets/images/img_4.webp" loading="lazy" alt="imagen"/>
+              <img className="imageP1" src="/images/img_4.webp" loading="lazy" alt="imagen"/>
             </Col>
             <Col  id="my-text">
               <a href="/home" ><h6 className="T2T">ILUSTRATOR</h6></a>

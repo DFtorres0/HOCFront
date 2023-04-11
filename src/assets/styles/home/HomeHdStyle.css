@@ -8,7 +8,7 @@ body {
 }
 /* Navigation */
 #header .intro {
-  background-image: url(../../img/head.webp);
+  background-image: url(/img/head.webp);
   height: auto;
   width: auto;
   background-position: center;

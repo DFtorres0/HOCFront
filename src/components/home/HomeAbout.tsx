@@ -1,5 +1,5 @@
 import "../../assets/styles/home/HomeAbStyle.css";
-import image from "../../assets/img/bg-header3.webp";
+import image from "/img/bg-header3.webp";
 import { ListGroup } from "react-bootstrap";
 
 const HomeAbout = () => {

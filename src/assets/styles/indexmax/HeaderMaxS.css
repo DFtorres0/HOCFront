@@ -13,7 +13,7 @@
     font-display: swap
   }
 #image{ 
-    background-image:linear-gradient(rgba(0,0,0,0.4),rgba(0,0,0,0.3)), url(../src/assets/images/bg_3.webp);
+    background-image:linear-gradient(rgba(0,0,0,0.4),rgba(0,0,0,0.3)), url(/images/bg_3.webp);
     background-position: center ;
     width: 100%;
     position: relative;
