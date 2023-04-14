@@ -5,7 +5,7 @@ import NavigationMax from "../templates/NavigationMax";
 function Testimonials() {
 
   return (
-    <div id="Max">
+    <div id="Max" data-testid="testimonials" >
       <NavigationMax/>
       <HeaderMax text={"💬Foros"}/>
       <FooterMax/>

@@ -8,7 +8,7 @@ import HomeFooter from "./HomeFooter";
 function Home() {
 
   return (
-    <div>
+    <div data-testid="home" >
       <HomeNavigation/>
       <HomeHeader/>
       <HomeAbout/>

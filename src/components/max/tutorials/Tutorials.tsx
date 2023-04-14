@@ -9,7 +9,7 @@ import TutorialsBody from "./TutorialsBody";
 function Tutorials() {
 
   return (
-    <div id="Max" >
+    <div id="Max" data-testid="tutorials" >
       <NavigationMax/>
       <HeaderMax text={"Tus Tutorias, Clases y Practicas📚en un solo lugar:"}/>
       <AboutMax/>

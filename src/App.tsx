@@ -24,7 +24,7 @@ const analytics = getAnalytics(app);
 
 function App() {
   return (
-    <Router>
+    <Router data-testid="router">
       <Routes>
         <Route path="/" element={<Login />} ></Route>
         <Route path="/home" element={<Home />} ></Route>

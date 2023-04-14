@@ -4,11 +4,11 @@ import MainContent from "./mainContent/MainContent";
 
 function Classes() {
   return (
-    <>
+    <div data-testid="classes" >
       <NavegationMax />
       <SideNav />
       <MainContent/>
-    </>
+    </div>
   );
 }
 
