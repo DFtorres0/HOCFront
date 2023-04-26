@@ -5,33 +5,33 @@
   align-content: center;
   justify-content: center;
   justify-items: center;
-  /* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#54d0dd+0,54d0dd+0,54d0dd+0,7fdce6+0,54d0dd+100 */
-  background: rgb(0, 0, 0); /* Old browsers */
+  /*Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#54d0dd+0,54d0dd+0,54d0dd+0,7fdce6+0,54d0dd+100 */
+  /*background: rgb(0, 0, 0); /* Old browsers */
   background: -moz-linear-gradient(
     top,
     rgba(0, 0, 0, 0) 0%,
     rgba(0, 0, 0, 0) 0%,
     rgba(0, 0, 0, 0) 0%,
     rgba(0, 0, 0, 0) 0%,
-    rgba(84, 208, 221, 1) 100%
+    rgba(43, 54, 65, 1) 100%
   ); /* FF3.6-15 */
   background: -webkit-linear-gradient(
-    top,60px
-    rgba(84, 208, 221, 1) 0%,
-    rgba(84, 208, 221, 1) 0%,
-    rgba(84, 208, 221, 1) 0%,
-    rgba(127, 220, 230, 1) 0%,
-    rgba(84, 208, 221, 1) 100%
+    to top,60px
+    rgba(27, 55, 87, 1) 0%,
+    rgba(27, 55, 87, 1) 0%,
+    rgba(27, 55, 87, 1) 0%,
+    rgba(27, 55, 87, 1) 0%,
+    rgba(27, 55, 87, 1) 100%
   ); /* Chrome10-25,Safari5.1-6 */
   background: linear-gradient(
     to bottom,
-    rgba(0, 0, 0, 0) 0%,
-    rgba(0, 0, 0, 0) 0%,
-    rgba(0, 0, 0, 0) 0%,
-    rgba(0, 0, 0, 0) 0%,
-    rgba(35, 225, 0, 1) 100%
+    rgba(43, 54, 65, 1) 0%,
+    rgba(43, 54, 65, 1) 0%,
+    rgba(43, 54, 65, 1) 0%,
+    rgba(43, 54, 65, 1) 0%,
+    rgba(56, 112, 168, 1) 70%
   ); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
-  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#54d0dd', endColorstr='#54d0dd', GradientType=0 ); /* IE6-9 */
+  /*filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#54d0dd', endColorstr='#54d0dd', GradientType=0 ); /* IE6-9 */
 }
 
 #contact .btn-default {
@@ -60,7 +60,7 @@
 }
 
 #contact h2 {
-  color: #383838;
+  color: #ffffff;
 }
 
 #contact .form-control {
@@ -71,7 +71,7 @@
   padding-bottom: 30px;
   border: 0;
   font-size: 14px;
-  color: #222;
+  color: #1f1e1e;
   background-color: rgba(255, 255, 255, 0.8);
   background-image: none;
   border: 1px solid transparent;
@@ -97,10 +97,11 @@
   transition: all 0.3s;
 }
 #contact a {
-  color: #343b42;
+  color: #ffffff;
 }
+
 #contact a:hover, a:focus, a:active {
-  color: #e3e3e4;
+  color: #1b3757;
   transition: all 0.3s;
 }
 #contact .btn:active,
@@ -126,6 +127,9 @@
 .btn-default.focus,
 .btn-default:active,
 .btn-default.active {
-  color: #26f900;
+  color: rgba(56, 112, 168,1);
   background-color: #414a52;
+}
+#contact .btn-default{
+  border-radius: 10px;
 }
