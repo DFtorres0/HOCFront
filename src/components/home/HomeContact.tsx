@@ -13,7 +13,7 @@ const HomeContact = () => {
         <Container>
           <Form action="https://wa.me/573165363587" method="get">
             <Form.Group className="mb-3" controlId="form">
-              <InputGroup>
+              <InputGroup >
                 <Form.Control
                   as="textarea"
                   className="form-control"
