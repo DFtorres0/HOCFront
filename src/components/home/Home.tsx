@@ -6,15 +6,14 @@ import HomeContact from "./HomeContact";
 import HomeFooter from "./HomeFooter";
 
 function Home() {
-
   return (
-    <div data-testid="home" >
-      <HomeNavigation/>
-      <HomeHeader/>
-      <HomeAbout/>
-      <HomePortfolio/>
-      <HomeContact/>
-      <HomeFooter/>
+    <div data-testid="home">
+      <HomeNavigation />
+      <HomeHeader />
+      <HomeAbout />
+      <HomePortfolio />
+      <HomeContact />
+      <HomeFooter />
     </div>
   );
 }
