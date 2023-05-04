@@ -1,7 +1,7 @@
 #portfolio {
   padding: 60px 0;
   /* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#54d0dd+0,54d0dd+0,54d0dd+0,71777d+0,414a52+100 */
-  background: rgb(43, 54, 65); /* Old browsers */
+  background: #252525; /* Old browsers */
  /* background: -moz-linear-gradient(
     top,
     rgba(84, 208, 221, 1) 0%,
@@ -30,14 +30,15 @@
 }
 
 #portfolio h2 {
+  margin-top: 15px;
   color: #ffff;
 }
 
 #portfolio hr {
   align-self: center;
   width: 70px;
-  margin-top: 40px;
-  margin-bottom: 40px;
+  margin-top: 20px;
+  margin-bottom: 20px;
   position: relative;
   left: 50%;
   margin-left: -35px;
@@ -46,7 +47,7 @@
 }
 
 #portfolio .categories {
-  padding-bottom: 30px;
+  padding-bottom: 20px;
   text-align: center;
 }
 
@@ -60,25 +61,51 @@
   width: 20rem;
   padding: 0px;
   cursor: pointer;
-  background: #4ea153;
+  background: #f6f9f9;
 }
 
-#portfolio .type Button {
+/*#portfolio .type Button {
   -webkit-transition-duration: 0.5s;
   -moz-transition-duration: 0.5s;
   transition-duration: 0.5s;
-  background: #999999;
+  background: #4c89a5;
+}*/
+
+#portfolio .type button {
+    margin: 15px;
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    /*background-color: #88b999;*/
+    padding: 0px;
+    box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16), 0 3px 6px rgba(0, 0, 0, 0.23);
+    position: relative;
+}
+
+
+#btn1 {
+  background-color: #88b999;
+}
+#btn2 {
+  background-color: #d59acb;
+}
+#btn3{
+  background-color: #8897b9;
+}
+#btn4{
+  background-color: #af88b9;
 }
 
 #portfolio i.fa {
   font-size: 20px;
   padding: 5px;
-  color: #000000;
+  color: #010101;
 }
 
 #Card.Headerr{
 background:#f39e9e;
 }
+
 .my-iconP-1 {
   font-size: 70px;
   color: rgb(211, 3, 3);
