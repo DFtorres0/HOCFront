@@ -1,8 +1,17 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<coverage generated="1681468446146" clover="3.2.0">
-  <project timestamp="1681468446146" name="All files">
-    <metrics statements="176" coveredstatements="150" conditionals="17" coveredconditionals="0" methods="32" coveredmethods="24" elements="225" coveredelements="174" complexity="0" loc="176" ncloc="176" packages="10" files="28" classes="28"/>
-    <package name="assets.styles">
+<coverage generated="1683309476215" clover="3.2.0">
+  <project timestamp="1683309476215" name="All files">
+    <metrics statements="255" coveredstatements="229" conditionals="17" coveredconditionals="0" methods="42" coveredmethods="34" elements="314" coveredelements="263" complexity="0" loc="255" ncloc="255" packages="15" files="42" classes="42"/>
+    <package name="src">
+      <metrics statements="3" coveredstatements="3" conditionals="0" coveredconditionals="0" methods="0" coveredmethods="0"/>
+      <file name="App.css" path="C:\Users\PERSONAL\source\HouseOfCode\HomeOfCodeFront\src\App.css">
+        <metrics statements="3" coveredstatements="3" conditionals="0" coveredconditionals="0" methods="0" coveredmethods="0"/>
+        <line num="1" count="1" type="stmt"/>
+        <line num="3" count="1" type="stmt"/>
+        <line num="4" count="1" type="stmt"/>
+      </file>
+    </package>
+    <package name="src.assets.styles">
       <metrics statements="3" coveredstatements="3" conditionals="0" coveredconditionals="0" methods="0" coveredmethods="0"/>
       <file name="loginForm.css" path="C:\Users\PERSONAL\source\HouseOfCode\HomeOfCodeFront\src\assets\styles\loginForm.css">
         <metrics statements="3" coveredstatements="3" conditionals="0" coveredconditionals="0" methods="0" coveredmethods="0"/>
@@ -11,7 +20,7 @@
         <line num="4" count="1" type="stmt"/>
       </file>
     </package>
-    <package name="assets.styles.classes">
+    <package name="src.assets.styles.classes">
       <metrics statements="3" coveredstatements="3" conditionals="0" coveredconditionals="0" methods="0" coveredmethods="0"/>
       <file name="ClassesSNavStyle.css" path="C:\Users\PERSONAL\source\HouseOfCode\HomeOfCodeFront\src\assets\styles\classes\ClassesSNavStyle.css">
         <metrics statements="3" coveredstatements="3" conditionals="0" coveredconditionals="0" methods="0" coveredmethods="0"/>
@@ -20,7 +29,7 @@
         <line num="4" count="1" type="stmt"/>
       </file>
     </package>
-    <package name="assets.styles.home">
+    <package name="src.assets.styles.home">
       <metrics statements="18" coveredstatements="18" conditionals="0" coveredconditionals="0" methods="0" coveredmethods="0"/>
       <file name="HomeAbStyle.css" path="C:\Users\PERSONAL\source\HouseOfCode\HomeOfCodeFront\src\assets\styles\home\HomeAbStyle.css">
         <metrics statements="3" coveredstatements="3" conditionals="0" coveredconditionals="0" methods="0" coveredmethods="0"/>
@@ -59,8 +68,32 @@
         <line num="4" count="1" type="stmt"/>
       </file>
     </package>
-    <package name="assets.styles.indexmax">
-      <metrics statements="3" coveredstatements="3" conditionals="0" coveredconditionals="0" methods="0" coveredmethods="0"/>
+    <package name="src.assets.styles.indexmax">
+      <metrics statements="15" coveredstatements="15" conditionals="0" coveredconditionals="0" methods="0" coveredmethods="0"/>
+      <file name="AboutMaxS.css" path="C:\Users\PERSONAL\source\HouseOfCode\HomeOfCodeFront\src\assets\styles\indexmax\AboutMaxS.css">
+        <metrics statements="3" coveredstatements="3" conditionals="0" coveredconditionals="0" methods="0" coveredmethods="0"/>
+        <line num="1" count="1" type="stmt"/>
+        <line num="3" count="1" type="stmt"/>
+        <line num="4" count="1" type="stmt"/>
+      </file>
+      <file name="ClassMaxS.css" path="C:\Users\PERSONAL\source\HouseOfCode\HomeOfCodeFront\src\assets\styles\indexmax\ClassMaxS.css">
+        <metrics statements="3" coveredstatements="3" conditionals="0" coveredconditionals="0" methods="0" coveredmethods="0"/>
+        <line num="1" count="1" type="stmt"/>
+        <line num="3" count="1" type="stmt"/>
+        <line num="4" count="1" type="stmt"/>
+      </file>
+      <file name="FooterMaxS.css" path="C:\Users\PERSONAL\source\HouseOfCode\HomeOfCodeFront\src\assets\styles\indexmax\FooterMaxS.css">
+        <metrics statements="3" coveredstatements="3" conditionals="0" coveredconditionals="0" methods="0" coveredmethods="0"/>
+        <line num="1" count="1" type="stmt"/>
+        <line num="3" count="1" type="stmt"/>
+        <line num="4" count="1" type="stmt"/>
+      </file>
+      <file name="HeaderMaxS.css" path="C:\Users\PERSONAL\source\HouseOfCode\HomeOfCodeFront\src\assets\styles\indexmax\HeaderMaxS.css">
+        <metrics statements="3" coveredstatements="3" conditionals="0" coveredconditionals="0" methods="0" coveredmethods="0"/>
+        <line num="1" count="1" type="stmt"/>
+        <line num="3" count="1" type="stmt"/>
+        <line num="4" count="1" type="stmt"/>
+      </file>
       <file name="IndexMaxS.css" path="C:\Users\PERSONAL\source\HouseOfCode\HomeOfCodeFront\src\assets\styles\indexmax\IndexMaxS.css">
         <metrics statements="3" coveredstatements="3" conditionals="0" coveredconditionals="0" methods="0" coveredmethods="0"/>
         <line num="1" count="1" type="stmt"/>
@@ -68,7 +101,16 @@
         <line num="4" count="1" type="stmt"/>
       </file>
     </package>
-    <package name="components">
+    <package name="src.assets.styles.tutorials">
+      <metrics statements="3" coveredstatements="3" conditionals="0" coveredconditionals="0" methods="0" coveredmethods="0"/>
+      <file name="TutorialsBodyS.css" path="C:\Users\PERSONAL\source\HouseOfCode\HomeOfCodeFront\src\assets\styles\tutorials\TutorialsBodyS.css">
+        <metrics statements="3" coveredstatements="3" conditionals="0" coveredconditionals="0" methods="0" coveredmethods="0"/>
+        <line num="1" count="1" type="stmt"/>
+        <line num="3" count="1" type="stmt"/>
+        <line num="4" count="1" type="stmt"/>
+      </file>
+    </package>
+    <package name="src.components">
       <metrics statements="8" coveredstatements="8" conditionals="0" coveredconditionals="0" methods="1" coveredmethods="1"/>
       <file name="Login.tsx" path="C:\Users\PERSONAL\source\HouseOfCode\HomeOfCodeFront\src\components\Login.tsx">
         <metrics statements="8" coveredstatements="8" conditionals="0" coveredconditionals="0" methods="1" coveredmethods="1"/>
@@ -82,7 +124,7 @@
         <line num="124" count="1" type="stmt"/>
       </file>
     </package>
-    <package name="components.classes">
+    <package name="src.components.classes">
       <metrics statements="21" coveredstatements="18" conditionals="2" coveredconditionals="0" methods="6" coveredmethods="5"/>
       <file name="ClassSideNav.tsx" path="C:\Users\PERSONAL\source\HouseOfCode\HomeOfCodeFront\src\components\classes\ClassSideNav.tsx">
         <metrics statements="16" coveredstatements="13" conditionals="2" coveredconditionals="0" methods="5" coveredmethods="4"/>
@@ -112,7 +154,7 @@
         <line num="15" count="1" type="stmt"/>
       </file>
     </package>
-    <package name="components.classes.mainContent">
+    <package name="src.components.classes.mainContent">
       <metrics statements="13" coveredstatements="13" conditionals="0" coveredconditionals="0" methods="3" coveredmethods="3"/>
       <file name="MainCFooter.tsx" path="C:\Users\PERSONAL\source\HouseOfCode\HomeOfCodeFront\src\components\classes\mainContent\MainCFooter.tsx">
         <metrics statements="3" coveredstatements="3" conditionals="0" coveredconditionals="0" methods="1" coveredmethods="1"/>
@@ -137,7 +179,7 @@
         <line num="15" count="1" type="stmt"/>
       </file>
     </package>
-    <package name="components.classes.mainContent.mainCSections">
+    <package name="src.components.classes.mainContent.mainCSections">
       <metrics statements="19" coveredstatements="19" conditionals="0" coveredconditionals="0" methods="5" coveredmethods="5"/>
       <file name="MainCSCompiler.tsx" path="C:\Users\PERSONAL\source\HouseOfCode\HomeOfCodeFront\src\components\classes\mainContent\mainCSections\MainCSCompiler.tsx">
         <metrics statements="3" coveredstatements="3" conditionals="0" coveredconditionals="0" methods="1" coveredmethods="1"/>
@@ -174,7 +216,7 @@
         <line num="17" count="1" type="stmt"/>
       </file>
     </package>
-    <package name="components.home">
+    <package name="src.components.home">
       <metrics statements="71" coveredstatements="55" conditionals="8" coveredconditionals="0" methods="15" coveredmethods="9"/>
       <file name="Home.tsx" path="C:\Users\PERSONAL\source\HouseOfCode\HomeOfCodeFront\src\components\home\Home.tsx">
         <metrics statements="8" coveredstatements="8" conditionals="0" coveredconditionals="0" methods="1" coveredmethods="1"/>
@@ -184,8 +226,8 @@
         <line num="4" count="1" type="stmt"/>
         <line num="5" count="1" type="stmt"/>
         <line num="6" count="1" type="stmt"/>
-        <line num="10" count="1" type="stmt"/>
-        <line num="22" count="1" type="stmt"/>
+        <line num="9" count="2" type="stmt"/>
+        <line num="21" count="1" type="stmt"/>
       </file>
       <file name="HomeAbout.tsx" path="C:\Users\PERSONAL\source\HouseOfCode\HomeOfCodeFront\src\components\home\HomeAbout.tsx">
         <metrics statements="6" coveredstatements="6" conditionals="0" coveredconditionals="0" methods="1" coveredmethods="1"/>
@@ -193,7 +235,7 @@
         <line num="2" count="1" type="stmt"/>
         <line num="3" count="1" type="stmt"/>
         <line num="5" count="1" type="stmt"/>
-        <line num="6" count="1" type="stmt"/>
+        <line num="6" count="2" type="stmt"/>
         <line num="52" count="1" type="stmt"/>
       </file>
       <file name="HomeContact.tsx" path="C:\Users\PERSONAL\source\HouseOfCode\HomeOfCodeFront\src\components\home\HomeContact.tsx">
@@ -202,14 +244,14 @@
         <line num="2" count="1" type="stmt"/>
         <line num="3" count="1" type="stmt"/>
         <line num="5" count="1" type="stmt"/>
-        <line num="6" count="1" type="stmt"/>
+        <line num="6" count="2" type="stmt"/>
         <line num="60" count="1" type="stmt"/>
       </file>
       <file name="HomeFooter.tsx" path="C:\Users\PERSONAL\source\HouseOfCode\HomeOfCodeFront\src\components\home\HomeFooter.tsx">
         <metrics statements="4" coveredstatements="4" conditionals="0" coveredconditionals="0" methods="1" coveredmethods="1"/>
         <line num="1" count="1" type="stmt"/>
         <line num="3" count="1" type="stmt"/>
-        <line num="4" count="1" type="stmt"/>
+        <line num="4" count="2" type="stmt"/>
         <line num="28" count="1" type="stmt"/>
       </file>
       <file name="HomeHeader.tsx" path="C:\Users\PERSONAL\source\HouseOfCode\HomeOfCodeFront\src\components\home\HomeHeader.tsx">
@@ -218,7 +260,7 @@
         <line num="2" count="1" type="stmt"/>
         <line num="3" count="1" type="stmt"/>
         <line num="5" count="1" type="stmt"/>
-        <line num="6" count="1" type="stmt"/>
+        <line num="6" count="2" type="stmt"/>
         <line num="21" count="1" type="stmt"/>
       </file>
       <file name="HomeNavigation.tsx" path="C:\Users\PERSONAL\source\HouseOfCode\HomeOfCodeFront\src\components\home\HomeNavigation.tsx">
@@ -228,9 +270,9 @@
         <line num="3" count="1" type="stmt"/>
         <line num="4" count="1" type="stmt"/>
         <line num="6" count="1" type="stmt"/>
-        <line num="7" count="1" type="stmt"/>
-        <line num="8" count="1" type="stmt"/>
-        <line num="10" count="1" type="stmt"/>
+        <line num="7" count="2" type="stmt"/>
+        <line num="8" count="2" type="stmt"/>
+        <line num="10" count="2" type="stmt"/>
         <line num="11" count="0" type="stmt"/>
         <line num="12" count="0" type="cond" truecount="0" falsecount="4"/>
         <line num="13" count="0" type="stmt"/>
@@ -238,8 +280,8 @@
         <line num="15" count="0" type="cond" truecount="0" falsecount="3"/>
         <line num="16" count="0" type="stmt"/>
         <line num="17" count="0" type="stmt"/>
-        <line num="21" count="1" type="stmt"/>
-        <line num="23" count="1" type="stmt"/>
+        <line num="21" count="2" type="stmt"/>
+        <line num="23" count="2" type="stmt"/>
         <line num="67" count="1" type="stmt"/>
       </file>
       <file name="HomePortfolio.tsx" path="C:\Users\PERSONAL\source\HouseOfCode\HomeOfCodeFront\src\components\home\HomePortfolio.tsx">
@@ -251,35 +293,89 @@
         <line num="13" count="1" type="stmt"/>
         <line num="15" count="1" type="stmt"/>
         <line num="61" count="1" type="stmt"/>
-        <line num="62" count="1" type="stmt"/>
-        <line num="64" count="1" type="stmt"/>
-        <line num="65" count="6" type="stmt"/>
+        <line num="62" count="2" type="stmt"/>
+        <line num="64" count="2" type="stmt"/>
+        <line num="65" count="12" type="stmt"/>
         <line num="68" count="0" type="stmt"/>
         <line num="84" count="0" type="stmt"/>
-        <line num="93" count="1" type="stmt"/>
+        <line num="93" count="2" type="stmt"/>
         <line num="94" count="0" type="stmt"/>
         <line num="95" count="0" type="cond" truecount="0" falsecount="1"/>
         <line num="96" count="0" type="stmt"/>
         <line num="103" count="0" type="stmt"/>
         <line num="105" count="0" type="stmt"/>
         <line num="106" count="0" type="stmt"/>
-        <line num="109" count="1" type="stmt"/>
-        <line num="135" count="6" type="stmt"/>
+        <line num="109" count="2" type="stmt"/>
+        <line num="135" count="12" type="stmt"/>
         <line num="139" count="0" type="stmt"/>
         <line num="156" count="1" type="stmt"/>
       </file>
     </package>
-    <package name="components.max.templates">
-      <metrics statements="17" coveredstatements="10" conditionals="7" coveredconditionals="0" methods="2" coveredmethods="1"/>
+    <package name="src.components.max.indexmax">
+      <metrics statements="14" coveredstatements="14" conditionals="0" coveredconditionals="0" methods="2" coveredmethods="2"/>
+      <file name="ClassMax.tsx" path="C:\Users\PERSONAL\source\HouseOfCode\HomeOfCodeFront\src\components\max\indexmax\ClassMax.tsx">
+        <metrics statements="7" coveredstatements="7" conditionals="0" coveredconditionals="0" methods="1" coveredmethods="1"/>
+        <line num="1" count="1" type="stmt"/>
+        <line num="2" count="1" type="stmt"/>
+        <line num="3" count="1" type="stmt"/>
+        <line num="4" count="1" type="stmt"/>
+        <line num="6" count="1" type="stmt"/>
+        <line num="7" count="1" type="stmt"/>
+        <line num="64" count="1" type="stmt"/>
+      </file>
+      <file name="IndexMax.tsx" path="C:\Users\PERSONAL\source\HouseOfCode\HomeOfCodeFront\src\components\max\indexmax\IndexMax.tsx">
+        <metrics statements="7" coveredstatements="7" conditionals="0" coveredconditionals="0" methods="1" coveredmethods="1"/>
+        <line num="1" count="1" type="stmt"/>
+        <line num="2" count="1" type="stmt"/>
+        <line num="3" count="1" type="stmt"/>
+        <line num="4" count="1" type="stmt"/>
+        <line num="5" count="1" type="stmt"/>
+        <line num="9" count="1" type="stmt"/>
+        <line num="20" count="1" type="stmt"/>
+      </file>
+    </package>
+    <package name="src.components.max.templates">
+      <metrics statements="39" coveredstatements="32" conditionals="7" coveredconditionals="0" methods="6" coveredmethods="5"/>
+      <file name="AboutMax.tsx" path="C:\Users\PERSONAL\source\HouseOfCode\HomeOfCodeFront\src\components\max\templates\AboutMax.tsx">
+        <metrics statements="11" coveredstatements="11" conditionals="0" coveredconditionals="0" methods="2" coveredmethods="2"/>
+        <line num="1" count="1" type="stmt"/>
+        <line num="2" count="1" type="stmt"/>
+        <line num="3" count="1" type="stmt"/>
+        <line num="4" count="1" type="stmt"/>
+        <line num="5" count="1" type="stmt"/>
+        <line num="7" count="1" type="stmt"/>
+        <line num="22" count="1" type="stmt"/>
+        <line num="24" count="2" type="stmt"/>
+        <line num="25" count="2" type="stmt"/>
+        <line num="38" count="12" type="stmt"/>
+        <line num="101" count="1" type="stmt"/>
+      </file>
+      <file name="FooterMax.tsx" path="C:\Users\PERSONAL\source\HouseOfCode\HomeOfCodeFront\src\components\max\templates\FooterMax.tsx">
+        <metrics statements="6" coveredstatements="6" conditionals="0" coveredconditionals="0" methods="1" coveredmethods="1"/>
+        <line num="1" count="1" type="stmt"/>
+        <line num="2" count="1" type="stmt"/>
+        <line num="3" count="1" type="stmt"/>
+        <line num="5" count="1" type="stmt"/>
+        <line num="6" count="3" type="stmt"/>
+        <line num="72" count="1" type="stmt"/>
+      </file>
+      <file name="HeaderMax.tsx" path="C:\Users\PERSONAL\source\HouseOfCode\HomeOfCodeFront\src\components\max\templates\HeaderMax.tsx">
+        <metrics statements="5" coveredstatements="5" conditionals="0" coveredconditionals="0" methods="1" coveredmethods="1"/>
+        <line num="1" count="1" type="stmt"/>
+        <line num="2" count="1" type="stmt"/>
+        <line num="4" count="1" type="stmt"/>
+        <line num="5" count="3" type="stmt"/>
+        <line num="17" count="1" type="stmt"/>
+      </file>
       <file name="NavigationMax.tsx" path="C:\Users\PERSONAL\source\HouseOfCode\HomeOfCodeFront\src\components\max\templates\NavigationMax.tsx">
         <metrics statements="17" coveredstatements="10" conditionals="7" coveredconditionals="0" methods="2" coveredmethods="1"/>
         <line num="1" count="1" type="stmt"/>
         <line num="2" count="1" type="stmt"/>
         <line num="3" count="1" type="stmt"/>
         <line num="5" count="1" type="stmt"/>
-        <line num="6" count="1" type="stmt"/>
-        <line num="7" count="1" type="stmt"/>
-        <line num="9" count="1" type="stmt"/>
+        <line num="6" count="4" type="stmt"/>
+        <line num="7" count="4" type="stmt"/>
+        <line num="9" count="4" type="stmt"/>
         <line num="10" count="0" type="stmt"/>
         <line num="11" count="0" type="cond" truecount="0" falsecount="4"/>
         <line num="12" count="0" type="stmt"/>
@@ -287,9 +383,49 @@
         <line num="14" count="0" type="cond" truecount="0" falsecount="3"/>
         <line num="15" count="0" type="stmt"/>
         <line num="16" count="0" type="stmt"/>
-        <line num="20" count="1" type="stmt"/>
-        <line num="21" count="1" type="stmt"/>
+        <line num="20" count="4" type="stmt"/>
+        <line num="21" count="4" type="stmt"/>
         <line num="56" count="1" type="stmt"/>
+      </file>
+    </package>
+    <package name="src.components.max.testimonials">
+      <metrics statements="5" coveredstatements="5" conditionals="0" coveredconditionals="0" methods="1" coveredmethods="1"/>
+      <file name="Testimonials.tsx" path="C:\Users\PERSONAL\source\HouseOfCode\HomeOfCodeFront\src\components\max\testimonials\Testimonials.tsx">
+        <metrics statements="5" coveredstatements="5" conditionals="0" coveredconditionals="0" methods="1" coveredmethods="1"/>
+        <line num="1" count="1" type="stmt"/>
+        <line num="2" count="1" type="stmt"/>
+        <line num="3" count="1" type="stmt"/>
+        <line num="7" count="1" type="stmt"/>
+        <line num="16" count="1" type="stmt"/>
+      </file>
+    </package>
+    <package name="src.components.max.tutorials">
+      <metrics statements="20" coveredstatements="20" conditionals="0" coveredconditionals="0" methods="3" coveredmethods="3"/>
+      <file name="Tutorials.tsx" path="C:\Users\PERSONAL\source\HouseOfCode\HomeOfCodeFront\src\components\max\tutorials\Tutorials.tsx">
+        <metrics statements="8" coveredstatements="8" conditionals="0" coveredconditionals="0" methods="1" coveredmethods="1"/>
+        <line num="1" count="1" type="stmt"/>
+        <line num="2" count="1" type="stmt"/>
+        <line num="3" count="1" type="stmt"/>
+        <line num="4" count="1" type="stmt"/>
+        <line num="5" count="1" type="stmt"/>
+        <line num="6" count="1" type="stmt"/>
+        <line num="11" count="2" type="stmt"/>
+        <line num="22" count="1" type="stmt"/>
+      </file>
+      <file name="TutorialsBody.tsx" path="C:\Users\PERSONAL\source\HouseOfCode\HomeOfCodeFront\src\components\max\tutorials\TutorialsBody.tsx">
+        <metrics statements="12" coveredstatements="12" conditionals="0" coveredconditionals="0" methods="2" coveredmethods="2"/>
+        <line num="1" count="1" type="stmt"/>
+        <line num="2" count="1" type="stmt"/>
+        <line num="3" count="1" type="stmt"/>
+        <line num="4" count="1" type="stmt"/>
+        <line num="5" count="1" type="stmt"/>
+        <line num="6" count="1" type="stmt"/>
+        <line num="8" count="1" type="stmt"/>
+        <line num="48" count="1" type="stmt"/>
+        <line num="49" count="2" type="stmt"/>
+        <line num="50" count="1" type="stmt"/>
+        <line num="63" count="4" type="stmt"/>
+        <line num="97" count="1" type="stmt"/>
       </file>
     </package>
   </project>

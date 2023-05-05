@@ -532,247 +532,247 @@
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span></td><td class="text"><pre class="prettyprint lang-js">#snav {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-    font-family: 'Poppins', sans-serif;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
 }
 &nbsp;
 #snav {
-   
-    --body-color: #233950;
-    --sidebar-color: #2b3641;
-    --primary-color: #3870a8;
-    --primary-color-light: #3a3b3c;
-    --toggle-color: #fff;
-    --text-color: #ccc;
-    --tran-03: all 0.2s ease;
-    --tran-03: all 0.3s ease;
-    --tran-04: all 0.4s ease;
-    --tran-05: all 0.5s ease;
+  --body-color: #233950;
+  --sidebar-color: #2b3641;
+  --primary-color: #3870a8;
+  --primary-color-light: #3a3b3c;
+  --toggle-color: #fff;
+  --text-color: #ccc;
+  --tran-03: all 0.2s ease;
+  --tran-03: all 0.3s ease;
+  --tran-04: all 0.4s ease;
+  --tran-05: all 0.5s ease;
 }
 &nbsp;
-.sidebar header .image-text{
-    display: flex;
-    align-items: center;
+.sidebar header .image-text {
+  display: flex;
+  align-items: center;
 }
 &nbsp;
-#snav body{
-    min-height: 100vh;
-    background-color: var(--body-color);
-    transition: var(--tran-05);
+#snav body {
+  min-height: 100vh;
+  background-color: var(--body-color);
+  transition: var(--tran-05);
 }
 &nbsp;
-#snav ::selection{
-    background-color: var(--primary-color);
-    color: #fff;
+#snav ::selection {
+  background-color: var(--primary-color);
+  color: #fff;
 }
 &nbsp;
 /* ===== Sidebar ===== */
-#snav .sidebar{
-    position: fixed;
-    top: 0;
-    left: 0;
-    height: 100%;
-    width: 200px;
-    padding-top: 100px;
-    background: var(--sidebar-color);
-    transition: var(--tran-05);
-    z-index: 100;  
+#snav .sidebar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 200px;
+  padding-top: 100px;
+  background: var(--sidebar-color);
+  transition: var(--tran-05);
+  z-index: 100;
 }
-#snav .sidebar.close{
-    width: 40px;
+#snav .sidebar.close {
+  width: 40px;
 }
 &nbsp;
 /* ===== Reusable code - Here ===== */
-#snav ListGroup{
-    height: 50px;
-    list-style: none;
-    display: flex;
-    align-items: center;
-    margin-top: 10px;
+#snav ListGroup {
+  height: 50px;
+  list-style: none;
+  display: flex;
+  align-items: center;
+  margin-top: 10px;
 }
 &nbsp;
 #snav .sidebar .module-number {
-    margin: 30px 0;
-    padding: 0;
-    color: var(--primary-color) !important;
+  margin: 30px 0;
+  padding: 0;
+  color: var(--primary-color) !important;
 }
 &nbsp;
 #snav .sidebar.close .module-number {
-    width: 40px;
-    margin-left: 10px;
-    color: var(--primary-color);
+  width: 40px;
+  margin-left: 10px;
+  color: var(--primary-color);
 }
 &nbsp;
-#snav .sidebar .icon{
-    min-width: 40px;
-    border-radius: 6px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    font-size: 20px;
+#snav .sidebar .icon {
+  min-width: 40px;
+  border-radius: 6px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 20px;
 }
 &nbsp;
-#snav .sidebar .classIcon{
-    margin-left: 10px;
+#snav .sidebar .classIcon {
+  margin-left: 10px;
 }
 &nbsp;
 #snav .sidebar .text,
-#snav .sidebar .icon{
-    color: var(--text-color);
-    transition: var(--tran-03);
+#snav .sidebar .icon {
+  color: var(--text-color);
+  transition: var(--tran-03);
 }
 &nbsp;
-#snav .sidebar .text{
-    font-size: 17px;
-    font-weight: 500;
-    white-space: nowrap;
-    opacity: 1;
+#snav .sidebar .text {
+  font-size: 17px;
+  font-weight: 500;
+  white-space: nowrap;
+  opacity: 1;
 }
 &nbsp;
-#snav .sidebar .nav-text{
-    font-size: 18px;
-    font-weight: 600;
-    margin-right: -50px;
+#snav .sidebar .nav-text {
+  font-size: 18px;
+  font-weight: 600;
+  margin-right: -50px;
 }
 &nbsp;
-#snav .sidebar.close .text{
-    opacity: 0;
-    display: none;
+#snav .sidebar.close .text {
+  opacity: 0;
+  display: none;
 }
 &nbsp;
 #snav .sidebar.close .menu {
-    width: 40px;
+  width: 40px;
 }
 /* =========================== */
 &nbsp;
-#snav .sidebar .header{
-    position: relative;
-    list-style: none;
-    background-color: transparent;
-    align-items: center;
-    border-radius: 6px;
-    text-decoration: none;
-    transition: var(--tran-03);
-    padding: 0;
+#snav .sidebar .header {
+  position: relative;
+  list-style: none;
+  background-color: transparent;
+  align-items: center;
+  border-radius: 6px;
+  text-decoration: none;
+  transition: var(--tran-03);
+  padding: 0;
 }
 &nbsp;
-#snav .sidebar .header .toggle{
-    position: absolute;
-    top: 50%;
-    transform: translateY(-63%) rotate(180deg);
-    height: 40px;
-    width: 20px;
-    background-color: var(--sidebar-color);
-    color: var(--primary-color);
-    border-radius: 3px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    cursor: pointer;
-    transition: var(--tran-05);
+#snav .sidebar .header .toggle {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-63%) rotate(180deg);
+  height: 40px;
+  width: 20px;
+  background-color: var(--sidebar-color);
+  color: var(--primary-color);
+  border-radius: 3px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  transition: var(--tran-05);
 }
 &nbsp;
-#snav body.dark .sidebar .header .toggle{
-    color: var(--text-color);
+#snav body.dark .sidebar .header .toggle {
+  color: var(--text-color);
 }
 &nbsp;
-#snav .sidebar.close .toggle{
-    transform: translateY(-50%) rotate(0deg);
+#snav .sidebar.close .toggle {
+  transform: translateY(-50%) rotate(0deg);
 }
 &nbsp;
-#snav .sidebar ListGroup .search-box{
-    border-radius: 6px;
-    background-color: var(--primary-color-light);
-    cursor: pointer;
-    transition: var(--tran-05);
+#snav .sidebar ListGroup .search-box {
+  border-radius: 6px;
+  background-color: var(--primary-color-light);
+  cursor: pointer;
+  transition: var(--tran-05);
 }
 &nbsp;
-#snav .sidebar ListGroup .search-box input{
-    height: 100%;
-    width: 100%;
-    outline: none;
-    border: none;
-    background-color: var(--primary-color-light);
-    color: var(--text-color);
-    border-radius: 6px;
-    font-size: 17px;
-    font-weight: 500;
-    transition: var(--tran-05);
+#snav .sidebar ListGroup .search-box input {
+  height: 100%;
+  width: 100%;
+  outline: none;
+  border: none;
+  background-color: var(--primary-color-light);
+  color: var(--text-color);
+  border-radius: 6px;
+  font-size: 17px;
+  font-weight: 500;
+  transition: var(--tran-05);
 }
 &nbsp;
 #snav .menu-links {
-    padding: 0%;
+  padding: 0%;
 }
 &nbsp;
-#snav .a{
-    list-style: none;
-    height: 100%;
-    background-color: transparent;
-    display: flex;
-    align-items: center;
-    height: 100%;
-    width: 100%;
-    border-radius: 6px;
-    text-decoration: none;
-    transition: var(--tran-03);
+#snav .a {
+  list-style: none;
+  height: 100%;
+  background-color: transparent;
+  display: flex;
+  align-items: center;
+  height: 100%;
+  width: 100%;
+  border-radius: 6px;
+  text-decoration: none;
+  transition: var(--tran-03);
 }
 &nbsp;
-#snav .sidebar ListGroup div:hover{
-    background-color: var(--primary-color);
+#snav .sidebar ListGroup div:hover {
+  background-color: var(--primary-color);
 }
 &nbsp;
 #snav .sidebar ListGroup div:hover .icon,
-#snav .sidebar ListGroup div:hover .text{
-    color: var(--sidebar-color);
+#snav .sidebar ListGroup div:hover .text {
+  color: var(--sidebar-color);
 }
 #snav body.dark .sidebar ListGroup div:hover .icon,
-#snav body.dark .sidebar ListGroup div:hover .text{
-    color: var(--text-color);
+#snav body.dark .sidebar ListGroup div:hover .text {
+  color: var(--text-color);
 }
 &nbsp;
-#snav .sidebar .menu-bar{
-    height: calc(100% - 28px);
-    display: flex;
-    flex-direction: column;
-    overflow-y: scroll;
-    padding: 0;
+#snav .sidebar .menu-bar {
+  height: calc(100% - 28px);
+  display: flex;
+  flex-direction: column;
+  overflow-y: scroll;
+  padding: 0;
 }
-#snav .menu-bar::-webkit-scrollbar{
-    display: none;
+#snav .menu-bar::-webkit-scrollbar {
+  display: none;
 }
-#snav .sidebar .menu-bar .mode{
-    border-radius: 6px;
-    background-color: var(--primary-color-light);
-    position: relative;
-    transition: var(--tran-05);
+#snav .sidebar .menu-bar .mode {
+  border-radius: 6px;
+  background-color: var(--primary-color-light);
+  position: relative;
+  transition: var(--tran-05);
 }
 &nbsp;
-#snav .home{
-    position: absolute;
-    top: 0;
-    left: 250px;
-    height: 100vh;
-    width: calc(100% - 250px);
-    background-color: var(--body-color);
-    transition: var(--tran-05);
+#snav .home {
+  position: absolute;
+  top: 0;
+  left: 250px;
+  height: 100vh;
+  width: calc(100% - 250px);
+  background-color: var(--body-color);
+  transition: var(--tran-05);
 }
-#snav .sidebar.close ~ .home{
-    left: 78px;
-    height: 100vh;
-    width: calc(100% - 78px);
+#snav .sidebar.close ~ .home {
+  left: 78px;
+  height: 100vh;
+  width: calc(100% - 78px);
 }
-#snav body.dark .home .text{
-    color: var(--text-color);
-}</pre></td></tr></table></pre>
+#snav body.dark .home .text {
+  color: var(--text-color);
+}
+&nbsp;</pre></td></tr></table></pre>
 
                 <div class='push'></div><!-- for sticky footer -->
             </div><!-- /wrapper -->
             <div class='footer quiet pad2 space-top1 center small'>
                 Code coverage generated by
                 <a href="https://istanbul.js.org/" target="_blank" rel="noopener noreferrer">istanbul</a>
-                at 2023-04-14T10:30:38.253Z
+                at 2023-05-05T17:57:55.838Z
             </div>
         <script src="../../../../prettify.js"></script>
         <script>

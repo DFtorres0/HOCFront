@@ -2,7 +2,7 @@ import "../../../assets/styles/indexmax/ClassMaxS.css";
 import "../../../assets/styles/tutorials/TutorialsBodyS.css";
 import { DiIllustrator, DiPhotoshop, DiAngularSimple } from "react-icons/di";
 import { SiJavascript } from "react-icons/si";
-import { Card, Button} from "react-bootstrap";
+import { Card, Button, Container} from "react-bootstrap";
 import { useState } from "react";
 
 const Curso = [
@@ -48,7 +48,7 @@ interface courseInterface {
 const TutorialsBody = () => {
   const [courses, setCourses] = useState<courseInterface[]>([...Curso]);
   return (
-    <footer>
+    <div>
       <div >
         <div
           style={{
@@ -59,18 +59,18 @@ const TutorialsBody = () => {
           <h2 className="my-text">Tutorias, Clases y Practicas</h2>
         </div >
       </div>
-      {courses.map((Curso) => (
-        <div className="d-flex flex-row" >
+      {courses.map((Curso, CursoIndex) => (
+        <div className="d-flex flex-row" key={CursoIndex}>
           <Card className=" d-flex flex-row cardT">
             {Curso.image}
             <Card.Body className="d-flex flex-column  " style={{ textAlign: 'left' }}>
               <Card.Title>{Curso.title}</Card.Title>
               <Card.Text>
                 {Curso.text}
-                <h6>
+                <Container className="h6">
                   {Curso.icon}
-                </h6>
-                <h6 className="T1">Avanzado - abr 28, 2021</h6>
+                </Container>
+                <Container className="T1 h6">Avanzado - abr 28, 2021</Container>
               </Card.Text>
               <Button variant="primary">QUIERO APRENDER HOY!</Button>
             </Card.Body>
@@ -90,7 +90,7 @@ const TutorialsBody = () => {
           <li className="page-item"><a className="page-link" href="#">3</a></li>
         </ul>
       </nav>
-    </footer>
+    </div>
   );
 };
 

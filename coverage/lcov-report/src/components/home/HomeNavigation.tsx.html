@@ -23,9 +23,9 @@
         <div class='clearfix'>
             
             <div class='fl pad1y space-right2'>
-                <span class="strong">33.33% </span>
+                <span class="strong">61.11% </span>
                 <span class="quiet">Statements</span>
-                <span class='fraction'>6/18</span>
+                <span class='fraction'>11/18</span>
             </div>
         
             
@@ -37,16 +37,16 @@
         
             
             <div class='fl pad1y space-right2'>
-                <span class="strong">0% </span>
+                <span class="strong">50% </span>
                 <span class="quiet">Functions</span>
-                <span class='fraction'>0/2</span>
+                <span class='fraction'>1/2</span>
             </div>
         
             
             <div class='fl pad1y space-right2'>
-                <span class="strong">33.33% </span>
+                <span class="strong">61.11% </span>
                 <span class="quiet">Lines</span>
-                <span class='fraction'>6/18</span>
+                <span class='fraction'>11/18</span>
             </div>
         
             
@@ -61,7 +61,7 @@
             </div>
         </template>
     </div>
-    <div class='status-line low'></div>
+    <div class='status-line medium'></div>
     <pre><table class="coverage">
 <tr><td class="line-count quiet"><a name='L1'></a><a href='#L1'>1</a>
 <a name='L2'></a><a href='#L2'>2</a>
@@ -136,23 +136,23 @@
 <span class="cline-any cline-yes">1x</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">2x</span>
+<span class="cline-any cline-yes">2x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">2x</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
 <span class="cline-any cline-no">&nbsp;</span>
 <span class="cline-any cline-no">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">2x</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-yes">2x</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
@@ -202,11 +202,11 @@ import { Navbar, Container, ListGroup } from "react-bootstrap";
 import { useState } from "react";
 import { BsCodeSlash } from "react-icons/bs";
 &nbsp;
-const HomeNavigation = <span class="fstat-no" title="function not covered" >() =</span>&gt; {
-  const [navbarClass, setNavbarClass] = <span class="cstat-no" title="statement not covered" >useState("transparent");</span>
-  const [height, setHeight] = <span class="cstat-no" title="statement not covered" >useState("10");</span>
+const HomeNavigation = () =&gt; {
+  const [navbarClass, setNavbarClass] = useState("transparent");
+  const [height, setHeight] = useState("10");
 &nbsp;
-  const handleScroll = <span class="cstat-no" title="statement not covered" ><span class="fstat-no" title="function not covered" >() =</span>&gt; {</span>
+  const handleScroll = <span class="fstat-no" title="function not covered" >() =</span>&gt; {
     const currentPosition = <span class="cstat-no" title="statement not covered" >window.pageYOffset;</span>
 <span class="cstat-no" title="statement not covered" >    if (currentPosition &gt; 0 &amp;&amp; navbarClass === "transparent") {</span>
 <span class="cstat-no" title="statement not covered" >      setNavbarClass("colored");</span>
@@ -217,9 +217,9 @@ const HomeNavigation = <span class="fstat-no" title="function not covered" >() =
     }
   };
 &nbsp;
-<span class="cstat-no" title="statement not covered" >  window.addEventListener("scroll", handleScroll);</span>
+  window.addEventListener("scroll", handleScroll);
 &nbsp;
-<span class="cstat-no" title="statement not covered" >  return (</span>
+  return (
     &lt;Navbar
       fixed="top"
       id="menu"
@@ -271,7 +271,7 @@ export default HomeNavigation;
             <div class='footer quiet pad2 space-top1 center small'>
                 Code coverage generated by
                 <a href="https://istanbul.js.org/" target="_blank" rel="noopener noreferrer">istanbul</a>
-                at 2023-04-14T10:30:38.253Z
+                at 2023-05-05T17:57:55.838Z
             </div>
         <script src="../../../prettify.js"></script>
         <script>
