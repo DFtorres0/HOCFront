@@ -13,14 +13,14 @@ const HomeContact = () => {
         <Container>
           <Form action="https://wa.me/573165363587" method="get">
             <Form.Group className="mb-3" controlId="form">
-              <InputGroup >
+              
                 <Form.Control
                   as="textarea"
                   className="form-control"
                   type="text"
                   placeholder="Dime como quieres tu proxima Pagina web o como te puedo ayudar!"
                 />
-              </InputGroup>
+              
             </Form.Group>
             <Button className="btn btn-default btn-lg" type="submit">
               <div>💻 Enviar!</div>
