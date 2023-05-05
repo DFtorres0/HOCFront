@@ -84,16 +84,16 @@
 
 
 #btn1 {
-  background-color: #88b999;
+  background-color: #639cc5;
 }
 #btn2 {
-  background-color: #d59acb;
+  background-color: #639cc5;
 }
 #btn3{
-  background-color: #8897b9;
+  background-color: #639cc5;
 }
 #btn4{
-  background-color: #af88b9;
+  background-color: #639cc5;
 }
 
 #portfolio i.fa {
@@ -126,4 +126,5 @@ background:#f39e9e;
   font-size: 70px;
   color: rgb(235, 234, 230);
 }
+
 

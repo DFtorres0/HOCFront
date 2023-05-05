@@ -33,18 +33,11 @@
 #about .about-text {
   margin-left: 10px; /*espacio entre imagen y texto*/
 }
-p::selection {
-  /*con los dos puntos decimos que es un pseudoelemnto*/
-  background: #232a3ae5; /*asi cambiamos el color cuand selecionamos texto*/
-}
-h3::selection {
-  background: #232a3ae5; /*asi cambiamos el color cuand selecionamos texto*/
-}
 
 #about .list {
     margin-top: 20px;
     margin-bottom: 10px;
-    border-radius: 15px;
+    border-radius: 5px;
     opacity: 1.0;
     justify-content: center;
     
@@ -73,6 +66,8 @@ h3::selection {
   border-radius: 0;
   margin-top: 20px;
   transition: all 0.3s;
+  position: relative;
+  left: -100px;
 }
 
 #about .btn-lg:hover,

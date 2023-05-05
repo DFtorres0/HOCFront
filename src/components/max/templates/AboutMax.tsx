@@ -55,7 +55,7 @@ const AboutMax = () => {
         >
           <div
             className="col-lg-6 mb-4 mb-lg-0"
-            style={{ margin: "20px auto", maxWidth: "400px" }}
+            style={{ margin: "20px auto", maxWidth: "400px"}}
           >
             <form action="#" className="d-flex search-form">
               <span className="icon-"></span>
