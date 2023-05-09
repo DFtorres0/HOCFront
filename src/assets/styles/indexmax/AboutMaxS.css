@@ -14,8 +14,8 @@
   justify-content: center;
 }
 .card {
-  height: 130px !important;
-  width: 150px !important;
+  height: 130px ;
+  width: 150px ;
   margin: auto;
   margin-top: 25px;
   background-color: #cccbcb !important;
@@ -43,6 +43,8 @@
   font-size: 40px;
   margin: 7 px;
   color: rgb(255, 251, 0);
+  margin-bottom: 15px;
+  margin-top: 5px;
 }
 .my-icon-5 {
   font-size: 60px;
@@ -89,5 +91,5 @@
 }
 #buttons{
   position: relative;
-  top: 10px;
+  
 }
