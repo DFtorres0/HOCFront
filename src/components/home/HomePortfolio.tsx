@@ -11,6 +11,10 @@ import {
 import { useState } from "react";
 import { DiAngularSimple, DiReact, DiMysql } from "react-icons/di";
 import { SiJavascript, SiPython, SiOracle } from "react-icons/si";
+import {FiMenu} from "react-icons/fi";
+import {HiPencilAlt} from "react-icons/hi";
+import {FaGamepad} from "react-icons/fa";
+import {IoIosApps} from "react-icons/io";
 
 const cursos = [
   {
@@ -115,21 +119,28 @@ const HomePortfolio = () => {
         </div>
       </Container>
       <div className="categories">
-        <ButtonGroup className="cat type">
-          <Button variant="outline-dark" size="lg">
-            Todo
+        {/* <ButtonGroup className="cat type">
+          <Button id="btn1" variant="outline-dark" size="lg" title="Todo">
+            <i><FiMenu className="TodoIcon" size = "25"></FiMenu></i>
           </Button>
-          <Button variant="outline-dark" size="lg">
-            Diseño Web
+          <Button className="boton2" id="btn2" variant="outline-dark" size="lg" title="Diseño" color="#d59acb">
+            <i><HiPencilAlt className="DiseñoIcon" size="25"></HiPencilAlt></i>
           </Button>
-          <Button variant="outline-dark" size="lg">
-            APP Modificadas
+          <Button id="btn3" variant="outline-dark" size="lg" title="App Modificadas">
+            <i><IoIosApps className="AppIcon" size="25"></IoIosApps></i> 
           </Button>
-          <Button variant="outline-dark" size="lg">
-            Juegos
+          <Button id="btn4" variant="outline-dark" size="lg" title="Juegos">
+            <i><FaGamepad className="GamesIcon" size="25"></FaGamepad></i>
           </Button>
-        </ButtonGroup>
+        </ButtonGroup> */}
+        <a href="#Alls"> Todo </a>
+        <a href="#Front" >Front-End</a>
+        <a href="#Back" >Back-End</a>
+        <a href="#DataBase" >Bases de datos</a>
+        {" "}
+        <div id="dotid" className ="dot"></div>
       </div>
+
       <Row className="row">
         {courses.map((curso, courseIndex) => (
           <Col key={courseIndex}>

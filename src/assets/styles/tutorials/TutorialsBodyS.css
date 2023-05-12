@@ -29,3 +29,16 @@
     height: 160px;
     margin: 5px;
 }
+.my-text{
+    align-items: center;
+    position: relative;
+    top:20px;
+    margin-bottom: 30px;
+    color: #fff;
+}
+.card-text, .card-title{
+    color: #000;
+}
+.my-text{
+    color: #000;
+}

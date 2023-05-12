@@ -1,7 +1,8 @@
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&display=swap");
 #portfolio {
   padding: 60px 0;
   /* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#54d0dd+0,54d0dd+0,54d0dd+0,71777d+0,414a52+100 */
-  background: rgb(43, 54, 65); /* Old browsers */
+  background: #252525; /* Old browsers */
  /* background: -moz-linear-gradient(
     top,
     rgba(84, 208, 221, 1) 0%,
@@ -30,14 +31,15 @@
 }
 
 #portfolio h2 {
+  margin-top: 15px;
   color: #ffff;
 }
 
 #portfolio hr {
   align-self: center;
   width: 70px;
-  margin-top: 40px;
-  margin-bottom: 40px;
+  margin-top: 20px;
+  margin-bottom: 20px;
   position: relative;
   left: 50%;
   margin-left: -35px;
@@ -46,8 +48,84 @@
 }
 
 #portfolio .categories {
-  padding-bottom: 30px;
+  padding-bottom: 20px;
   text-align: center;
+  padding-inline: 30px ;
+  display: flex;
+  justify-content: center;
+  align-items: center; 
+  font-size: 13px;
+  margin-top: 60px;
+  height: 50px;
+  position: relative;
+  bottom: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+}
+.categories a {
+  color: #f6f4e6;
+  text-decoration: none;
+  font-size: 1.2em;
+  text-transform: uppercase;
+  font-weight: 500;
+  display: inline-block;
+  width: 130px;
+  -webkit-transition: all 0.2s ease-in-out;
+  transition: all 0.2s ease-in-out;
+  font-family: "Montserrat","sans-serif";
+}
+.categories a:hover {
+  color: #1891bd;
+}
+
+.dot {
+  margin-top: 70px;
+  width: 6px;
+  height: 6px;
+  background: #1891bd;
+  border-radius: 50%;
+  opacity: 10px;
+  -webkit-transform: translateX(30px);
+  transform: translateX(30px);
+  -webkit-transition: all 0.2s ease-in-out;
+  transition: all 0.2s ease-in-out;
+  
+}
+#dotid{
+  position: relative  ;
+  left: -487px;
+}
+.categories a:nth-child(1):hover ~ .dot {
+  -webkit-transform: translateX(30px);
+  transform: translateX(30px);
+  -webkit-transition: all 0.2s ease-in-out;
+  transition: all 0.2s ease-in-out;
+  opacity: 1;
+}
+
+.categories a:nth-child(2):hover ~ .dot {
+  -webkit-transform: translateX(160px);
+  transform: translateX(160px);
+  -webkit-transition: all 0.2s ease-in-out;
+  transition: all 0.2s ease-in-out;
+  opacity: 1;
+}
+
+.categories a:nth-child(3):hover ~.dot {
+  -webkit-transform: translateX(289px);
+  transform: translateX(289px);
+  -webkit-transition: all 0.2s ease-in-out;
+  transition: all 0.2s ease-in-out;
+  opacity: 1;
+}
+
+.categories a:nth-child(4):hover ~.dot {
+  -webkit-transform: translateX(420px);
+  transform: translateX(420px);
+  -webkit-transition: all 0.2s ease-in-out;
+  transition: all 0.2s ease-in-out;
+  opacity: 1;
 }
 
 #portfolio .row {
@@ -60,25 +138,56 @@
   width: 20rem;
   padding: 0px;
   cursor: pointer;
-  background: #4ea153;
+  background: #f6f9f9;
 }
 
-#portfolio .type Button {
+/*#portfolio .type Button {
   -webkit-transition-duration: 0.5s;
   -moz-transition-duration: 0.5s;
   transition-duration: 0.5s;
-  background: #999999;
+  background: #4c89a5;
+}*/
+
+#portfolio .type button {
+    margin: 15px;
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    /*background-color: #88b999;*/
+    padding: 0px;
+    box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16), 0 3px 6px rgba(0, 0, 0, 0.23);
+    position: relative;
+}
+
+
+#btn1 {
+  background-color: #639cc5;
+}
+#btn2 {
+  background-color: #639cc5;
+}
+#btn3{
+  background-color: #639cc5;
+}
+#btn4{
+  background-color: #639cc5;
+}
+#btn1:hover,#btn2:hover,#btn3:hover,#btn4:hover{
+  transform: scale(1.5);
+    transition: transform 0.3s ease;
+    box-shadow: 2px 2px 5px 0px #333;
 }
 
 #portfolio i.fa {
   font-size: 20px;
   padding: 5px;
-  color: #000000;
+  color: #010101;
 }
 
 #Card.Headerr{
 background:#f39e9e;
 }
+
 .my-iconP-1 {
   font-size: 70px;
   color: rgb(211, 3, 3);
@@ -99,4 +208,5 @@ background:#f39e9e;
   font-size: 70px;
   color: rgb(235, 234, 230);
 }
+
 

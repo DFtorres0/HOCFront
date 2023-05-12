@@ -25,15 +25,17 @@ const HomeAbout = () => {
                 otros servicios.
               </p>
 
-              <h4>Nos especializamos en los siguientes servicios</h4>
+              <h4 className="tittle"><b>Nos especializamos en los siguientes servicios</b></h4>
               
-              <ListGroup className="list" variant="flush">
-                <ListGroup.Item variant="dark">Diseño de Pagina Web RESPONSIVE DESIGN adaptable a cualquier dispositivo (celular, tablets, ordenadores).</ListGroup.Item>
-                <ListGroup.Item variant="dark">Activacion de Windows, Office y diferentes programas.</ListGroup.Item>
-                <ListGroup.Item variant="dark">Modificacion de Aplicaciones SO Android.</ListGroup.Item>
-                <ListGroup.Item variant="dark">Cualquier tipo de Suscripción.</ListGroup.Item>
-                <ListGroup.Item variant="dark">Videojuegos de Xbox y PC.</ListGroup.Item>
-                <ListGroup.Item variant="dark">Soluciones TI.</ListGroup.Item>
+              <ListGroup className="list" variant="flush" id="Lista">
+                <ListGroup.Item  id="list_Group">
+                <li>Diseño de Pagina Web RESPONSIVE DESIGN adaptable a cualquier dispositivo (celular, tablets, ordenadores).</li>
+                <li>Activacion de Windows, Office y diferentes programas.</li>
+                <li>Modificacion de Aplicaciones SO Android.</li>
+                <li>Cualquier tipo de Suscripción.</li>
+                <li>Videojuegos de Xbox y PC.</li>
+                <li>Soluciones TI.</li>
+                </ListGroup.Item>
               </ListGroup>
               <a
                 href="#portfolio"

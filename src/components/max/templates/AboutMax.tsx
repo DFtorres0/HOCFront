@@ -3,14 +3,15 @@ import { DiIllustrator, DiPhotoshop, DiAngularSimple, DiReact } from "react-icon
 import { SiJavascript, SiVuedotjs, SiLinkedin, SiTwitter, SiFacebook } from "react-icons/si";
 import { Row, Col, Card } from "react-bootstrap";
 import { useState } from "react";
+import { relative } from "path";
 
 const Topics = [
-  { id: 0, name: "Illustrator" , icon: <DiIllustrator className="my-icon-1"/> },
+  { id: 0, name: "Illustrator" , icon: <DiIllustrator className="my-icon-1" /> },
   { id: 1, name: "Photoshop", icon: <DiPhotoshop className="my-icon-2"/>},
-  { id: 2, name: "Angular", icon: <DiAngularSimple className="my-icon-3"/> },
+  { id: 2, name: "Angular", icon: <DiAngularSimple className="my-icon-3" /> },
   { id: 3, name: "JavaScript", icon: <SiJavascript className="my-icon-4"/> },
-  { id: 4, name: "React", icon: <DiReact className="my-icon-5"/> },
-  { id: 5, name: "Vue", icon: <SiVuedotjs className="my-icon-6"/> },
+  { id: 4, name: "React", icon: <DiReact className="my-icon-5" /> },
+  { id: 5, name: "Vue", icon: <SiVuedotjs className="my-icon-6" /> },
 ];
 
 interface courseInterface {
@@ -29,17 +30,16 @@ const AboutMax = () => {
           marginTop: "20%",
         }}
       >
-        <h5 className="my-textT">TUTORIAL DE CURSOS!💎</h5>
-        <h2 className="my-text">Busca tu tema de interes:</h2>
+        <h2 className="my-text">BUSCA TU TEMA DE INTERÉS</h2>
       </div >
       <div className="my-container">
       <Row className="row">
         {courses.map((Topics, TopicsIndex) => (
           <Col key={TopicsIndex}>
             <Card
-              className="card" style={{padding: "0"}}>
+              className="card" style={{padding: ""}}>
               <Card.Body>{Topics.icon}
-                <Card.Title className="my-card-text">
+                <Card.Title className="my-card-text" id="buttons">
                   {Topics.name}
                 </Card.Title>
               </Card.Body>
@@ -51,11 +51,11 @@ const AboutMax = () => {
       <div>
         <div
           className="row mb-5 align-items-center"
-          style={{ marginTop: "8%" }}
+          style={{ marginTop: "2%"}} id="buscador"
         >
           <div
             className="col-lg-6 mb-4 mb-lg-0"
-            style={{ margin: "20px auto", maxWidth: "400px" }}
+            style={{ margin: "20px auto", maxWidth: "400px"}}
           >
             <form action="#" className="d-flex search-form">
               <span className="icon-"></span>

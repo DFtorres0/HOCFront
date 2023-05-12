@@ -1,8 +1,47 @@
+footer{
+    background: #484a4d;
+    color: rgba(247, 247, 247, 0.4);
+}
 #T-text{
     text-align: left;
+    color: rgb(240, 248, 255);
+    position: relative;
+    left: 250px;
+    /*margin: auto !important;*/
 }
 #T-text .T1{
-    margin-top: 5%;
-    max-width: 250px;
-    color: rgb(85, 85, 85);
+    max-width: 400px;
+    color: rgb(255, 255, 255);
+    position: relative;
+    
+    /*margin:auto !important;*/
+}
+#Text_container{
+    position: relative;
+    left: 250px;
+
+}
+#Text_container p{
+    color:aliceblue;
+}
+.p-4 #Text_container #unorder_list .unorder_a{
+    color:aliceblue;
+
+}
+.copyright{
+    color:aliceblue;
+}
+.copyright a{
+    color:aliceblue;
+}
+.copyright .copyright_text{
+    color:rgb(255, 255, 255);
+}
+.copyright{
+    position: relative;
+    top:-10px;
+}
+#p-4{
+    position: relative;
+    left: -170px
 }
