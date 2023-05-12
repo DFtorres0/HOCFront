@@ -14,10 +14,11 @@
   justify-content: center;
 }
 .card {
-  height: 130px;
-  width: 130px;
-  margin: 8px;
-  background-color: #ffffff;
+  height: 130px ;
+  width: 150px ;
+  margin: auto;
+  margin-top: 25px;
+  background-color: #cccbcb !important;
   padding: 0;
   border: none;
 }
@@ -39,9 +40,11 @@
   color: rgb(255, 8, 8);
 }
 .my-icon-4 {
-  font-size: 50px;
-  margin: 5px;
+  font-size: 40px;
+  margin: 7 px;
   color: rgb(255, 251, 0);
+  margin-bottom: 15px;
+  margin-top: 5px;
 }
 .my-icon-5 {
   font-size: 60px;
@@ -58,10 +61,11 @@
   color: rgb(0, 0, 0);
 }
 .my-text {
-  text-align: left;
-  margin-left: 10%;
+  text-align: center;
   color: rgb(31, 121, 255);
   font-weight: bold;
+  font-size: 27px;
+
 }
 .my-textT {
   text-align: left;
@@ -79,5 +83,13 @@
 }
 .my-icon-share {
   color: rgb(31, 121, 255);
-  width: 40px
+  width: 50px
+}
+#buscador{
+  position: relative;
+  top: 50px;
+}
+#buttons{
+  position: relative;
+  
 }

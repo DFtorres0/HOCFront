@@ -10,7 +10,7 @@ const HomeFooter = () => {
             <a href="https://latinapp.000webhostapp.com/" rel="nofollow">
               {" "}
             </a>
-            . Diseñado Por:
+             . Diseñado Por:{" "} 
             <a
               href="https://wa.me/573165363587?text=Me%20gustaría%20mas%20informacion%20de%20Diseño%20%20De%20Paginas%20Web%20gracias."
               rel="nofollow"

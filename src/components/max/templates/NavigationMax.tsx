@@ -36,15 +36,15 @@ const NavigationMax = () => {
              <hr/>
             </Nav.Link>
             <Nav.Link href="/tutorials" className="navlink">
-            <h4> 📓 Clases</h4>
+            <h4> Clases</h4>
              <hr/>
             </Nav.Link>
             <Nav.Link href="/testimonials" className="navlink">
-            <h4> 💬 Foros</h4>
+            <h4> Foros</h4>
              <hr/>
             </Nav.Link>
             <Nav.Link href="/Courses" className="navlink">
-            <h4> 💬 cursos</h4>
+            <h4> cursos</h4>
              <hr/>
             </Nav.Link>
           </Nav>

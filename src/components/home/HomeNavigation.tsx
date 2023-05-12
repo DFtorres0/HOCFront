@@ -40,22 +40,22 @@ const HomeNavigation = () => {
         <ListGroup className="nav navbar-nav navbar-right">
           <li>
             <a href="#header" className="page-scroll">
-              🏠 {"{Home}"}
+               {"Home"}
             </a>
           </li>
           <li>
             <a href="#about" className="page-scroll">
-              👽SobreNosotros
+              SobreNosotros
             </a>
           </li>
           <li>
             <a href="#portfolio" className="page-scroll">
-              📋Portafolio™
+              Portafolio™
             </a>
           </li>
           <li>
             <a href="#contact" className="page-scroll">
-              📲Contactanos
+              Contactanos
             </a>
           </li>
         </ListGroup>

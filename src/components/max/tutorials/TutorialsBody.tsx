@@ -8,14 +8,14 @@ import { useState } from "react";
 const Curso = [
   {
     id: 0, title: "Aprende hoy mismo React",
-    text: "El nuevo framework mas utilizado en el mundo descubre todo lo que puedes hacer! Un mundo de oportunidades 🌐",
+    text: "El nuevo framework mas utilizado en el mundo descubre todo lo que puedes hacer! Un mundo de oportunidades",
     icon: <DiIllustrator className="my-iconT-1" />,
     image: <img src="/images/img_1.webp" alt="computador 1" className="image-T" />,
     image1: <img src="/images/img_1_horizontal.webp" alt="computador 1" className="image-T-1" />
   },
   {
-    id: 1, title: "Aprende hoy mismo Angular 💎",
-    text: "Las empresas mas grandes de la industria Tech usan Angular. Para aprender hay que emprender ! Comienza hoy mismo ha cambiar el mundo 🌎",
+    id: 1, title: "Aprende hoy mismo Angular",
+    text: "Las empresas mas grandes de la industria Tech usan Angular. Para aprender hay que emprender ! Comienza hoy mismo ha cambiar el mundo",
     icon: <DiPhotoshop className="my-iconT-1" />,
     image: <img src="/images/img_2.webp" alt="computador 1" className="image-T" />,
     image1: <img src="/images/img_2_horizontal.webp" alt="computador 1" className="image-T-1" />
@@ -29,7 +29,7 @@ const Curso = [
   },
   {
     id: 3, title: "Aprende hoy mismo Illustrator",
-    text: "Hecha a volvar tu imaginacion! y vectoriza crea modifica tus imagenes en diferentes formatos integralas a tus proyectos. Y RECUERDA TODO ENTRA POR LOS OJOS 👁",
+    text: "Hecha a volvar tu imaginacion! y vectoriza crea modifica tus imagenes en diferentes formatos integralas a tus proyectos. Y RECUERDA TODO ENTRA POR LOS OJOS",
     icon: <SiJavascript className="my-iconT-1" />,
     image: <img src="/images/img_4.webp" alt="computador 1" className="image-T" />,
     image1: <img src="/images/img_4_horizontal.webp" alt="computador 1" className="image-T-1" />
@@ -55,7 +55,6 @@ const TutorialsBody = () => {
             marginTop: "10%",
           }}
         >
-          <h5 className="my-textT">APRENDE HOY! </h5>
           <h2 className="my-text">Tutorias, Clases y Practicas</h2>
         </div >
       </div>
@@ -72,13 +71,13 @@ const TutorialsBody = () => {
                 </Container>
                 <Container className="T1 h6">Avanzado - abr 28, 2021</Container>
               </Card.Text>
-              <Button variant="primary">QUIERO APRENDER HOY!</Button>
+              <Button variant="primary" id="text1">QUIERO APRENDER HOY!</Button>
             </Card.Body>
           </Card>
-          <Card style={{ width: '20rem', height: '18rem', marginLeft: '130px' }} className=" d-flex flex-row">
+          <Card style={{ width: '20rem', height: '18rem', marginLeft: '130px',color:'#000' }} className=" d-flex flex-row">
             <Card.Body>
               {Curso.image1}
-              <Card.Title style={{ textAlign: 'center', marginTop: '30px' }}>{Curso.title}</Card.Title>
+              <Card.Title style={{ textAlign: 'center', marginTop: '30px', color:'#000'}}>{Curso.title}</Card.Title>
             </Card.Body>
           </Card>
         </div>
