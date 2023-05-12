@@ -2,7 +2,7 @@
   padding: 50px 0;
   text-align: left;
   /* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#54d0dd+0,54d0dd+0,54d0dd+0,7fdce6+0,54d0dd+100 */
-  background: rgb(251, 251, 251); /* Old browsers */
+  background: #fbfbfb; /* Old browsers */
   background: -moz-linear-gradient(
     top,
     rgb(0, 0, 0) 0%,
@@ -90,4 +90,14 @@
   height: auto;
   border-radius: 10px;
   box-shadow: 10px 10px 5px 0px #383838;
+}
+#list_Group{
+  list-style-type: disc;
+  background: #fbfbfb;
+}
+#list_Group li{
+  margin-bottom: 15px;
+}
+.tittle{
+  margin-top: 30px;
 }

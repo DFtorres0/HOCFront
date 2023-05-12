@@ -119,7 +119,7 @@ const HomePortfolio = () => {
         </div>
       </Container>
       <div className="categories">
-        <ButtonGroup className="cat type">
+        {/* <ButtonGroup className="cat type">
           <Button id="btn1" variant="outline-dark" size="lg" title="Todo">
             <i><FiMenu className="TodoIcon" size = "25"></FiMenu></i>
           </Button>
@@ -132,7 +132,13 @@ const HomePortfolio = () => {
           <Button id="btn4" variant="outline-dark" size="lg" title="Juegos">
             <i><FaGamepad className="GamesIcon" size="25"></FaGamepad></i>
           </Button>
-        </ButtonGroup>
+        </ButtonGroup> */}
+        <a href="#Alls"> Todo </a>
+        <a href="#Front" >Front-End</a>
+        <a href="#Back" >Back-End</a>
+        <a href="#DataBase" >Bases de datos</a>
+        {" "}
+        <div id="dotid" className ="dot"></div>
       </div>
 
       <Row className="row">

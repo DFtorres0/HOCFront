@@ -1,3 +1,4 @@
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&display=swap");
 #portfolio {
   padding: 60px 0;
   /* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#54d0dd+0,54d0dd+0,54d0dd+0,71777d+0,414a52+100 */
@@ -49,6 +50,82 @@
 #portfolio .categories {
   padding-bottom: 20px;
   text-align: center;
+  padding-inline: 30px ;
+  display: flex;
+  justify-content: center;
+  align-items: center; 
+  font-size: 13px;
+  margin-top: 60px;
+  height: 50px;
+  position: relative;
+  bottom: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+}
+.categories a {
+  color: #f6f4e6;
+  text-decoration: none;
+  font-size: 1.2em;
+  text-transform: uppercase;
+  font-weight: 500;
+  display: inline-block;
+  width: 130px;
+  -webkit-transition: all 0.2s ease-in-out;
+  transition: all 0.2s ease-in-out;
+  font-family: "Montserrat","sans-serif";
+}
+.categories a:hover {
+  color: #1891bd;
+}
+
+.dot {
+  margin-top: 70px;
+  width: 6px;
+  height: 6px;
+  background: #1891bd;
+  border-radius: 50%;
+  opacity: 10px;
+  -webkit-transform: translateX(30px);
+  transform: translateX(30px);
+  -webkit-transition: all 0.2s ease-in-out;
+  transition: all 0.2s ease-in-out;
+  
+}
+#dotid{
+  position: relative  ;
+  left: -487px;
+}
+.categories a:nth-child(1):hover ~ .dot {
+  -webkit-transform: translateX(30px);
+  transform: translateX(30px);
+  -webkit-transition: all 0.2s ease-in-out;
+  transition: all 0.2s ease-in-out;
+  opacity: 1;
+}
+
+.categories a:nth-child(2):hover ~ .dot {
+  -webkit-transform: translateX(160px);
+  transform: translateX(160px);
+  -webkit-transition: all 0.2s ease-in-out;
+  transition: all 0.2s ease-in-out;
+  opacity: 1;
+}
+
+.categories a:nth-child(3):hover ~.dot {
+  -webkit-transform: translateX(289px);
+  transform: translateX(289px);
+  -webkit-transition: all 0.2s ease-in-out;
+  transition: all 0.2s ease-in-out;
+  opacity: 1;
+}
+
+.categories a:nth-child(4):hover ~.dot {
+  -webkit-transform: translateX(420px);
+  transform: translateX(420px);
+  -webkit-transition: all 0.2s ease-in-out;
+  transition: all 0.2s ease-in-out;
+  opacity: 1;
 }
 
 #portfolio .row {
