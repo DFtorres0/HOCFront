@@ -95,6 +95,11 @@
 #btn4{
   background-color: #639cc5;
 }
+#btn1:hover,#btn2:hover,#btn3:hover,#btn4:hover{
+  transform: scale(1.5);
+    transition: transform 0.3s ease;
+    box-shadow: 2px 2px 5px 0px #333;
+}
 
 #portfolio i.fa {
   font-size: 20px;
