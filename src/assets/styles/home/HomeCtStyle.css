@@ -6,15 +6,15 @@
   justify-content: center;
   justify-items: center;
   /*Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#54d0dd+0,54d0dd+0,54d0dd+0,7fdce6+0,54d0dd+100 */
-  /*background: rgb(0, 0, 0); /* Old browsers */
-  background: -moz-linear-gradient(
+  background: rgb(248, 245, 245); /* Old browsers */
+  /*background: -moz-linear-gradient(
     top,
     rgba(0, 0, 0, 0) 0%,
     rgba(0, 0, 0, 0) 0%,
     rgba(0, 0, 0, 0) 0%,
     rgba(0, 0, 0, 0) 0%,
     rgba(43, 54, 65, 1) 100%
-  ); /* FF3.6-15 */
+  ); /* FF3.6-15 
   background: -webkit-linear-gradient(
     to top,60px
     rgba(27, 55, 87, 1) 0%,
@@ -22,7 +22,7 @@
     rgba(27, 55, 87, 1) 0%,
     rgba(27, 55, 87, 1) 0%,
     rgba(27, 55, 87, 1) 100%
-  ); /* Chrome10-25,Safari5.1-6 */
+  ); /* Chrome10-25,Safari5.1-6 
   background: linear-gradient(
     to bottom,
     rgba(43, 54, 65, 1) 0%,
@@ -30,13 +30,13 @@
     rgba(43, 54, 65, 1) 0%,
     rgba(43, 54, 65, 1) 0%,
     rgba(56, 112, 168, 1) 70%
-  ); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+  );*/ /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
   /*filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#54d0dd', endColorstr='#54d0dd', GradientType=0 ); /* IE6-9 */
 }
 
 #contact .btn-default {
   text-transform: uppercase;
-  color: #ffffff;
+  color: #f7f3f3;
   background-color: #414a52;
   border: 0;
   padding: 14px 20px;
@@ -60,7 +60,7 @@
 }
 
 #contact h2 {
-  color: #ffffff;
+  color: #080808;
 }
 
 #contact .form-control {
@@ -81,6 +81,8 @@
   -webkit-transition: none;
   -o-transition: none;
   transition: none;
+  border-radius: 20px;
+  border-color: #080808;
 }
 
 #contact .social {
@@ -97,11 +99,11 @@
   transition: all 0.3s;
 }
 #contact a {
-  color: #ffffff;
+  color: #0c0c0c;
 }
 
 #contact a:hover, a:focus, a:active {
-  color: #1b3757;
+  color: #2f5d91;
   transition: all 0.3s;
 }
 #contact .btn:active,
@@ -127,7 +129,7 @@
 .btn-default.focus,
 .btn-default:active,
 .btn-default.active {
-  color: rgba(56, 112, 168,1);
+  color: rgb(33, 139, 156);
   background-color: #414a52;
 }
 #contact .btn-default{

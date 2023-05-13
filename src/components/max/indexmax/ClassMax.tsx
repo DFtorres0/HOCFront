@@ -12,15 +12,15 @@ const ClassMax = () => {
              <img className="imageP2" src="/images/img_1.webp" loading="lazy" alt="imagen"/>
           </Col>
           <Col md id="my-text">
-            <a href="/home" ><h6 className="T1c">CLASE</h6></a>
-            <h3 className="T1t">Aprende hoy React Native</h3>
-            <h6 className="T1">
+            <a href="/home" ><h6 className="T1c" id="texto">CLASE</h6></a>
+            <h3 className="T1t" id="texto">Aprende hoy React Native</h3>
+            <h6 className="T1" id="texto">
               Aprende desde 0 framework's y domina y mundo de posibilidades en
               la web🌐.
             </h6>
-            <DiReact className="my-icontT" />
-            <SiJavascript className="my-icontT" />
-            <h6 className="T1">Avanzado - abr 28, 2021</h6>
+            <DiReact className="my-icontT" id="texto"/>
+            <SiJavascript className="my-icontT" id="texto" />
+            <h6 className="T1" id="texto">Avanzado - abr 28, 2021</h6>
           </Col>
         </Row>
       </div>
@@ -31,8 +31,8 @@ const ClassMax = () => {
               <img className="imageP1" src="/images/img_2.webp" loading="lazy" alt="imagen" />
             </Col>
             <Col id="my-text" >
-              <a href="/home" ><h6 className="T2T">TUTORIA DE JAVASCRIPT</h6></a>
-              <h6 className="T2">Practica JavaScript Hoy!</h6>
+              <a href="/home" ><h6 className="T2T" id="texto2">TUTORIA DE JAVASCRIPT</h6></a>
+              <h6 className="T2" id="texto2">Practica JavaScript Hoy!</h6>
             </Col>
           </Row>
           <Row>
@@ -40,8 +40,8 @@ const ClassMax = () => {
               <img className="imageP1" src="/images/img_3.webp" loading="lazy"alt="imagen" />
             </Col>
             <Col id="my-text">
-              <a href="/home" ><h6 className="T2T">TUTORIA DE VUE</h6></a>
-              <h6 className="T2">Practica Vue hoy mismo</h6>
+              <a href="/home" ><h6 className="T2T" id="texto2">TUTORIA DE VUE</h6></a>
+              <h6 className="T2" id="texto2">Practica Vue hoy mismo</h6>
             </Col>
           </Row>
           <Row>
@@ -49,8 +49,8 @@ const ClassMax = () => {
               <img className="imageP1" src="/images/img_4.webp" loading="lazy" alt="imagen"/>
             </Col>
             <Col  id="my-text">
-              <a href="/home" ><h6 className="T2T">ILUSTRATOR</h6></a>
-              <h6 className="T2">
+              <a href="/home" ><h6 className="T2T" id="texto2">ILUSTRATOR</h6></a>
+              <h6 className="T2" id="texto2">
                 Aprende a crear tus propias imagenes con Ilustrator🌄!
               </h6>
             </Col>

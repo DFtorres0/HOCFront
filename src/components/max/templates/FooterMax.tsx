@@ -33,23 +33,23 @@ const FooterMax = () => {
             </p>
           </Col>
 
-          <Col id="T-text" lg="3" md="6" className="mb-4 mb-md-0 mx-1">
-            <p>Links Rapidos :🚀</p>
+          <Col id="Text_container" lg="3" md="6" className="mb-4 mb-md-0 mx-1">
+            <p>Links Rapidos :</p>
 
-            <ul className="list-unstyled mb-0">
+            <ul className="list-unstyled mb-0" id="unorder_list">
               <li>
-                <a rel="preload" href="/indexmax" className="text-black">
+                <a rel="preload" href="/indexmax" className="unorder_a" id="a_footer">
                   Inicio
                 </a>
               </li>
               <li>
-                <a rel="preload" href="/tutorials" className="text-black">
-                  📓 Clases
+                <a rel="preload" href="/tutorials" className="unorder_a" style = {{color: "#fff"}}>
+                  Clases
                 </a>
               </li>
               <li>
-                <a rel="preload" href="/testimonials" className="text-black">
-                  💬 Foro
+                <a rel="preload" href="/testimonials" className="unorder_a">
+                  Foro
                 </a>
               </li>
             </ul>
@@ -57,11 +57,9 @@ const FooterMax = () => {
         </Row>
       </Container>
 
-      <div
-        style={{ backgroundColor: "rgba(0, 0, 0, 0)", margin: "10%" }}
-      >
-        Copyright © 2023 . Diseñado Por:
-        <a className="text-dark" href="/home">
+      <div className="copyright">
+        Copyright © 2023 . Diseñado Por:{" "}
+        <a className="copyright_text" href="/home">
           Home of Code ™.
         </a>
       </div>
