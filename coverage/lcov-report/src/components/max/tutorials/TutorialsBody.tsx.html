@@ -23,9 +23,9 @@
         <div class='clearfix'>
             
             <div class='fl pad1y space-right2'>
-                <span class="strong">75% </span>
+                <span class="strong">100% </span>
                 <span class="quiet">Statements</span>
-                <span class='fraction'>9/12</span>
+                <span class='fraction'>12/12</span>
             </div>
         
             
@@ -37,16 +37,16 @@
         
             
             <div class='fl pad1y space-right2'>
-                <span class="strong">0% </span>
+                <span class="strong">100% </span>
                 <span class="quiet">Functions</span>
-                <span class='fraction'>0/2</span>
+                <span class='fraction'>2/2</span>
             </div>
         
             
             <div class='fl pad1y space-right2'>
-                <span class="strong">75% </span>
+                <span class="strong">100% </span>
                 <span class="quiet">Lines</span>
-                <span class='fraction'>9/12</span>
+                <span class='fraction'>12/12</span>
             </div>
         
             
@@ -61,7 +61,7 @@
             </div>
         </template>
     </div>
-    <div class='status-line medium'></div>
+    <div class='status-line high'></div>
     <pre><table class="coverage">
 <tr><td class="line-count quiet"><a name='L1'></a><a href='#L1'>1</a>
 <a name='L2'></a><a href='#L2'>2</a>
@@ -208,8 +208,8 @@
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-yes">1x</span>
-<span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-yes">2x</span>
+<span class="cline-any cline-yes">1x</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
@@ -222,7 +222,7 @@
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-yes">4x</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
@@ -261,7 +261,7 @@
 import "../../../assets/styles/tutorials/TutorialsBodyS.css";
 import { DiIllustrator, DiPhotoshop, DiAngularSimple } from "react-icons/di";
 import { SiJavascript } from "react-icons/si";
-import { Card, Button} from "react-bootstrap";
+import { Card, Button, Container} from "react-bootstrap";
 import { useState } from "react";
 &nbsp;
 const Curso = [
@@ -304,10 +304,10 @@ interface courseInterface {
   image1: JSX.Element;
 }
 &nbsp;
-const TutorialsBody = <span class="fstat-no" title="function not covered" >() =</span>&gt; {
-  const [courses, setCourses] = <span class="cstat-no" title="statement not covered" >useState&lt;courseInterface[]&gt;([...Curso]);</span>
-<span class="cstat-no" title="statement not covered" >  return (</span>
-    &lt;footer&gt;
+const TutorialsBody = () =&gt; {
+  const [courses, setCourses] = useState&lt;courseInterface[]&gt;([...Curso]);
+  return (
+    &lt;div&gt;
       &lt;div &gt;
         &lt;div
           style={{
@@ -318,18 +318,18 @@ const TutorialsBody = <span class="fstat-no" title="function not covered" >() =<
           &lt;h2 className="my-text"&gt;Tutorias, Clases y Practicas&lt;/h2&gt;
         &lt;/div &gt;
       &lt;/div&gt;
-      {courses.map(<span class="fstat-no" title="function not covered" >(C</span>urso) =&gt; (
-<span class="cstat-no" title="statement not covered" >        &lt;div className="d-flex flex-row" &gt;</span>
+      {courses.map((Curso, CursoIndex) =&gt; (
+        &lt;div className="d-flex flex-row" key={CursoIndex}&gt;
           &lt;Card className=" d-flex flex-row cardT"&gt;
             {Curso.image}
             &lt;Card.Body className="d-flex flex-column  " style={{ textAlign: 'left' }}&gt;
               &lt;Card.Title&gt;{Curso.title}&lt;/Card.Title&gt;
               &lt;Card.Text&gt;
                 {Curso.text}
-                &lt;h6&gt;
+                &lt;Container className="h6"&gt;
                   {Curso.icon}
-                &lt;/h6&gt;
-                &lt;h6 className="T1"&gt;Avanzado - abr 28, 2021&lt;/h6&gt;
+                &lt;/Container&gt;
+                &lt;Container className="T1 h6"&gt;Avanzado - abr 28, 2021&lt;/Container&gt;
               &lt;/Card.Text&gt;
               &lt;Button variant="primary"&gt;QUIERO APRENDER HOY!&lt;/Button&gt;
             &lt;/Card.Body&gt;
@@ -349,7 +349,7 @@ const TutorialsBody = <span class="fstat-no" title="function not covered" >() =<
           &lt;li className="page-item"&gt;&lt;a className="page-link" href="#"&gt;3&lt;/a&gt;&lt;/li&gt;
         &lt;/ul&gt;
       &lt;/nav&gt;
-    &lt;/footer&gt;
+    &lt;/div&gt;
   );
 };
 &nbsp;
@@ -361,7 +361,7 @@ export default TutorialsBody;
             <div class='footer quiet pad2 space-top1 center small'>
                 Code coverage generated by
                 <a href="https://istanbul.js.org/" target="_blank" rel="noopener noreferrer">istanbul</a>
-                at 2023-04-14T10:30:38.253Z
+                at 2023-05-05T17:57:55.838Z
             </div>
         <script src="../../../../prettify.js"></script>
         <script>

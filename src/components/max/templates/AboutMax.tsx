@@ -34,8 +34,8 @@ const AboutMax = () => {
       </div >
       <div className="my-container">
       <Row className="row">
-        {courses.map((Topics) => (
-          <Col>
+        {courses.map((Topics, TopicsIndex) => (
+          <Col key={TopicsIndex}>
             <Card
               className="card" style={{padding: ""}}>
               <Card.Body>{Topics.icon}

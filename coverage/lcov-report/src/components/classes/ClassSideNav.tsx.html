@@ -23,9 +23,9 @@
         <div class='clearfix'>
             
             <div class='fl pad1y space-right2'>
-                <span class="strong">43.75% </span>
+                <span class="strong">81.25% </span>
                 <span class="quiet">Statements</span>
-                <span class='fraction'>7/16</span>
+                <span class='fraction'>13/16</span>
             </div>
         
             
@@ -37,16 +37,16 @@
         
             
             <div class='fl pad1y space-right2'>
-                <span class="strong">0% </span>
+                <span class="strong">80% </span>
                 <span class="quiet">Functions</span>
-                <span class='fraction'>0/5</span>
+                <span class='fraction'>4/5</span>
             </div>
         
             
             <div class='fl pad1y space-right2'>
-                <span class="strong">43.75% </span>
+                <span class="strong">81.25% </span>
                 <span class="quiet">Lines</span>
-                <span class='fraction'>7/16</span>
+                <span class='fraction'>13/16</span>
             </div>
         
             
@@ -61,7 +61,7 @@
             </div>
         </template>
     </div>
-    <div class='status-line low'></div>
+    <div class='status-line high'></div>
     <pre><table class="coverage">
 <tr><td class="line-count quiet"><a name='L1'></a><a href='#L1'>1</a>
 <a name='L2'></a><a href='#L2'>2</a>
@@ -529,17 +529,17 @@
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-no">&nbsp;</span>
 <span class="cline-any cline-no">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-yes">1x</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
@@ -552,13 +552,13 @@
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-yes">6x</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-yes">21x</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-yes">21x</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
@@ -784,10 +784,10 @@ const courseContent = [
   ],
 ];
 &nbsp;
-const ClassSideNav = <span class="fstat-no" title="function not covered" >() =</span>&gt; {
-  const [navClass, setNavClass] = <span class="cstat-no" title="statement not covered" >useState("close");</span>
+const ClassSideNav = () =&gt; {
+  const [navClass, setNavClass] = useState("close");
 &nbsp;
-  const handleToggleNav = <span class="cstat-no" title="statement not covered" ><span class="fstat-no" title="function not covered" >() =</span>&gt; {</span>
+  const handleToggleNav = <span class="fstat-no" title="function not covered" >() =</span>&gt; {
 <span class="cstat-no" title="statement not covered" >    if (navClass === "") {</span>
 <span class="cstat-no" title="statement not covered" >      setNavClass("close");</span>
     } else {
@@ -795,7 +795,7 @@ const ClassSideNav = <span class="fstat-no" title="function not covered" >() =</
     }
   };
 &nbsp;
-<span class="cstat-no" title="statement not covered" >  return (</span>
+  return (
     &lt;div id="snav"&gt;
       &lt;Nav className={`sidebar ${navClass}`}&gt;
         &lt;Container className="header"&gt;
@@ -807,14 +807,14 @@ const ClassSideNav = <span class="fstat-no" title="function not covered" >() =</
           &lt;/Col&gt;
         &lt;/Container&gt;
         &lt;Container className="menu-bar"&gt;
-          {courseContent.map(<span class="fstat-no" title="function not covered" >(m</span>odule, moduleIndex) =&gt; (
-<span class="cstat-no" title="statement not covered" >            &lt;Row key={moduleIndex} c</span>lassName="menu"&gt;
+          {courseContent.map((module, moduleIndex) =&gt; (
+            &lt;Row key={moduleIndex} className="menu"&gt;
               &lt;div className="module-number icon"&gt;{moduleIndex + 1}&lt;/div&gt;
               &lt;ListGroup className="menu-links"&gt;
-                {module.map(<span class="fstat-no" title="function not covered" >(c</span>ourseItems, courseIndex) =&gt; (
-<span class="cstat-no" title="statement not covered" >                  &lt;li key={courseIndex}&gt;</span>
-                    {courseItems.map(<span class="fstat-no" title="function not covered" >(i</span>tem, courseIIndex) =&gt; (
-<span class="cstat-no" title="statement not covered" >                      &lt;div key={courseIIndex} c</span>lassName="a"&gt;
+                {module.map((courseItems, courseIndex) =&gt; (
+                  &lt;li key={courseIndex}&gt;
+                    {courseItems.map((item, courseIIndex) =&gt; (
+                      &lt;div key={courseIIndex} className="a"&gt;
                         &lt;div className="icon classIcon"&gt;{courseIndex + 1}&lt;/div&gt;
                         &lt;span className="text"&gt;{item.courseITitle}&lt;/span&gt;
                       &lt;/div&gt;
@@ -838,7 +838,7 @@ export default ClassSideNav;
             <div class='footer quiet pad2 space-top1 center small'>
                 Code coverage generated by
                 <a href="https://istanbul.js.org/" target="_blank" rel="noopener noreferrer">istanbul</a>
-                at 2023-04-14T10:30:38.253Z
+                at 2023-05-05T17:57:55.838Z
             </div>
         <script src="../../../prettify.js"></script>
         <script>
