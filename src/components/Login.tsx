@@ -11,10 +11,38 @@ import { FaFacebookF } from "react-icons/fa";
 import { BsTwitter } from "react-icons/bs";
 import { Link } from "react-router-dom";
 import { Container, Row, Col } from "react-bootstrap";
+import { LoginObject, LoginObjectModel } from "../core/services/LoginObject";
+import { AuthenticationService } from "../core/services/Authentication.service";
+import { useState } from "react";
 
 function Login(): JSX.Element {
+
+  const [username, setUsername] = useState('')
+  const [password, setPassword] = useState('')
+
+  const handleUsernameChange = (event: any) => {
+    setUsername(event.target.value)
+  }
+
+  const handlePasswordChange = (event: any) => {
+    setPassword(event.target.value)
+  }
+
+  const handleAuthentication = () => {
+    const auth = new AuthenticationService();
+
+    const user: LoginObject = {
+      username: username,
+      password: password
+    }
+    user.username = username
+    user.password = password
+
+    auth.login(user);
+  };
+
   return (
-    <div id="login" data-testid="login" >
+    <div id="login" data-testid="login">
       <div className="login">
         <Row className="other">
           <Col className="mb-5 mt-5">
@@ -38,6 +66,8 @@ function Login(): JSX.Element {
                       className="form-control"
                       placeholder="Usuario"
                       aria-label="Username"
+                      value={username}
+                      onChange={handleUsernameChange}
                     />
                   </FloatingLabel>
                 </Container>
@@ -54,6 +84,8 @@ function Login(): JSX.Element {
                       className="form-control"
                       placeholder="Contraseña"
                       aria-label="Password"
+                      value={password}
+                      onChange={handlePasswordChange}
                     />
                   </FloatingLabel>
                   <InputGroup className="form-label"></InputGroup>
@@ -69,7 +101,10 @@ function Login(): JSX.Element {
                   />
                 </Container>
                 <Link to="/home">
-                  <Button className="mb-4 w-50 gradient-custom-2">
+                  <Button
+                    onClick={handleAuthentication}
+                    className="mb-4 w-50 gradient-custom-2"
+                  >
                     SIGN IN
                   </Button>
                 </Link>
