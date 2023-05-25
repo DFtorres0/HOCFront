@@ -31,7 +31,7 @@ const LessonMock: Lesson[] = [
   {
     LessonTitle: "Lessons1",
     LessonDescription: "Loremipsum",
-    LessonContent: "Loremipsum",
+    LessonContent: '<iframe width="887" height="499" src="https://www.youtube.com/embed/-apU2sviHCM" title="Ricardo Arjona - Historia De Taxi  (Video)" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>',
     IntensityLevel: IntensityLevelMock,
     Module: ModuleMock,
     Topic: TopicMock,
@@ -39,7 +39,7 @@ const LessonMock: Lesson[] = [
   {
     LessonTitle: "Lessons2",
     LessonDescription: "Loremipsum",
-    LessonContent: "Loremipsum",
+    LessonContent: '<iframe width="887" height="499" src="https://www.youtube.com/embed/VhZiiVnmrEY" title="Pedro Capó - La Fiesta (Live Performance)" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>',
     IntensityLevel: IntensityLevelMock,
     Module: ModuleMock,
     Topic: TopicMock,
@@ -47,7 +47,7 @@ const LessonMock: Lesson[] = [
   {
     LessonTitle: "Lessons3",
     LessonDescription: "Loremipsum",
-    LessonContent: "Loremipsum",
+    LessonContent: '<iframe width="887" height="499" src="https://www.youtube.com/embed/m0Kd7qttGBc" title="Nico Hernández - El Malo | Video Oficial" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>',
     IntensityLevel: IntensityLevelMock,
     Module: ModuleMock,
     Topic: TopicMock,
@@ -100,5 +100,22 @@ export const MainCourseMock: MainCourse[] = [
   {
     Course: CourseMock,
     Modules: MainCourseModuleMock,
-  },
+  },{
+    Course: CourseMock,
+    Modules: MainCourseModuleMock,
+  },{
+    Course: CourseMock,
+    Modules: MainCourseModuleMock,
+  },{
+    Course: CourseMock,
+    Modules: MainCourseModuleMock,
+  },{
+    Course: CourseMock,
+    Modules: MainCourseModuleMock,
+  },{
+    Course: CourseMock,
+    Modules: MainCourseModuleMock,
+  }
 ];
+
+

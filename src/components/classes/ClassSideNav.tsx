@@ -226,7 +226,7 @@ const ClassSideNav = () => {
             <BiRightArrow className="toggle icon" />
           </Col>
           <Col>
-            <div className="text nav-text">Course Name</div>
+            <div id="navprymarytext" className="text nav-text">Course Name</div>
           </Col>
         </Container>
         <Container className="menu-bar">
