@@ -207,7 +207,7 @@ const courseContent = [
   ],
 ];
 
-const ClassSideNav = () => {
+const ClassSideNav = ({hijoapadre}: {hijoapadre: Lessons}) => {
   const [navClass, setNavClass] = useState("close");
 
   const handleToggleNav = () => {
@@ -237,7 +237,7 @@ const ClassSideNav = () => {
                 {module.map((courseItems, courseIndex) => (
                   <li key={courseIndex}>
                     {courseItems.map((item, courseIIndex) => (
-                      <div key={courseIIndex} className="a">
+                      <div onClick={item => hijoapadre(item)} key={courseIIndex} className="a">
                         <div className="icon classIcon">{courseIndex + 1}</div>
                         <span className="text">{item.courseITitle}</span>
                       </div>
