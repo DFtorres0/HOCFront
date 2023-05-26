@@ -2,22 +2,22 @@ import { UserRole } from "./UserRole";
 
 export interface User {
 
-  UserId: bigint;
+  UserId?: bigint;
 
-  UserName?: string;
+  UserName: string;
 
-  UserUsername?: string;
+  UserUsername: string;
 
-  UserPassword?: string;
+  UserPassword: string;
 
-  UserEmail?: string;
+  UserEmail: string;
 
-  UserPhone: string;
+  UserPhone?: string;
 
-  UserProfilePicture: string;
+  UserProfilePicture?: string;
 
-  UserRoleId: bigint;
+  UserRoleId?: bigint;
 
-  UserRole?: UserRole;
+  UserRole: UserRole;
   
 }

@@ -12,7 +12,7 @@ body {
   padding-bottom: 10px;
   margin-left: 40px;
   line-height: 20px;
-  cursor: pointer;
+  cursor:pointer; cursor: hand
 }
 
 .p{
@@ -21,6 +21,7 @@ body {
 
 #navhover :hover{
   color: #093f8b;
+  cursor:pointer; cursor: hand
 } 
 
 #navbarMax {
@@ -33,4 +34,5 @@ body {
   letter-spacing: 1px;
   margin-left: 30px;
   font-weight: 500;
+  cursor:pointer; cursor: hand
 }

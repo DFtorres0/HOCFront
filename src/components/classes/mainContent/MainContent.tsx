@@ -1,3 +1,4 @@
+
 import MainCFooter from "./MainCFooter";
 import MainCResource from "./MainCResource";
 import MainCSections from "./mainCSections/MainCSections";
@@ -5,10 +6,10 @@ import MainCSections from "./mainCSections/MainCSections";
 const MainContent = () => {
   return (
     <>
-      <MainCResource/>
-      <MainCSections/>
-      <MainCFooter/>
-    </> 
+        <MainCResource />
+        <MainCSections />
+        <MainCFooter />
+    </>
   );
 };
 

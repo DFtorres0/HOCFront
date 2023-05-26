@@ -15,6 +15,7 @@ import {FiMenu} from "react-icons/fi";
 import {HiPencilAlt} from "react-icons/hi";
 import {FaGamepad} from "react-icons/fa";
 import {IoIosApps} from "react-icons/io";
+import { Link } from "react-router-dom";
 
 const cursos = [
   {
@@ -114,7 +115,7 @@ const HomePortfolio = () => {
     <div id="portfolio">
       <Container>
         <div className="section-title text-center center">
-          <h2>Portafolio™</h2>
+          <Container className="h2">Portafolio™</Container>
           <hr />
         </div>
       </Container>
@@ -133,10 +134,11 @@ const HomePortfolio = () => {
             <i><FaGamepad className="GamesIcon" size="25"></FaGamepad></i>
           </Button>
         </ButtonGroup> */}
-        <a href="#Alls"> Todo </a>
-        <a href="#Front" >Front-End</a>
-        <a href="#Back" >Back-End</a>
-        <a href="#DataBase" >Bases de datos</a>
+        <Link className="a" to="#Alls"> Todo </Link>
+        <Link className="a" to="#Front" >Front-End</Link>
+        <Link className="a" to="#Back" >Back-End</Link>
+        <Link className="a" to="#DataBase" >Bases de datos</Link>
+
         {" "}
         <div id="dotid" className ="dot"></div>
       </div>

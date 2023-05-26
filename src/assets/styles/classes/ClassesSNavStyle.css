@@ -1,15 +1,17 @@
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&display=swap");
 #snav {
-  margin: 0;
-  padding: 0;
+  margin-right: 15px;
+  padding: 90px 0px;
   box-sizing: border-box;
-  font-family: "Poppins", sans-serif;
+  /* font-family: "Poppins", sans-serif; */
+  font-family: "Montserrat","sans-serif";
 }
 
 #snav {
   --body-color: #233950;
   --sidebar-color: #2b3641;
-  --primary-color: #3870a8;
-  --primary-color-light: #3a3b3c;
+  --primary-color: #569dc9;
+  --primary-color-light: #3c3b3a;
   --toggle-color: #fff;
   --text-color: #ccc;
   --tran-03: all 0.2s ease;
@@ -34,6 +36,7 @@
   color: #fff;
 }
 
+
 /* ===== Sidebar ===== */
 #snav .sidebar {
   position: fixed;
@@ -53,7 +56,7 @@
 /* ===== Reusable code - Here ===== */
 #snav ListGroup {
   height: 50px;
-  list-style: none;
+  /* list-style: none; */
   display: flex;
   align-items: center;
   margin-top: 10px;
@@ -187,18 +190,22 @@
 
 #snav .sidebar ListGroup div:hover {
   background-color: var(--primary-color);
+  cursor: pointer;
 }
 
 #snav .sidebar ListGroup div:hover .icon,
 #snav .sidebar ListGroup div:hover .text {
   color: var(--sidebar-color);
+  cursor: pointer;
 }
 #snav body.dark .sidebar ListGroup div:hover .icon,
 #snav body.dark .sidebar ListGroup div:hover .text {
   color: var(--text-color);
+ 
 }
 
 #snav .sidebar .menu-bar {
+  
   height: calc(100% - 28px);
   display: flex;
   flex-direction: column;
@@ -232,3 +239,4 @@
 #snav body.dark .home .text {
   color: var(--text-color);
 }
+
