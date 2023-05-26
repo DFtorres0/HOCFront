@@ -1,14 +1,14 @@
-
+import { Lesson } from "../../../core/models/Lessons";
 import MainCFooter from "./MainCFooter";
 import MainCResource from "./MainCResource";
 import MainCSections from "./mainCSections/MainCSections";
 
-const MainContent = () => {
+const MainContent = ({ lesson }: { lesson: Lesson | undefined }) => {
   return (
     <>
-        <MainCResource />
-        <MainCSections />
-        <MainCFooter />
+      <MainCResource videoHTML={lesson? lesson.LessonContent:undefined} />
+      <MainCSections />
+      <MainCFooter />
     </>
   );
 };

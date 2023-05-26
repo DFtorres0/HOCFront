@@ -13,32 +13,41 @@ import { Link } from "react-router-dom";
 import { Container, Row, Col } from "react-bootstrap";
 import { LoginObject, LoginObjectModel } from "../core/services/LoginObject";
 import { AuthenticationService } from "../core/services/Authentication.service";
-import { useState } from "react";
+import { useEffect, useState } from "react";
 
 function Login(): JSX.Element {
-
-  const [username, setUsername] = useState('')
-  const [password, setPassword] = useState('')
+  const [username, setUsername] = useState("");
+  const [password, setPassword] = useState("");
+  const [redirectTo, setredirectTo] = useState("/");
 
   const handleUsernameChange = (event: any) => {
-    setUsername(event.target.value)
-  }
+    setUsername(event.target.value);
+  };
 
   const handlePasswordChange = (event: any) => {
-    setPassword(event.target.value)
-  }
+    setPassword(event.target.value);
+  };
 
   const handleAuthentication = () => {
     const auth = new AuthenticationService();
 
     const user: LoginObject = {
       username: username,
-      password: password
-    }
-    user.username = username
-    user.password = password
+      password: password,
+    };
+    user.username = username;
+    user.password = password;
 
     auth.login(user);
+    
+    const userToken = localStorage.getItem("token");
+    console.log(userToken)
+    if (userToken == "undefined" || undefined || null) {
+      setredirectTo("/");
+    } else {
+      setredirectTo("/home");
+    }
+    console.log(redirectTo)
   };
 
   return (
@@ -100,7 +109,7 @@ function Login(): JSX.Element {
                     label={"Recuerdame"}
                   />
                 </Container>
-                <Link to="/home">
+                <Link to={`${redirectTo}`}>
                   <Button
                     onClick={handleAuthentication}
                     className="mb-4 w-50 gradient-custom-2"
