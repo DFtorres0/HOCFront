@@ -2,10 +2,10 @@ import MainCFooter from "./MainCFooter";
 import MainCResource from "./MainCResource";
 import MainCSections from "./mainCSections/MainCSections";
 
-const MainContent = ({actualResource}: {actualResource:Lesson}) => {
+const MainContent = () => {
   return (
     <>
-      <MainCResource text={actualResource.mainResource}/>
+      <MainCResource/>
       <MainCSections/>
       <MainCFooter/>
     </>
