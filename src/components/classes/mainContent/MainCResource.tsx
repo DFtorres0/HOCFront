@@ -1,11 +1,22 @@
 import { Container } from "react-bootstrap";
+import { MainCourseMock } from "../../../models/MainCourseMock";
+import Videos from "../Resource";
 
 const MainCResource = () => {
-  const videoHTML = '<iframe width="72%" height="530" src="https://www.youtube.com/embed/5jKZ9KGtee0" title="One Happy Cat" frameBorder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowFullScreen></iframe>'
+  const videoHTML = "<div>";
+  
 
   return (
-    <div style={{ marginTop: '70px'}}>
-      <div dangerouslySetInnerHTML={{__html: videoHTML}} />
+    <div style={{ marginTop: "90px" , marginBottom: "80px"}}>
+      {MainCourseMock.map((result) =>
+        result.Modules.map((module) =>
+          module.Lessons.map((attribute) => (
+            <div dangerouslySetInnerHTML={{ __html: attribute.LessonContent}} />
+        
+          ))
+        )
+      )}
+      
     </div>
   );
 };

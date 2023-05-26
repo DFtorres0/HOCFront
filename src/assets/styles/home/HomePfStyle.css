@@ -30,7 +30,7 @@
   filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#54d0dd', endColorstr='#414a52', GradientType=0 ); /* IE6-9 */
 }
 
-#portfolio h2 {
+#portfolio .h2 {
   margin-top: 15px;
   color: #ffff;
 }
@@ -63,7 +63,7 @@
   -webkit-transform: translate(-50%, -50%);
   transform: translate(-50%, -50%);
 }
-.categories a {
+.categories .a {
   color: #f6f4e6;
   text-decoration: none;
   font-size: 1.2em;
@@ -75,7 +75,7 @@
   transition: all 0.2s ease-in-out;
   font-family: "Montserrat","sans-serif";
 }
-.categories a:hover {
+.categories .a:hover {
   color: #1891bd;
 }
 
@@ -96,7 +96,7 @@
   position: relative  ;
   left: -487px;
 }
-.categories a:nth-child(1):hover ~ .dot {
+.categories .a:nth-child(1):hover ~ .dot {
   -webkit-transform: translateX(30px);
   transform: translateX(30px);
   -webkit-transition: all 0.2s ease-in-out;
@@ -104,7 +104,7 @@
   opacity: 1;
 }
 
-.categories a:nth-child(2):hover ~ .dot {
+.categories .a:nth-child(2):hover ~ .dot {
   -webkit-transform: translateX(160px);
   transform: translateX(160px);
   -webkit-transition: all 0.2s ease-in-out;
@@ -112,7 +112,7 @@
   opacity: 1;
 }
 
-.categories a:nth-child(3):hover ~.dot {
+.categories .a:nth-child(3):hover ~.dot {
   -webkit-transform: translateX(289px);
   transform: translateX(289px);
   -webkit-transition: all 0.2s ease-in-out;
@@ -120,7 +120,7 @@
   opacity: 1;
 }
 
-.categories a:nth-child(4):hover ~.dot {
+.categories .a:nth-child(4):hover ~.dot {
   -webkit-transform: translateX(420px);
   transform: translateX(420px);
   -webkit-transition: all 0.2s ease-in-out;
