@@ -8,7 +8,7 @@ const MainContent = () => {
       <MainCResource/>
       <MainCSections/>
       <MainCFooter/>
-    </>
+    </> 
   );
 };
 
