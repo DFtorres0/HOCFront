@@ -1,6 +1,7 @@
 import { Lesson } from "./Lessons";
 import { Topic } from "./Topic";
 
+
 export interface Forum {
   ForumId?: bigint;
 
@@ -16,3 +17,4 @@ export interface Forum {
 
   Topic: Topic;
 }
+

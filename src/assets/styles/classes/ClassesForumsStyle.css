@@ -1,0 +1,32 @@
+.Acordion{
+    width:  75%;
+    height: 100px;
+    margin: auto;
+    margin-bottom: 500px;
+    margin-top: 15px;
+    
+}
+.Hola{
+    border-radius: 10px;
+    position: relative;
+    background: #ededee;
+    padding: 5px 10px 1% 10px;
+    
+
+}
+.Panel{
+    border: 1px solid #252525;
+    border-radius: 10px;
+    margin-bottom: 10px;
+    background: #fcf7f7;
+}
+.answer{
+    display: block;
+    margin: auto;
+    border: 1px #252525 solid; 
+    border-radius: 5px;
+    
+    width: 100px;
+    height: 35px;
+
+}
