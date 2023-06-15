@@ -6,6 +6,7 @@ import {
   FormGroup,
   InputGroup,
 } from "react-bootstrap";
+import { BsCodeSlash } from "react-icons/bs";
 import "../assets/styles/loginForm.css";
 import { FaFacebookF } from "react-icons/fa";
 import { BsTwitter } from "react-icons/bs";
@@ -53,26 +54,27 @@ function Login(): JSX.Element {
   return (
     <div id="login" data-testid="login">
       <div className="login">
-        <Row className="other">
-          <Col className="mb-5 mt-5">
+        <Row className="other mb-5">
+          <Col id="col1" className="mb-5">
             <Container className="d-flex flex-column ms-1">
-              <Container className="text-center mt-1 h4 mb-5 pb-1">
-                Login
+              <Container className="text-center mt-5 h4 mb-5 pb-2">
+                <b>Iniciar Sesion</b>
               </Container>
-              <Container className="text-center p mb-3 pb-1">
+              <Container className="text-center p mb-3 pb-2">
                 Por favor inicia sesion en tu cuenta
               </Container>
-              <FormGroup className="needs-validation">
-                <Container className="form-group mb-4">
+              <FormGroup id="validation" className="needs-validation">
+                <Container className="form-group ">
                   <FloatingLabel
-                    style={{ width: "70%" }}
+                    style={{ width: "60%" }}
                     className="form-label"
+                    id="floatingUser"
                     controlId="floatingUser"
                     label="Usuario"
                   >
                     <FormControl
                       type="text"
-                      className="form-control"
+                      className="form-control text-center"
                       placeholder="Usuario"
                       aria-label="Username"
                       value={username}
@@ -81,29 +83,30 @@ function Login(): JSX.Element {
                   </FloatingLabel>
                 </Container>
 
-                <Container className="form-group mb-4">
+                <Container className="form-group mb-4 ">
                   <FloatingLabel
-                    style={{ width: "70%" }}
+                    style={{ width: "60%"  }}
                     className="form-label"
-                    controlId="floatingPassword"
+                    controlId="floatingPassword "
                     label="Contraseña"
                   >
                     <FormControl
                       type="password"
-                      className="form-control"
+                      className="form-control "
                       placeholder="Contraseña"
                       aria-label="Password"
                       value={password}
                       onChange={handlePasswordChange}
                     />
                   </FloatingLabel>
-                  <InputGroup className="form-label"></InputGroup>
+                  <InputGroup className="form-label mt-3"></InputGroup>
                 </Container>
                 <Container
                   style={{ display: "flex" }}
                   className="form-group form-check mb-4"
                 >
                   <Form.Check
+                    className="form-check mb-4"
                     type={"checkbox"}
                     id={"RememberMeCheckbox"}
                     label={"Recuerdame"}
@@ -121,40 +124,43 @@ function Login(): JSX.Element {
             </Container>
 
             <Container className="d-flex flex-row align-items-center justify-content-center pb-3 mb-4">
-              <Container className="mb-0 p">
-                Don't have an account?
-                <Button className="mx-2" color="danger">
-                  Danger
+              <Container className="acc">
+                 Aun no tienes cuenta?
+                <Button id ="btndanger" className="mx-3" color="danger">
+                 Registrate
                 </Button>
               </Container>
             </Container>
-            <Container>
+            <Container  className="otherlogin " >
               <Button
-                className="mb-4 w-100 "
+                id="facebook"
+                className="btnface mb-5 w-50 "
                 size="lg"
                 style={{ backgroundColor: "#3b5998" }}
               >
-                <FaFacebookF /> Continue with facebook
+                <FaFacebookF/> Inicie Sesion con Facebook
               </Button>
 
               <Button
-                className="mb-4 w-100"
+                id="twitter"
+                className="mb-5 w-50"
                 size="lg"
                 style={{ backgroundColor: "#007EADs" }}
               >
-                <BsTwitter /> Continue with twitter
+                <BsTwitter /> Inicie Sesion con Twitter
               </Button>
             </Container>
           </Col>
-          <Col col="6" className="mb-5 other">
+          <Col col="6" id="col2" className=" other">
             <div className="d-flex flex-column  justify-content-center h-100 mb-4">
               <div className="text-white p-md-5 mx-md-4">
-                <h4 className="mb-4">We are more than just a company</h4>
-                <p className="small mb-0">
-                  Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed
+                <h4 id="textclo2" className="mb-4"> HOME OF CODE </h4>
+                <h4 id="textclo2" className="mb-4"> <BsCodeSlash /> </h4>
+                <p id="textclo2" className="small mb-0">
+                  {/* Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed
                   do eiusmod tempor incididunt ut labore et dolore magna aliqua.
                   Ut enim ad minim veniam, quis nostrud exercitation ullamco
-                  laboris nisi ut aliquip ex ea commodo consequat.
+                  laboris nisi ut aliquip ex ea commodo consequat. */}
                 </p>
               </div>
             </div>
