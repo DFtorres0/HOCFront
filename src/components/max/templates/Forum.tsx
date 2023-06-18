@@ -1,23 +1,55 @@
-import React, { useState } from 'react';
+import React, { useState } from "react";
+import "../../../assets/styles/classes/ClassesForumsStyle.css";
+import {
+  Accordion,
+  AccordionItem,
+  AccordionButton,
+  AccordionPanel,
+  AccordionIcon,
+  Box,
+  Heading,
+} from "@chakra-ui/react";
+import {forums,answers} from "../../../core/models/AnswersMock";
+
 
 interface InputBoxProps {
   onInputChange: (value: string) => void;
 }
 
-const InputBox: React.FC<InputBoxProps> = ({ onInputChange }) => {
-  const [inputValue, setInputValue] = useState('');
-
-  const handleChange = (event: React.ChangeEvent<HTMLInputElement>) => {
-    const value = event.target.value;
-    setInputValue(value);
-    onInputChange(value);
-  };
+const Forum = ({isLesson}:{isLesson:boolean}) => {
+  const [answerView, setAnswerView] = useState(false);
 
   return (
-    <div>
-      <input type="text" value={inputValue} onChange={handleChange} />
+    <div className="Div" style={{ marginBottom: "50px", height: "120%" }}>
+      <Accordion className="Acordion" defaultIndex={[0]} allowMultiple>
+      {forums.map((forum, forumIndex)=>{if((forum.Lesson !== undefined)===isLesson){return (
+        <AccordionItem className="AcordionItem" key={forumIndex} style={{ marginBottom: "50px"}}>
+        <h2>
+          <AccordionButton className="AcordionButton">
+            <Box className="AcordionBox">{forum.ForumTitle}</Box>
+            <AccordionIcon />
+          </AccordionButton>
+        </h2>
+        
+        {answers.map((answer,answerIndex)=> answer.Forum==forum?(
+          <AccordionPanel pb={4} className="Panel" key={answerIndex}>
+          {answer.MessageContent}
+          <input type="button" value="Respuesta" className="answer"></input>
+        </AccordionPanel>
+        ):null)}
+
+        <div>RESPUESTAS</div>
+        <input
+          type="button"
+          value="Respuesta"
+          className="ButtonAnswer"
+          id="answer"
+        ></input>
+      </AccordionItem>
+      )}})}
+      </Accordion>
     </div>
   );
 };
 
-export default InputBox;
+export default Forum;

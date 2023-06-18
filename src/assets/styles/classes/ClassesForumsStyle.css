@@ -1,32 +1,55 @@
+
 .Acordion{
     width:  75%;
     height: 100px;
     margin: auto;
-    margin-bottom: 500px;
     margin-top: 15px;
+    background: #ededee;
     
 }
-.Hola{
+.AcordionButton{
     border-radius: 10px;
     position: relative;
     background: #ededee;
     padding: 5px 10px 1% 10px;
-    
+    border: #252525 ;
+    background: #484a4d;
+    color: aliceblue;
 
 }
 .Panel{
     border: 1px solid #252525;
     border-radius: 10px;
     margin-bottom: 10px;
-    background: #fcf7f7;
+    background: #484a4d;
+    color: aliceblue;
+
 }
-.answer{
+.answer, #answer{
     display: block;
     margin: auto;
-    border: 1px #252525 solid; 
+    border: 0px #252525 solid; 
     border-radius: 5px;
-    
     width: 100px;
     height: 35px;
+    background: #8b939b;
+    color: #ededee;
+    
 
+
+}
+.AcordionBox{
+    text-align: center;
+    flex: 1;
+    align-self: span;
+}
+.ButtonAnswer{
+    float: right;
+}
+.answer:hover,#answer:hover{
+    color: rgb(57, 211, 235);
+    scale: 1.2;
+}
+.AcordionItem{
+    background: #ededee;
 }
