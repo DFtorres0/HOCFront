@@ -21,7 +21,7 @@ const Forum = ({isLesson}:{isLesson:boolean}) => {
 
   return (
     <div className="Div" style={{ marginBottom: "50px", height: "120%" }}>
-      <Accordion className="Acordion" defaultIndex={[0]} allowMultiple>
+      <Accordion className="Acordion" allowToggle>
       {forums.map((forum, forumIndex)=>{if((forum.Lesson !== undefined)===isLesson){return (
         <AccordionItem className="AcordionItem" key={forumIndex} style={{ marginBottom: "50px"}}>
         <h2>
@@ -38,7 +38,7 @@ const Forum = ({isLesson}:{isLesson:boolean}) => {
         </AccordionPanel>
         ):null)}
 
-        <div>RESPUESTAS</div>
+        <div className="TextBoxAnswer"><input type="text" placeholder="Escribe aquí" className="TextBox"></input></div>
         <input
           type="button"
           value="Respuesta"
