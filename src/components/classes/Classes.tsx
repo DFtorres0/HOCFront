@@ -7,11 +7,11 @@ import { Lesson } from "../../core/models/Lessons";
 
 function Classes() {
 
-  const [currentLesson, setCurrentLesson] = useState<Lesson>()
+  const [currentLesson, setCurrentLesson] = useState<Lesson>();
 
-  const handleCurrentLesson = (event:Lesson) => {
-    setCurrentLesson(event)
-  }
+  const handleCurrentLesson = (event: Lesson) => {
+    setCurrentLesson(event);
+  };
 
   return (
     <div id="HeaderClasses">

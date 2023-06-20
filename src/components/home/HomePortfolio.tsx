@@ -68,7 +68,7 @@ const HomePortfolio = () => {
 
   const ModalComponent = ({ course }: { course: courseInterface }) => {
     return (
-      <Modal
+      <Modal 
         show={course.modalShow}
         onHide={() => course.modalShow}
         backdrop="static"
