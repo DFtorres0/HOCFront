@@ -4,6 +4,7 @@ import { DiIllustrator, DiPhotoshop, DiAngularSimple } from "react-icons/di";
 import { SiJavascript } from "react-icons/si";
 import { Card, Button, Container} from "react-bootstrap";
 import { useState } from "react";
+import { Link } from "react-router-dom";
 
 const Curso = [
   {
@@ -59,10 +60,10 @@ const TutorialsBody = () => {
         </div >
       </div>
       {courses.map((Curso, CursoIndex) => (
-        <div className="d-flex flex-row" key={CursoIndex}>
+        <div  className="d-flex flex-row" key={CursoIndex}>
           <Card className=" d-flex flex-row cardT">
             {Curso.image}
-            <Card.Body className="d-flex flex-column  " style={{ textAlign: 'left' }}>
+            <Card.Body className="d-flex flex-column " style={{ textAlign: 'left' }}>
               <Card.Title>{Curso.title}</Card.Title>
               <Card.Text>
                 {Curso.text}
@@ -70,8 +71,8 @@ const TutorialsBody = () => {
                   {Curso.icon}
                 </Container>
                 <Container className="T1 h6">Avanzado - abr 28, 2021</Container>
-              </Card.Text>
-              <Button variant="primary" id="text1">QUIERO APRENDER HOY!</Button>
+              </Card.Text><Link to="/classes">
+              <Button variant="primary" id="text1">QUIERO APRENDER HOY!</Button></Link>
             </Card.Body>
           </Card>
           <Card style={{ width: '20rem', height: '18rem', marginLeft: '130px',color:'#000' }} className=" d-flex flex-row">

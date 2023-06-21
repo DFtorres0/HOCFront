@@ -20,10 +20,10 @@ const Forum = ({isLesson}:{isLesson:boolean}) => {
   const [answerView, setAnswerView] = useState(false);
 
   return (
-    <div className="Div" style={{ marginBottom: "50px", height: "120%" }}>
-      <Accordion className="Acordion" allowToggle>
+    <div className="Div" style={{ marginBottom: "50px", height: "100%" }}>
+      <Accordion style={{backgroundColor:"transparent"}} className="Acordion" defaultIndex={[0]} allowMultiple>
       {forums.map((forum, forumIndex)=>{if((forum.Lesson !== undefined)===isLesson){return (
-        <AccordionItem className="AcordionItem" key={forumIndex} style={{ marginBottom: "50px"}}>
+        <AccordionItem className="AcordionItem" key={forumIndex} style={{ marginBottom: "50px", backgroundColor:"transparent", color:"aliceblue"}}>
         <h2>
           <AccordionButton className="AcordionButton">
             <Box className="AcordionBox">{forum.ForumTitle}</Box>

@@ -1,6 +1,6 @@
 const MainCFooter = () => {
     return (
-        <div id="footer">
+        <div id="footer" style={{marginTop:"auto"}}>
           <div className="container text-center">
             <div className="fnav">
               <p>

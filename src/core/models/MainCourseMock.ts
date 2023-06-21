@@ -13,14 +13,14 @@ const IntensityLevelMock: IntensityLevel = {
 };
 
 const CourseMock: Courses = {
-  CourseName: "Course 1",
+  CourseName: "React",
   CourseDescription: "Loremipsum",
   IntensityLevel: IntensityLevelMock,
 };
 
 const TopicMock: Topic = {
-  TopicName: "Topic 2",
-  TopicDescription: "Loremipsum",
+  TopicName: "React",
+  TopicDescription: "React es una libreria creada por Facebook",
 };
 
 const ModuleMock: Module = {
@@ -29,25 +29,26 @@ const ModuleMock: Module = {
 
 const LessonMock: Lesson[] = [
   {
-    LessonTitle: "Lessons1",
-    LessonDescription: "Loremipsum",
-    LessonContent: '<iframe width="887" height="499" src="https://www.youtube.com/embed/-apU2sviHCM" title="Ricardo Arjona - Historia De Taxi  (Video)" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>',
+    LessonTitle: "Componentes",
+    LessonDescription: "En React, los componentes son bloques de construcción fundamentales para construir interfaces de usuario reutilizables y modulares. Los componentes en React pueden ser clases o funciones, y encapsulan la lógica y la representación visual de una parte específica de la interfaz de usuario.",
+    LessonContent: "XlvziQilc_w",
     IntensityLevel: IntensityLevelMock,
     Module: ModuleMock,
     Topic: TopicMock,
   },
   {
-    LessonTitle: "Lessons2",
-    LessonDescription: "Loremipsum",
-    LessonContent: '<iframe width="887" height="499" src="https://www.youtube.com/embed/VhZiiVnmrEY" title="Pedro Capó - La Fiesta (Live Performance)" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>',
+    LessonTitle: "Elementos",
+    LessonDescription:
+      "En React, puedes crear elementos utilizando JSX (JavaScript XML) para representar y renderizar elementos en tu aplicación. Los elementos de React son objetos ligeros que describen lo que se debe renderizar en la interfaz de usuario.",
+    LessonContent: "rUuusqy50yk",
     IntensityLevel: IntensityLevelMock,
     Module: ModuleMock,
     Topic: TopicMock,
   },
   {
-    LessonTitle: "Lessons3",
-    LessonDescription: "Loremipsum",
-    LessonContent: '<iframe width="887" height="499" src="https://www.youtube.com/embed/m0Kd7qttGBc" title="Nico Hernández - El Malo | Video Oficial" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>',
+    LessonTitle: "Hooks",
+    LessonDescription: "Los hooks son una característica introducida en React a partir de la versión 16.8. Los hooks permiten a los componentes de función en React tener estado y utilizar características adicionales sin necesidad de utilizar clases.",
+    LessonContent: "gxG4o0b7T3E",
     IntensityLevel: IntensityLevelMock,
     Module: ModuleMock,
     Topic: TopicMock,
@@ -100,22 +101,25 @@ export const MainCourseMock: MainCourse[] = [
   {
     Course: CourseMock,
     Modules: MainCourseModuleMock,
-  },{
+  },
+  {
     Course: CourseMock,
     Modules: MainCourseModuleMock,
-  },{
+  },
+  {
     Course: CourseMock,
     Modules: MainCourseModuleMock,
-  },{
+  },
+  {
     Course: CourseMock,
     Modules: MainCourseModuleMock,
-  },{
+  },
+  {
     Course: CourseMock,
     Modules: MainCourseModuleMock,
-  },{
+  },
+  {
     Course: CourseMock,
     Modules: MainCourseModuleMock,
-  }
+  },
 ];
-
-

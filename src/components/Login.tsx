@@ -15,11 +15,33 @@ import { Container, Row, Col } from "react-bootstrap";
 import { LoginObject, LoginObjectModel } from "../core/services/LoginObject";
 import { AuthenticationService } from "../core/services/Authentication.service";
 import { useEffect, useState } from "react";
+import { UserRoleService } from "../core/services/UserRole";
 
 function Login(): JSX.Element {
+
+  const userRole = new UserRoleService()
+  userRole.getAll()
+
   const [username, setUsername] = useState("");
   const [password, setPassword] = useState("");
-  const [redirectTo, setredirectTo] = useState("/");
+  const [redirectTo, setredirectTo] = useState("/home");
+  const [isMobile, setIsMobile] = useState(false);
+
+
+  useEffect(() => {
+    const mediaQuery = window.matchMedia("(max-width: 900px)");
+    const handleMediaQueryChange = (event: any) => {
+      setIsMobile(event.matches);
+    };
+
+    setIsMobile(mediaQuery.matches);
+
+    mediaQuery.addEventListener("change", handleMediaQueryChange);
+
+    return () => {
+      mediaQuery.removeEventListener("change", handleMediaQueryChange);
+    };
+  }, []);
 
   const handleUsernameChange = (event: any) => {
     setUsername(event.target.value);
@@ -44,7 +66,7 @@ function Login(): JSX.Element {
     const userToken = localStorage.getItem("token");
     console.log(userToken)
     if (userToken == "undefined" || undefined || null) {
-      setredirectTo("/");
+      setredirectTo("/home");
     } else {
       setredirectTo("/home");
     }
@@ -52,10 +74,10 @@ function Login(): JSX.Element {
   };
 
   return (
-    <div id="login" data-testid="login">
+    <div  id="login" data-testid="login">
       <div className="login">
-        <Row className="other mb-5">
-          <Col id="col1" className="mb-5">
+        <Row style={{minHeight:"100vh"}} className="other mb-5">
+          <Col style={{display:"flex", flexDirection:"column"}} id="col1" className="mb-5">
             <Container className="d-flex flex-column ms-1">
               <Container className="text-center mt-5 h4 mb-5 pb-2">
                 <b>Iniciar Sesion</b>
@@ -151,7 +173,7 @@ function Login(): JSX.Element {
               </Button>
             </Container>
           </Col>
-          <Col col="6" id="col2" className=" other">
+          <Col style={{display: isMobile?"none":""}} col="6" id="col2" className=" other">
             <div className="d-flex flex-column  justify-content-center h-100 mb-4">
               <div className="text-white p-md-5 mx-md-4">
                 <h4 id="textclo2" className="mb-4"> HOME OF CODE </h4>

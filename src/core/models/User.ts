@@ -2,7 +2,7 @@ import { UserRole } from "./UserRole";
 
 export interface User {
 
-  UserId?: bigint;
+  UserId?: number;
 
   UserName: string;
 
@@ -16,8 +16,8 @@ export interface User {
 
   UserProfilePicture?: string;
 
-  UserRoleId?: bigint;
+  UserRoleId?: number;
 
-  UserRole: UserRole;
+  UserRole?: UserRole | undefined ;
   
 }

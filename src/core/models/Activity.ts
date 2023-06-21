@@ -16,10 +16,10 @@ export interface Activity{
 
      ModuleId? : bigint; 
 
-     IntensityLevel : IntensityLevel;
+     IntensityLevel : IntensityLevel | undefined;
 
-     Module : Module ;
+     Module : Module | undefined;
 
-     Topic : Topic;
+     Topic : Topic | undefined;
 
     }
