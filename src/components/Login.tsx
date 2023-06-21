@@ -131,7 +131,7 @@ function Login(): JSX.Element {
                 <Link to={`${redirectTo}`}>
                   <Button
                     onClick={handleAuthentication}
-                    className="mb-4 w-50 gradient-custom-2"
+                    className=" justify-content-center align-items-center mb-5 w-25 gradient-custom-2"
                   >
                     SIGN IN
                   </Button>
