@@ -7,26 +7,9 @@
   text-align: center;
   font-family: "Montserrat","sans-serif";
 }
-#form-group{
-  position: relative;
-  left: 10px;
-}
 
-/* #login .needs-validation .form-group{
-  margin-left: 90px;
-} */
-
-#login .d-flex .otherlogin{
-  border-radius: 9000px;
-  margin-top: 90px;
-}
-#otherlogin .d-flex .otherlogin{
-  border-radius: 9000px;
-  margin-top: 90px;
-}
-
-#login .d-flex .mb-4-w-100{
-  margin-top: 4px ;
+.custom-row {
+  --bs-gutter-x: 0;
 }
 
 #login .gradient-custom-2 {
@@ -48,14 +31,9 @@
   box-shadow:5px 5px 5px #05363c;
 }
 
-#login .form-label, #login .form-control {
+#login .form-control, .form-label {
   background-color: rgba(0, 0, 0, 0.15);
   color: #fafaf9;
-  border-radius: 10px;
-  margin-top: 20px;
-  /* margin-left: 20px; */
-  /* position: relative;
-  left: 20px; */
 }
 
 /* #login .form-check {
@@ -82,16 +60,10 @@
 }
 #col2{
   background-color: #b6c6c8;
-  
 }
 #textclo2{
   font-size: 50px;
   color: #1c484f;
-}
-
-#login .other {
-  padding: 0px;
-  --bs-gutter-x: 0px;
 }
 
 /* #login .btnface{
@@ -99,15 +71,6 @@
   margin-left: 10px;
   
 } */
-
-#validation{
-  position: relative;
-  left: 130px;
-}
-
-#floatingUser{
-  text-align: center;
-}
 
 #btnsing{
   position: relative;
@@ -117,16 +80,4 @@
 
 #btndanger{
   border-radius: 10px;
-}
-
-#facebook{
-  position: relative;
-  left: 170px;
-  top: -5px;
-}
-
-#twitter{
-  position: relative;
-  top: 55px;
-  right: 189px;
 }
