@@ -8,13 +8,13 @@ import {
   Row,
   Modal,
 } from "react-bootstrap";
-import { useState } from "react";
+import { useState, FC } from "react";
 import { DiAngularSimple, DiReact, DiMysql } from "react-icons/di";
 import { SiJavascript, SiPython, SiOracle } from "react-icons/si";
-import {FiMenu} from "react-icons/fi";
-import {HiPencilAlt} from "react-icons/hi";
-import {FaGamepad} from "react-icons/fa";
-import {IoIosApps} from "react-icons/io";
+import { FiMenu } from "react-icons/fi";
+import { HiPencilAlt } from "react-icons/hi";
+import { FaGamepad } from "react-icons/fa";
+import { IoIosApps } from "react-icons/io";
 import { Link } from "react-router-dom";
 
 const cursos = [
@@ -56,44 +56,49 @@ const cursos = [
   },
 ];
 
-interface courseInterface {
+interface CourseInterface {
   id: number;
   name: string;
   icon: JSX.Element;
   modalShow: boolean;
 }
 
-const HomePortfolio = () => {
-  const [courses, setCourses] = useState<courseInterface[]>([...cursos]);
+interface ModalComponentProps extends CourseInterface {
+  handleSetModal: (id: number, show: boolean) => void;
+}
 
-  const ModalComponent = ({ course }: { course: courseInterface }) => {
-    return (
-      <Modal 
-        show={course.modalShow}
-        onHide={() => course.modalShow}
-        backdrop="static"
-        keyboard={false}
-        centered
-      >
-        <Modal.Header closeButton>
-          <Modal.Title>{course.name}</Modal.Title>
-        </Modal.Header>
-        <Modal.Body>
-          <Card.Title>
-            {course.icon}
-          </Card.Title>
-        </Modal.Body>
-        <Modal.Footer>
-          <Button
-            variant="secondary"
-            onClick={() => handleSetModal(course.id, false)}
-          >
-            Cerrar
-          </Button>
-        </Modal.Footer>
-      </Modal>
-    );
-  };
+const ModalComponent: FC<ModalComponentProps> = ({
+  icon,
+  id,
+  modalShow,
+  name,
+  handleSetModal,
+}) => {
+  return (
+    <Modal
+      show={modalShow}
+      onHide={() => modalShow}
+      backdrop="static"
+      keyboard={false}
+      centered
+    >
+      <Modal.Header closeButton>
+        <Modal.Title>{name}</Modal.Title>
+      </Modal.Header>
+      <Modal.Body>
+        <Card.Title>{icon}</Card.Title>
+      </Modal.Body>
+      <Modal.Footer>
+        <Button variant="secondary" onClick={() => handleSetModal(id, false)}>
+          Cerrar
+        </Button>
+      </Modal.Footer>
+    </Modal>
+  );
+};
+
+const HomePortfolio: FC = () => {
+  const [courses, setCourses] = useState<CourseInterface[]>([...cursos]);
 
   const handleSetModal = (id: number, show: boolean) => {
     const newCourses = cursos.map((course) => {
@@ -134,13 +139,20 @@ const HomePortfolio = () => {
             <i><FaGamepad className="GamesIcon" size="25"></FaGamepad></i>
           </Button>
         </ButtonGroup> */}
-        <Link className="a" to="#Alls"> Todo </Link>
-        <Link className="a" to="#Front" >Front-End</Link>
-        <Link className="a" to="#Back" >Back-End</Link>
-        <Link className="a" to="#DataBase" >Bases de datos</Link>
-
-        {" "}
-        <div id="dotid" className ="dot"></div>
+        <Link className="a" to="#Alls">
+          {" "}
+          Todo{" "}
+        </Link>
+        <Link className="a" to="#Front">
+          Front-End
+        </Link>
+        <Link className="a" to="#Back">
+          Back-End
+        </Link>
+        <Link className="a" to="#DataBase">
+          Bases de datos
+        </Link>{" "}
+        <div id="dotid" className="dot"></div>
       </div>
 
       <Row className="row">
@@ -153,12 +165,10 @@ const HomePortfolio = () => {
             >
               <Card.Header>{curso.name}</Card.Header>
               <Card.Body>
-                <Card.Title>
-                  {curso.icon}
-                </Card.Title>
+                <Card.Title>{curso.icon}</Card.Title>
               </Card.Body>
             </Card>
-            <ModalComponent course={curso} />
+            <ModalComponent {...curso} handleSetModal={handleSetModal} />
           </Col>
         ))}
       </Row>

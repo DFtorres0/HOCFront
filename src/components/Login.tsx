@@ -70,8 +70,11 @@ const Login = () => {
 
   return (
     <div className="login" id="login" data-testid="login">
-      <Row class="custom-row" style={{ minHeight: "100vh", maxWidth: "100vw" }}>
-        <Col class="flex flex-column" id="col1">
+      <Row
+        className="custom-row"
+        style={{ minHeight: "100vh", maxWidth: "100vw" }}
+      >
+        <Col className="flex flex-column" id="col1">
           <Container className="d-flex flex-column">
             <Container className="text-center mt-5 h4 mb-5 pb-2">
               <b>Iniciar Sesion</b>
@@ -80,7 +83,7 @@ const Login = () => {
               Por favor inicia sesion en tu cuenta
             </Container>
             <FormGroup
-              class="flex flex-column justify-content-center"
+              className="flex flex-column justify-content-center"
               style={{
                 paddingLeft: isMobile ? "5%" : "20%",
                 paddingRight: isMobile ? "5%" : "20%",
