@@ -7,6 +7,16 @@ import { UserRoleService } from "./UserRole";
 export class UserService {
   private baseUrl = `${enviroment.apiUrl}/Users/`;
 
+  async axiosGetAll(): Promise<void | User[]> {
+    const axios = require('axios');
+
+    axios.get(this.baseUrl + 'all').then(function (response: any) {
+      console.log(response)
+    }).catch(function (error: any) {
+      console.log(error)
+    }).finally(function () {})
+  }
+
   async getAll(): Promise<void | User[]> {
     const userArray: User[] = [];
 
