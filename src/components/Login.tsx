@@ -69,77 +69,6 @@ const Login = () => {
   };
 
   return (
-<<<<<<< HEAD
-    <div  id="login" data-testid="login">
-      <div className="login">
-        <Row style={{minHeight:"100vh"}} className="other mb-5">
-          <Col style={{display:"flex", flexDirection:"column"}} id="col1" className="mb-5">
-            <Container className="d-flex flex-column ms-1">
-              <Container className="text-center mt-5 h4 mb-5 pb-2">
-                <b>Iniciar Sesion</b>
-              </Container>
-              <Container className="text-center p mb-3 pb-2">
-                Por favor inicia sesion en tu cuenta
-              </Container>
-              <FormGroup id="validation" className="needs-validation">
-                <Container className="form-group ">
-                  <FloatingLabel
-                    style={{ width: "60%" }}
-                    className="form-label"
-                    id="floatingUser"
-                    controlId="floatingUser"
-                    label="Usuario"
-                  >
-                    <FormControl
-                      type="text"
-                      className="form-control text-center"
-                      placeholder="Usuario"
-                      aria-label="Username"
-                      value={username}
-                      onChange={handleUsernameChange}
-                    />
-                  </FloatingLabel>
-                </Container>
-
-                <Container className="form-group mb-4 ">
-                  <FloatingLabel
-                    style={{ width: "60%"  }}
-                    className="form-label"
-                    controlId="floatingPassword "
-                    label="Contraseña"
-                  >
-                    <FormControl
-                      type="password"
-                      className="form-control "
-                      placeholder="Contraseña"
-                      aria-label="Password"
-                      value={password}
-                      onChange={handlePasswordChange}
-                    />
-                  </FloatingLabel>
-                  <InputGroup className="form-label mt-3"></InputGroup>
-                </Container>
-                <Container
-                  style={{ display: "flex" }}
-                  className="form-group form-check mb-4"
-                >
-                  <Form.Check
-                    className="form-check mb-4"
-                    type={"checkbox"}
-                    id={"RememberMeCheckbox"}
-                    label={"Recuerdame"}
-                  />
-                </Container>
-                <Link to={`${redirectTo}`}>
-                  <Button
-                    onClick={handleAuthentication}
-                    className=" justify-content-center align-items-center mb-5 w-25 gradient-custom-2"
-                  >
-                    SIGN IN
-                  </Button>
-                </Link>
-              </FormGroup>
-=======
     <div className="login" id="login" data-testid="login">
       <Row
         className="custom-row"
@@ -149,7 +78,6 @@ const Login = () => {
           <Container className="d-flex flex-column">
             <Container className="text-center mt-5 h4 mb-5 pb-2">
               <b>Iniciar Sesion</b>
->>>>>>> b525a261d3cf9825e7ef5e1f8ff15a2bc7f43166
             </Container>
             <Container className="text-center p mb-3 pb-2">
               Por favor inicia sesion en tu cuenta
