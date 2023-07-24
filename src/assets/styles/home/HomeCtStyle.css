@@ -83,10 +83,11 @@
   transition: none;
   border-radius: 20px;
   border-color: #080808;
+  
 }
 
 #contact .social {
-  margin-top: 80px;
+  margin-top: 40px;
 }
 #contact ul {
   padding: 0;

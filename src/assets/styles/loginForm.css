@@ -7,14 +7,20 @@
   text-align: center;
   font-family: "Montserrat","sans-serif";
 }
-#form-group{
-  position: relative;
-  left: 10px;
+.Container-form-group{
+  display: flex;
+  align-self: center;
+  flex-direction: column;
+  width: 90%;
+} 
+
+.form-group{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
 }
 
-/* #login .needs-validation .form-group{
-  margin-left: 90px;
-} */
 
 #login .d-flex .otherlogin{
   border-radius: 9000px;
@@ -45,7 +51,8 @@
   /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
   background: linear-gradient(to right, #05363c, #007184);
   border-color: #1c484f;
-  box-shadow:5px 5px 5px #05363c;
+  border: 4px solid #1c484f;
+  border-radius: 10px;
   position: relative;
   right: inherit;
   right: 135px;
@@ -55,16 +62,7 @@
   background-color: rgba(0, 0, 0, 0.15);
   color: #fafaf9;
   border-radius: 10px;
-  margin-top: 20px;
-  /* margin-left: 20px; */
-  /* position: relative;
-  left: 20px; */
 }
-
-/* #login .form-check {
-  margin-left: 10px;
-  margin-top: -5px;
-} */
 
 #login .login {
   background-color: #1c484f;
@@ -104,33 +102,27 @@
 } */
 
 #validation{
-  position: relative;
-  left: 130px;
+  display: flex;
+  flex-direction: column;
 }
 
-#floatingUser{
-  text-align: center;
-}
-
-#btnsing{
-  position: relative;
-  right: 130px;
-  top:-15px;
-}
 
 #btndanger{
   border-radius: 10px
   
 }
 
-#facebook{
-  position: relative;
-  left: 170px;
-  top: -5px;
+.otherlogin{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 
-#twitter{
-  position: relative;
-  top: 55px;
-  right: 189px;
+#facebook, #twitter{
+  width: 55% ;
+}
+
+.text-container{
+  display: flex;
+  justify-content: center;
 }

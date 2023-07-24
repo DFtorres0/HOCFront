@@ -6,7 +6,7 @@ import {
   FormGroup,
   InputGroup,
 } from "react-bootstrap";
-import { BsCodeSlash } from "react-icons/bs";
+import { BsCodeSlash, BsJustify } from "react-icons/bs";
 import "../assets/styles/loginForm.css";
 import { FaFacebookF } from "react-icons/fa";
 import { BsTwitter } from "react-icons/bs";
@@ -79,66 +79,35 @@ function Login(): JSX.Element {
         <Row style={{minHeight:"100vh"}} className="other mb-5">
           <Col style={{display:"flex", flexDirection:"column"}} id="col1" className="mb-5">
             <Container className="d-flex flex-column ms-1">
-              <Container className="text-center mt-5 h4 mb-5 pb-2">
+              <Container className="text-center mt-5 h4 mb-5 pb-2 text-container">
                 <b>Iniciar Sesion</b>
               </Container>
-              <Container className="text-center p mb-3 pb-2">
+              <Container className="text-center p mb-3 pb-2 text-container">
                 Por favor inicia sesion en tu cuenta
               </Container>
               <FormGroup id="validation" className="needs-validation">
-                <Container className="form-group ">
-                  <FloatingLabel
-                    style={{ width: "60%" }}
-                    className="form-label"
-                    id="floatingUser"
-                    controlId="floatingUser"
-                    label="Usuario"
-                  >
-                    <FormControl
-                      type="text"
-                      className="form-control text-center"
-                      placeholder="Usuario"
-                      aria-label="Username"
-                      value={username}
-                      onChange={handleUsernameChange}
-                    />
-                  </FloatingLabel>
-                </Container>
+               <div className="Container-form-group">
+                  <Container className="form-group mb-1">
+                   <FloatingLabel  style={{ width: "60%" }} className="form-label" id="floatingUser" controlId="floatingUser" label="Usuario">
+                      <FormControl type="text" className="form-control" placeholder="Usuario" aria-label="Username" value={username} onChange={handleUsernameChange}/>
+                    </FloatingLabel>
+                  </Container>
+                
 
-                <Container className="form-group mb-4 ">
-                  <FloatingLabel
-                    style={{ width: "60%"  }}
-                    className="form-label"
-                    controlId="floatingPassword "
-                    label="Contraseña"
-                  >
-                    <FormControl
-                      type="password"
-                      className="form-control "
-                      placeholder="Contraseña"
-                      aria-label="Password"
-                      value={password}
-                      onChange={handlePasswordChange}
-                    />
-                  </FloatingLabel>
-                  <InputGroup className="form-label mt-3"></InputGroup>
+                  <Container className="form-group mb-4">
+                   <FloatingLabel style={{ width: "60%"  }} className="form-label" controlId="floatingPassword " label="Contraseña">
+                     <FormControl type="password" className="form-control " placeholder="Contraseña" aria-label="Password" value={password} onChange={handlePasswordChange}/>
+                    </FloatingLabel>
+                    <InputGroup className="form-label mt-3"></InputGroup>
+                  </Container>
+                </div>
+                
+                <Container style={{ display: "flex"}} className="form-group form-check mb-4">
+                  <Form.Check className="form-check mb-4" type={"checkbox"} id={"RememberMeCheckbox"} label={"Recuerdame"}/>
                 </Container>
-                <Container
-                  style={{ display: "flex" }}
-                  className="form-group form-check mb-4"
-                >
-                  <Form.Check
-                    className="form-check mb-4"
-                    type={"checkbox"}
-                    id={"RememberMeCheckbox"}
-                    label={"Recuerdame"}
-                  />
-                </Container>
+                
                 <Link to={`${redirectTo}`}>
-                  <Button
-                    onClick={handleAuthentication}
-                    className=" justify-content-center align-items-center mb-5 w-25 gradient-custom-2"
-                  >
+                  <Button onClick={handleAuthentication} className="mb-5 w-25" >
                     SIGN IN
                   </Button>
                 </Link>
@@ -147,28 +116,18 @@ function Login(): JSX.Element {
 
             <Container className="d-flex flex-row align-items-center justify-content-center pb-3 mb-4">
               <Container className="acc">
-                 Aun no tienes cuenta?
+                 ¿Aun no tienes cuenta?
                 <Button id ="btndanger" className="mx-3" color="danger">
                  Registrate
                 </Button>
               </Container>
             </Container>
             <Container  className="otherlogin " >
-              <Button
-                id="facebook"
-                className="btnface mb-5 w-50 "
-                size="lg"
-                style={{ backgroundColor: "#3b5998" }}
-              >
+              <Button id="facebook" className="btnface mb-4 w-55 logButton " size="lg" style={{ backgroundColor: "#3b5998" }}>
                 <FaFacebookF/> Inicie Sesion con Facebook
               </Button>
 
-              <Button
-                id="twitter"
-                className="mb-5 w-50"
-                size="lg"
-                style={{ backgroundColor: "#007EADs" }}
-              >
+              <Button id="twitter" className="mb-4 w-55 logButton" size="lg" style={{ backgroundColor: "#007EADs" }}>
                 <BsTwitter /> Inicie Sesion con Twitter
               </Button>
             </Container>
@@ -178,12 +137,6 @@ function Login(): JSX.Element {
               <div className="text-white p-md-5 mx-md-4">
                 <h4 id="textclo2" className="mb-4"> HOME OF CODE </h4>
                 <h4 id="textclo2" className="mb-4"> <BsCodeSlash /> </h4>
-                <p id="textclo2" className="small mb-0">
-                  {/* Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed
-                  do eiusmod tempor incididunt ut labore et dolore magna aliqua.
-                  Ut enim ad minim veniam, quis nostrud exercitation ullamco
-                  laboris nisi ut aliquip ex ea commodo consequat. */}
-                </p>
               </div>
             </div>
           </Col>

@@ -115,25 +115,11 @@ const HomePortfolio = () => {
     <div id="portfolio">
       <Container>
         <div className="section-title text-center center">
-          <Container className="h2">Portafolio™</Container>
+          <Container className="h2">Portafolio</Container>
           <hr />
         </div>
       </Container>
       <div className="categories">
-        {/* <ButtonGroup className="cat type">
-          <Button id="btn1" variant="outline-dark" size="lg" title="Todo">
-            <i><FiMenu className="TodoIcon" size = "25"></FiMenu></i>
-          </Button>
-          <Button className="boton2" id="btn2" variant="outline-dark" size="lg" title="Diseño" color="#d59acb">
-            <i><HiPencilAlt className="DiseñoIcon" size="25"></HiPencilAlt></i>
-          </Button>
-          <Button id="btn3" variant="outline-dark" size="lg" title="App Modificadas">
-            <i><IoIosApps className="AppIcon" size="25"></IoIosApps></i> 
-          </Button>
-          <Button id="btn4" variant="outline-dark" size="lg" title="Juegos">
-            <i><FaGamepad className="GamesIcon" size="25"></FaGamepad></i>
-          </Button>
-        </ButtonGroup> */}
         <Link className="a" to="#Alls"> Todo </Link>
         <Link className="a" to="#Front" >Front-End</Link>
         <Link className="a" to="#Back" >Back-End</Link>

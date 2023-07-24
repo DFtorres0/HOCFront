@@ -9,13 +9,17 @@ footer{
 .p-4{
     display: flex;
     flex-wrap: wrap;
+    min-width: 400px;
+
     
 }
+
 #T-text{
     text-align: center;
     color: rgb(240, 248, 255);
-    flex: 2;
+    flex: 1;
     min-width: 250px;
+    text-align: center;
     /*margin: auto !important;*/
 }
 #T-text .T1{
@@ -26,8 +30,9 @@ footer{
     /*margin:auto !important;*/
 }
 #Text_container{
-    flex: 2;
+    flex: 1;
     min-width: 250px;
+    text-align: center;
 
 }
 #Text_container p{
