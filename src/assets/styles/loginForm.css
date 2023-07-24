@@ -7,6 +7,7 @@
   text-align: center;
   font-family: "Montserrat","sans-serif";
 }
+<<<<<<< HEAD
 .Container-form-group{
   display: flex;
   align-self: center;
@@ -33,6 +34,11 @@
 
 #login .d-flex .mb-4-w-100{
   margin-top: 4px ;
+=======
+
+.custom-row {
+  --bs-gutter-x: 0;
+>>>>>>> 45f516d7a85e2917f1bf58d5fb455c997a700a1a
 }
 
 #login .gradient-custom-2 {
@@ -58,10 +64,13 @@
   right: 135px;
 }
 
-#login .form-label, #login .form-control {
+#login .form-control, .form-label {
   background-color: rgba(0, 0, 0, 0.15);
   color: #fafaf9;
+<<<<<<< HEAD
   border-radius: 10px;
+=======
+>>>>>>> 45f516d7a85e2917f1bf58d5fb455c997a700a1a
 }
 
 #login .login {
@@ -83,16 +92,10 @@
 }
 #col2{
   background-color: #b6c6c8;
-  
 }
 #textclo2{
   font-size: 50px;
   color: #1c484f;
-}
-
-#login .other {
-  padding: 0px;
-  --bs-gutter-x: 0px;
 }
 
 /* #login .btnface{
@@ -101,6 +104,7 @@
   
 } */
 
+<<<<<<< HEAD
 #validation{
   display: flex;
   flex-direction: column;
@@ -120,6 +124,16 @@
 
 #facebook, #twitter{
   width: 55% ;
+=======
+#btnsing{
+  position: relative;
+  right: 130px;
+  top:-15px;
+}
+
+#btndanger{
+  border-radius: 10px;
+>>>>>>> 45f516d7a85e2917f1bf58d5fb455c997a700a1a
 }
 
 .text-container{
