@@ -3,19 +3,64 @@ import { enviroment } from "../../enviroments/enviroment";
 import { User } from "../models/User";
 import { UserRole } from "../models/UserRole";
 import { UserRoleService } from "./UserRole";
+import axios from "axios";
+import { get } from "jquery";
+import { promises } from "dns";
 
 export class UserService {
   private baseUrl = `${enviroment.apiUrl}/Users/`;
 
   async axiosGetAll(): Promise<void | User[]> {
-    const axios = require('axios');
-
+    return 
     axios.get(this.baseUrl + 'all').then(function (response: any) {
+        console.log(response)
+      }).catch(function (error: any) {
+          console.log(error)
+      }).finally(function () {})
+    
+  }
+  async axiosGetGet(): Promise<void | User[]>{
+    return
+    axios.get(this.baseUrl + 'get').then(function (response: any) {
       console.log(response)
     }).catch(function (error: any) {
       console.log(error)
     }).finally(function () {})
   }
+
+  async axiosPostEdit(user: User): Promise<void | User>{
+    return
+    axios.post(this.baseUrl + 'edit', user).then(function (response: any) {
+    }).catch(function (error: any) {
+      console.log(error)
+    }).finally(function () {})
+  }
+
+  async axiosPostAuthenticate(user: User): Promise<void | User>{
+    return
+    axios.post(this.baseUrl + 'authenticate', user).then(function (response: any) {
+    }).catch(function (error: any) {
+      console.log(error)
+   }).finally(function () {})
+  }
+
+  async axiosPostLogout(user: User): Promise<void | User>{
+    return
+    axios.post(this.baseUrl + 'logout', user).then(function (response: any) {
+    }).catch(function (error: any) {
+      console.log(error)
+    }).finally(function () {})
+  }
+
+  async axiosPutCreate(user: User): Promise<void | User>{
+    return
+    axios.put(this.baseUrl + 'create', user).then(function (response: any) {
+    }).catch(function (error: any) {
+      console.log(error)
+    }).finally(function () {})
+  }
+
+  
 
   async getAll(): Promise<void | User[]> {
     const userArray: User[] = [];

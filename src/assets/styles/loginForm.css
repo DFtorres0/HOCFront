@@ -7,12 +7,11 @@
   text-align: center;
   font-family: "Montserrat","sans-serif";
 }
-<<<<<<< HEAD
 .Container-form-group{
   display: flex;
   align-self: center;
   flex-direction: column;
-  width: 90%;
+  
 } 
 
 .form-group{
@@ -23,23 +22,13 @@
 }
 
 
-#login .d-flex .otherlogin{
-  border-radius: 9000px;
-  margin-top: 90px;
-}
-#otherlogin .d-flex .otherlogin{
-  border-radius: 9000px;
-  margin-top: 90px;
+
+.otherlogin{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 
-#login .d-flex .mb-4-w-100{
-  margin-top: 4px ;
-=======
-
-.custom-row {
-  --bs-gutter-x: 0;
->>>>>>> 45f516d7a85e2917f1bf58d5fb455c997a700a1a
-}
 
 #login .gradient-custom-2 {
   /* fallback for old browsers */
@@ -54,7 +43,6 @@
     #050003
   );
 
-  /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
   background: linear-gradient(to right, #05363c, #007184);
   border-color: #1c484f;
   border: 4px solid #1c484f;
@@ -67,25 +55,11 @@
 #login .form-control, .form-label {
   background-color: rgba(0, 0, 0, 0.15);
   color: #fafaf9;
-<<<<<<< HEAD
-  border-radius: 10px;
-=======
->>>>>>> 45f516d7a85e2917f1bf58d5fb455c997a700a1a
 }
 
 #login .login {
   background-color: #1c484f;
-
-  /* fallback for old browsers */
-  /* background: #134186; */
-
-  /* Chrome 10-25, Safari 5.1-6 */
   background: -webkit-linear-gradient(to right, #e8ef1f, #1b3757, #b44593);
-
-  /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
-  /* background: linear-gradient(to right, #050124, #050124, #710851); */
-  /* background: linear-gradient(to right, #02282d,#05363c, #007184); */
-  
 }
 #col1{
   background-color: #1c484f;
@@ -98,44 +72,13 @@
   color: #1c484f;
 }
 
-/* #login .btnface{
-  align-items: center;
-  margin-left: 10px;
+ .btnlog{
+  width: 70%;
   
-} */
-
-<<<<<<< HEAD
-#validation{
-  display: flex;
-  flex-direction: column;
-}
-
-
-#btndanger{
-  border-radius: 10px
-  
-}
-
-.otherlogin{
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-}
-
-#facebook, #twitter{
-  width: 55% ;
-=======
-#btnsing{
-  position: relative;
-  right: 130px;
-  top:-15px;
-}
-
+} 
 #btndanger{
   border-radius: 10px;
->>>>>>> 45f516d7a85e2917f1bf58d5fb455c997a700a1a
 }
-
 .text-container{
   display: flex;
   justify-content: center;

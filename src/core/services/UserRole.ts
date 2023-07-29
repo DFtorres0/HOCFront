@@ -1,8 +1,30 @@
 import { enviroment } from "../../enviroments/enviroment";
 import { UserRole } from "../models/UserRole";
+import axios from "axios";
 
 export class UserRoleService {
   private baseUrl = `${enviroment.apiUrl}/UserRole/`;
+
+  async axiosGetAll(): Promise<void | UserRole[]> {
+    return
+    axios.get(this.baseUrl + 'all').then(function (response: any) {
+      console.log(response)
+    }).catch(function (error: any) {
+      console.log(error)
+    }).finally(function () {})
+  }
+
+  async axiosGetGet(): Promise<void | UserRole[]> {
+    return
+    axios.get(this.baseUrl + 'get').then(function (response: any) {
+      console.log(response)
+    }).catch(function (error: any) {
+      console.log(error)
+    }).finally(function () {})
+  }
+
+
+
 
   async getAll(): Promise<undefined | UserRole[]> {
     const userRolesArray: UserRole[] = [];

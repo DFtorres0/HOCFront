@@ -125,15 +125,6 @@ const HomePortfolio: FC = () => {
         </div>
       </Container>
       <div className="categories">
-<<<<<<< HEAD
-        <Link className="a" to="#Alls"> Todo </Link>
-        <Link className="a" to="#Front" >Front-End</Link>
-        <Link className="a" to="#Back" >Back-End</Link>
-        <Link className="a" to="#DataBase" >Bases de datos</Link>
-
-        {" "}
-        <div id="dotid" className ="dot"></div>
-=======
         {/* <ButtonGroup className="cat type">
           <Button id="btn1" variant="outline-dark" size="lg" title="Todo">
             <i><FiMenu className="TodoIcon" size = "25"></FiMenu></i>
@@ -162,7 +153,6 @@ const HomePortfolio: FC = () => {
           Bases de datos
         </Link>{" "}
         <div id="dotid" className="dot"></div>
->>>>>>> 45f516d7a85e2917f1bf58d5fb455c997a700a1a
       </div>
 
       <Row className="row">
