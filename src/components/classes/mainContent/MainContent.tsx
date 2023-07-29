@@ -5,8 +5,25 @@ import MainCResource from "./MainCResource";
 import MainCSections from "./mainCSections/MainCSections";
 import Forum from "../../max/templates/Forum";
 import { MainCourseMock } from "../../../core/models/MainCourseMock";
+import { useEffect, useState } from "react";
 
 const MainContent = ({ lesson }: { lesson: Lesson | undefined }) => {
+  const [isMobile, setIsMobile] = useState(false);
+
+  useEffect(() => {
+    const mediaQuery = window.matchMedia("(max-width: 900px)");
+    const handleMediaQueryChange = (event: any) => {
+      setIsMobile(event.matches);
+    };
+
+    setIsMobile(mediaQuery.matches);
+
+    mediaQuery.addEventListener("change", handleMediaQueryChange);
+
+    return () => {
+      mediaQuery.removeEventListener("change", handleMediaQueryChange);
+    };
+  }, []);
   return (
     <div
       style={{
@@ -36,7 +53,7 @@ const MainContent = ({ lesson }: { lesson: Lesson | undefined }) => {
           {lesson?.LessonTitle}
         </Container>
       </Container>
-      <Row style={{ width: "94vw", padding: "0", paddingLeft: "4vw" }}>
+      <Row style={{ width: "94vw", padding: "0", paddingLeft: "45px", display:"flex",flexDirection:isMobile?"column":undefined}}>
         <Col style={{ minWidth: "60vw" }}>
           <MainCResource
             videoHTML={lesson ? lesson.LessonContent : undefined}

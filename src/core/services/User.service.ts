@@ -1,44 +1,61 @@
 import { enviroment } from "../../enviroments/enviroment";
 import { User } from "../models/User";
+import { UserRole } from "../models/UserRole";
+import { UserRoleService } from "./UserRole";
 import axios from "axios";
+import { get } from "jquery";
+import { promises } from "dns";
 
 export class UserService {
   private baseUrl = `${enviroment.apiUrl}/Users/`;
 
   async getAll(): Promise<void | User[]> {
-
-    try {
-      axios
-        .get(`${this.baseUrl}all`)
-        .then(function (response: any) {
-          const userData: User[] = response.data;
-          console.log(userData);
-        })
-        .catch(function (error: any) {
-          console.log(error);
-        })
-        .finally(function () {});
-    } catch (error) {
-      console.log(error);
-    }
+    return;
+    axios
+      .get(this.baseUrl + "all")
+      .then(function (response: any) {
+        const userData: User[] = response.data;
+        console.log(userData);
+      })
+      .catch(function (error: any) {
+        console.log(error);
+      })
+      .finally(function () {});
+  }
+  async axiosGetOne(): Promise<void | User[]> {
+    return;
+    axios
+      .get(this.baseUrl + "get")
+      .then(function (response: any) {
+        const userData: User = response.data;
+        console.log(userData);
+      })
+      .catch(function (error: any) {
+        console.log(error);
+      })
+      .finally(function () {});
   }
 
-  async create(user: User): Promise<void | User[]> {
-    const userArray: User[] = [];
-
-    const fetchConfig = {
-      method: "PUT",
-      headers: {
-        "Content-Type": "application/json",
-      },
-      body: JSON.stringify(user),
-    };
-
+  async axiosPostEdit(user: User): Promise<void | User> {
+    return;
+    axios
+      .post(this.baseUrl + "edit", user)
+      .then(function (response: any) {})
+      .catch(function (error: any) {
+        console.log(error);
+      })
+      .finally(function () {});
+  }
+  
+  async axiosCreate(user: User): Promise<void | User> {
+    return;
+    axios
+      .put(this.baseUrl + "create", user)
+      .then(function (response: any) {})
+      .catch(function (error: any) {
+        console.log(error);
+      })
+      .finally(function () {});
   }
 
-  async delete(number: number): Promise<void | User[]> {
-    const userArray: User[] = [];
-
-    
-  }
 }

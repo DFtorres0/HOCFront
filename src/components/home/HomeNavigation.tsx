@@ -50,7 +50,7 @@ const HomeNavigation = () => {
           </li>
           <li>
             <a href="#portfolio" className="page-scroll">
-              Portafolio™
+              Portafolio
             </a>
           </li>
           <li>

@@ -56,6 +56,7 @@
 }
 
 #about .btn-default {
+  display: flex;
   text-transform: uppercase;
   color: #ffffff;
   background-color: #414a52;
@@ -66,8 +67,13 @@
   border-radius: 0;
   margin-top: 20px;
   transition: all 0.3s;
-  position: relative;
-  left: -100px;
+  width: 200px;
+  justify-content: center;
+}
+
+.ContainerButton{
+  display: flex;
+  justify-content: center;
 }
 
 #about .btn-lg:hover,
@@ -100,4 +106,13 @@
 }
 .tittle{
   margin-top: 30px;
+}
+
+.img{
+  margin-bottom: 20px;
+}
+
+.row{
+  display: flex;
+  min-width: 400px;
 }

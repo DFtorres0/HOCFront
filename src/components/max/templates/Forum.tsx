@@ -38,7 +38,7 @@ const Forum = ({isLesson}:{isLesson:boolean}) => {
         </AccordionPanel>
         ):null)}
 
-        <div>RESPUESTAS</div>
+        <div className="TextBoxAnswer"><input type="text" placeholder="Escribe aquí" className="TextBox"></input></div>
         <input
           type="button"
           value="Respuesta"

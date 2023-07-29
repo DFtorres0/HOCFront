@@ -12,8 +12,8 @@ const FooterMax = () => {
       }}
     >
       <Container className="p-4">
-        <Row>
-          <Col id="T-text" lg="4" md="12" className=" mb-md-0">
+        
+          <div id="T-text"  className=" mb-md-0">
             <p >Siguenos:</p>
 
             <p className="T1">
@@ -31,9 +31,9 @@ const FooterMax = () => {
                 <SiLinkedin />
                 </a>
             </p>
-          </Col>
+          </div>
 
-          <Col id="Text_container" lg="3" md="6" className="mb-4 mb-md-0 mx-1">
+          <div id="Text_container"  className="mb-4 mb-md-0 mx-1">
             <p>Links Rapidos :</p>
 
             <ul className="list-unstyled mb-0" id="unorder_list">
@@ -53,15 +53,17 @@ const FooterMax = () => {
                 </a>
               </li>
             </ul>
-          </Col>
-        </Row>
+          </div>
+        
       </Container>
 
       <div className="copyright">
-        Copyright © 2023 . Diseñado Por:{" "}
-        <a className="copyright_text" href="/home">
-          Home of Code ™.
-        </a>
+        <div className="copyrightText1">
+            Copyright © 2023 . Diseñado Por:{" "}
+            <a className="copyright_text" href="/home">
+              Home of Code.
+            </a>
+        </div>
       </div>
     </footer>
   );

@@ -11,8 +11,8 @@ const HomeAbout = () => {
           <hr />
         </div>
         <div className="row">
-          <div className="col-xs-12 col-md-6">
-            <img style={{height: 'auto', width: 'auto'}} src={image} alt="anonymous" />
+          <div className="col-xs-12 col-md-6 img">
+            <img style={{height: 'auto', width: 'auto'}} src={image} alt="anonymous"/>
           </div>
           <div className="col-xs-12 col-md-6">
             <div className="about-text">
@@ -37,14 +37,15 @@ const HomeAbout = () => {
                 <li>Soluciones TI.</li>
                 </ListGroup.Item>
               </ListGroup>
-              <a
-                href="#portfolio"
-                className="btn btn-default btn-lg page-scroll"
-              >
-                Mi Portafolio
-              </a>
+              
             </div>
           </div>
+          <div className="ContainerButton">
+            <a href="#portfolio" className="btn btn-default btn-lg page-scroll">
+                Mi Portafolio
+              </a>
+          </div>
+          
         </div>
       </div>
     </div>

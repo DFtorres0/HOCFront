@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useState, useEffect} from "react";
 import { Container, Nav, Navbar } from "react-bootstrap";
 
 type MainCSNavProps = {
@@ -7,6 +7,22 @@ type MainCSNavProps = {
 
 const MainCSNavbar: React.FC<MainCSNavProps> = ({ currentComponent }) => {
   const [clickComponent, setClickComponent] = useState("close");
+  const [isMobile, setIsMobile] = useState(false);
+
+  useEffect(() => {
+    const mediaQuery = window.matchMedia("(max-width: 900px)");
+    const handleMediaQueryChange = (event: any) => {
+      setIsMobile(event.matches);
+    };
+
+    setIsMobile(mediaQuery.matches);
+
+    mediaQuery.addEventListener("change", handleMediaQueryChange);
+
+    return () => {
+      mediaQuery.removeEventListener("change", handleMediaQueryChange);
+    };
+  }, []);
 
   const handleOnChange = (data: string) => {
     currentComponent(data);
@@ -14,27 +30,27 @@ const MainCSNavbar: React.FC<MainCSNavProps> = ({ currentComponent }) => {
 
   return (
     <div>
-      <Navbar style={{ fontSize: "30px", marginBottom: "20px" }}>
+      <Navbar style={{ fontSize:!isMobile?"30px":"15px", marginBottom: "20px" }}>
         <Container style={{ display: "flex", justifyContent: "center" }}>
           <Nav>
             <Nav.Link
               onClick={() => handleOnChange("Compilador")}
               style={{
                 color: "aliceblue",
-                paddingLeft: "50px",
-                paddingRight: "50px",
-                borderLeft: "2px solid #4a4a4a",
+                paddingLeft:!isMobile? "50px":"10px",
+                paddingRight:!isMobile? "50px":"10px",
               }}
             >
               Compilador
-            </Nav.Link>
+            </Nav.Link >
             <Nav.Link
               onClick={() => handleOnChange("Descripcion")}
               style={{
                 color: "aliceblue",
-                paddingLeft: "50px",
-                paddingRight: "50px",
+                paddingLeft:!isMobile? "50px":"10px",
+                paddingRight:!isMobile? "50px":"10px",
                 borderLeft: "1px solid #4a4a4a",
+                
               }}
             >
               Descripcion
@@ -43,10 +59,9 @@ const MainCSNavbar: React.FC<MainCSNavProps> = ({ currentComponent }) => {
               onClick={() => handleOnChange("Recursos")}
               style={{
                 color: "aliceblue",
-                paddingLeft: "50px",
-                paddingRight: "50px",
+                paddingLeft:!isMobile? "50px":"10px",
+                paddingRight:!isMobile? "50px":"10px",
                 borderLeft: "1px solid #4a4a4a",
-                borderRight: "2px solid #4a4a4a",
               }}
             >
               Recursos

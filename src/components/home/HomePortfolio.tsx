@@ -120,7 +120,7 @@ const HomePortfolio: FC = () => {
     <div id="portfolio">
       <Container>
         <div className="section-title text-center center">
-          <Container className="h2">Portafolio™</Container>
+          <Container className="h2">Portafolio</Container>
           <hr />
         </div>
       </Container>

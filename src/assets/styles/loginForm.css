@@ -7,10 +7,28 @@
   text-align: center;
   font-family: "Montserrat","sans-serif";
 }
+.Container-form-group{
+  display: flex;
+  align-self: center;
+  flex-direction: column;
+  
+} 
 
-.custom-row {
-  --bs-gutter-x: 0;
+.form-group{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
 }
+
+
+
+.otherlogin{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
 
 #login .gradient-custom-2 {
   /* fallback for old browsers */
@@ -25,10 +43,10 @@
     #050003
   );
 
-  /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
   background: linear-gradient(to right, #05363c, #007184);
   border-color: #1c484f;
-  box-shadow:5px 5px 5px #05363c;
+  border: 4px solid #1c484f;
+  border-radius: 10px;
   position: relative;
   right: inherit;
   right: 135px;
@@ -39,24 +57,9 @@
   color: #fafaf9;
 }
 
-/* #login .form-check {
-  margin-left: 10px;
-  margin-top: -5px;
-} */
-
 #login .login {
   background-color: #1c484f;
-
-  /* fallback for old browsers */
-  /* background: #134186; */
-
-  /* Chrome 10-25, Safari 5.1-6 */
   background: -webkit-linear-gradient(to right, #e8ef1f, #1b3757, #b44593);
-
-  /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
-  /* background: linear-gradient(to right, #050124, #050124, #710851); */
-  /* background: linear-gradient(to right, #02282d,#05363c, #007184); */
-  
 }
 #col1{
   background-color: #1c484f;
@@ -69,18 +72,14 @@
   color: #1c484f;
 }
 
-/* #login .btnface{
-  align-items: center;
-  margin-left: 10px;
+ .btnlog{
+  width: 70%;
   
-} */
-
-#btnsing{
-  position: relative;
-  right: 130px;
-  top:-15px;
-}
-
+} 
 #btndanger{
   border-radius: 10px;
+}
+.text-container{
+  display: flex;
+  justify-content: center;
 }

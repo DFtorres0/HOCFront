@@ -7,10 +7,10 @@ body {
   font-size: large;
   color: rgba(255, 255, 255, 0.7);
   letter-spacing: 1px;
-  margin-left: 30px;
+  /*margin-left: 30px;*/
   padding-top: 10px;
   padding-bottom: 10px;
-  margin-left: 40px;
+  /*margin-left: 40px;*/
   line-height: 20px;
   cursor:pointer; cursor: hand
 }
@@ -35,4 +35,12 @@ body {
   margin-left: 30px;
   font-weight: 500;
   cursor:pointer; cursor: hand
+}
+.dropdown-menu.show{
+  background: #252525;
+  margin-right: 100px;
+}
+.navbar-expand .navbar-nav .dropdown-menu{
+  position: relative;
+  left: -150px;
 }

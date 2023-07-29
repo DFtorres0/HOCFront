@@ -2,48 +2,31 @@ import { useEffect } from "react";
 import { enviroment } from "../../enviroments/enviroment";
 import { Session } from "../models/Session.model";
 import { LoginObject } from "./LoginObject";
-
-
+import axios from "axios";
 
 export class AuthenticationService {
   private baseUrl = `${enviroment.apiUrl}/Users/`;
 
-  async login<Session>(LoginObject: LoginObject): Promise<void | Session> {
-    const fetchAuthConfig = {
-      method: "POST",
-      headers: {
-        "Content-Type": "application/json",
-      },
-      body: JSON.stringify(LoginObject),
-    };
-
-    return await fetch(this.baseUrl + "authenticate", fetchAuthConfig)
-      .then((response) => response.json())
-      .then((data) => {
-        console.log(data);
-        localStorage.setItem("token", JSON.stringify(data.token))
-        localStorage.setItem("user", JSON.stringify(data.user))
-        console.log(localStorage.getItem("user"));
+  async PostAuthenticate(loginObject: LoginObject): Promise<void | Session> {
+    return;
+    axios
+      .post(this.baseUrl + "authenticate", loginObject)
+      .then(function (response: any) {})
+      .catch(function (error: any) {
+        console.log(error);
       })
-      .catch((err) => {
-        console.log(err);
-      });
+      .finally(function () {});
+  }
+  
+  async axiosLogout<Bool>(): Promise<void | Bool> {
+    return;
+    axios
+      .post(this.baseUrl + "logout")
+      .then(function (response: any) {})
+      .catch(function (error: any) {
+        console.log(error);
+      })
+      .finally(function () {});
   }
 
-  async logout<Bool>(): Promise<void | Bool> {
-    const fetchAuthConfig = {
-      method: "POST",
-      headers: {
-        "Content-Type": "application/json",
-      },
-    };
-
-    return await fetch(this.baseUrl + "logout", fetchAuthConfig)
-      .then((response) => {
-        sessionStorage.clear();
-      })
-      .catch((err) => {
-        console.log(err);
-      });
-  }
 }
