@@ -1,7 +1,6 @@
 import { enviroment } from "../../enviroments/enviroment";
 import { User } from "../models/User";
 import { UserRole } from "../models/UserRole";
-import { UserRoleService } from "./UserRole";
 import axios from "axios";
 import { get } from "jquery";
 import { promises } from "dns";
@@ -46,7 +45,7 @@ export class UserService {
       })
       .finally(function () {});
   }
-  
+
   async axiosCreate(user: User): Promise<void | User> {
     return;
     axios
