@@ -11,4 +11,5 @@ ReactDOM.createRoot(document.getElementById("root") as HTMLElement).render(
 );
 
 const userService = new UserService();
-userService.axiosGetAll()
+const response = await userService.getAll()
+console.log(response)
