@@ -57,7 +57,6 @@ const Login = () => {
     user.username = username;
     user.password = password;
 
-    auth.login(user);
 
     const userToken = localStorage.getItem("token");
     console.log(userToken);

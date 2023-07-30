@@ -8,8 +8,7 @@ export class AuthenticationService {
   private baseUrl = `${enviroment.apiUrl}/Users/`;
 
   async PostAuthenticate(loginObject: LoginObject): Promise<void | Session> {
-    return;
-    axios
+    return axios
       .post(this.baseUrl + "authenticate", loginObject)
       .then(function (response: any) {})
       .catch(function (error: any) {
@@ -19,8 +18,7 @@ export class AuthenticationService {
   }
   
   async axiosLogout<Bool>(): Promise<void | Bool> {
-    return;
-    axios
+    return axios
       .post(this.baseUrl + "logout")
       .then(function (response: any) {})
       .catch(function (error: any) {

@@ -9,8 +9,7 @@ export class CoursesService {
   private baseUrl = `${enviroment.apiUrl}/Users/`;
 
   async axiosGetAll(): Promise<void | Courses[]> {
-    return
-    axios.get(this.baseUrl + 'all').then(function (response: any) {
+    return axios.get(this.baseUrl + 'all').then(function (response: any) {
       console.log(response)
     }).catch(function (error: any) {
       console.log(error)
@@ -18,8 +17,7 @@ export class CoursesService {
   }
 
   async axiosGetGet(): Promise<void | Courses[]> {
-    return
-    axios.get(this.baseUrl + 'get').then(function (response: any) {
+    return axios.get(this.baseUrl + 'get').then(function (response: any) {
       console.log(response)
     }).catch(function (error: any) {
       console.log(error)
@@ -27,8 +25,7 @@ export class CoursesService {
   }
 
   async axiosPostEdit(courses: Courses): Promise<void | Courses[]> {
-    return
-    axios.post(this.baseUrl + 'edit', courses).then(function (response: any) {
+    return axios.post(this.baseUrl + 'edit', courses).then(function (response: any) {
       console.log(response)
     }).catch(function (error: any) {
       console.log(error)
@@ -36,8 +33,7 @@ export class CoursesService {
   }
 
   async axiosPutCreate(courses: Courses): Promise<void | Courses[]> {
-    return
-    axios.put(this.baseUrl + 'create', courses).then(function (response: any) {
+    return axios.put(this.baseUrl + 'create', courses).then(function (response: any) {
       console.log(response)
     }).catch(function (error: any) {
       console.log(error)

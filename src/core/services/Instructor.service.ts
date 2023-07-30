@@ -9,8 +9,7 @@ export class InstructorService {
   private baseUrl = `${enviroment.apiUrl}/Users/`;
 
   async axiosGetAll(): Promise<void | Instructor[]> {
-    return
-    axios.get(this.baseUrl + 'all').then(function (response: any) {
+    return axios.get(this.baseUrl + 'all').then(function (response: any) {
       console.log(response)
     }).catch(function (error: any) {
       console.log(error)
@@ -18,8 +17,7 @@ export class InstructorService {
   }
 
   async axiosGetGet(): Promise<void | Instructor[]> {
-    return
-    axios.get(this.baseUrl + 'get').then(function (response: any) {
+    return axios.get(this.baseUrl + 'get').then(function (response: any) {
       console.log(response)
     }).catch(function (error: any) {
       console.log(error)
@@ -27,8 +25,7 @@ export class InstructorService {
   }
 
   async axiosPostEdit(instructor: Instructor): Promise<void | Instructor[]> {
-    return
-    axios.post(this.baseUrl + 'edit', instructor).then(function (response: any) {
+    return axios.post(this.baseUrl + 'edit', instructor).then(function (response: any) {
       console.log(response)
     }).catch(function (error: any) {
       console.log(error)
@@ -36,8 +33,7 @@ export class InstructorService {
   }
 
   async axiosPutCreate(instructor: Instructor): Promise<void | Instructor[]> {
-    return
-    axios.put(this.baseUrl + 'create', instructor).then(function (response: any) {
+    return axios.put(this.baseUrl + 'create', instructor).then(function (response: any) {
       console.log(response)
     }).catch(function (error: any) {
       console.log(error)
