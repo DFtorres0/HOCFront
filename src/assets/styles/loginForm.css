@@ -49,7 +49,6 @@
   border-radius: 10px;
   position: relative;
   right: inherit;
-  right: 135px;
 }
 
 #login .form-control, .form-label {
@@ -72,13 +71,10 @@
   color: #1c484f;
 }
 
- .btnlog{
-  width: 70%;
+ .logButton{
+  width: 60%;
   
 } 
-#btndanger{
-  border-radius: 10px;
-}
 .text-container{
   display: flex;
   justify-content: center;

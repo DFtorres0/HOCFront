@@ -21,6 +21,7 @@ const Login = () => {
   const [username, setUsername] = useState("");
   const [password, setPassword] = useState("");
   const [redirectTo, setredirectTo] = useState("/home");
+  const [Go, setGo] = useState("/CreateUser");
   const [isMobile, setIsMobile] = useState(false);
 
 
@@ -57,15 +58,7 @@ const Login = () => {
     user.username = username;
     user.password = password;
 
-
-    const userToken = localStorage.getItem("token");
-    console.log(userToken);
-    if (userToken == "undefined" || undefined || null) {
-      setredirectTo("/home");
-    } else {
-      setredirectTo("/home");
-    }
-    console.log(redirectTo);
+    auth.PostAuthenticate(user);
   };
 
   return (
@@ -112,7 +105,7 @@ const Login = () => {
             <Container className="d-flex flex-row align-items-center justify-content-center pb-3 mb-4">
               <Container className="acc">
                  ¿Aun no tienes cuenta?
-                <Button id ="btndanger" className="mx-3" color="danger">
+                <Button className="mx-3 Reg" color="danger" onClick={() => window.location.href = '/CreateUser'}>
                  Registrate
                 </Button>
               </Container>

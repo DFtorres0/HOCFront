@@ -8,6 +8,8 @@ import Classes from "./components/classes/Classes";
 
 import { initializeApp } from "firebase/app";
 import { getAnalytics } from "firebase/analytics";
+import CreateUser from "./components/CreateUser";
+import CreateClass from "./components/CreateClass";
 
 const firebaseConfig = {
   apiKey: "AIzaSyC-y8LYoMEH4BMbWHWi0Drl2pNigl_L7PY",
@@ -32,6 +34,8 @@ function App() {
         <Route path="/testimonials" element={<Testimonials />} ></Route>
         <Route path="/tutorials" element={<Tutorials />} ></Route>
         <Route path="/classes" element={<Classes />} ></Route>
+        <Route path="/CreateUser" element={<CreateUser />} ></Route>
+        <Route path="/CreateClass" element={<CreateClass />} ></Route>
       </Routes>
     </Router>
   )

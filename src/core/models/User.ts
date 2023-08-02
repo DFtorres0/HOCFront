@@ -4,20 +4,39 @@ export interface User {
 
   UserId?: number;
 
+  Name: string;
+
   UserName: string;
 
-  UserUsername: string;
+  Password: string;
 
-  UserPassword: string;
+  Email: string;
 
-  UserEmail: string;
+  Phone?: string;
 
-  UserPhone?: string;
+  ProfilePicture?: string;
 
-  UserProfilePicture?: string;
+  RoleId?: number;
 
-  UserRoleId?: number;
-
-  UserRole?: UserRole | undefined ;
+  Role?: UserRole | undefined ;
   
 }
+
+export class User{
+   public Name: string;
+   public Email: string;
+   public RoleId?: number;
+   public UserName: string;
+   public Password: string;
+   public Phone?: string;
+
+   constructor(User: User) {
+     this.Name = User.Name;
+     this.Email = User.Email;
+     this.RoleId = User.RoleId;
+     this.UserName = User.UserName;
+     this.Password = User.Password;
+     this.Phone = User.Phone;
+   }
+}
+
