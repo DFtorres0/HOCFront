@@ -19,9 +19,9 @@ export interface Lesson {
 
   ModuleId?: bigint;
 
-  IntensityLevel: IntensityLevel;
+  IntensityLevel?: IntensityLevel;
 
-  Module: Module;
+  Module?: Module;
 
-  Topic: Topic;
+  Topic?: Topic;
 }

@@ -1,15 +1,29 @@
 import { IntensityLevel } from "./IntensityLevels";
 
 export interface Courses {
-  CourseId?: bigint;
+  CourseId?: number;
 
   CourseName: string;
 
   CourseDescription: string;
 
-  CourseDuration?: bigint;
+  CourseDuration?: number | undefined;
 
-  IntensityLevelId?: bigint;
+  IntensityLevelId?: number;
 
-  IntensityLevel: IntensityLevel;
+  IntensityLevel?: IntensityLevel;
+}
+
+export class Courses{
+  public CourseName: string;
+  public CourseDescription: string;
+  public CourseDuration?: number | undefined;
+  public IntensityLevel?: IntensityLevel;
+
+  constructor(Courses: Courses) {
+    this.CourseName = Courses.CourseName
+    this.CourseDescription = Courses.CourseDescription
+    this.CourseDuration = Courses.CourseDuration
+    this.IntensityLevel = Courses.IntensityLevel
+  }
 }
