@@ -15,9 +15,11 @@
     "isolatedModules": true,
     "noEmit": true,
     "jsx": "react-jsx",
-    "jsxImportSource": "@emotion/react"
+    "jsxImportSource": "@emotion/react",
+    "types": ["node", "jest"],
+    "typeRoots": ["node_modules/@types", "src/@types"]
   },
-  "include": ["src", "src/test", "files.js"],
-  "exclude": ["node_modules", "coverage", ".github"],
+  "include": ["src/**/*", "src/test", "files.js"],
+  "exclude": ["node_modules", "coverage", ".github", ".firebase"],
   "references": [{ "path": "./tsconfig.node.json" }]
 }
