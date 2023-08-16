@@ -1,6 +1,8 @@
 import "../../assets/styles/home/HomeHdStyle.css";
 import { Link } from "react-router-dom";
-import { Container } from "react-bootstrap";
+import { Button, Container, Stack } from "react-bootstrap";
+import getMockUsers from "./hooks/useGetExample";
+import getMockUsersList from "./hooks/useListExample";
 
 const HomeHeader = () => {
   return (
@@ -12,6 +14,23 @@ const HomeHeader = () => {
           <Link to="/indexmax" className="btn btn-custom btn-lg page-scroll">
             Saber mas
           </Link>
+          <Stack gap={3}>
+            <p>Api example with axios</p>
+            <Button
+              onClick={getMockUsers}
+              variant="outline-light"
+              className="btn-lg page-scroll"
+            >
+              Get One
+            </Button>
+            <Button
+              onClick={getMockUsersList}
+              variant="outline-info"
+              className="btn-lg page-scroll"
+            >
+              Get List
+            </Button>
+          </Stack>
         </Container>
       </div>
     </div>
