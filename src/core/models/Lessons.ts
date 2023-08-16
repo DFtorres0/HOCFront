@@ -9,11 +9,11 @@ export interface Lesson {
 
   LessonDescription: string;
 
-  LessonDuration?: bigint;
+  LessonDuration?: number;
 
   LessonContent: string;
 
-  IntensityLevelId?: bigint;
+  IntensityLevelId?: number;
 
   TopicId?: bigint;
 
@@ -24,4 +24,23 @@ export interface Lesson {
   Module?: Module;
 
   Topic?: Topic;
+}
+
+export class Lesson{
+  public LessonTitle: string;
+  public LessonDescription: string;
+  public LessonDuration?: number | undefined;
+  public LessonContent: string;
+  public LessonIntensityLevelId?: number | undefined;
+  public LessonTopic: string;
+
+  constructor(Lesson: Lesson){
+    this.LessonTitle = Lesson.LessonTitle
+    this.LessonDescription = Lesson.LessonDescription
+    this.LessonDuration = Lesson.LessonDuration
+    this.LessonContent = Lesson.LessonContent
+    this.LessonIntensityLevelId = Lesson.LessonIntensityLevelId
+    this.LessonTopic = Lesson.LessonTopic
+  }
+
 }

@@ -4,19 +4,19 @@ import { Topic } from "./Topic";
 
 export interface Activity{
 
-     ActivitiesId : bigint;
+     ActivitiesId? : bigint;
 
      ActivityTitle : string;  
 
      ActivityContent : string;  
 
-     IntensityLevelId? : bigint; 
+     IntensityLevelId : number; 
 
      TopicId? : bigint; 
 
      ModuleId? : bigint; 
 
-     IntensityLevel : IntensityLevel | undefined;
+     IntensityLevel? : IntensityLevel | undefined;
 
      Module : Module | undefined;
 

@@ -20,24 +20,76 @@ import CreateActivity from "./CreateActivities";
 
 
 interface CreateClassProps {
+  onLessonTitleChange: (title: string) => void;
+  onLessonDescriptionChange: (description: string) => void;
+  onLessonDurationChange: (duartion: number) => void;
+  onLessonContentChange: (content: string) => void;
+  onLessonIntensityIdChange: (intensityId: number) => void;
+  onLessonTopicChange: (topic: string) => void;
+  onActivityTitleChange: (title: string) => void;
+  onActivityContentChange: (Acontent: string) => void;
+  onActivityIntensityIdChange: (AintensityId: number) => void;
+  onActivityTopicChange: (Atopic: string) => void;
   
 }
 
-const CreateModule: React.FC<CreateClassProps> = (props) => {
-  const [CourseName, setCourseName] = useState('');
-  const [Duration, setDuration] = useState<number>();
-  const [Description, setDescription] = useState('');
+const CreateModule: React.FC<CreateClassProps> = ({onLessonTitleChange, onLessonDescriptionChange
+  , onLessonContentChange, onLessonDurationChange, onLessonIntensityIdChange, onLessonTopicChange,
+  onActivityTitleChange, onActivityContentChange, onActivityIntensityIdChange, onActivityTopicChange}) => {
+  const [lessonTitle, setLessonTitle] = useState('');
+  const [LessonDescription, setLessonDescription] = useState('');
+  const [LessonDuration, setLessonDuration] = useState<number>();
+  const [LessonContent, setLessonContent] = useState('');
+  const [LessonIntensityId, setLessonIntensityId] = useState<number>();
+  const [LessonTopic, setLessonTopic] = useState('');
+  const [ActivityTitle, setActivityTitle] = useState('');
+  const [ActivityContent, setActivityContent] = useState('');
+  const [ActivityIntensityId, setActivityIntensityId] = useState<number>();
+  const [ActivityTopic, setActivityTopic] = useState('');
 
   
-  const handleCourseNameChange = (event: React.ChangeEvent<HTMLInputElement>) => {
-    setCourseName(event.target.value);
+
+  const handleLessonTitleChange = (title: string) => {
+    setLessonTitle(title);
+    onLessonTitleChange(title);
   };
-  const handleDurationChange = (event: React.ChangeEvent<HTMLInputElement>) => {
-    setDuration(+event.target.value);
+  const handleLessonDescriptionChange = (description: string) => {
+    setLessonDescription(description);
+    onLessonDescriptionChange(description);
   };
-  const handleDescriptionChange = (event: React.ChangeEvent<HTMLInputElement>) => {
-    setDescription(event.target.value);
+  const handleLessonDurationChange = (duration: number) => {
+    setLessonDuration(duration);
+    onLessonDurationChange(duration);
   };
+  const handleLessonContentChange = (content: string) => {
+    setLessonContent(content);
+    onLessonContentChange(content);
+  }
+  const handleLessonIntensityIdChange = (intensityId: number) => {
+    setLessonIntensityId(+intensityId);
+    onLessonIntensityIdChange(+intensityId);
+  }
+  const handleLessonTopicChange = (topic: string) => {
+    setLessonTopic(topic);
+    onLessonTopicChange(topic);
+  }
+  const handleActivityTitleChange = (Atitle: string) => {
+    setActivityTitle(Atitle);
+    onActivityTitleChange(Atitle);
+  }
+  const handleActivityContentChange = (Acontent: string) => {
+    setActivityContent(Acontent);
+    onActivityContentChange(Acontent);
+  }
+  const handleActivityIntensityIdChange = (AintensityId: number) => {
+    setActivityIntensityId(+AintensityId);
+    onActivityIntensityIdChange(+AintensityId);
+  }
+  const handleActivityTopicChange = (Atopic: string) => {
+    setActivityTopic(Atopic);
+    onActivityTopicChange(Atopic);
+  }
+
 
   
 
@@ -54,21 +106,22 @@ const CreateModule: React.FC<CreateClassProps> = (props) => {
   }
 
   const emptyActivities: Activity ={
-      ActivitiesId: 0n,
-      ActivityTitle: "",
-      ActivityContent: "",
-      IntensityLevel: undefined,
-      Module: undefined,
-      Topic: undefined
+    ActivityTitle: "",
+    ActivityContent: "",
+    IntensityLevel: undefined,
+    Module: undefined,
+    Topic: undefined,
+    IntensityLevelId: 0
   }
 
   const emptyLesson: Lesson = {
-      LessonTitle: "",
-      LessonDescription: "",
-      LessonContent: "",
-      IntensityLevelId: undefined,
-      ModuleId: undefined,
-      TopicId: undefined
+    LessonTitle: "",
+    LessonDescription: "",
+    LessonContent: "",
+    IntensityLevelId: undefined,
+    ModuleId: undefined,
+    TopicId: undefined,
+    LessonTopic: ""
   }
 
   const [activity, setActivity] = useState<Activity[]>([]);
@@ -91,12 +144,15 @@ const CreateModule: React.FC<CreateClassProps> = (props) => {
   }
   
   
+  
   return (
     <>
           <div>
             {lesson?.map((lesson, lessonIndex) => (
               <div key={lessonIndex}>
-                <CreateLesson/>
+                <CreateLesson onLessonTitleChange={handleLessonTitleChange} onLessonDescriptionChange={handleLessonDescriptionChange}
+                onLessonDurationChange={handleLessonDurationChange} onLessonContentChange={handleLessonContentChange}
+                onLessonIntensityIdChange={handleLessonIntensityIdChange} onLessonTopicChange={handleLessonTopicChange}/>
                 <Button variant="outline-danger" className="DeleteModule mb-3" onClick={() => removeLesson(lessonIndex)}>Eliminar lección</Button>{''}
               </div>
               
@@ -105,7 +161,8 @@ const CreateModule: React.FC<CreateClassProps> = (props) => {
           <div>
             {activity?.map((activity, activityIndex) => (
               <div key={activityIndex}>
-                <CreateActivity/>
+                <CreateActivity onActivityTitleChange={handleActivityTitleChange} onActivityContentChange={handleActivityContentChange}
+                onActivityIntensityIdChange={handleActivityIntensityIdChange} onActivityTopicChange={handleActivityTopicChange}/>
                 <Button variant="outline-danger" className="DeleteModule mb-3" onClick={() => removeActivity(activityIndex)}>Eliminar actividad</Button>{''}
               </div>
               

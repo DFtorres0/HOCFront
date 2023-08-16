@@ -14,10 +14,28 @@ import { Courses } from "../core/models/Courses";
 import { IntensityLevel } from "../core/models/IntensityLevels";
 import { json } from "stream/consumers";
 import CreateModule from "./CreateModule";
+import CreateLesson from "./CreateLesson";
+import CreateActivity from "./CreateActivities";
+import { Lesson } from "../core/models/Lessons";
+import { CourseLessonsProgressService } from "../core/services/CourseLessonsProgress.service";
+import axios from "axios";
+import { enviroment } from "../enviroments/enviroment";
+
 
 
 interface CreateClassProps {
-  
+
+}
+class lessonService {
+  private baseUrl = `${enviroment.apiUrl}/Lesson/`;
+
+  async axiosPutCreate(Lesson: Lesson): Promise<void | Lesson[]> {
+    return axios.put(this.baseUrl + 'create', Lesson).then(function (response: any) {
+      console.log(response)
+    }).catch(function (error: any) {
+      console.log(error)
+    }).finally(function () {})
+  }
 }
 
 const CreateClass: React.FC<CreateClassProps> = (props) => {
@@ -25,6 +43,16 @@ const CreateClass: React.FC<CreateClassProps> = (props) => {
   const [Duration, setDuration] = useState<number>();
   const [Description, setDescription] = useState('');
   const [IntensityId, setIntensityId] = useState<number>();
+  const [LessonTitle, setLessonTitle] = useState('');
+  const [LessonDescription, setLessonDescription] = useState('');
+  const [LessonDuration, setLessonDuration] = useState<number>();
+  const [LessonContent, setLessonContent] = useState('');
+  const [LessonIntensityId, setLessonIntensityId] = useState<number>();
+  const [LessonTopic, setLessonTopic] = useState('');
+  const [ActivityTitle, setActivityTitle] = useState('');
+  const [ActivityContent, setActivityContent] = useState('');
+  const [ActivityIntensityId, setActivityIntensityId] = useState<number>();
+  const [ActivityTopic, setActivityTopic] = useState('');
   
   const handleCourseNameChange = (event: React.ChangeEvent<HTMLInputElement>) => {
     setCourseName(event.target.value);
@@ -38,11 +66,45 @@ const CreateClass: React.FC<CreateClassProps> = (props) => {
   const handleIntensityIdChange = (event: React.ChangeEvent<HTMLInputElement>) => {
     setIntensityId(+event.target.value);
   }
+
+  const handleLessonTitleChange = (title: string) => {
+    setLessonTitle(title);
+  };
+  const handleLessonDescriptionChange = (description: string) => {
+    setLessonDescription(description);
+  };
+  const handleLessonDurationChange = (duration: number) => {
+    setLessonDuration(duration);
+  };
+  const handleLessonContentChange = (content: string) => {
+    setLessonContent(content);
+  };
+  const handleLessonIntensityIdChange = (intensityId: number) => {
+    setLessonIntensityId(intensityId);
+  };
+  const handleLessonTopicChange = (topic: string) => {
+    setLessonTopic(topic);
+  };
   
+  const handleActivityTitleChange = (Atitle: string) => {
+    setActivityTitle(Atitle);
+  };
+  const handleActivityContentChange = (Acontent: string) => {
+    setActivityContent(Acontent);
+  };
+  const handleActivityIntensityIdChange = (Aintensity: number) => {
+    setActivityIntensityId(Aintensity);
+  };
+  const handleActivityTopicChange = (Atopic: string) => {
+    setActivityTopic(Atopic);
+  };
+  
+
   const handleSubmit = (event: React.FormEvent<HTMLFormElement>) => {
     event.preventDefault();
 
     const Create = new CoursesService();
+    const CreateLesson = new lessonService();
 
     const CreateClass: Courses = {
       CourseName: CourseName,
@@ -57,7 +119,29 @@ const CreateClass: React.FC<CreateClassProps> = (props) => {
     CreateClass.IntensityLevelId = IntensityId;
 
     Create.axiosPutCreate(CreateClass);
+
     
+    const CreateLessons: Lesson = {
+      LessonTitle: LessonTitle,
+      LessonDescription: LessonDescription,
+      LessonDuration: LessonDuration,
+      LessonContent: LessonContent,
+      LessonIntensityLevelId: LessonIntensityId,
+      LessonTopic: LessonTopic,
+
+    }
+    
+    CreateLessons.LessonTitle = LessonTitle;
+    CreateLessons.LessonDescription = LessonDescription;
+    CreateLessons.LessonDuration = LessonDuration;
+    CreateLessons.LessonContent = LessonContent;
+    CreateLessons.IntensityLevelId = LessonIntensityId;
+    CreateLessons.LessonTopic = LessonTopic;
+
+    
+
+    CreateLesson.axiosPutCreate(CreateLessons);
+
   };
 
   const emptyModule: Module = {
@@ -65,6 +149,7 @@ const CreateClass: React.FC<CreateClassProps> = (props) => {
       CourseName: "",
       CourseDescription: "",
       CourseDuration: 0,
+      IntensityLevelId: 0,
       IntensityLevel: {
         LevelName: "",
         LevelDescription: ""
@@ -107,10 +192,15 @@ const CreateClass: React.FC<CreateClassProps> = (props) => {
             <Form.Control type="text"  as="textarea" className="TextArea" placeholder="Descripción" style={{width:"100%",height:"30vh"}} value={Description}  required onChange={handleDescriptionChange}/>
           </FloatingLabel>
           
+          
           <div>
             {modules?.map((module, moduleIndex) => (
               <div key={moduleIndex}>
-                <CreateModule/>
+                <CreateModule onLessonTitleChange={handleLessonTitleChange} onLessonDescriptionChange={handleLessonDescriptionChange}
+                onLessonDurationChange={handleLessonDurationChange} onLessonContentChange={handleLessonContentChange}
+                onLessonIntensityIdChange={handleLessonIntensityIdChange} onLessonTopicChange={handleLessonTopicChange}
+                onActivityTitleChange={handleActivityTitleChange} onActivityContentChange={handleActivityContentChange}
+                onActivityIntensityIdChange={handleActivityIntensityIdChange} onActivityTopicChange={handleActivityTopicChange}/>
                 <Button variant="outline-danger" className="DeleteModule mb-3" onClick={() => removeModule(moduleIndex)}>Eliminar modulo</Button>{''}
               </div>
               
@@ -121,6 +211,7 @@ const CreateClass: React.FC<CreateClassProps> = (props) => {
           <Button variant="outline-info" className="addModule" onClick={addModule}>Añadir modulo</Button>{''}
           <Button type="submit" variant="outline-info" className="SubmitBtn">Crear</Button>{' '}
           </div>
+          <h1>{LessonTopic}</h1>
         </form>
       </div>
     
