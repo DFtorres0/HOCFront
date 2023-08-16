@@ -1,4 +1,6 @@
+import { useQuery } from "@tanstack/react-query";
 import api from "../../../core/services/api";
+import { exampleApiQueryKeys } from "../utilities";
 
 const getMockUsers = async (): Promise<ExampleApiResponse> => {
   // put here your api call
@@ -6,4 +8,16 @@ const getMockUsers = async (): Promise<ExampleApiResponse> => {
   return data;
 };
 
-export default getMockUsers;
+const useGetMockUsers = (userId?: number) => {
+  return useQuery<ExampleApiResponse>(
+    exampleApiQueryKeys.detail(userId),
+    async () => getMockUsers(),
+    {
+      staleTime: Infinity,
+      notifyOnChangeProps: ["data", "error"],
+      enabled: !!userId, // if you want to fetch data only when userId is defined
+    }
+  );
+};
+
+export default useGetMockUsers;
