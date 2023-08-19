@@ -1,17 +1,14 @@
-import Youtube from "react-youtube"
+import Youtube from "react-youtube";
 
 const MainCResource = ({ videoHTML }: { videoHTML: string | undefined }) => {
-
   let videoResource: string;
-  videoResource = ""
+  videoResource = "";
   if (videoHTML != undefined) {
     videoResource = videoHTML;
   }
   return (
     <div style={{ marginTop: "10px", marginBottom: "20px" }}>
-      if(videoResource != ""){
-        (<Youtube opts={{height:"450", width:"100%"}} videoId={videoHTML} />)
-      }
+      <Youtube opts={{ height: "450", width: "100%" }} videoId={videoHTML} />
     </div>
   );
 };

@@ -9,7 +9,3 @@ ReactDOM.createRoot(document.getElementById("root") as HTMLElement).render(
     <App />
   </React.StrictMode>
 );
-
-const userService = new UserService();
-const response = await userService.getAll()
-console.log(response)

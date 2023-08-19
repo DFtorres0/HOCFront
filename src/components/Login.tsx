@@ -13,7 +13,7 @@ import { FaFacebookF } from "react-icons/fa";
 import { BsTwitter } from "react-icons/bs";
 import { Link } from "react-router-dom";
 import { Container, Row, Col } from "react-bootstrap";
-import { LoginObject, LoginObjectModel } from "../core/services/LoginObject";
+import { LoginObject, LoginObjectModel } from "../core/models/LoginObject";
 import { AuthenticationService } from "../core/services/Authentication.service";
 import { useEffect, useState, FC } from "react";
 

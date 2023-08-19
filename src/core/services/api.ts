@@ -30,9 +30,8 @@ const getCustomAxiosInstance = (
 const api = getCustomAxiosInstance(
   // use the actual VITE_API_URL to use the backend service
   axios.create({
-    // baseURL: import.meta.env.VITE_API_URL as string,
-    baseURL: import.meta.env.VITE_TEST_API_URL as string,
-    withCredentials: true,
+    baseURL: import.meta.env.VITE_API_URL as string,
+    withCredentials: false,
   })
 );
 

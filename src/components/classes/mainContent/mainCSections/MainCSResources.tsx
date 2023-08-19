@@ -1,7 +1,12 @@
 import { Container } from "react-bootstrap";
-import { Lesson } from "../../../../core/models/Lessons";
 
-const MainCSResources = ({isVisible, lesson}:{isVisible: string, lesson: Lesson | undefined}) => {
+const MainCSResources = ({
+  isVisible,
+  lesson,
+}: {
+  isVisible: string;
+  lesson: Lesson | undefined;
+}) => {
   return (
     <div
       style={{
@@ -10,7 +15,9 @@ const MainCSResources = ({isVisible, lesson}:{isVisible: string, lesson: Lesson 
         marginBottom: "30px",
       }}
     >
-      <Container style={{textAlign:"left"}} className="h2">{lesson?.Topic.TopicDescription}</Container>
+      <Container style={{ textAlign: "left" }} className="h2">
+        {lesson?.TopicNavigation?.TopicDescription}
+      </Container>
     </div>
   );
 };

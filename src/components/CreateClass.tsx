@@ -8,19 +8,11 @@ import { BsCodeSlash, BsDisplay, BsJustify } from "react-icons/bs";
 import { Container} from "react-bootstrap";
 import { MdOutlineClass } from "react-icons/md";
 import { ReactDOM } from "react";
-import { Module } from "../core/models/Module";
-import { CoursesService } from "../core/services/Courses.service";
-import { Courses } from "../core/models/Courses";
-import { IntensityLevel } from "../core/models/IntensityLevels";
 import { json } from "stream/consumers";
 import CreateModule from "./CreateModule";
 
 
-interface CreateClassProps {
-  
-}
-
-const CreateClass: React.FC<CreateClassProps> = (props) => {
+const CreateClass = () => {
   const [CourseName, setCourseName] = useState('');
   const [Duration, setDuration] = useState<number>();
   const [Description, setDescription] = useState('');
@@ -42,13 +34,12 @@ const CreateClass: React.FC<CreateClassProps> = (props) => {
   const handleSubmit = (event: React.FormEvent<HTMLFormElement>) => {
     event.preventDefault();
 
-    const Create = new CoursesService();
-
-    const CreateClass: Courses = {
+    const CreateClass: Course = {
       CourseName: CourseName,
       CourseDescription: Description,
       CourseDuration: Duration,
       IntensityLevelId: IntensityId,
+      Modules: []
     };
 
     CreateClass.CourseName = CourseName;
@@ -56,21 +47,13 @@ const CreateClass: React.FC<CreateClassProps> = (props) => {
     CreateClass.CourseDuration = Duration;
     CreateClass.IntensityLevelId = IntensityId;
 
-    Create.axiosPutCreate(CreateClass);
-    
   };
 
   const emptyModule: Module = {
-    Courses: {
-      CourseName: "",
-      CourseDescription: "",
-      CourseDuration: 0,
-      IntensityLevel: {
-        LevelName: "",
-        LevelDescription: ""
-      }
-    }
+    Activities: [],
+    Lessons: []
   }
+  
 
   const [modules, setModules] = useState<Module[]>([]);
 

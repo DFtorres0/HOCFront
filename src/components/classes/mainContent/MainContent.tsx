@@ -1,10 +1,9 @@
 import { Col, Container, Row } from "react-bootstrap";
-import { Lesson } from "../../../core/models/Lessons";
 import MainCFooter from "./MainCFooter";
 import MainCResource from "./MainCResource";
 import MainCSections from "./mainCSections/MainCSections";
 import Forum from "../../max/templates/Forum";
-import { MainCourseMock } from "../../../core/models/MainCourseMock";
+import { CoursesMock } from "../../../core/models/MainCourseMock";
 import { useEffect, useState } from "react";
 
 const MainContent = ({ lesson }: { lesson: Lesson | undefined }) => {
@@ -43,7 +42,7 @@ const MainContent = ({ lesson }: { lesson: Lesson | undefined }) => {
         }}
         className="h1"
       >
-        {MainCourseMock[0].Course.CourseName}:
+        {CoursesMock[0].CourseName}:
         <Container
           style={{
             paddingTop:"15px"
@@ -56,7 +55,7 @@ const MainContent = ({ lesson }: { lesson: Lesson | undefined }) => {
       <Row style={{ width: "94vw", padding: "0", paddingLeft: "45px", display:"flex",flexDirection:isMobile?"column":undefined}}>
         <Col style={{ minWidth: "60vw" }}>
           <MainCResource
-            videoHTML={lesson ? lesson.LessonContent : undefined}
+            videoHTML={lesson?lesson.LessonContent: undefined}
           />
           <MainCSections lesson={lesson} />
         </Col>

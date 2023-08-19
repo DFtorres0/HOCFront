@@ -1,7 +1,7 @@
 import { useEffect } from "react";
 import { enviroment } from "../../enviroments/enviroment";
 import { Session } from "../models/Session.model";
-import { LoginObject } from "./LoginObject";
+import { LoginObject } from "../models/LoginObject";
 import axios from "axios";
 
 export class AuthenticationService {

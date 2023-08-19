@@ -1,9 +1,4 @@
-import { Topic } from "./Topic";
-import { UserRole } from "./UserRole";
-import { User } from "./User";
-import { Forum } from "./Forums";
-import { Answer } from "./Answer";
-import { MainCourseMock } from "./MainCourseMock";
+import { CoursesMock } from "./MainCourseMock";
 
 const topic: Topic = {
     TopicName: "React",
@@ -30,7 +25,7 @@ const forum: Forum = {
 const forumLesson: Forum = {
     ForumTitle: "Foro Lección1",
     Topic: topic,
-    Lesson: MainCourseMock[0].Modules[0].Lessons[0]
+    Lesson: CoursesMock[0].Modules[0].Lessons[0]
 }
 
 const answer: Answer = {

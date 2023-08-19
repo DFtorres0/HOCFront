@@ -2,8 +2,7 @@ import { Col, Container, ListGroup, Nav, Row } from "react-bootstrap";
 import { BiRightArrow, BiLeftArrow } from "react-icons/bi";
 import "../../assets/styles/classes/ClassesSNavStyle.css";
 import { useState } from "react";
-import { Lesson } from "../../core/models/Lessons";
-import { MainCourseMock } from "../../core/models/MainCourseMock";
+import { CoursesMock } from "../../core/models/MainCourseMock";
 
 type ClassSideNavProps = {
   currentLesson: (data: Lesson) => void;
@@ -38,7 +37,7 @@ const ClassSideNav: React.FC<ClassSideNavProps> = ({ currentLesson }) => {
           </Col>
         </Container>
         <Container className="menu-bar">
-          {MainCourseMock[0].Modules.map((module, moduleIndex) => (
+          {CoursesMock[0].Modules.map((module, moduleIndex) => (
             <Row key={moduleIndex} className="menu">
               <div className="module-number icon">{moduleIndex + 1}</div>
               <ListGroup className="menu-links">

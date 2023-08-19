@@ -1,5 +1,4 @@
 import { Container } from "react-bootstrap";
-import { Lesson } from "../../../../core/models/Lessons";
 
 const MainCSDescription = ({isVisible, lesson}:{isVisible: string, lesson: Lesson | undefined}) => {
   return (

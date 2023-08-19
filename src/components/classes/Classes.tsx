@@ -3,7 +3,6 @@ import "../../assets/styles/classes/ClassesHdStyle.css";
 import NavegationMax from "../max/templates/NavigationMax";
 import SideNav from "./ClassSideNav";
 import MainContent from "./mainContent/MainContent";
-import { Lesson } from "../../core/models/Lessons";
 
 function Classes() {
 

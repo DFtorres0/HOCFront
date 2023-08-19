@@ -1,3 +1,6 @@
 import { generateQueryKeys } from "../../core/functions";
 
-export const exampleApiQueryKeys = generateQueryKeys("example");
+const exampleApiQueryKeys = generateQueryKeys("example");
+const userRolesApiQueryKeys = generateQueryKeys("user_roles")
+
+export { exampleApiQueryKeys, userRolesApiQueryKeys }
