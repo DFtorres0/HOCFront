@@ -23,7 +23,7 @@ type Module = {
 };
 
 type Activity = {
-  ActivitiesId: bigint;
+  ActivitiesId?: bigint;
   ActivityTitle: string;
   ActivityContent: string;
   IntensityLevel?: number;

@@ -37,21 +37,18 @@ const LessonMock: Lesson[] = [
 
 const ActivitiesMock: Activity[] = [
   {
-    ActivitiesId: 1n,
     ActivityTitle: "attempt1",
     ActivityContent: "Loremipsum",
     IntensityLevelNavigation: IntensityLevelMock,
     TopicNavigation: TopicMock,
   },
   {
-    ActivitiesId: 2n,
     ActivityTitle: "attempt2",
     ActivityContent: "Loremipsum",
     IntensityLevelNavigation: IntensityLevelMock,
     TopicNavigation: TopicMock,
   },
   {
-    ActivitiesId: 3n,
     ActivityTitle: "attempt3",
     ActivityContent: "Loremipsum",
     IntensityLevelNavigation: IntensityLevelMock,

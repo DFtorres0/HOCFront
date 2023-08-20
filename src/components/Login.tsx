@@ -1,12 +1,4 @@
-import {
-  Button,
-  FloatingLabel,
-  Form,
-  FormControl,
-  FormGroup,
-  InputGroup,
-  Stack,
-} from "react-bootstrap";
+import {Button,FloatingLabel,Form,FormControl,FormGroup,InputGroup,Stack,} from "react-bootstrap";
 import { BsCodeSlash, BsJustify } from "react-icons/bs";
 import "../assets/styles/loginForm.css";
 import { FaFacebookF } from "react-icons/fa";
@@ -17,7 +9,10 @@ import { LoginObject, LoginObjectModel } from "../core/models/LoginObject";
 import { AuthenticationService } from "../core/services/Authentication.service";
 import { useEffect, useState, FC } from "react";
 
-const Login = () => {
+
+const Login: React.FC = () => {
+
+  const [rememberMe, setRememberMe] = useState<boolean>(false);
   const [username, setUsername] = useState("");
   const [password, setPassword] = useState("");
   const [redirectTo, setredirectTo] = useState("/home");
@@ -48,6 +43,10 @@ const Login = () => {
     setPassword(event.target.value);
   };
 
+  const handleRememberMeChange = () =>{
+    setRememberMe(!rememberMe);
+  }
+
   const handleAuthentication = () => {
     const auth = new AuthenticationService();
 
@@ -59,6 +58,13 @@ const Login = () => {
     user.password = password;
 
     auth.PostAuthenticate(user);
+
+    if (rememberMe) {
+      localStorage.setItem("rememberedUsername",username);
+    }else{
+      localStorage.removeItem("rememberedUsername");
+    }
+
   };
 
   return (
@@ -91,13 +97,13 @@ const Login = () => {
                 </div>
                 
                 <Container style={{ display: "flex"}} className="form-group form-check mb-4">
-                  <Form.Check className="form-check mb-4" type={"checkbox"} id={"RememberMeCheckbox"} label={"Recuerdame"}/>
+                  <Form.Check className="form-check mb-4" type={"checkbox"} id={"RememberMeCheckbox"} label={"Recuerdame"} checked={rememberMe} onChange={handleRememberMeChange}/>
                 </Container>
                 
-                <Link to={`${redirectTo}`}>
-                  <Button onClick={handleAuthentication} className="mb-5 w-25" >
-                    SIGN IN
-                  </Button>
+                <Link to={`/${redirectTo}`}>
+                    <Button onClick={handleAuthentication} className="mb-5 w-25" >
+                      SIGN IN
+                    </Button>
                 </Link>
               </FormGroup>
             </Container>
