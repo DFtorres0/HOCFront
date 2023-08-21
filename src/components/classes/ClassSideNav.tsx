@@ -37,7 +37,7 @@ const ClassSideNav: React.FC<ClassSideNavProps> = ({ currentLesson }) => {
           </Col>
         </Container>
         <Container className="menu-bar">
-          {CoursesMock[0].Modules.map((module, moduleIndex) => (
+          {CoursesMock[1]?.modules.map((module, moduleIndex) => (
             <Row key={moduleIndex} className="menu">
               <div className="module-number icon">{moduleIndex + 1}</div>
               <ListGroup className="menu-links">

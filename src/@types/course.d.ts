@@ -5,13 +5,13 @@ type IntensityLevel = {
 };
 
 type Course = {
-  CourseId?: number;
-  CourseName: string;
-  CourseDescription: string;
-  CourseDuration?: number | undefined;
-  IntensityLevelId?: number;
-  IntensityLevel?: IntensityLevel;
-  Modules: Module[];
+  courseId?: number;
+  courseName: string;
+  courseDescription: string;
+  courseDuration?: number | undefined;
+  intensityLevelId?: number;
+  intensityLevel?: IntensityLevel;
+  modules: Module[];
 };
 
 type Module = {

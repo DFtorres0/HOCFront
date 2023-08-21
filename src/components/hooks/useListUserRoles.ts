@@ -1,6 +1,6 @@
-import api from "../../../core/services/api";
+import api from "../../core/services/api";
 import { useQuery } from "@tanstack/react-query";
-import { userRolesApiQueryKeys } from "../utilities";
+import { userRolesApiQueryKeys } from "../home/utilities";
 
 const getUserRoleList = async (): Promise<UserRole[]> => {
   // put here your api call

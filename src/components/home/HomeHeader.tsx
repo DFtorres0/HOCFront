@@ -2,7 +2,7 @@ import "../../assets/styles/home/HomeHdStyle.css";
 import { Link } from "react-router-dom";
 import { Button, Container, Modal, Stack } from "react-bootstrap";
 import { FC, useEffect, useState } from "react";
-import useUserList from "./hooks/useListUsers";
+import useUserList from "../hooks/useListUsers";
 
 interface ExampleUserComponentProps {
   exampleData: ExampleApiResponse;
@@ -47,9 +47,7 @@ const HomeHeader = () => {
   //   useMockUsersList();
   // const { data, isSuccess } = useGetMockUsers(1); // data is not fetched if you don't pass the userId
 
-  const { data: userList, isSuccess: userRolesSuccess } = useUserList()
-
-  console.log(userList?.[0])
+  //const { data: userList, isSuccess: userRolesSuccess } = useUserList()
 
   const handleModalOpen = () => setShowModal(true);
   const handleModalClose = () => setShowModal(false);
@@ -107,7 +105,7 @@ const HomeHeader = () => {
                 >
                   react-query
                 </a>
-              {userRolesSuccess && userList?.map(user => (user.UserName))}
+              {/*userRolesSuccess && userList?.map(user => (user.UserName))*/}
               </p> 
               {/* {singleModalData && (
                 <ExampleUserComponent exampleData={singleModalData} />

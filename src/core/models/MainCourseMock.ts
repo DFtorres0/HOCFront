@@ -68,10 +68,10 @@ const ModuleMock: Module[] = [
 ];
 
 const CourseMock: Course = {
-  CourseName: "React",
-  CourseDescription: "Loremipsum",
-  IntensityLevel: IntensityLevelMock,
-  Modules: ModuleMock,
+  courseName: "React",
+  courseDescription: "Loremipsum",
+  intensityLevel: IntensityLevelMock,
+  modules: ModuleMock,
 };
 
 export const CoursesMock: Course[] = [
