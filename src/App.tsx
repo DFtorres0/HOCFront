@@ -12,6 +12,7 @@ import CreateUser from "./components/CreateUser";
 import CreateClass from "./components/CreateClass";
 import { QueryClient, QueryClientProvider } from "@tanstack/react-query";
 import { ReactQueryDevtools } from "@tanstack/react-query-devtools";
+import RenderedRoutes from "./Routes";
 
 const firebaseConfig = {
   apiKey: "AIzaSyC-y8LYoMEH4BMbWHWi0Drl2pNigl_L7PY",
@@ -32,16 +33,7 @@ function App() {
   return (
     <QueryClientProvider client={queryClient}>
       <Router data-testid="router">
-        <Routes>
-          <Route path="/" element={<Login />}></Route>
-          <Route path="/home" element={<Home />}></Route>
-          <Route path="/indexmax" element={<IndexMax />}></Route>
-          <Route path="/testimonials" element={<Testimonials />}></Route>
-          <Route path="/tutorials" element={<Tutorials />}></Route>
-          <Route path="/classes" element={<Classes />}></Route>
-          <Route path="/CreateUser" element={<CreateUser />}></Route>
-          <Route path="/CreateClass" element={<CreateClass />}></Route>
-        </Routes>
+        <RenderedRoutes/>
       </Router>
       <ReactQueryDevtools initialIsOpen={false} />
     </QueryClientProvider>

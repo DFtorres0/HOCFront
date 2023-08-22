@@ -1,7 +1,7 @@
 type IntensityLevel = {
-  IntensityLevelId?: bigint;
-  LevelName: string;
-  LevelDescription: string;
+  intensityLevelId?: bigint;
+  levelName: string;
+  levelDescription: string;
 };
 
 type Course = {
@@ -15,54 +15,55 @@ type Course = {
 };
 
 type Module = {
-  ModuleId?: bigint;
-  CourseId?: bigint;
-  Course?: Course;
-  Activities: Activity[];
-  Lessons: Lesson[];
+  moduleId?: bigint;
+  moduleName?: string;
+  courseId?: bigint;
+  course?: Course;
+  activities: Activity[];
+  lessons: Lesson[];
 };
 
 type Activity = {
-  ActivitiesId?: bigint;
-  ActivityTitle: string;
-  ActivityContent: string;
-  IntensityLevel?: number;
-  Topic?: number;
-  ModuleId?: number;
-  IntensityLevelNavigation?: IntensityLevel | undefined;
-  Module?: Module | undefined;
-  TopicNavigation: Topic | undefined;
+  activitiesId?: bigint;
+  activityTitle: string;
+  activityContent: string;
+  intensityLevel?: number;
+  topic?: number;
+  moduleId?: number;
+  intensityLevelNavigation?: IntensityLevel | undefined;
+  module?: Module | undefined;
+  topicNavigation: Topic | undefined;
 };
 
 type Lesson = {
-  LessonId?: bigint;
-  LessonTitle: string;
-  LessonDescription: string;
-  LessonDuration?: bigint;
-  LessonContent: string;
-  IntensityLevel?: bigint;
-  Topic?: bigint;
-  ModuleId?: bigint;
-  IntensityLevelNavigation?: IntensityLevel;
-  Module?: Module;
-  TopicNavigation?: Topic;
+  lessonId?: bigint;
+  lessonTitle: string;
+  lessonDescription: string;
+  lessonDuration?: bigint;
+  lessonContent: string;
+  intensityLevel?: bigint;
+  topic?: bigint;
+  moduleId?: bigint;
+  intensityLevelNavigation?: IntensityLevel;
+  module?: Module;
+  topicNavigation?: Topic;
 };
 
 type CourseActivityProgress = {
-  CourseActivityProgressId?: bigint;
-  Completed?: boolean;
-  DueDate?: Date;
-  ActivityId?: bigint;
-  UserId?: bigint;
-  Activity: Activity;
-  User: User;
+  courseActivityProgressId?: bigint;
+  completed?: boolean;
+  dueDate?: Date;
+  activityId?: bigint;
+  userId?: bigint;
+  activity: Activity;
+  user: User;
 };
 
 type CourseLessonProgress = {
-  CourseLessonProgressId?: bigint;
-  UserId?: bigint;
-  LessonId?: bigint;
-  Completed?: boolean;
-  Lesson: Lesson;
-  User: User;
+  courseLessonProgressId?: bigint;
+  userId?: bigint;
+  lessonId?: bigint;
+  completed?: boolean;
+  lesson: Lesson;
+  user: User;
 };

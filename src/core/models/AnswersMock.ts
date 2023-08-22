@@ -1,42 +1,42 @@
 import { CoursesMock } from "./MainCourseMock";
 
 const topic: Topic = {
-    TopicName: "React",
-    TopicDescription: "Front-End"
+    topicName: "React",
+    topicDescription: "Front-End"
 }
 
 const role: UserRole = {
-    RoleName: "Estudiante",
-    RoleDescription: "Estudiante"
+    roleName: "Estudiante",
+    roleDescription: "Estudiante"
 }
 
 const user: User = {
-    UserName: "Juan",
-    UserUsername: "JuanCho",
-    UserPassword: "1234",
-    UserEmail: "JuanCho@gmail.com",
-    UserRole: role
+    userName: "Juan",
+    userUsername: "JuanCho",
+    userPassword: "1234",
+    userEmail: "JuanCho@gmail.com",
+    userRole: role
 }
 
 const forum: Forum = {
-    ForumTitle: "Foro1",
-    Topic: topic
+    forumTitle: "Foro1",
+    topic: topic
 }
 const forumLesson: Forum = {
-    ForumTitle: "Foro Lección1",
-    Topic: topic,
-    Lesson: CoursesMock[0].Modules[0].Lessons[0]
+    forumTitle: "Foro Lección1",
+    topic: topic,
+    lesson: CoursesMock[0]?.modules[0]?.lessons[0]
 }
 
 const answer: Answer = {
-    MessageContent: "Lorem ipsum dolor sit amet, consectetur adip",
-    Forum: forum,
-    User: user
+    messageContent: "Lorem ipsum dolor sit amet, consectetur adip",
+    forum: forum,
+    user: user
 }
 const answerLesson: Answer = {
-    MessageContent: "Lorem ipsum dolor sit amet, consectetur adip lorem ipsum dolor sit amet",
-    Forum: forumLesson,
-    User: user
+    messageContent: "Lorem ipsum dolor sit amet, consectetur adip lorem ipsum dolor sit amet",
+    forum: forumLesson,
+    user: user
 }
 
 const forums: Forum[] = [forum, forum, forumLesson, forumLesson]

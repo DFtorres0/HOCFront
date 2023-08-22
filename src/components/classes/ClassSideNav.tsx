@@ -36,15 +36,15 @@ const ClassSideNav: React.FC<ClassSideNavProps> = ({ currentLesson }) => {
             </div>
           </Col>
         </Container>
-        <Container className="menu-bar">
+        <Container style={{overflow: "hidden"}} className="menu-bar">
           {CoursesMock[1]?.modules.map((module, moduleIndex) => (
-            <Row key={moduleIndex} className="menu">
-              <div className="module-number icon">{moduleIndex + 1}</div>
+            <Row key={moduleIndex} style={{width: "100%", margin: "0", marginLeft:navClass=="close"?"0":"1rem"}}>
+              <div style={{justifyContent: "flex-start"}} className="module-number icon">{moduleIndex + 1 + `.  ${navClass!="close"?module.moduleName: " "}`}</div>
               <ListGroup className="menu-links">
-                {module.Lessons.map((lesson, lessonIndex) => (
+                {module.lessons.map((lesson, lessonIndex) => (
                   <div style={{cursor: "pointer"}} onClick={() => handleCurrentLesson(lesson)} key={lessonIndex} className="a">
                     <div className="icon classIcon">{lessonIndex + 1}</div>
-                    <span className="text">{lesson.LessonTitle}</span>
+                    <span className="text">{lesson.lessonTitle}</span>
                   </div>
                 ))}
               </ListGroup>

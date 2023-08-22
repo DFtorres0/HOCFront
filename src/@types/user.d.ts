@@ -1,40 +1,40 @@
 type UserRole = {
-  UserRoleId?: number;
-  RoleName: string;
-  RoleDescription: string;
+  userRoleId?: number;
+  roleName: string;
+  roleDescription: string;
 };
 
 type User = {
-  UserUserId?: number;
-  UserName: string;
-  UserUsername: string;
-  UserPassword: string;
-  UserEmail: string;
-  UserPhone?: string;
-  UserProfilePicture?: string;
-  UserRoleId?: number;
-  UserRole?: UserRole | undefined;
+  userUserId?: number;
+  userName: string;
+  userUsername: string;
+  userPassword: string;
+  userEmail: string;
+  userPhone?: string;
+  userProfilePicture?: string;
+  userRoleId?: number;
+  userRole?: UserRole | undefined;
 };
 
 type AvailableCourses = {
-  AvailableCourses?: bigint;
-  UserId?: bigint;
-  CourseId?: bigint;
-  Course: Courses;
-  User: User;
+  availableCourses?: bigint;
+  userId?: bigint;
+  courseId?: bigint;
+  course: Courses;
+  user: User;
 };
 
 type Instructor = {
-  InstructorId?: bigint;
-  InstructorExperience?: bigint;
-  UserId?: bigint;
-  User: User;
+  instructorId?: bigint;
+  instructorExperience?: bigint;
+  userId?: bigint;
+  user: User;
 };
 
 type InstructorSpecialty = {
-  InstructorEspecialtyId?: bigint;
-  InstructorId?: bigint;
-  TopicId?: bigint;
-  Instructor: Instructor;
-  Topic: Topic;
+  instructorEspecialtyId?: bigint;
+  instructorId?: bigint;
+  topicId?: bigint;
+  instructor: Instructor;
+  topic: Topic;
 };

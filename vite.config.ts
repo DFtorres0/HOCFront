@@ -117,6 +117,11 @@ export default defineConfig({
       },
     },
   },
+  resolve: {
+    alias: {
+      src: resolve(__dirname, 'src/')
+    }
+  },
   server: {
     open: false,
     port: 3001,
