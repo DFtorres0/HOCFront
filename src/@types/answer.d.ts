@@ -1,26 +1,26 @@
 type Topic = {
-  topicId?: bigint;
+  topicId?: number;
   topicName: string;
   topicDescription: string;
-  mainTopic?: bigint;
+  mainTopic?: number;
 };
 
 type Forum = {
-  forumId?: bigint;
+  forumId?: number;
   forumTitle: string;
   forumPublishDate?: Date;
-  topicId?: bigint;
-  lessonId?: bigint;
+  topicId?: number;
+  lessonId?: number;
   lesson?: Lesson;
   topic: Topic;
 };
 
 type Answer = {
-  answerId?: bigint;
+  answerId?: number;
   messageContent: string;
-  forumId?: bigint;
-  subAnswerId?: bigint;
-  userId?: bigint;
+  forumId?: number;
+  subAnswerId?: number;
+  userId?: number;
   forum?: Forum;
   subAnswer?: Answer;
   user?: User;

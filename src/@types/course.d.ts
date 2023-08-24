@@ -1,5 +1,5 @@
 type IntensityLevel = {
-  intensityLevelId?: bigint;
+  intensityLevelId?: number;
   levelName: string;
   levelDescription: string;
 };
@@ -15,16 +15,16 @@ type Course = {
 };
 
 type Module = {
-  moduleId?: bigint;
+  moduleId?: number;
   moduleName?: string;
-  courseId?: bigint;
+  courseId?: number;
   course?: Course;
   activities: Activity[];
   lessons: Lesson[];
 };
 
 type Activity = {
-  activitiesId?: bigint;
+  activitiesId?: number;
   activityTitle: string;
   activityContent: string;
   intensityLevel?: number;
@@ -36,33 +36,33 @@ type Activity = {
 };
 
 type Lesson = {
-  lessonId?: bigint;
+  lessonId?: number;
   lessonTitle: string;
   lessonDescription: string;
-  lessonDuration?: bigint;
+  lessonDuration?: number;
   lessonContent: string;
-  intensityLevel?: bigint;
-  topic?: bigint;
-  moduleId?: bigint;
+  intensityLevel?: number;
+  topic?: number;
+  moduleId?: number;
   intensityLevelNavigation?: IntensityLevel;
   module?: Module;
   topicNavigation?: Topic;
 };
 
 type CourseActivityProgress = {
-  courseActivityProgressId?: bigint;
+  courseActivityProgressId?: number;
   completed?: boolean;
   dueDate?: Date;
-  activityId?: bigint;
-  userId?: bigint;
+  activityId?: number;
+  userId?: number;
   activity: Activity;
   user: User;
 };
 
 type CourseLessonProgress = {
-  courseLessonProgressId?: bigint;
-  userId?: bigint;
-  lessonId?: bigint;
+  courseLessonProgressId?: number;
+  userId?: number;
+  lessonId?: number;
   completed?: boolean;
   lesson: Lesson;
   user: User;
