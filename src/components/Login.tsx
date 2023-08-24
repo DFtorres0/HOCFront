@@ -8,6 +8,7 @@ import { Container, Row, Col } from "react-bootstrap";
 import { LoginObject, LoginObjectModel } from "../core/models/LoginObject";
 import { AuthenticationService } from "../core/services/Authentication.service";
 import { useEffect, useState, FC } from "react";
+import useAuthentication from "./hooks/authenticationHooks/useAuthenticate";
 
 
 const Login: React.FC = () => {
@@ -15,7 +16,7 @@ const Login: React.FC = () => {
   const [rememberMe, setRememberMe] = useState<boolean>(false);
   const [username, setUsername] = useState("");
   const [password, setPassword] = useState("");
-  const [redirectTo, setredirectTo] = useState("/home");
+  const [redirectTo, setredirectTo] = useState("home");
   const [Go, setGo] = useState("/CreateUser");
   const [isMobile, setIsMobile] = useState(false);
 
@@ -47,25 +48,7 @@ const Login: React.FC = () => {
     setRememberMe(!rememberMe);
   }
 
-  const handleAuthentication = () => {
-    const auth = new AuthenticationService();
-
-    const user: LoginObject = {
-      username: username,
-      password: password,
-    };
-    user.username = username;
-    user.password = password;
-
-    auth.PostAuthenticate(user);
-
-    if (rememberMe) {
-      localStorage.setItem("rememberedUsername",username);
-    }else{
-      localStorage.removeItem("rememberedUsername");
-    }
-
-  };
+    const {mutate: authenticateUser, error: authenticationError} = useAuthentication()
 
   return (
     <div  id="login" data-testid="login">
@@ -101,7 +84,7 @@ const Login: React.FC = () => {
                 </Container>
                 
                 <Link to={`/${redirectTo}`}>
-                    <Button onClick={handleAuthentication} className="mb-5 w-25" >
+                    <Button onClick={() => authenticateUser({username, password})} className="mb-5 w-25" >
                       SIGN IN
                     </Button>
                 </Link>

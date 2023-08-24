@@ -1,6 +1,6 @@
 import api from "../../core/services/api";
 import { useQuery } from "@tanstack/react-query";
-import { coursesApiQueryKeys } from "../home/utilities";
+import { coursesApiQueryKeys } from "../utilities";
 
 const getCourseList = async (): Promise<Course[]> => {
   // put here your api call

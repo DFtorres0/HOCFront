@@ -24,7 +24,6 @@ const ModalComponent: FC<ModalComponentProps> = ({
   setModalShow,
   course,
 }) => {
-  console.log(JSON.stringify(course));
   return (
     <Modal
       show={modalShow}
