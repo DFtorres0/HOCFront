@@ -17,7 +17,7 @@ interface CreateClassProps {
   onLessonDurationChange: (duartion: number) => void;
   onLessonContentChange: (content: string) => void;
   onLessonIntensityIdChange: (intensityId: number) => void;
-  onLessonTopicChange: (topic: string) => void;
+  onLessonTopicChange: (topic: number) => void;
   onActivityTitleChange: (title: string) => void;
   onActivityContentChange: (Acontent: string) => void;
   onActivityIntensityIdChange: (AintensityId: number) => void;
@@ -41,7 +41,7 @@ const CreateModule: React.FC<CreateClassProps> = ({
   const [LessonDuration, setLessonDuration] = useState<number>();
   const [LessonContent, setLessonContent] = useState("");
   const [LessonIntensityId, setLessonIntensityId] = useState<number>();
-  const [LessonTopic, setLessonTopic] = useState("");
+  const [LessonTopic, setLessonTopic] = useState<number>();
   const [ActivityTitle, setActivityTitle] = useState("");
   const [ActivityContent, setActivityContent] = useState("");
   const [ActivityIntensityId, setActivityIntensityId] = useState<number>();
@@ -67,7 +67,7 @@ const CreateModule: React.FC<CreateClassProps> = ({
     setLessonIntensityId(+intensityId);
     onLessonIntensityIdChange(+intensityId);
   };
-  const handleLessonTopicChange = (topic: string) => {
+  const handleLessonTopicChange = (topic: number) => {
     setLessonTopic(topic);
     onLessonTopicChange(topic);
   };
@@ -89,26 +89,26 @@ const CreateModule: React.FC<CreateClassProps> = ({
   };
 
   const emptyModule: Module = {
-    Activities: [],
-    Lessons: [],
+    activities: [],
+    lessons: [],
   };
 
   const emptyActivities: Activity = {
-    ActivityTitle: "",
-    ActivityContent: "",
-    IntensityLevel: undefined,
-    Module: undefined,
-    Topic: undefined,
-    TopicNavigation: undefined
+    activityTitle: "",
+    activityContent: "",
+    intensityLevel: undefined,
+    module: undefined,
+    topic: undefined,
+    topicNavigation: undefined
   };
 
   const emptyLesson: Lesson = {
-    LessonTitle: "",
-    LessonDescription: "",
-    LessonContent: "",
-    IntensityLevel: undefined,
-    ModuleId: undefined,
-    Topic: undefined
+    lessonTitle: "",
+    lessonDescription: "",
+    lessonContent: "",
+    intensityLevel: undefined,
+    moduleId: undefined,
+    topic: undefined
   };
 
   const [activity, setActivity] = useState<Activity[]>([]);

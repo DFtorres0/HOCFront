@@ -11,7 +11,6 @@ import { json } from "stream/consumers";
 import CreateModule from "./CreateModule";
 import CreateLesson from "./CreateLesson";
 import CreateActivity from "./CreateActivities";
-import { Lesson } from "../core/models/Lessons";
 import axios from "axios";
 import { enviroment } from "../enviroments/enviroment";
 
@@ -25,7 +24,7 @@ const CreateClass = () => {
   const [LessonDuration, setLessonDuration] = useState<number>();
   const [LessonContent, setLessonContent] = useState("");
   const [LessonIntensityId, setLessonIntensityId] = useState<number>();
-  const [LessonTopic, setLessonTopic] = useState("");
+  const [LessonTopic, setLessonTopic] = useState<number>();
   const [ActivityTitle, setActivityTitle] = useState("");
   const [ActivityContent, setActivityContent] = useState("");
   const [ActivityIntensityId, setActivityIntensityId] = useState<number>();
@@ -65,7 +64,7 @@ const CreateClass = () => {
   const handleLessonIntensityIdChange = (intensityId: number) => {
     setLessonIntensityId(intensityId);
   };
-  const handleLessonTopicChange = (topic: string) => {
+  const handleLessonTopicChange = (topic: number) => {
     setLessonTopic(topic);
   };
 
@@ -86,39 +85,39 @@ const CreateClass = () => {
     event.preventDefault();
 
     const CreateClass: Course = {
-      CourseName: CourseName,
-      CourseDescription: Description,
-      CourseDuration: Duration,
-      IntensityLevelId: IntensityId,
-      Modules: [],
+      courseName: CourseName,
+      courseDescription: Description,
+      courseDuration: Duration,
+      intensityLevelId: IntensityId,
+      modules: [],
     };
 
-    CreateClass.CourseName = CourseName;
-    CreateClass.CourseDescription = Description;
-    CreateClass.CourseDuration = Duration;
-    CreateClass.IntensityLevelId = IntensityId;
+    CreateClass.courseName = CourseName;
+    CreateClass.courseDescription = Description;
+    CreateClass.courseDuration = Duration;
+    CreateClass.intensityLevelId = IntensityId;
   };
 
   const emptyModule: Module = {
-    Activities: [],
-    Lessons: [],
+    activities: [],
+    lessons: [],
   };
 
   const CreateLessons: Lesson = {
-    LessonTitle: LessonTitle,
-    LessonDescription: LessonDescription,
-    LessonDuration: LessonDuration,
-    LessonContent: LessonContent,
-    LessonIntensityLevelId: LessonIntensityId,
-    LessonTopic: LessonTopic,
+    lessonTitle: LessonTitle,
+    lessonDescription: LessonDescription,
+    lessonDuration: LessonDuration,
+    lessonContent: LessonContent,
+    intensityLevel: LessonIntensityId,
+    topic: LessonTopic,
   };
 
-  CreateLessons.LessonTitle = LessonTitle;
-  CreateLessons.LessonDescription = LessonDescription;
-  CreateLessons.LessonDuration = LessonDuration;
-  CreateLessons.LessonContent = LessonContent;
-  CreateLessons.IntensityLevelId = LessonIntensityId;
-  CreateLessons.LessonTopic = LessonTopic;
+  CreateLessons.lessonTitle = LessonTitle;
+  CreateLessons.lessonDescription = LessonDescription;
+  CreateLessons.lessonDuration = LessonDuration;
+  CreateLessons.lessonContent = LessonContent;
+  CreateLessons.intensityLevel = LessonIntensityId;
+  CreateLessons.topic = LessonTopic;
 
   const [modules, setModules] = useState<Module[]>([]);
 
