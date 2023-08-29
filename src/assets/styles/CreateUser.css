@@ -1,0 +1,23 @@
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&display=swap");
+*{
+    font-family: "Montserrat", sans-serif;
+}
+.Container-form{
+    border: 2px solid #252525;
+    border-radius: 10px;
+    padding: 5vh 10vh;
+    width: 40vw;
+    height: 85vh;
+    display: flex;
+    flex-direction: column;
+    min-width: 400px;
+    margin: 3vh auto;
+    overflow: auto;
+}
+.Container-form::-webkit-scrollbar{
+    display: none;
+}
+
+.SubmitBtn{
+    width: 100%;
+}

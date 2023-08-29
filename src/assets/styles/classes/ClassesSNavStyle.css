@@ -1,15 +1,16 @@
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&display=swap");
 #snav {
-  margin: 0;
-  padding: 0;
+  padding: 1px 0px;
   box-sizing: border-box;
-  font-family: "Poppins", sans-serif;
+  /* font-family: "Poppins", sans-serif; */
+  font-family: "Montserrat","sans-serif";
 }
 
 #snav {
   --body-color: #233950;
   --sidebar-color: #2b3641;
-  --primary-color: #3870a8;
-  --primary-color-light: #3a3b3c;
+  --primary-color: #569dc9;
+  --primary-color-light: #3c3b3a;
   --toggle-color: #fff;
   --text-color: #ccc;
   --tran-03: all 0.2s ease;
@@ -34,6 +35,7 @@
   color: #fff;
 }
 
+
 /* ===== Sidebar ===== */
 #snav .sidebar {
   position: fixed;
@@ -41,7 +43,7 @@
   left: 0;
   height: 100%;
   width: 200px;
-  padding-top: 100px;
+  padding-top: 90px;
   background: var(--sidebar-color);
   transition: var(--tran-05);
   z-index: 100;
@@ -53,21 +55,19 @@
 /* ===== Reusable code - Here ===== */
 #snav ListGroup {
   height: 50px;
-  list-style: none;
+  /* list-style: none; */
   display: flex;
   align-items: center;
-  margin-top: 10px;
 }
 
 #snav .sidebar .module-number {
-  margin: 30px 0;
+  margin: 10px 0;
   padding: 0;
   color: var(--primary-color) !important;
 }
 
 #snav .sidebar.close .module-number {
   width: 40px;
-  margin-left: 10px;
   color: var(--primary-color);
 }
 
@@ -78,10 +78,6 @@
   align-items: center;
   justify-content: center;
   font-size: 20px;
-}
-
-#snav .sidebar .classIcon {
-  margin-left: 10px;
 }
 
 #snav .sidebar .text,
@@ -126,7 +122,6 @@
 
 #snav .sidebar .header .toggle {
   position: absolute;
-  top: 50%;
   transform: translateY(-63%) rotate(180deg);
   height: 40px;
   width: 20px;
@@ -187,26 +182,28 @@
 
 #snav .sidebar ListGroup div:hover {
   background-color: var(--primary-color);
+  cursor: pointer;
 }
 
 #snav .sidebar ListGroup div:hover .icon,
 #snav .sidebar ListGroup div:hover .text {
   color: var(--sidebar-color);
+  cursor: pointer;
 }
 #snav body.dark .sidebar ListGroup div:hover .icon,
 #snav body.dark .sidebar ListGroup div:hover .text {
   color: var(--text-color);
+ 
 }
 
 #snav .sidebar .menu-bar {
   height: calc(100% - 28px);
   display: flex;
   flex-direction: column;
-  overflow-y: scroll;
+  justify-content: flex-start;
+  align-content: flex-start;
+  overflow-y: auto;
   padding: 0;
-}
-#snav .menu-bar::-webkit-scrollbar {
-  display: none;
 }
 #snav .sidebar .menu-bar .mode {
   border-radius: 6px;
@@ -215,20 +212,7 @@
   transition: var(--tran-05);
 }
 
-#snav .home {
-  position: absolute;
-  top: 0;
-  left: 250px;
-  height: 100vh;
-  width: calc(100% - 250px);
-  background-color: var(--body-color);
-  transition: var(--tran-05);
-}
-#snav .sidebar.close ~ .home {
-  left: 78px;
-  height: 100vh;
-  width: calc(100% - 78px);
-}
 #snav body.dark .home .text {
   color: var(--text-color);
 }
+

@@ -1,9 +1,10 @@
 {
   "compilerOptions": {
-    "target": "ESNext",
+    "target": "ES6",
     "useDefineForClassFields": true,
     "lib": ["DOM", "DOM.Iterable", "ESNext"],
     "allowJs": false,
+    "baseUrl": ".",
     "skipLibCheck": true,
     "esModuleInterop": false,
     "allowSyntheticDefaultImports": true,
@@ -14,8 +15,13 @@
     "resolveJsonModule": true,
     "isolatedModules": true,
     "noEmit": true,
-    "jsx": "react-jsx"
+    "jsx": "react-jsx",
+    "jsxImportSource": "@emotion/react",
+    "outDir": "./dist",
+    "types": ["node", "jest"],
+    "typeRoots": ["node_modules/@types", "src/@types"]
   },
-  "include": ["src", "src/test"],
+  "include": ["src/**/*", "src/test", "files.js"],
+  "exclude": ["node_modules", "coverage", ".github", ".firebase"],
   "references": [{ "path": "./tsconfig.node.json" }]
 }

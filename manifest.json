@@ -1,0 +1,15 @@
+{
+    "name": "Home Of Code",
+    "short_name": "Home Of Code",
+    "theme_color": "#3367D6",
+    "background_color": "#ffffff",
+    "display": "standalone",
+    "start_url": "/index.html",
+    "icons": [
+        {
+            "src": "/public/images/illustrator.webp",
+            "type": "image/webp",
+            "size": "32x32"
+        }
+    ]
+}

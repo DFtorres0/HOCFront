@@ -7,159 +7,149 @@ import {
   Col,
   Row,
   Modal,
+  Spinner,
 } from "react-bootstrap";
-import { useState } from "react";
-import { DiAngularSimple, DiReact, DiMysql } from "react-icons/di";
-import { SiJavascript, SiPython, SiOracle } from "react-icons/si";
-import {FiMenu} from "react-icons/fi";
-import {HiPencilAlt} from "react-icons/hi";
-import {FaGamepad} from "react-icons/fa";
-import {IoIosApps} from "react-icons/io";
+import { useState, FC, useEffect } from "react";
+import { Link, useNavigate } from "react-router-dom";
+import useCourseList from "../hooks/useListCourses";
 
-const cursos = [
-  {
-    id: 0,
-    name: "Angular",
-    icon: <DiAngularSimple className="my-iconP-1" />,
-    modalShow: false,
-  },
-  {
-    id: 1,
-    name: "React",
-    icon: <DiReact className="my-iconP-2" />,
-    modalShow: false,
-  },
-  {
-    id: 2,
-    name: "JavaScript",
-    icon: <SiJavascript className="my-iconP-3" />,
-    modalShow: false,
-  },
-  {
-    id: 3,
-    name: "Python",
-    icon: <SiPython className="my-iconP-4" />,
-    modalShow: false,
-  },
-  {
-    id: 4,
-    name: "SQL",
-    icon: <DiMysql className="my-iconP-5" />,
-    modalShow: false,
-  },
-  {
-    id: 5,
-    name: "Oracle",
-    icon: <SiOracle className="my-iconP-1" />,
-    modalShow: false,
-  },
-];
+interface ModalComponentProps {
+  modalShow: boolean;
+  setModalShow: () => void;
+  course?: Course;
+}
 
-interface courseInterface {
-  id: number;
-  name: string;
-  icon: JSX.Element;
+const ModalComponent: FC<ModalComponentProps> = ({
+  modalShow,
+  setModalShow,
+  course,
+}) => {
+  const navigate = useNavigate();
+  return (
+    <Modal show={modalShow} backdrop="static" keyboard={false} centered>
+      <Modal.Header
+        style={{
+          backgroundColor: "#2d6166",
+          borderColor: "#183d41",
+          color: "aliceblue",
+        }}
+      >
+        <Modal.Title>{course?.courseName}</Modal.Title>
+      </Modal.Header>
+      <Modal.Body
+        style={{
+          backgroundColor: "#2d6166",
+          borderColor: "#183d41",
+          color: "aliceblue",
+        }}
+      >
+        <Card.Title>{course?.courseDescription}</Card.Title>
+      </Modal.Body>
+      <Modal.Footer
+        style={{ backgroundColor: "#2d6166", borderColor: "#183d41" }}
+      >
+        <Button
+          variant="primary"
+          onClick={() => navigate(`/classes/${course?.courseId}`)}
+        >
+          Quiero ir!
+        </Button>
+        <Button variant="secondary" onClick={setModalShow}>
+          Cerrar
+        </Button>
+      </Modal.Footer>
+    </Modal>
+  );
+};
+
+interface CourseListWithShowModal {
+  Course: Course;
   modalShow: boolean;
 }
 
-const HomePortfolio = () => {
-  const [courses, setCourses] = useState<courseInterface[]>([...cursos]);
+const HomePortfolio: FC = () => {
+  const [courses, setCourses] = useState<CourseListWithShowModal[]>([]);
+  const [modalShow, setModalShow] = useState(false);
+  const [selectedCourse, setSelectedCourse] = useState<Course>();
 
-  const ModalComponent = ({ course }: { course: courseInterface }) => {
-    return (
-      <Modal
-        show={course.modalShow}
-        onHide={() => course.modalShow}
-        backdrop="static"
-        keyboard={false}
-        centered
-      >
-        <Modal.Header closeButton>
-          <Modal.Title>{course.name}</Modal.Title>
-        </Modal.Header>
-        <Modal.Body>
-          <Card.Title>
-            {course.icon}
-          </Card.Title>
-        </Modal.Body>
-        <Modal.Footer>
-          <Button
-            variant="secondary"
-            onClick={() => handleSetModal(course.id, false)}
-          >
-            Cerrar
-          </Button>
-        </Modal.Footer>
-      </Modal>
-    );
+  const {
+    data: courseList,
+    isSuccess: courseListSuccess,
+    isLoading: courseListLoading,
+  } = useCourseList();
+
+  const handleCloseModal = () => {
+    setModalShow(false);
   };
 
-  const handleSetModal = (id: number, show: boolean) => {
-    const newCourses = cursos.map((course) => {
-      if (course.id === id) {
-        return {
-          id: course.id,
-          name: course.name,
-          icon: course.icon,
-          modalShow: show,
-        };
-      }
-      return course;
-    });
-    setCourses(newCourses);
-    console.log(newCourses);
+  const handleSetSelectedCourse = (actualCourse: Course) => {
+    setSelectedCourse(actualCourse);
+    setModalShow(true);
   };
+
+  useEffect(() => {
+    if (courseListSuccess && courseList) {
+      const updatedCourses: CourseListWithShowModal[] = courseList.map(
+        (course) => ({
+          Course: course,
+          modalShow: false, // Initializing modalShow as false
+        })
+      );
+      setCourses(updatedCourses);
+    }
+  }, [courseListSuccess, courseList]);
 
   return (
     <div id="portfolio">
       <Container>
         <div className="section-title text-center center">
-          <h2>Portafolio™</h2>
+          <Container className="h2">Portafolio</Container>
           <hr />
         </div>
       </Container>
       <div className="categories">
-        {/* <ButtonGroup className="cat type">
-          <Button id="btn1" variant="outline-dark" size="lg" title="Todo">
-            <i><FiMenu className="TodoIcon" size = "25"></FiMenu></i>
-          </Button>
-          <Button className="boton2" id="btn2" variant="outline-dark" size="lg" title="Diseño" color="#d59acb">
-            <i><HiPencilAlt className="DiseñoIcon" size="25"></HiPencilAlt></i>
-          </Button>
-          <Button id="btn3" variant="outline-dark" size="lg" title="App Modificadas">
-            <i><IoIosApps className="AppIcon" size="25"></IoIosApps></i> 
-          </Button>
-          <Button id="btn4" variant="outline-dark" size="lg" title="Juegos">
-            <i><FaGamepad className="GamesIcon" size="25"></FaGamepad></i>
-          </Button>
-        </ButtonGroup> */}
-        <a href="#Alls"> Todo </a>
-        <a href="#Front" >Front-End</a>
-        <a href="#Back" >Back-End</a>
-        <a href="#DataBase" >Bases de datos</a>
-        {" "}
-        <div id="dotid" className ="dot"></div>
+        <Link className="a" to="#Alls">
+          {" "}
+          Todo{" "}
+        </Link>
+        <Link className="a" to="#Front">
+          Front-End
+        </Link>
+        <Link className="a" to="#Back">
+          Back-End
+        </Link>
+        <Link className="a" to="#DataBase">
+          Bases de datos
+        </Link>{" "}
+        <div id="dotid" className="dot"></div>
       </div>
-
-      <Row className="row">
-        {courses.map((curso, courseIndex) => (
-          <Col key={courseIndex}>
-            <Card
-              bg="secondary"
-              className="card"
-              onClick={() => handleSetModal(curso.id, true)}
-            >
-              <Card.Header>{curso.name}</Card.Header>
-              <Card.Body>
-                <Card.Title>
-                  {curso.icon}
-                </Card.Title>
-              </Card.Body>
-            </Card>
-            <ModalComponent course={curso} />
-          </Col>
-        ))}
-      </Row>
+      {courseListLoading ? (
+        <Spinner animation="border" role="status">
+          <span className="visually-hidden">Loading...</span>
+        </Spinner>
+      ) : (
+        <Row className="row">
+          {courseList?.map((course, courseIndex) => (
+            <Col key={courseIndex}>
+              <Card
+                bg="secondary"
+                className="card"
+                onClick={() => handleSetSelectedCourse(course)}
+              >
+                <Card.Header>{course.courseName}</Card.Header>
+                <Card.Body>
+                  <Card.Title>{course.courseDuration} horas</Card.Title>
+                </Card.Body>
+              </Card>
+            </Col>
+          ))}
+          <ModalComponent
+            modalShow={modalShow}
+            course={selectedCourse}
+            setModalShow={handleCloseModal}
+          />
+        </Row>
+      )}
     </div>
   );
 };

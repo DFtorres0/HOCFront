@@ -1,11 +1,14 @@
-import { Container } from "react-bootstrap";
+import Youtube from "react-youtube";
 
-const MainCResource = () => {
-  const videoHTML = '<iframe width="72%" height="530" src="https://www.youtube.com/embed/5jKZ9KGtee0" title="One Happy Cat" frameBorder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowFullScreen></iframe>'
-
+const MainCResource = ({ videoHTML }: { videoHTML: string | undefined }) => {
+  let videoResource: string;
+  videoResource = "";
+  if (videoHTML != undefined) {
+    videoResource = videoHTML;
+  }
   return (
-    <div style={{ marginTop: '70px'}}>
-      <div dangerouslySetInnerHTML={{__html: videoHTML}} />
+    <div style={{ marginTop: "10px", marginBottom: "20px" }}>
+      <Youtube opts={{ height: "450", width: "100%" }} videoId={videoHTML} />
     </div>
   );
 };

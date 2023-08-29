@@ -1,0 +1,42 @@
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&display=swap");
+*{
+    font-family: "Montserrat", sans-serif;
+}
+.Container-form{
+    border: 2px solid #252525;
+    border-radius: 10px;
+    padding: 5vh 10vh;
+    width: 40vw;
+    height: 85vh;
+    display: flex;
+    flex-direction: column;
+    min-width: 400px;
+    margin: 3vh auto;
+    overflow: auto;
+}
+.Container-form::-webkit-scrollbar{
+    display: none;
+}
+
+
+.ButtonsContainer{
+    display: flex;
+}
+.SubmitBtn{
+    width: 100%;
+    margin: 5px;
+}
+.TextArea{
+    resize: none;
+}
+.addModule{
+    width: 100%;
+    margin: 5px;
+}
+.DeleteModule{
+    width: 100%;
+}
+.Container-btn{
+    display: flex;
+    flex: 1;
+}

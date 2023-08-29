@@ -86,3 +86,7 @@
   top: -10px;
   font-family: "Montserrat","sans-serif";
 }
+
+.row {
+  --bs-gutter-x: 0;
+}
