@@ -36,11 +36,3 @@ body {
   font-weight: 500;
   cursor:pointer; cursor: hand
 }
-.dropdown-menu.show{
-  background: #252525;
-  margin-right: 100px;
-}
-.navbar-expand .navbar-nav .dropdown-menu{
-  position: relative;
-  left: -150px;
-}

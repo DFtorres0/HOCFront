@@ -4,7 +4,7 @@ import { getAnalytics } from "firebase/analytics";
 import { QueryClient, QueryClientProvider } from "@tanstack/react-query";
 import { ReactQueryDevtools } from "@tanstack/react-query-devtools";
 import RenderedRoutes from "./Routes";
-import UserProvider from "./userProvider";
+import UserProvider from "./UserProvider";
 
 const firebaseConfig = {
   apiKey: "AIzaSyC-y8LYoMEH4BMbWHWi0Drl2pNigl_L7PY",

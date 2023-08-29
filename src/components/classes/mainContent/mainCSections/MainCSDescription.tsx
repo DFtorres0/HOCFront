@@ -9,7 +9,7 @@ const MainCSDescription = ({isVisible, lesson}:{isVisible: string, lesson: Lesso
         marginBottom: "30px",
       }}
     >
-      <Container style={{textAlign:"left"}} className="h2">{lesson?.LessonDescription}</Container>
+      <Container style={{textAlign:"left"}} className="h2">{lesson?.lessonDescription}</Container>
     </div>
   );
 };

@@ -7,7 +7,7 @@ export const useValidateContext = () => {
     useEffect(() => {
         const token = getDecodedToken()
         
-        const localUserRole = token.UserRole
+        const localUserRole = token?.UserRole
         if (localUserRole) {
           auth?.setUserRoles(localUserRole)
         }

@@ -49,9 +49,14 @@ const routesConfig: RoutesType[] = [
     },
     {
       id: 'classes',
-      path: '/classes',
+      path: '/classes/*',
       guard: GuardRole(["Administrador", "Instructor", "Estudiante"]),
-      component: lazy(() => import("src/components/classes/Classes"))
+      routes: [{
+        id: "course",
+        path: "/:id",
+        component: lazy(() => import("src/components/classes/Classes"))
+      }],
+      
     },
     {
       id: 'register',

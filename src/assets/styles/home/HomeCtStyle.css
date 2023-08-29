@@ -5,12 +5,34 @@
   align-content: center;
   justify-content: center;
   justify-items: center;
-  background: rgb(248, 245, 245); 
+  background: #569dc9; /* Old browsers */
+  /* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#54d0dd+0,54d0dd+0,54d0dd+0,7fdce6+0,54d0dd+100 */
+  background: -moz-linear-gradient(
+    top,
+    #3c8faf ,
+    #337a8b ,
+    #2d6166 
+  ); /* FF3.6-15 */
+  background: -webkit-linear-gradient(
+    top,
+    #3c8faf ,
+    #337a8b ,
+    #2d6166 
+  ); /* Chrome10-25,Safari5.1-6*/ 
+  background: linear-gradient(
+    to bottom,
+    #3c8faf ,
+    #337a8b ,
+    #2d6166 
+
+  ); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */  
+ 
+  color: aliceblue;
 }
 
 #contact .btn-default {
   text-transform: uppercase;
-  color: #f7f3f3;
+  color: aliceblue;
   background-color: #414a52;
   border: 0;
   padding: 14px 20px;

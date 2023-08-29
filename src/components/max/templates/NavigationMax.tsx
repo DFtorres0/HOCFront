@@ -3,7 +3,6 @@ import {
   Navbar,
   Container,
   Nav,
-  ListGroup,
   NavDropdown,
 } from "react-bootstrap";
 import "../../../assets/styles/indexmax/IndexMaxS.css";
@@ -14,23 +13,8 @@ const NavigationMax = () => {
   const [height, setHeight] = useState("10");
   const [isMobile, setIsMobile] = useState(false);
 
-  useEffect(() => {
-    const mediaQuery = window.matchMedia("(max-width: 900px)");
-    const handleMediaQueryChange = (event: any) => {
-      setIsMobile(event.matches);
-    };
-
-    setIsMobile(mediaQuery.matches);
-
-    mediaQuery.addEventListener("change", handleMediaQueryChange);
-
-    return () => {
-      mediaQuery.removeEventListener("change", handleMediaQueryChange);
-    };
-  }, []);
-
   const handleScroll = () => {
-    const currentPosition = window.pageYOffset;
+    const currentPosition = window.scrollY;
     if (currentPosition > 0 && navbarClass === "transparent") {
       setNavbarClass("colored");
       setHeight("7");
@@ -49,7 +33,7 @@ const NavigationMax = () => {
       style={{ height: `${height}%` }}
       id="navbarMax"
     >
-      <Container >
+      <Container>
         <Navbar.Brand
           href="/home"
           id="navmaxhoc"
@@ -60,32 +44,16 @@ const NavigationMax = () => {
         <Navbar.Toggle aria-controls="responsive-navbar-nav" />
         <Navbar.Collapse id="responsive-navbar-nav"></Navbar.Collapse>
         <Nav>
-          <NavDropdown
-            title={<BsCodeSlash />}
-            style={{ display: isMobile ? "" : "none" , paddingRight:"auto"}}
-          >
-            <NavDropdown.Item href="/indexmax" id="navhover" className="word">
+          <div style={{ display: "flex" }}>
+            <Nav.Link href="/indexmax" id="navhover" className="word">
               <Container className="p">Inicio</Container>
-            </NavDropdown.Item>
-
-            <NavDropdown.Item href="/testimonials" id="navhover">
+            </Nav.Link>
+            <Nav.Link href="/testimonials" id="navhover">
               <Container className="p">Comunidad</Container>
-            </NavDropdown.Item>
-
-            <NavDropdown.Item href="/tutorials" id="navhover">
+            </Nav.Link>
+            <Nav.Link href="/tutorials" id="navhover">
               <Container className="p">Cursos</Container>
-            </NavDropdown.Item>
-          </NavDropdown>
-          <div style={{display:isMobile?"none":"flex"}}>
-          <Nav.Link href="/indexmax" id="navhover" className="word">
-            <Container className="p">Inicio</Container>
-          </Nav.Link>
-          <Nav.Link href="/testimonials" id="navhover">
-            <Container className="p">Comunidad</Container>
-          </Nav.Link>
-          <Nav.Link href="/tutorials" id="navhover">
-            <Container className="p">Cursos</Container>
-          </Nav.Link>
+            </Nav.Link>
           </div>
         </Nav>
       </Container>

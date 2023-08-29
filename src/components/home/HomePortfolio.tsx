@@ -10,7 +10,7 @@ import {
   Spinner,
 } from "react-bootstrap";
 import { useState, FC, useEffect } from "react";
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 import useCourseList from "../hooks/useListCourses";
 
 interface ModalComponentProps {
@@ -24,20 +24,36 @@ const ModalComponent: FC<ModalComponentProps> = ({
   setModalShow,
   course,
 }) => {
+  const navigate = useNavigate();
   return (
-    <Modal
-      show={modalShow}
-      backdrop="static"
-      keyboard={false}
-      centered
-    >
-      <Modal.Header closeButton>
+    <Modal show={modalShow} backdrop="static" keyboard={false} centered>
+      <Modal.Header
+        style={{
+          backgroundColor: "#2d6166",
+          borderColor: "#183d41",
+          color: "aliceblue",
+        }}
+      >
         <Modal.Title>{course?.courseName}</Modal.Title>
       </Modal.Header>
-      <Modal.Body>
-        <Card.Title>icon</Card.Title>
+      <Modal.Body
+        style={{
+          backgroundColor: "#2d6166",
+          borderColor: "#183d41",
+          color: "aliceblue",
+        }}
+      >
+        <Card.Title>{course?.courseDescription}</Card.Title>
       </Modal.Body>
-      <Modal.Footer>
+      <Modal.Footer
+        style={{ backgroundColor: "#2d6166", borderColor: "#183d41" }}
+      >
+        <Button
+          variant="primary"
+          onClick={() => navigate(`/classes/${course?.courseId}`)}
+        >
+          Quiero ir!
+        </Button>
         <Button variant="secondary" onClick={setModalShow}>
           Cerrar
         </Button>
@@ -122,7 +138,7 @@ const HomePortfolio: FC = () => {
               >
                 <Card.Header>{course.courseName}</Card.Header>
                 <Card.Body>
-                  <Card.Title>{course.courseDescription}</Card.Title>
+                  <Card.Title>{course.courseDuration} horas</Card.Title>
                 </Card.Body>
               </Card>
             </Col>

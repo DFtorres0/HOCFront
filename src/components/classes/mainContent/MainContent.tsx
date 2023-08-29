@@ -3,10 +3,9 @@ import MainCFooter from "./MainCFooter";
 import MainCResource from "./MainCResource";
 import MainCSections from "./mainCSections/MainCSections";
 import Forum from "../../max/templates/Forum";
-import { CoursesMock } from "../../../core/models/MainCourseMock";
 import { useEffect, useState } from "react";
 
-const MainContent = ({ lesson }: { lesson: Lesson | undefined }) => {
+const MainContent = ({ lesson, currentCourse }: { lesson: Lesson | undefined, currentCourse?: Course | undefined }) => {
   const [isMobile, setIsMobile] = useState(false);
 
   useEffect(() => {
@@ -37,25 +36,27 @@ const MainContent = ({ lesson }: { lesson: Lesson | undefined }) => {
           textAlign: "left",
           color: "aliceblue",
           display: "flex",
+          flexDirection: "column",
           marginTop: "80px",
-          alignItems: "center"
+          alignItems: "flex-start"
         }}
         className="h1"
       >
-        {CoursesMock[0].CourseName}:
+        {currentCourse?.courseName}:
         <Container
           style={{
-            paddingTop:"15px"
+            paddingTop:"15px",
+            paddingLeft: "20px"
           }}
           className="h2"
         >
-          {lesson?.LessonTitle}
+          {lesson?.lessonTitle}
         </Container>
       </Container>
       <Row style={{ width: "94vw", padding: "0", paddingLeft: "45px", display:"flex",flexDirection:isMobile?"column":undefined}}>
         <Col style={{ minWidth: "60vw" }}>
           <MainCResource
-            videoHTML={lesson?lesson.LessonContent: undefined}
+            videoHTML={lesson?lesson.lessonContent: undefined}
           />
           <MainCSections lesson={lesson} />
         </Col>

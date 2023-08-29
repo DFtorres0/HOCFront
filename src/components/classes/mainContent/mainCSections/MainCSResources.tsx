@@ -16,7 +16,7 @@ const MainCSResources = ({
       }}
     >
       <Container style={{ textAlign: "left" }} className="h2">
-        {lesson?.TopicNavigation?.TopicDescription}
+        {lesson?.topicNavigation?.topicDescription}
       </Container>
     </div>
   );
