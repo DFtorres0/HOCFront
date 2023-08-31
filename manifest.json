@@ -1,15 +1,23 @@
 {
     "name": "Home Of Code",
-    "short_name": "Home Of Code",
-    "theme_color": "#3367D6",
+    "short_name": "HOC",
     "background_color": "#ffffff",
+    "categories":["education"],
+    "description": "",
     "display": "standalone",
-    "start_url": "/index.html",
+    "start_url": "/Home",
     "icons": [
         {
-            "src": "/public/images/illustrator.webp",
-            "type": "image/webp",
-            "size": "32x32"
+            "src": "./public/Icons/Icon142.png",
+            "size": "142x142",
+            "type": "image/png"
+        },
+        {
+            "src": "./public/Icon/Icon620.png",
+            "size": "620x620",
+            "type": "image/png"
         }
-    ]
+    ],
+    "scope":"/",
+    "theme_color": "#ffffff"
 }
