@@ -8,13 +8,7 @@ import { BsCodeSlash, BsDisplay, BsJustify } from "react-icons/bs";
 import { Container} from "react-bootstrap";
 import { MdOutlineClass, MdOutlineSignalWifiStatusbarConnectedNoInternet4 } from "react-icons/md";
 import { ReactDOM } from "react";
-import { Module } from "../core/models/Module";
-import { CoursesService } from "../core/services/Courses.service";
-import { Courses } from "../core/models/Courses";
-import { IntensityLevel } from "../core/models/IntensityLevels";
 import { json } from "stream/consumers";
-import { Activity } from "../core/models/Activity";
-import { Lesson } from "../core/models/Lessons";
 import CreateClass from "../../src/components/CreateClass";
 
 
@@ -25,7 +19,7 @@ interface CreateClassProps {
   onLessonDurationChange: (duration: number) => void;
   onLessonContentChange: (content: string) => void;
   onLessonIntensityIdChange: (intensityId: number) => void;
-  onLessonTopicChange: (topic: string) => void;
+  onLessonTopicChange: (topic: number) => void;
   
 }
 
@@ -65,9 +59,6 @@ onLessonDurationChange, onLessonContentChange, onLessonIntensityIdChange, onLess
     onLessonTopicChange(event.target.value)
   };
 
-
- 
-  
   
   return (
     <> 

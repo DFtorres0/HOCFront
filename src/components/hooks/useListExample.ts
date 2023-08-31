@@ -1,4 +1,4 @@
-import api from "../../../core/services/api";
+import api from "../../core/services/api";
 import { useQuery } from "@tanstack/react-query";
 import { exampleApiQueryKeys } from "../utilities";
 

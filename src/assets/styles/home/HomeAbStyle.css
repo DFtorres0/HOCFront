@@ -1,34 +1,29 @@
 #about {
   padding: 50px 0;
   text-align: left;
+  
+  background: #569dc9; /* Old browsers */
   /* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#54d0dd+0,54d0dd+0,54d0dd+0,7fdce6+0,54d0dd+100 */
-  background: #fbfbfb; /* Old browsers */
   background: -moz-linear-gradient(
     top,
-    rgb(0, 0, 0) 0%,
-    rgb(25, 25, 25) 0%,
-    rgb(23, 23, 23) 0%,
-    rgb(6, 6, 6) 0%,
-    rgb(8, 8, 8) 100%
+    #3c8faf ,
+    #337a8b ,
+    #2d6166 
   ); /* FF3.6-15 */
   background: -webkit-linear-gradient(
-    to top,60px
-    rgb(11, 11, 11) 0%,
-    rgb(11, 11, 11) 0%,
-    rgb(8, 8, 8) 0%,
-    rgb(4, 4, 4) 0%,
-    rgb(7, 7, 7) 100%,
+    top,
+    #3c8faf ,
+    #337a8b ,
+    #2d6166 
   ); /* Chrome10-25,Safari5.1-6*/ 
   background: linear-gradient(
     to bottom,
-    rgb(12, 12, 12) 0%,
-    rgb(11, 11, 11) 0%,
-    rgb(5, 5, 5) 0%,
-    rgb(10, 10, 10) 30%,
-    rgb(5, 5, 5) 100%,
+    #3c8faf ,
+    #337a8b ,
+    #2d6166 
 
-  ); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
-  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#54d0dd', endColorstr='#54d0dd', GradientType=0 ); /* IE6-9 */
+  ); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */  
+ 
 }
 #about .about-text {
   margin-left: 10px; /*espacio entre imagen y texto*/
@@ -99,7 +94,8 @@
 }
 #list_Group{
   list-style-type: disc;
-  background: #fbfbfb;
+  background: transparent ;
+  color: aliceblue;
 }
 #list_Group li{
   margin-bottom: 15px;

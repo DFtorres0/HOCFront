@@ -3,7 +3,6 @@ import MainCSCompiler from "./MainCSCompiler";
 import MainCSDescription from "./MainCSDescription";
 import MainCSNavbar from "./MainCSNavbar";
 import MainCSResources from "./MainCSResources";
-import { Lesson } from "../../../../core/models/Lessons";
 
 const MainCSections = ({ lesson }: { lesson: Lesson | undefined }) => {
   const [currentComponent, setCurrentComponent] = useState("")

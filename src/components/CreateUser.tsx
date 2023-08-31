@@ -6,10 +6,6 @@ import Form from 'react-bootstrap/Form';
 import Button from 'react-bootstrap/Button';
 import { BsCodeSlash, BsJustify, BsTelephone } from "react-icons/bs";
 import { Container} from "react-bootstrap";
-import { UserService } from "../core/services/User.service";
-import { User } from "../core/models/User";
-
-
 
 interface CreateUserProps {
   // Define las propiedades requeridas aquí.
@@ -41,25 +37,21 @@ const CreateUser: React.FC<CreateUserProps> = (props) => {
   const handleSubmit = (event: React.FormEvent<HTMLFormElement>) => {
     event.preventDefault();
 
-    const create = new UserService();
-
     const CreateUser: User = {
-      Name: Name,
-      UserName: userName,
-      Email: email,
-      RoleId: 1,
-      Password: password,
-      Phone: Phone,
+      UserName: Name,
+      UserUsername: userName,
+      UserEmail: email,
+      UserRoleId: 1,
+      UserPassword: password,
+      UserPhone: Phone,
 
     };
-    CreateUser.Name = Name;
-    CreateUser.Email = email;
-    CreateUser.UserName = userName;
-    CreateUser.Password = password;
-    CreateUser.Phone = Phone;
+    CreateUser.UserName = Name;
+    CreateUser.UserEmail = email;
+    CreateUser.UserUsername = userName;
+    CreateUser.UserPassword = password;
+    CreateUser.UserPhone = Phone;
 
-    create.axiosCreate(CreateUser);
-    
   };
 
   

@@ -1,24 +1,58 @@
-import { useState } from "react";
+import { useEffect, useState } from "react";
+import { useNavigate, useParams } from "react-router-dom";
 import "../../assets/styles/classes/ClassesHdStyle.css";
 import NavegationMax from "../max/templates/NavigationMax";
 import SideNav from "./ClassSideNav";
 import MainContent from "./mainContent/MainContent";
-import { Lesson } from "../../core/models/Lessons";
+import useGetOneCourse, { postCourseIdModel } from "../hooks/useGetOneCourse";
+import { Spinner } from "react-bootstrap";
 
 function Classes() {
-
   const [currentLesson, setCurrentLesson] = useState<Lesson>();
+
+  const { id } = useParams<Record<string, string>>();
+
+  const course: postCourseIdModel = {
+    courseId: id,
+  };
+
+  const {
+    mutate: getOneCourse,
+    error: courseError,
+    isLoading: courseLoading,
+    data: courseData
+  } = useGetOneCourse();
+
+  console.log(courseData)
 
   const handleCurrentLesson = (event: Lesson) => {
     setCurrentLesson(event);
   };
 
+  const navigate = useNavigate()
+
+  useEffect(() => {
+    if (id) {
+      getOneCourse(course)
+    }
+  },[id, getOneCourse])
+
+  useEffect(() => {
+    if (!id || courseError){
+      navigate("/home")
+    }
+  },[id, courseError, navigate])
+
+  if (courseLoading) {
+    return <Spinner/>
+  } 
+
   return (
     <div id="HeaderClasses">
       <div data-testid="classes">
         <NavegationMax />
-        <SideNav currentLesson={handleCurrentLesson} />
-        <MainContent lesson={currentLesson} />
+        <SideNav currentLesson={handleCurrentLesson} currentCourse={courseData} />
+        <MainContent lesson={currentLesson} currentCourse={courseData} />
       </div>
     </div>
   );

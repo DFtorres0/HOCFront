@@ -1,21 +1,6 @@
-import { Module } from "./Module";
-import { Activity } from "./Activity";
-import { Courses } from "./Courses";
-import { IntensityLevel } from "./IntensityLevels";
-import { MainCourse } from "./MainCourse";
-import { MainCourseModules } from "./MainCourseModules";
-import { Topic } from "./Topic";
-import { Lesson } from "./Lessons";
-
 const IntensityLevelMock: IntensityLevel = {
   LevelName: "Level 1",
   LevelDescription: "Loremipsum",
-};
-
-const CourseMock: Courses = {
-  CourseName: "React",
-  CourseDescription: "Loremipsum",
-  IntensityLevel: IntensityLevelMock,
 };
 
 const TopicMock: Topic = {
@@ -23,103 +8,75 @@ const TopicMock: Topic = {
   TopicDescription: "React es una libreria creada por Facebook",
 };
 
-const ModuleMock: Module = {
-  Courses: CourseMock,
-};
-
 const LessonMock: Lesson[] = [
   {
-    LessonTitle: "Componentes",
-    LessonDescription: "En React, los componentes son bloques de construcción fundamentales para construir interfaces de usuario reutilizables y modulares. Los componentes en React pueden ser clases o funciones, y encapsulan la lógica y la representación visual de una parte específica de la interfaz de usuario.",
-    LessonContent: "XlvziQilc_w",
-    IntensityLevel: IntensityLevelMock,
-    Module: ModuleMock,
-    Topic: TopicMock,
+    lessonTitle: "Componentes",
+    lessonDescription:
+      "En React, los componentes son bloques de construcción fundamentales para construir interfaces de usuario reutilizables y modulares. Los componentes en React pueden ser clases o funciones, y encapsulan la lógica y la representación visual de una parte específica de la interfaz de usuario.",
+    lessonContent: "XlvziQilc_w",
+    intensityLevelNavigation: IntensityLevelMock,
+    topicNavigation: TopicMock,
   },
   {
-    LessonTitle: "Elementos",
-    LessonDescription:
+    lessonTitle: "Elementos",
+    lessonDescription:
       "En React, puedes crear elementos utilizando JSX (JavaScript XML) para representar y renderizar elementos en tu aplicación. Los elementos de React son objetos ligeros que describen lo que se debe renderizar en la interfaz de usuario.",
-    LessonContent: "rUuusqy50yk",
-    IntensityLevel: IntensityLevelMock,
-    Module: ModuleMock,
-    Topic: TopicMock,
+    lessonContent: "rUuusqy50yk",
+    intensityLevelNavigation: IntensityLevelMock,
+    topicNavigation: TopicMock,
   },
   {
-    LessonTitle: "Hooks",
-    LessonDescription: "Los hooks son una característica introducida en React a partir de la versión 16.8. Los hooks permiten a los componentes de función en React tener estado y utilizar características adicionales sin necesidad de utilizar clases.",
-    LessonContent: "gxG4o0b7T3E",
-    IntensityLevel: IntensityLevelMock,
-    Module: ModuleMock,
-    Topic: TopicMock,
+    lessonTitle: "Hooks",
+    lessonDescription:
+      "Los hooks son una característica introducida en React a partir de la versión 16.8. Los hooks permiten a los componentes de función en React tener estado y utilizar características adicionales sin necesidad de utilizar clases.",
+    lessonContent: "gxG4o0b7T3E",
+    intensityLevelNavigation: IntensityLevelMock,
+    topicNavigation: TopicMock,
   },
 ];
 
 const ActivitiesMock: Activity[] = [
   {
-    ActivitiesId: 1n,
-    ActivityTitle: "attempt1",
-    ActivityContent: "Loremipsum",
-    IntensityLevel: IntensityLevelMock,
-    Module: ModuleMock,
-    Topic: TopicMock,
+    activityTitle: "attempt1",
+    activityContent: "Loremipsum",
+    intensityLevelNavigation: IntensityLevelMock,
+    topicNavigation: TopicMock,
   },
   {
-    ActivitiesId: 2n,
-    ActivityTitle: "attempt2",
-    ActivityContent: "Loremipsum",
-    IntensityLevel: IntensityLevelMock,
-    Module: ModuleMock,
-    Topic: TopicMock,
+    activityTitle: "attempt2",
+    activityContent: "Loremipsum",
+    intensityLevelNavigation: IntensityLevelMock,
+    topicNavigation: TopicMock,
   },
   {
-    ActivitiesId: 3n,
-    ActivityTitle: "attempt3",
-    ActivityContent: "Loremipsum",
-    IntensityLevel: IntensityLevelMock,
-    Module: ModuleMock,
-    Topic: TopicMock,
+    activityTitle: "attempt3",
+    activityContent: "Loremipsum",
+    intensityLevelNavigation: IntensityLevelMock,
+    topicNavigation: TopicMock,
   },
 ];
 
-const MainCourseModuleMock: MainCourseModules[] = [
+const ModuleMock: Module[] = [
   {
-    Activities: ActivitiesMock,
-    Lessons: LessonMock,
+    activities: ActivitiesMock,
+    lessons: LessonMock,
   },
   {
-    Activities: ActivitiesMock,
-    Lessons: LessonMock,
-  },
-  {
-    Activities: ActivitiesMock,
-    Lessons: LessonMock,
+    activities: ActivitiesMock,
+    lessons: LessonMock,
   },
 ];
 
-export const MainCourseMock: MainCourse[] = [
-  {
-    Course: CourseMock,
-    Modules: MainCourseModuleMock,
-  },
-  {
-    Course: CourseMock,
-    Modules: MainCourseModuleMock,
-  },
-  {
-    Course: CourseMock,
-    Modules: MainCourseModuleMock,
-  },
-  {
-    Course: CourseMock,
-    Modules: MainCourseModuleMock,
-  },
-  {
-    Course: CourseMock,
-    Modules: MainCourseModuleMock,
-  },
-  {
-    Course: CourseMock,
-    Modules: MainCourseModuleMock,
-  },
-];
+const CourseMock: Course = {
+  courseName: "React",
+  courseDescription: "Loremipsum",
+  intensityLevel: IntensityLevelMock,
+  modules: ModuleMock,
+};
+
+export const CoursesMock: Course[] = [
+  CourseMock,
+  CourseMock,
+  CourseMock,
+  CourseMock
+]

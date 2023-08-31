@@ -1,5 +1,5 @@
 import { useQuery } from "@tanstack/react-query";
-import api from "../../../core/services/api";
+import api from "../../core/services/api";
 import { exampleApiQueryKeys } from "../utilities";
 
 const getMockUsers = async (): Promise<ExampleApiResponse> => {

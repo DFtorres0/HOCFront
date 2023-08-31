@@ -13,6 +13,9 @@
   flex-direction: column;
   
 } 
+#login .row {
+  --bs-gutter-x: 0
+}
 
 .form-group{
   display: flex;

@@ -2,7 +2,6 @@ import React from "react";
 import ReactDOM from "react-dom/client";
 import { App } from "./App";
 import "bootstrap/dist/css/bootstrap.min.css";
-import { UserService } from "./core/services/User.service";
 import * as serviceWorkerRegistration from "../serviceWorkerRegistration"
 
 ReactDOM.createRoot(document.getElementById("root") as HTMLElement).render(
@@ -10,10 +9,6 @@ ReactDOM.createRoot(document.getElementById("root") as HTMLElement).render(
     <App />
   </React.StrictMode>
 );
-
-const userService = new UserService();
-const response = await userService.getAll()
-console.log(response)
 
 
 if ("service-worker" in navigator) {
