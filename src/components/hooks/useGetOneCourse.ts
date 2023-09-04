@@ -1,25 +1,24 @@
-import { useMutation } from "@tanstack/react-query";
+import { useQuery } from "@tanstack/react-query";
 import api from "../../core/services/api";
+import { coursesApiQueryKeys } from "../utilities";
 
 export interface postCourseIdModel {
     courseId?: string;
 }
 
-const getOneCourse = async (postCourse: postCourseIdModel) => {
+const getOneCourse = async (id: string | undefined): Promise<Course> => {
   // put here your api call
-  const { data } = await api.post("/Course/get", postCourse);
+  const { data } = await api.post(`/Course/get/?id=${id}`);
   return data;
 };
 
-const useGetOneCourse = () => {
-
-  return useMutation((postCourse: postCourseIdModel) => getOneCourse(postCourse),
+const useGetOneCourse = (id: string | undefined) => {
+  return useQuery<Course>(
+    coursesApiQueryKeys.detail(),
+    async () => getOneCourse(id),
     {
-        onError: (err: any) => console.log(err),
-        onSuccess: (data: any) => {
-            const course = data;
-            return course
-        }
+      staleTime: Infinity,
+      notifyOnChangeProps: ["data", "error"],
     }
   );
 };

@@ -17,11 +17,11 @@ function Classes() {
   };
 
   const {
-    mutate: getOneCourse,
     error: courseError,
+    isSuccess: courseSuccess,
     isLoading: courseLoading,
     data: courseData
-  } = useGetOneCourse();
+  } = useGetOneCourse(id);
 
   console.log(courseData)
 
@@ -30,12 +30,6 @@ function Classes() {
   };
 
   const navigate = useNavigate()
-
-  useEffect(() => {
-    if (id) {
-      getOneCourse(course)
-    }
-  },[id, getOneCourse])
 
   useEffect(() => {
     if (!id || courseError){
