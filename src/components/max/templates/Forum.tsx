@@ -1,15 +1,11 @@
-import React, { useState } from "react";
+import { useState } from "react";
 import "../../../assets/styles/classes/ClassesForumsStyle.css";
-import {
-  Accordion,
-  AccordionItem,
-  AccordionButton,
-  AccordionPanel,
-  AccordionIcon,
-  Box,
-  Heading,
-} from "@chakra-ui/react";
+
 import { forums, answers } from "../../../core/models/AnswersMock";
+import { Accordion } from "react-bootstrap";
+import AccordionItem from "react-bootstrap/esm/AccordionItem";
+import AccordionHeader from "react-bootstrap/esm/AccordionHeader";
+import AccordionBody from "react-bootstrap/esm/AccordionBody";
 
 interface InputBoxProps {
   onInputChange: (value: string) => void;
@@ -22,15 +18,13 @@ const Forum = ({ isLesson }: { isLesson: boolean }) => {
     <div className="Div" style={{ height: "100%" }}>
       <Accordion
         style={{ backgroundColor: "transparent" }}
-        className="Acordion"
-        defaultIndex={[0]}
-        allowMultiple
+        defaultActiveKey="0"
       >
         {forums?.map((forum, forumIndex) => {
           if ((forum.lesson !== undefined) === isLesson) {
             return (
               <AccordionItem
-                className="AcordionItem"
+              eventKey={`${forumIndex}`}
                 key={forumIndex}
                 style={{
                   marginBottom: "0",
@@ -38,23 +32,17 @@ const Forum = ({ isLesson }: { isLesson: boolean }) => {
                   color: "aliceblue",
                 }}
               >
-                <h2>
-                  <AccordionButton className="AcordionButton">
-                    <Box className="AcordionBox">{forum.forumTitle}</Box>
-                    <AccordionIcon />
-                  </AccordionButton>
-                </h2>
-
+                <AccordionHeader>{forum.forumTitle}</AccordionHeader>
                 {answers?.map((answer, answerIndex) =>
                   answer.forum == forum ? (
-                    <AccordionPanel pb={4} className="Panel" key={answerIndex}>
+                    <AccordionBody className="Panel" key={answerIndex}>
                       {answer.messageContent}
                       <input
                         type="button"
                         value="Respuesta"
                         className="answer"
                       ></input>
-                    </AccordionPanel>
+                    </AccordionBody>
                   ) : null
                 )}
 
@@ -72,8 +60,9 @@ const Forum = ({ isLesson }: { isLesson: boolean }) => {
                   id="answer"
                 ></input>
               </AccordionItem>
-            );
+            )
           }
+          return null;
         })}
       </Accordion>
     </div>

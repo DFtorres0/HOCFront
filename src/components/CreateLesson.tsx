@@ -56,7 +56,7 @@ onLessonDurationChange, onLessonContentChange, onLessonIntensityIdChange, onLess
   };
   const handleLessonTopicChange = (event: React.ChangeEvent<HTMLInputElement>) => {
     setLessonTopic(event.target.value);
-    onLessonTopicChange(event.target.value)
+    onLessonTopicChange(parseInt(event.target.value))
   };
 
   

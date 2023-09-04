@@ -16,27 +16,3 @@ export const useAuth = () => {
   }
   return context;
 };
-
-export const AuthProvider: React.FC = ({ children }) => {
-  const [isAuthenticated, setIsAuthenticated] = useState(
-    localStorage.getItem('isAuthenticated') === 'true'
-  );
-
-  const login = () => {
-    // Lógica para iniciar sesión y establecer isAuthenticated en true
-    localStorage.setItem('isAuthenticated', 'true');
-    setIsAuthenticated(true);
-  };
-
-  const logout = () => {
-    // Lógica para cerrar sesión y establecer isAuthenticated en false
-    localStorage.removeItem('isAuthenticated');
-    setIsAuthenticated(false);
-  };
-
-  return (
-    <AuthContext.Provider value={{ isAuthenticated, login, logout }}>
-      {children}
-    </AuthContext.Provider>
-  );
-};
