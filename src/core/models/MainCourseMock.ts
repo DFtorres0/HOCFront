@@ -1,11 +1,11 @@
 const IntensityLevelMock: IntensityLevel = {
-  LevelName: "Level 1",
-  LevelDescription: "Loremipsum",
+  levelName: "Level 1",
+  levelDescription: "Loremipsum",
 };
 
 const TopicMock: Topic = {
-  TopicName: "React",
-  TopicDescription: "React es una libreria creada por Facebook",
+  topicName: "React",
+  topicDescription: "React es una libreria creada por Facebook",
 };
 
 const LessonMock: Lesson[] = [

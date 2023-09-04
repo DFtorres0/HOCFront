@@ -8,14 +8,7 @@ import { BsCodeSlash, BsDisplay, BsJustify } from "react-icons/bs";
 import { Container} from "react-bootstrap";
 import { MdOutlineClass } from "react-icons/md";
 import { ReactDOM } from "react";
-import { Module } from "../core/models/Module";
-import { CoursesService } from "../core/services/Courses.service";
-import { Courses } from "../core/models/Courses";
-import { IntensityLevel } from "../core/models/IntensityLevels";
 import { json } from "stream/consumers";
-import { Activity } from "../core/models/Activity";
-import { Lesson } from "../core/models/Lessons";
-
 
 interface CreateClassProps {
   onActivityTitleChange: (Atitle: string) => void;
