@@ -5,7 +5,7 @@
     "categories": ["education"],
     "description": "",
     "display": "standalone",
-    "start_url": "./Home",
+    "start_url": "./login",
     "icons": [
         {
             "src": "./public/Icons/Icon142.png",
@@ -13,7 +13,7 @@
             "type": "image/png"
         },
         {
-            "src": "./public/Icon/Icon620.png",
+            "src": "./public/Icons/Icon620.png",
             "size": "620x620",
             "type": "image/png"
         }

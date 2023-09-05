@@ -138,7 +138,7 @@ const HomePortfolio: FC = () => {
               >
                 <Card.Header>{course.courseName}</Card.Header>
                 <Card.Body>
-                  <Card.Title>{course.courseDuration} horas</Card.Title>
+                  <Card.Title>{course.courseDuration} lecciones</Card.Title>
                 </Card.Body>
               </Card>
             </Col>

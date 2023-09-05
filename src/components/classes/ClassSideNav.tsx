@@ -41,7 +41,7 @@ const ClassSideNav: React.FC<ClassSideNavProps> = ({
         </div>
         <Container style={{ overflowX: "hidden" }} className="menu-bar">
           {currentCourse ? (
-            currentCourse.modules.map((module, moduleIndex) => (
+            currentCourse.modules?.map((module, moduleIndex) => (
               <Row
                 key={moduleIndex}
                 style={{

@@ -8,7 +8,7 @@ export interface postCourseIdModel {
 
 const getOneCourse = async (id: string | undefined): Promise<Course> => {
   // put here your api call
-  const { data } = await api.post(`/Course/get/?id=${id}`);
+  const { data } = await api.get(`/Course/get/?id=${id}`);
   return data;
 };
 

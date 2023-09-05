@@ -23,7 +23,10 @@ function Classes() {
     data: courseData
   } = useGetOneCourse(id);
 
+  if(courseSuccess){
+    
   console.log(courseData)
+  }
 
   const handleCurrentLesson = (event: Lesson) => {
     setCurrentLesson(event);
