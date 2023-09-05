@@ -2,7 +2,7 @@
   "compilerOptions": {
     "target": "es5",
     "outDir": "dist",
-    "rootDir": "src",
+    "rootDir": "./",
     "composite": true,
     "module": "ESNext",
     "moduleResolution": "Node",

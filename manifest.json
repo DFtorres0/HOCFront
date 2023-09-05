@@ -2,10 +2,10 @@
     "name": "Home Of Code",
     "short_name": "HOC",
     "background_color": "#ffffff",
-    "categories":["education"],
+    "categories": ["education"],
     "description": "",
     "display": "standalone",
-    "start_url": "/Home",
+    "start_url": "./Home",
     "icons": [
         {
             "src": "./public/Icons/Icon142.png",
@@ -18,6 +18,6 @@
             "type": "image/png"
         }
     ],
-    "scope":"/",
+    "scope": "/",
     "theme_color": "#ffffff"
 }
