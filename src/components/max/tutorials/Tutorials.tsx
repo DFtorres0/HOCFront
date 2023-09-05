@@ -1,4 +1,3 @@
-import "../../../App.css";
 import NavigationMax from "../templates/NavigationMax";
 import HeaderMax from "../templates/HeaderMax";
 import FooterMax from "../templates/FooterMax";

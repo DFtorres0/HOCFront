@@ -2,7 +2,6 @@ import "../../../assets/styles/indexmax/ClassMaxS.css";
 import { Card, Button, Container, Spinner, Row, Col } from "react-bootstrap";
 import { Link, useNavigate } from "react-router-dom";
 import useCourseList from "src/components/hooks/useListCourses";
-import CardHeader from "react-bootstrap/esm/CardHeader";
 
 interface courseInterface {
   id: number;
