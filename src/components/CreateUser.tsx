@@ -38,19 +38,19 @@ const CreateUser: React.FC<CreateUserProps> = (props) => {
     event.preventDefault();
 
     const CreateUser: User = {
-      UserName: Name,
-      UserUsername: userName,
-      UserEmail: email,
-      UserRoleId: 1,
-      UserPassword: password,
-      UserPhone: Phone,
+      userName: Name,
+      userUsername: userName,
+      userEmail: email,
+      userRoleId: 1,
+      userPassword: password,
+      userPhone: Phone,
 
     };
-    CreateUser.UserName = Name;
-    CreateUser.UserEmail = email;
-    CreateUser.UserUsername = userName;
-    CreateUser.UserPassword = password;
-    CreateUser.UserPhone = Phone;
+    CreateUser.userName = Name;
+    CreateUser.userEmail = email;
+    CreateUser.userUsername = userName;
+    CreateUser.userPassword = password;
+    CreateUser.userPhone = Phone;
 
   };
 

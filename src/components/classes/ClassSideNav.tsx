@@ -2,7 +2,6 @@ import { Col, Container, ListGroup, Nav, Row } from "react-bootstrap";
 import { BiRightArrow, BiLeftArrow } from "react-icons/bi";
 import "../../assets/styles/classes/ClassesSNavStyle.css";
 import { useState } from "react";
-import { CoursesMock } from "../../core/models/MainCourseMock";
 
 type ClassSideNavProps = {
   currentLesson: (data: Lesson) => void;
