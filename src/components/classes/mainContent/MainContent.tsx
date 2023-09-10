@@ -5,7 +5,13 @@ import MainCSections from "./mainCSections/MainCSections";
 import Forum from "../../max/templates/Forum";
 import { useEffect, useState } from "react";
 
-const MainContent = ({ lesson, currentCourse }: { lesson: Lesson | undefined, currentCourse?: Course | undefined }) => {
+const MainContent = ({
+  lesson,
+  currentCourse,
+}: {
+  lesson?: Lesson;
+  currentCourse?: Course;
+}) => {
   const [isMobile, setIsMobile] = useState(false);
 
   useEffect(() => {
@@ -38,25 +44,33 @@ const MainContent = ({ lesson, currentCourse }: { lesson: Lesson | undefined, cu
           display: "flex",
           flexDirection: "column",
           marginTop: "80px",
-          alignItems: "flex-start"
+          alignItems: "flex-start",
         }}
         className="h1"
       >
         {currentCourse?.courseName}:
         <Container
           style={{
-            paddingTop:"15px",
-            paddingLeft: "20px"
+            paddingTop: "15px",
+            paddingLeft: "20px",
           }}
           className="h2"
         >
           {lesson?.lessonTitle}
         </Container>
       </Container>
-      <Row style={{ width: "94vw", padding: "0", paddingLeft: "45px", display:"flex",flexDirection:isMobile?"column":undefined}}>
+      <Row
+        style={{
+          width: "94vw",
+          padding: "0",
+          paddingLeft: "45px",
+          display: "flex",
+          flexDirection: isMobile ? "column" : undefined,
+        }}
+      >
         <Col style={{ minWidth: "60vw" }}>
           <MainCResource
-            videoHTML={lesson?lesson.lessonContent: undefined}
+            videoHTML={lesson ? lesson.lessonContent : undefined}
           />
           <MainCSections lesson={lesson} />
         </Col>

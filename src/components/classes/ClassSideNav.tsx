@@ -1,5 +1,5 @@
-import { Col, Container, ListGroup, Nav, Row } from "react-bootstrap";
-import { BiRightArrow, BiLeftArrow } from "react-icons/bi";
+import { Container, ListGroup, Nav, Row } from "react-bootstrap";
+import { BiRightArrow } from "react-icons/bi";
 import "../../assets/styles/classes/ClassesSNavStyle.css";
 import { useState } from "react";
 
@@ -19,11 +19,7 @@ const ClassSideNav: React.FC<ClassSideNavProps> = ({
   };
 
   const handleToggleNav = () => {
-    if (navClass === "") {
-      setNavClass("close");
-    } else {
-      setNavClass("");
-    }
+    setNavClass(navClass === "" ? "close" : "");
   };
 
   return (
@@ -33,7 +29,7 @@ const ClassSideNav: React.FC<ClassSideNavProps> = ({
           <BiRightArrow onClick={handleToggleNav} className="toggle icon" />
         </Container>
         <div
-          style={{ paddingLeft: "10px", marginTop: "35px"}}
+          style={{ paddingLeft: "10px", marginTop: "35px" }}
           id="navprymarytext"
           className="text nav-text"
         >
@@ -41,7 +37,7 @@ const ClassSideNav: React.FC<ClassSideNavProps> = ({
         </div>
         <Container style={{ overflowX: "hidden" }} className="menu-bar">
           {currentCourse ? (
-            currentCourse.modules.map((module, moduleIndex) => (
+            currentCourse.modules?.map((module, moduleIndex) => (
               <Row
                 key={moduleIndex}
                 style={{
@@ -51,7 +47,10 @@ const ClassSideNav: React.FC<ClassSideNavProps> = ({
                 }}
               >
                 <div
-                  style={{ justifyContent: navClass != "close" ?"flex-start":"center" }}
+                  style={{
+                    justifyContent:
+                      navClass != "close" ? "flex-start" : "center",
+                  }}
                   className="module-number icon"
                 >
                   {moduleIndex +
