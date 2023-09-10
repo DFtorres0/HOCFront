@@ -3,11 +3,10 @@ import api from "../../core/services/api";
 import { coursesApiQueryKeys } from "../utilities";
 
 export interface postCourseIdModel {
-    courseId?: string;
+  courseId?: string;
 }
 
 const getOneCourse = async (id: string | undefined): Promise<Course> => {
-  // put here your api call
   const { data } = await api.get(`/Course/get/?id=${id}`);
   return data;
 };
@@ -19,6 +18,7 @@ const useGetOneCourse = (id: string | undefined) => {
     {
       staleTime: Infinity,
       notifyOnChangeProps: ["data", "error"],
+      enabled: !!id,
     }
   );
 };
