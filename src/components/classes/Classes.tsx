@@ -1,51 +1,51 @@
 import { useEffect, useState } from "react";
 import { useNavigate, useParams } from "react-router-dom";
 import "../../assets/styles/classes/ClassesHdStyle.css";
-import NavegationMax from "../max/templates/NavigationMax";
+import NavigationMax from "../max/templates/NavigationMax";
 import SideNav from "./ClassSideNav";
 import MainContent from "./mainContent/MainContent";
-import useGetOneCourse, { postCourseIdModel } from "../hooks/useGetOneCourse";
+import useGetOneCourse from "../hooks/useGetOneCourse";
 import { Spinner } from "react-bootstrap";
 
 function Classes() {
   const [currentLesson, setCurrentLesson] = useState<Lesson>();
 
   const { id } = useParams<Record<string, string>>();
-
-  const course: postCourseIdModel = {
-    courseId: id,
-  };
+  console.info("Id from the params:", id);
 
   const {
     error: courseError,
     isSuccess: courseSuccess,
     isLoading: courseLoading,
-    data: courseData
+    data: courseData,
+    refetch,
   } = useGetOneCourse(id);
-
-  console.log(courseData)
 
   const handleCurrentLesson = (event: Lesson) => {
     setCurrentLesson(event);
   };
 
-  const navigate = useNavigate()
+  const navigate = useNavigate();
 
   useEffect(() => {
-    if (!id || courseError){
-      navigate("/home")
+    if (!id || courseError) {
+      navigate("/home");
     }
-  },[id, courseError, navigate])
+    if (id) refetch();
+  }, [id, courseError, navigate, refetch]);
 
   if (courseLoading) {
-    return <Spinner/>
-  } 
+    return <Spinner />;
+  }
 
   return (
     <div id="HeaderClasses">
       <div data-testid="classes">
-        <NavegationMax />
-        <SideNav currentLesson={handleCurrentLesson} currentCourse={courseData} />
+        <NavigationMax />
+        <SideNav
+          currentLesson={handleCurrentLesson}
+          currentCourse={courseData}
+        />
         <MainContent lesson={currentLesson} currentCourse={courseData} />
       </div>
     </div>
