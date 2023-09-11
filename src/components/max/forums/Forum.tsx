@@ -47,7 +47,19 @@ const Forum = ({ isLesson }: { isLesson: boolean }) => {
         style={{ backgroundColor: "transparent", margin: "2rem 1rem 0 1rem" }}
         defaultActiveKey="0"
       >
-        {forumsListLoading && <Spinner />}
+        {forumsListLoading && (
+          <Stack
+            direction="horizontal"
+            gap={3}
+            style={{
+              justifyContent: "center",
+              alignItems: "center",
+              margin: "0 1rem 0.5rem 0",
+            }}
+          >
+            <Spinner role="status" />
+          </Stack>
+        )}
         {forumsListSuccess &&
           forumsList &&
           forumsList.map((forum, forumIndex) => (
