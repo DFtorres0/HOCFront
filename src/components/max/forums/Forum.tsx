@@ -15,6 +15,7 @@ import AccordionItem from "react-bootstrap/esm/AccordionItem";
 import AccordionHeader from "react-bootstrap/esm/AccordionHeader";
 import AccordionBody from "react-bootstrap/esm/AccordionBody";
 import useListForums from "./hooks/useListForums";
+import useCreateAnswer from "./hooks/useCreateAnswer";
 
 const Forum = ({ isLesson }: { isLesson: boolean }) => {
   const [errorMessage, setErrorMessage] = useState("");
@@ -30,9 +31,33 @@ const Forum = ({ isLesson }: { isLesson: boolean }) => {
     error: forumsListError,
   } = useListForums();
 
+  const {
+    mutate: createAnswer,
+    isError: createAnswerError,
+    isSuccess: createAnswerSuccess,
+  } = useCreateAnswer();
+
   const handleSubmitAnswer = () => {
     setModalOpen(false);
   };
+
+  const handleReplyToForum = (forumId?: number) => {
+    if (!forumId) return;
+    // add the real userId, probably from the context, add it to the token
+    createAnswer({ forumId, messageContent: modalInputValue, userId: 1 });
+    setModalOpen(true);
+  };
+
+  useEffect(() => {
+    if (createAnswerSuccess) {
+      setErrorMessage("Respuesta enviada");
+      setShowToast(true);
+    }
+    if (createAnswerError) {
+      setErrorMessage("Error al enviar la respuesta");
+      setShowToast(true);
+    }
+  }, [createAnswerSuccess, createAnswerError]);
 
   useEffect(() => {
     if (forumsListIsError && forumsListError) {
@@ -99,27 +124,21 @@ const Forum = ({ isLesson }: { isLesson: boolean }) => {
                 </AccordionBody>
               )}
 
-              <div style={{ height: "5vh" }} className="TextBoxAnswer">
-                <input
-                  type="text"
-                  placeholder="Escribe aquí"
-                  className=""
-                ></input>
-              </div>
               <Stack
                 direction="horizontal"
                 gap={3}
                 style={{
                   justifyContent: "flex-end",
                   alignItems: "flex-end",
-                  margin: "0 1rem 0.5rem 0",
+                  margin: "1rem 1rem 0.5rem 0",
                 }}
               >
                 <Button
                   id="answer"
                   variant="primary"
                   style={{ margin: 0 }}
-                  onClick={() => setModalOpen(true)}
+                  disabled={!forum.forumId}
+                  onClick={() => handleReplyToForum(forum.forumId)}
                 >
                   Responder
                 </Button>
