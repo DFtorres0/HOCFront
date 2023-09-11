@@ -5,8 +5,7 @@ import {
   FormControl,
   FormGroup,
   InputGroup,
-  Spinner,
-  Stack,
+  Spinner
 } from "react-bootstrap";
 import { BsCodeSlash, BsJustify } from "react-icons/bs";
 import "../../assets/styles/loginForm.css";
@@ -15,7 +14,7 @@ import { BsTwitter } from "react-icons/bs";
 import { Link, useNavigate } from "react-router-dom";
 import { Container, Row, Col } from "react-bootstrap";
 import { useEffect, useState, FC } from "react";
-import useAuthentication from "../hooks/authenticationHooks/useAuthenticate";
+import useAuthentication from "./hooks/useAuthenticate";
 
 const Login: React.FC = () => {
   const navigate = useNavigate();
