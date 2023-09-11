@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import "../assets/styles/CreateClass.css";
+import "../../assets/styles/CreateClass.css";
 import FloatingLabel from "react-bootstrap/FloatingLabel";
 import Form from "react-bootstrap/Form";
 import Button from "react-bootstrap/Button";
