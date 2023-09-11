@@ -7,10 +7,10 @@
 }
 
 #snav {
-  --body-color: #233950;
-  --sidebar-color: #2b3641;
-  --primary-color: #569dc9;
-  --primary-color-light: #3c3b3a;
+  --body-color: #1c3a3d ;
+  --sidebar-color: #19353b;
+  --primary-color: #3f9cc0;
+  --primary-color-light: #22535f;
   --toggle-color: #fff;
   --text-color: #ccc;
   --tran-03: all 0.2s ease;
@@ -49,7 +49,7 @@
   z-index: 100;
 }
 #snav .sidebar.close {
-  width: 40px;
+  width: 55px;
 }
 
 /* ===== Reusable code - Here ===== */

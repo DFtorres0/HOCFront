@@ -70,10 +70,6 @@ export default defineConfig({
           __dirname,
           "src/components/home/HomePortfolio.tsx"
         ),
-        ClassMax: resolve(
-          __dirname,
-          "src/components/max/indexmax/ClassMax.tsx"
-        ),
         IndexMax: resolve(
           __dirname,
           "src/components/max/indexmax/IndexMax.tsx"

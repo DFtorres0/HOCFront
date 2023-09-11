@@ -22,38 +22,32 @@ const HomeAbout = () => {
             </Container>
             <Container className="col-xs-12 col-md-6">
               <Container className="p">
-                Ponemos a dispocicion diferentes soluciones tecnologicas como es
-                el diseño de paginas web o desarrollo web, aplicaciones
-                modificadas , diseño de aplicaciones para diferentes
-                plataformas, trabajamos FRONT-END,tenemos conocimiento en los
-                ultimos legunajes de programacion, ultimas tecnologia entre
-                otros servicios.
+                Nos especializamos en proporcionar educación digital de alta calidad en
+                diversas áreas de la programación y desarrollo de software.
+                Ofrecemos una amplia gama de cursos interactivos, tutoriales y
+                proyectos prácticos impartidos por expertos en la industria.
               </Container>
             </Container>
           </Row>
           <Row>
             <Container>
               <h4 className="tittle">
-                <b>Nos especializamos en los siguientes servicios</b>
+                <b>Los servicios clave incluyen</b>
               </h4>
 
               <ListGroup className="list" variant="flush" id="Lista">
                 <ListGroup.Item id="list_Group">
-                  <li>
-                    Diseño de Pagina Web RESPONSIVE DESIGN adaptable a cualquier
-                    dispositivo (celular, tablets, ordenadores).
-                  </li>
-                  <li>Activacion de Windows, Office y diferentes programas.</li>
-                  <li>Modificacion de Aplicaciones SO Android.</li>
-                  <li>Cualquier tipo de Suscripción.</li>
-                  <li>Videojuegos de Xbox y PC.</li>
-                  <li>Soluciones TI.</li>
+                  <li>Cursos Diversificados</li>
+                  <li>Aprendizaje Interactivo</li>
+                  <li>Instructores Expertos</li>
+                  <li>Comunidad de Estudiantes</li>
+                  <li>Flexibilidad de Horario</li>
                 </ListGroup.Item>
               </ListGroup>
             </Container>
             <Container className="ContainerButton">
               <Link
-              to="#portfolio"
+                to="#portfolio"
                 className="a btn btn-default btn-lg page-scroll"
               >
                 Mi Portafolio

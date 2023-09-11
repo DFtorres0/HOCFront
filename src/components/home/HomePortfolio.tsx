@@ -132,7 +132,7 @@ const HomePortfolio: FC = () => {
           {courseList?.map((course, courseIndex) => (
             <Col key={courseIndex}>
               <Card
-                bg="secondary"
+                bg="info"
                 className="card"
                 onClick={() => handleSetSelectedCourse(course)}
               >
