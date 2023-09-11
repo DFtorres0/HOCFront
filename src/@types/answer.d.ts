@@ -25,3 +25,7 @@ type Answer = {
   subAnswer?: Answer;
   user?: User;
 };
+
+type ForumWithAnswers = Forum & {
+  answers?: Answer[];
+};
