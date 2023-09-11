@@ -19,92 +19,92 @@ export default defineConfig({
         index: resolve(__dirname, "index.html"),
         main: resolve(__dirname, "src/main.tsx"),
         App: resolve(__dirname, "src/App.tsx"),
-        Login: resolve(__dirname, "src/components/Login.tsx"),
-        Classes: resolve(__dirname, "src/components/classes/Classes.tsx"),
+        Login: resolve(__dirname, "src/pages/Login.tsx"),
+        Classes: resolve(__dirname, "src/pages/classes/Classes.tsx"),
         ClassSideNav: resolve(
           __dirname,
-          "src/components/classes/ClassSideNav.tsx"
+          "src/pages/classes/ClassSideNav.tsx"
         ),
         MainContent: resolve(
           __dirname,
-          "src/components/classes/mainContent/MainContent.tsx"
+          "src/pages/classes/mainContent/MainContent.tsx"
         ),
         MainCResource: resolve(
           __dirname,
-          "src/components/classes/mainContent/MainCResource.tsx"
+          "src/pages/classes/mainContent/MainCResource.tsx"
         ),
         MainCFooter: resolve(
           __dirname,
-          "src/components/classes/mainContent/MainCFooter.tsx"
+          "src/pages/classes/mainContent/MainCFooter.tsx"
         ),
         MainCSections: resolve(
           __dirname,
-          "src/components/classes/mainContent/mainCSections/MainCSections.tsx"
+          "src/pages/classes/mainContent/mainCSections/MainCSections.tsx"
         ),
         MainCSCompiler: resolve(
           __dirname,
-          "src/components/classes/mainContent/mainCSections/MainCSCompiler.tsx"
+          "src/pages/classes/mainContent/mainCSections/MainCSCompiler.tsx"
         ),
         MainCSDescription: resolve(
           __dirname,
-          "src/components/classes/mainContent/mainCSections/MainCSDescription.tsx"
+          "src/pages/classes/mainContent/mainCSections/MainCSDescription.tsx"
         ),
         MainCSNavbar: resolve(
           __dirname,
-          "src/components/classes/mainContent/mainCSections/MainCSNavbar.tsx"
+          "src/pages/classes/mainContent/mainCSections/MainCSNavbar.tsx"
         ),
         MainCSResources: resolve(
           __dirname,
-          "src/components/classes/mainContent/mainCSections/MainCSResources.tsx"
+          "src/pages/classes/mainContent/mainCSections/MainCSResources.tsx"
         ),
-        Home: resolve(__dirname, "src/components/home/Home.tsx"),
-        HomeAbout: resolve(__dirname, "src/components/home/HomeAbout.tsx"),
-        HomeContact: resolve(__dirname, "src/components/home/HomeContact.tsx"),
-        HomeFooter: resolve(__dirname, "src/components/home/HomeFooter.tsx"),
-        HomeHeader: resolve(__dirname, "src/components/home/HomeHeader.tsx"),
+        Home: resolve(__dirname, "src/pages/home/Home.tsx"),
+        HomeAbout: resolve(__dirname, "src/pages/home/HomeAbout.tsx"),
+        HomeContact: resolve(__dirname, "src/pages/home/HomeContact.tsx"),
+        HomeFooter: resolve(__dirname, "src/pages/home/HomeFooter.tsx"),
+        HomeHeader: resolve(__dirname, "src/pages/home/HomeHeader.tsx"),
         HomeNavigation: resolve(
           __dirname,
-          "src/components/home/HomeNavigation.tsx"
+          "src/pages/home/HomeNavigation.tsx"
         ),
         HomePortfolio: resolve(
           __dirname,
-          "src/components/home/HomePortfolio.tsx"
+          "src/pages/home/HomePortfolio.tsx"
         ),
         IndexMax: resolve(
           __dirname,
-          "src/components/max/indexmax/IndexMax.tsx"
+          "src/pages/max/indexmax/IndexMax.tsx"
         ),
         Testimonials: resolve(
           __dirname,
-          "src/components/max/testimonials/Testimonials.tsx"
+          "src/pages/max/testimonials/Testimonials.tsx"
         ),
         TestHeader: resolve(
           __dirname,
-          "src/components/max/testimonials/TestHeader.tsx"
+          "src/pages/max/testimonials/TestHeader.tsx"
         ),
         Tutorials: resolve(
           __dirname,
-          "src/components/max/tutorials/Tutorials.tsx"
+          "src/pages/max/tutorials/Tutorials.tsx"
         ),
         TutorialsBody: resolve(
           __dirname,
-          "src/components/max/tutorials/TutorialsBody.tsx"
+          "src/pages/max/tutorials/TutorialsBody.tsx"
         ),
         AboutMax: resolve(
           __dirname,
-          "src/components/max/templates/AboutMax.tsx"
+          "src/pages/max/templates/AboutMax.tsx"
         ),
         FooterMax: resolve(
           __dirname,
-          "src/components/max/templates/FooterMax.tsx"
+          "src/pages/max/templates/FooterMax.tsx"
         ),
         HeaderMax: resolve(
           __dirname,
-          "src/components/max/templates/HeaderMax.tsx"
+          "src/pages/max/templates/HeaderMax.tsx"
         ),
         NavigationMax: resolve(
           __dirname,
-          "src/components/max/templates/NavigationMax.tsx"
+          "src/pages/max/templates/NavigationMax.tsx"
         ),
       },
     },

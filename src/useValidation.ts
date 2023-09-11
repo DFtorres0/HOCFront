@@ -1,6 +1,6 @@
 import { useEffect } from "react"
 import { useAuth } from "./UserProvider"
-import { getDecodedToken, removeSessionToken } from "./core/functions"
+import { getDecodedToken } from "./core/functions"
 
 export const useValidateContext = () => {
     const auth = useAuth()

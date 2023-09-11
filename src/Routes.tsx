@@ -21,31 +21,31 @@ const routesConfig: RoutesType[] = [
     {
       id: 'login',
       path: '/login',
-      component: lazy(() => import("src/components/Login"))
+      component: lazy(() => import("src/pages/Login"))
     },
     {
       id: 'home',
       path: '/home',
       guard: GuardRole(["Administrador", "Instructor", "Estudiante"]),
-      component: lazy(() => import("src/components/home/Home"))
+      component: lazy(() => import("src/pages/home/Home"))
     },
     {
       id: 'indexmax',
       path: '/indexmax',
       guard: GuardRole(["Administrador", "Instructor", "Estudiante"]),
-      component: lazy(() => import("src/components/max/indexmax/IndexMax"))
+      component: lazy(() => import("src/pages/max/indexmax/IndexMax"))
     },
     {
       id: 'testimonials',
       path: '/testimonials',
       guard: GuardRole(["Administrador", "Instructor", "Estudiante"]),
-      component: lazy(() => import("src/components/max/testimonials/Testimonials"))
+      component: lazy(() => import("src/pages/max/testimonials/Testimonials"))
     },
     {
       id: 'tutorials',
       path: '/tutorials',
       guard: GuardRole(["Administrador", "Instructor", "Estudiante"]),
-      component: lazy(() => import("src/components/max/tutorials/Tutorials"))
+      component: lazy(() => import("src/pages/max/tutorials/Tutorials"))
     },
     {
       id: 'classes',
@@ -54,20 +54,20 @@ const routesConfig: RoutesType[] = [
       routes: [{
         id: "course",
         path: "/:id",
-        component: lazy(() => import("src/components/classes/Classes"))
+        component: lazy(() => import("src/pages/classes/Classes"))
       }],
       
     },
     {
       id: 'register',
       path: '/register',
-      component: lazy(() => import("src/components/CreateUser"))
+      component: lazy(() => import("src/pages/CreateUser"))
     },
     {
       id: 'CreateClass',
       path: '/CreateClass',
       guard: GuardRole(["Administrador", "Instructor"]),
-      component: lazy(() => import("src/components/CreateClass"))
+      component: lazy(() => import("src/pages/CreateClass"))
     },
   ]
 
