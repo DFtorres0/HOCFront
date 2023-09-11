@@ -26,10 +26,10 @@ export default defineConfig({
           __dirname,
           "src/pages/classes/ClassSideNav.tsx"
         ),
-        CreateClass: resolve(__dirname, "src/pages/classes/CreateClass.tsx"),
-        CreateActivities: resolve(__dirname, "src/pages/classes/CreateActivities.tsx"),
-        CreateLesson: resolve(__dirname, "src/pages/classes/CreateLesson.tsx"),
-        CreateModule: resolve(__dirname, "src/pages/classes/CreateModule.tsx"),
+        CreateClass: resolve(__dirname, "src/pages/createclass/CreateClass.tsx"),
+        CreateActivities: resolve(__dirname, "src/pages/createclass/CreateActivities.tsx"),
+        CreateLesson: resolve(__dirname, "src/pages/createclass/CreateLesson.tsx"),
+        CreateModule: resolve(__dirname, "src/pages/createclass/CreateModule.tsx"),
         MainContent: resolve(
           __dirname,
           "src/pages/classes/mainContent/MainContent.tsx"
