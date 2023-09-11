@@ -1,6 +1,6 @@
 // CreateUser.tsx
 import React, { useState } from "react";
-import "../assets/styles/CreateUser.css";
+import "../../assets/styles/CreateUser.css";
 import FloatingLabel from 'react-bootstrap/FloatingLabel';
 import Form from 'react-bootstrap/Form';
 import Button from 'react-bootstrap/Button';

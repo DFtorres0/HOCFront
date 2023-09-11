@@ -21,7 +21,7 @@ const routesConfig: RoutesType[] = [
     {
       id: 'login',
       path: '/login',
-      component: lazy(() => import("src/pages/Login"))
+      component: lazy(() => import("src/pages/login/Login"))
     },
     {
       id: 'home',
@@ -61,13 +61,13 @@ const routesConfig: RoutesType[] = [
     {
       id: 'register',
       path: '/register',
-      component: lazy(() => import("src/pages/CreateUser"))
+      component: lazy(() => import("src/pages/login/CreateUser"))
     },
     {
       id: 'CreateClass',
       path: '/CreateClass',
       guard: GuardRole(["Administrador", "Instructor"]),
-      component: lazy(() => import("src/pages/CreateClass"))
+      component: lazy(() => import("src/pages/createclass/CreateClass"))
     },
   ]
 

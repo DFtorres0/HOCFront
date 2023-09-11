@@ -19,12 +19,17 @@ export default defineConfig({
         index: resolve(__dirname, "index.html"),
         main: resolve(__dirname, "src/main.tsx"),
         App: resolve(__dirname, "src/App.tsx"),
-        Login: resolve(__dirname, "src/pages/Login.tsx"),
+        Login: resolve(__dirname, "src/pages/login/Login.tsx"),
+        CreateUser: resolve(__dirname, "src/pages/login/CreateUser.tsx"),
         Classes: resolve(__dirname, "src/pages/classes/Classes.tsx"),
         ClassSideNav: resolve(
           __dirname,
           "src/pages/classes/ClassSideNav.tsx"
         ),
+        CreateClass: resolve(__dirname, "src/pages/classes/CreateClass.tsx"),
+        CreateActivities: resolve(__dirname, "src/pages/classes/CreateActivities.tsx"),
+        CreateLesson: resolve(__dirname, "src/pages/classes/CreateLesson.tsx"),
+        CreateModule: resolve(__dirname, "src/pages/classes/CreateModule.tsx"),
         MainContent: resolve(
           __dirname,
           "src/pages/classes/mainContent/MainContent.tsx"

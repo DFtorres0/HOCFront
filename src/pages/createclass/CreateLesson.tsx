@@ -9,7 +9,7 @@ import { Container} from "react-bootstrap";
 import { MdOutlineClass, MdOutlineSignalWifiStatusbarConnectedNoInternet4 } from "react-icons/md";
 import { ReactDOM } from "react";
 import { json } from "stream/consumers";
-import CreateClass from "../../src/components/CreateClass";
+import CreateClass from "./CreateClass";
 
 
 

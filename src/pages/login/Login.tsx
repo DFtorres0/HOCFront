@@ -9,15 +9,13 @@ import {
   Stack,
 } from "react-bootstrap";
 import { BsCodeSlash, BsJustify } from "react-icons/bs";
-import "../assets/styles/loginForm.css";
+import "../../assets/styles/loginForm.css";
 import { FaFacebookF } from "react-icons/fa";
 import { BsTwitter } from "react-icons/bs";
 import { Link, useNavigate } from "react-router-dom";
 import { Container, Row, Col } from "react-bootstrap";
-import { LoginObject, LoginObjectModel } from "../core/models/LoginObject";
-import { AuthenticationService } from "../core/services/Authentication.service";
 import { useEffect, useState, FC } from "react";
-import useAuthentication from "./hooks/authenticationHooks/useAuthenticate";
+import useAuthentication from "../hooks/authenticationHooks/useAuthenticate";
 
 const Login: React.FC = () => {
   const navigate = useNavigate();

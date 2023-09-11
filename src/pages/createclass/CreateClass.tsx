@@ -11,8 +11,6 @@ import { json } from "stream/consumers";
 import CreateModule from "./CreateModule";
 import CreateLesson from "./CreateLesson";
 import CreateActivity from "./CreateActivities";
-import axios from "axios";
-import { enviroment } from "../enviroments/enviroment";
 
 const CreateClass = () => {
   const [CourseName, setCourseName] = useState("");

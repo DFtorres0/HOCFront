@@ -1,11 +1,11 @@
 import { render, screen } from "@testing-library/react";
-import Login from "../components/Login";
+import Login from "../pages/login/Login";
 import { MemoryRouter, Routes, Route } from "react-router-dom";
-import Home from "../components/home/Home";
-import Classes from "../components/classes/Classes";
-import IndexMax from "../components/max/indexmax/IndexMax";
-import Testimonials from "../components/max/testimonials/Testimonials";
-import Tutorials from "../components/max/tutorials/Tutorials";
+import Home from "../pages/home/Home";
+import Classes from "../pages/classes/Classes";
+import IndexMax from "../pages/max/indexmax/IndexMax";
+import Testimonials from "../pages/max/testimonials/Testimonials";
+import Tutorials from "../pages/max/tutorials/Tutorials";
 import userEvent from "@testing-library/user-event"
 
 /**
