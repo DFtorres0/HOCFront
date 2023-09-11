@@ -44,7 +44,7 @@ const Forum = ({ isLesson }: { isLesson: boolean }) => {
   return (
     <div className="Div" style={{ height: "100%" }}>
       <Accordion
-        style={{ backgroundColor: "transparent", margin: "0 1rem" }}
+        style={{ backgroundColor: "transparent", margin: "2rem 1rem 0 1rem" }}
         defaultActiveKey="0"
       >
         {forumsListLoading && <Spinner />}
@@ -56,7 +56,6 @@ const Forum = ({ isLesson }: { isLesson: boolean }) => {
               key={forumIndex}
               style={{
                 marginBottom: "0",
-                marginTop: "2rem",
                 backgroundColor: "transparent",
                 color: "aliceblue",
               }}
