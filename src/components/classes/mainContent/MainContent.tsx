@@ -2,7 +2,7 @@ import { Col, Container, Row } from "react-bootstrap";
 import MainCFooter from "./MainCFooter";
 import MainCResource from "./MainCResource";
 import MainCSections from "./mainCSections/MainCSections";
-import Forum from "../../max/templates/Forum";
+import Forum from "../../max/forums/Forum";
 import { useEffect, useState } from "react";
 
 const MainContent = ({
