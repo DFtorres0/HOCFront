@@ -36,7 +36,7 @@ const TutorialsBody = () => {
           courseList?.map((course, courseIndex) => (
             <Col style={{ minWidth: "32vw" }} key={courseIndex}>
               <Card
-                bg="secondary"
+                bg="info"
                 style={{ width: "25vw", minHeight: "30vh" }}
                 className="card"
               >

@@ -4,6 +4,7 @@ import "../../../assets/styles/classes/ClassesForumsStyle.css";
 import {
   Accordion,
   Button,
+  Container,
   Form,
   Modal,
   Spinner,
@@ -16,12 +17,27 @@ import AccordionHeader from "react-bootstrap/esm/AccordionHeader";
 import AccordionBody from "react-bootstrap/esm/AccordionBody";
 import useListForums from "./hooks/useListForums";
 import useCreateAnswer from "./hooks/useCreateAnswer";
+import { getDecodedToken } from "src/core/functions";
 
-const Forum = ({ isLesson }: { isLesson: boolean }) => {
+const Forum = ({
+  isLesson,
+  lessonId,
+}: {
+  isLesson: boolean;
+  lessonId?: number;
+}) => {
   const [errorMessage, setErrorMessage] = useState("");
   const [showToast, setShowToast] = useState(false);
   const [modalOpen, setModalOpen] = useState(false);
   const [modalInputValue, setModalInputValue] = useState("");
+  const [currentForumId, setCurrentForumId] = useState<number>();
+  const [currentAnswerId, setCurrentAnswerId] = useState<number>();
+  const [isToForum, setIsToForum] = useState<boolean>();
+  const [forceUpdate, setForceUpdate] = useState(false);
+
+  const handleReload = () => {
+    setForceUpdate(prevState => !prevState);
+  };
 
   const {
     data: forumsList,
@@ -39,13 +55,37 @@ const Forum = ({ isLesson }: { isLesson: boolean }) => {
 
   const handleSubmitAnswer = () => {
     setModalOpen(false);
+    console.log(currentForumId, currentAnswerId, modalInputValue);
+    if (isToForum) {
+      if (!currentForumId) return;
+      createAnswer({
+        forumId: currentForumId,
+        messageContent: modalInputValue,
+        userId: getDecodedToken().sub,
+      });
+    } else {
+      if (!currentAnswerId) return;
+      createAnswer({
+        subAnswerId: currentAnswerId,
+        messageContent: modalInputValue,
+        userId: getDecodedToken().sub,
+      });
+    }
+    handleReload()
   };
 
-  const handleReplyToForum = (forumId?: number) => {
-    if (!forumId) return;
-    // add the real userId, probably from the context, add it to the token
-    createAnswer({ forumId, messageContent: modalInputValue, userId: 1 });
+  const handleReplyToForum = () => {
     setModalOpen(true);
+  };
+
+  const handleReplyToAnswer = () => {
+    setModalOpen(true);
+  };
+
+  const handleChangeAnswerText = (
+    event: React.ChangeEvent<HTMLInputElement>
+  ) => {
+    setModalInputValue(event.target.value);
   };
 
   useEffect(() => {
@@ -88,68 +128,98 @@ const Forum = ({ isLesson }: { isLesson: boolean }) => {
         {forumsListSuccess &&
           forumsList &&
           forumsList.map((forum, forumIndex) => {
-            const shouldRender = isLesson
-              ? forum.lesson || forum.lessonId
-              : !(forum.lesson || forum.lessonId);
-            if (!shouldRender) return null;
-            return (
-              <AccordionItem
-                eventKey={`${forumIndex}`}
-                key={forumIndex}
-                style={{
-                  marginBottom: "0",
-                  backgroundColor: "transparent",
-                  color: "aliceblue",
-                }}
-              >
-                <AccordionHeader>{forum.forumTitle}</AccordionHeader>
-                {forum.answers?.length ? (
-                  forum.answers.map((answer, answerIndex) =>
-                    answer.forum === forum ? (
+            var shouldRender: boolean = false
+            if (isLesson && forum.lessonId) {
+              if (forum.lessonId == lessonId) {
+                shouldRender = true;
+              } else {
+                shouldRender = false;
+              }
+            } else if (!isLesson && !forum.lessonId) {
+              shouldRender = true;
+            }
+            if (shouldRender)
+              return (
+                <AccordionItem
+                  eventKey={`${forumIndex}`}
+                  key={forumIndex}
+                  style={{
+                    marginBottom: "0",
+                    backgroundColor: "transparent",
+                    color: "aliceblue",
+                  }}
+                >
+                  <AccordionHeader>{forum.forumTitle}</AccordionHeader>
+                  {forum.answers?.length ? (
+                    forum.answers.map((answer, answerIndex) => (
                       <AccordionBody
                         className="Panel"
                         key={answerIndex}
                         style={{ margin: "1rem 1rem 0 1rem" }}
                       >
                         {answer.messageContent}
-                        <input
-                          type="button"
-                          value="Respuesta"
-                          className="answer"
-                        ></input>
+                        <Container>
+                          {answer.answers?.length
+                            ? answer.answers.map(
+                                (subAnswer, subAnswerIndex) => (
+                                  <AccordionBody key={subAnswerIndex}>
+                                    {subAnswer.messageContent}
+                                  </AccordionBody>
+                                )
+                              )
+                            : null}
+                        </Container>
+                        <Button
+                          id="answer"
+                          variant="seconday"
+                          style={{ margin: 0 }}
+                          disabled={!forum.forumId}
+                          onClick={() => {
+                            setCurrentAnswerId(answer.answerId),
+                              setCurrentForumId(undefined),
+                              setIsToForum(false),
+                              handleReplyToAnswer();
+                          }}
+                        >
+                          Responder
+                        </Button>
                       </AccordionBody>
-                    ) : null
-                  )
-                ) : (
-                  <AccordionBody
-                    className="Panel"
-                    style={{ margin: "1rem 1rem 0 1rem" }}
-                  >
-                    <p>Todavía no hay respuestas</p>
-                  </AccordionBody>
-                )}
+                    ))
+                  ) : (
+                    <AccordionBody
+                      className="Panel"
+                      style={{ margin: "1rem 1rem 0 1rem" }}
+                    >
+                      <p>Todavía no hay respuestas</p>
+                    </AccordionBody>
+                  )}
 
-                <Stack
-                  direction="horizontal"
-                  gap={3}
-                  style={{
-                    justifyContent: "flex-end",
-                    alignItems: "flex-end",
-                    margin: "1rem 1rem 0.5rem 0",
-                  }}
-                >
-                  <Button
-                    id="answer"
-                    variant="primary"
-                    style={{ margin: 0 }}
-                    disabled={!forum.forumId}
-                    onClick={() => handleReplyToForum(forum.forumId)}
+                  <Stack
+                    direction="horizontal"
+                    gap={3}
+                    style={{
+                      justifyContent: "flex-end",
+                      alignItems: "flex-end",
+                      margin: "1rem 1rem 0.5rem 0",
+                    }}
                   >
-                    Responder
-                  </Button>
-                </Stack>
-              </AccordionItem>
-            );
+                    <Button
+                      id="answer"
+                      variant="primary"
+                      style={{ margin: 0 }}
+                      disabled={!forum.forumId}
+                      onClick={() => {
+                        setCurrentForumId(forum.forumId),
+                          setCurrentAnswerId(undefined),
+                          setIsToForum(true),
+                          handleReplyToForum();
+                      }}
+                    >
+                      Responder
+                    </Button>
+                  </Stack>
+                </AccordionItem>
+              );
           })}
       </Accordion>
       <Modal show={modalOpen} onHide={() => setModalOpen(false)} centered>
@@ -162,7 +232,7 @@ const Forum = ({ isLesson }: { isLesson: boolean }) => {
               type="text"
               placeholder="Escribe aquí"
               value={modalInputValue}
-              onChange={(e) => setModalInputValue(e.target.value)}
+              onChange={handleChangeAnswerText}
             />
           </Form>
         </Modal.Body>

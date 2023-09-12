@@ -5,7 +5,7 @@ import {
   FormControl,
   FormGroup,
   InputGroup,
-  Spinner
+  Spinner,
 } from "react-bootstrap";
 import { BsCodeSlash, BsJustify } from "react-icons/bs";
 import "../../assets/styles/loginForm.css";
@@ -157,6 +157,7 @@ const Login: React.FC = () => {
                 </Button>
               </Container>
             </Container>
+            {/*
             <Container className="otherlogin ">
               <Button
                 id="facebook"
@@ -175,7 +176,7 @@ const Login: React.FC = () => {
               >
                 <BsTwitter /> Inicie Sesion con Twitter
               </Button>
-            </Container>
+  </Container>*/}
           </Col>
           <Col
             style={{ display: isMobile ? "none" : "" }}

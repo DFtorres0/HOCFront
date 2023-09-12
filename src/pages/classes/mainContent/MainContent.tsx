@@ -75,7 +75,7 @@ const MainContent = ({
           <MainCSections lesson={lesson} />
         </Col>
         <Col style={{ margin: "0", padding: "0", marginTop: "2vh" }}>
-          <Forum isLesson={true} />
+          <Forum isLesson={true} lessonId={lesson?.lessonId} />
         </Col>
       </Row>
 

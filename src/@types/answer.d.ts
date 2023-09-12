@@ -23,6 +23,7 @@ type Answer = {
   userId?: number;
   forum?: Forum;
   subAnswer?: Answer;
+  answers?: Answer[];
   user?: User;
 };
 
