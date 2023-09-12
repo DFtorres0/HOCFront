@@ -2,8 +2,7 @@ body {
   background-color: #ffffff;
 }
 
-
-#navhover{
+#navhover {
   font-size: large;
   color: rgba(255, 255, 255, 0.7);
   letter-spacing: 1px;
@@ -12,27 +11,31 @@ body {
   padding-bottom: 10px;
   /*margin-left: 40px;*/
   line-height: 20px;
-  cursor:pointer; cursor: hand
+  cursor: pointer;
+  cursor: hand;
 }
 
-.p{
+.p {
   font-size: 19px;
 }
 
-#navhover :hover{
+#navhover :hover {
   color: #093f8b;
-  cursor:pointer; cursor: hand
-} 
+  cursor: pointer;
+  cursor: hand;
+}
 
 #navbarMax {
   transition: all 0.8s;
+  z-index: 500;
 }
-#navmaxhoc{
+#navmaxhoc {
   text-transform: uppercase;
   color: rgba(255, 255, 255, 0.7);
   font-size: 18px;
   letter-spacing: 1px;
   margin-left: 30px;
   font-weight: 500;
-  cursor:pointer; cursor: hand
+  cursor: pointer;
+  cursor: hand;
 }

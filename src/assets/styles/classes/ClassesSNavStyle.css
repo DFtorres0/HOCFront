@@ -1,13 +1,7 @@
 @import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&display=swap");
-#snav {
-  padding: 1px 0px;
-  box-sizing: border-box;
-  /* font-family: "Poppins", sans-serif; */
-  font-family: "Montserrat","sans-serif";
-}
 
 #snav {
-  --body-color: #1c3a3d ;
+  --body-color: #1c3a3d;
   --sidebar-color: #19353b;
   --primary-color: #3f9cc0;
   --primary-color-light: #22535f;
@@ -17,6 +11,13 @@
   --tran-03: all 0.3s ease;
   --tran-04: all 0.4s ease;
   --tran-05: all 0.5s ease;
+}
+
+.sidebar {
+  padding: 1px 0px;
+  box-sizing: border-box;
+  /* font-family: "Poppins", sans-serif; */
+  font-family: "Montserrat", "sans-serif";
 }
 
 .sidebar header .image-text {
@@ -35,7 +36,6 @@
   color: #fff;
 }
 
-
 /* ===== Sidebar ===== */
 #snav .sidebar {
   position: fixed;
@@ -46,7 +46,7 @@
   padding-top: 90px;
   background: var(--sidebar-color);
   transition: var(--tran-05);
-  z-index: 100;
+  z-index: 2000;
 }
 #snav .sidebar.close {
   width: 55px;
@@ -110,7 +110,6 @@
 /* =========================== */
 
 #snav .sidebar .header {
-  position: relative;
   list-style: none;
   background-color: transparent;
   align-items: center;
@@ -121,8 +120,7 @@
 }
 
 #snav .sidebar .header .toggle {
-  position: absolute;
-  transform: translateY(-63%) rotate(180deg);
+  transform: rotate(180deg);
   height: 40px;
   width: 20px;
   background-color: var(--sidebar-color);
@@ -140,7 +138,7 @@
 }
 
 #snav .sidebar.close .toggle {
-  transform: translateY(-50%) rotate(0deg);
+  transform: rotate(0deg);
 }
 
 #snav .sidebar ListGroup .search-box {
@@ -193,7 +191,6 @@
 #snav body.dark .sidebar ListGroup div:hover .icon,
 #snav body.dark .sidebar ListGroup div:hover .text {
   color: var(--text-color);
- 
 }
 
 #snav .sidebar .menu-bar {
@@ -212,7 +209,29 @@
   transition: var(--tran-05);
 }
 
+.menu-bar {
+  scrollbar-width: thin;
+  scrollbar-color: var(--sidebar-color) var(--primary-color);
+}
+
+.menu-bar::-webkit-scrollbar {
+  width: 5px;
+}
+
+.menu-bar::-webkit-scrollbar-track {
+  background: var(--sidebar-color);
+  border-radius: 4px;
+}
+
+.menu-bar::-webkit-scrollbar-thumb {
+  background-color: var(--primary-color);
+  border-radius: 4px;
+}
+
+.menu-bar::-webkit-scrollbar-thumb:hover {
+  background-color: var(--primary-color-light);
+}
+
 #snav body.dark .home .text {
   color: var(--text-color);
 }
-
