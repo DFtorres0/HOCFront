@@ -41,7 +41,7 @@ type Lesson = {
   lessonDescription: string;
   lessonDuration?: number;
   lessonContent: string;
-  lessonResources: string;
+  lessonResources?: string;
   intensityLevel?: number;
   topic?: number;
   moduleId?: number;
