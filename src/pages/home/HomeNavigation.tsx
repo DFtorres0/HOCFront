@@ -6,6 +6,7 @@ import { removeSessionToken } from "src/core/functions";
 import { useNavigate } from "react-router-dom";
 
 const HomeNavigation = () => {
+  const navigate = useNavigate();
   const [navbarClass, setNavbarClass] = useState("transparent");
   const [height, setHeight] = useState("10");
   const [isMobile, setIsMobile] = useState(false);
@@ -23,7 +24,6 @@ const HomeNavigation = () => {
 
   const handleCloseSessions = () => {
     removeSessionToken();
-    const navigate = useNavigate();
     navigate("/login");
   };
 

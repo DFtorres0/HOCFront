@@ -5,7 +5,7 @@ import NavigationMax from "../max/templates/NavigationMax";
 import SideNav from "./ClassSideNav";
 import MainContent from "./mainContent/MainContent";
 import useGetOneCourse from "../hooks/useGetOneCourse";
-import { Spinner } from "react-bootstrap";
+import { LoadingScreen } from "src/pages/max/Loader";
 
 function Classes() {
   const [currentLesson, setCurrentLesson] = useState<Lesson>();
@@ -35,7 +35,7 @@ function Classes() {
   }, [id, courseError, navigate, refetch]);
 
   if (courseLoading) {
-    return <Spinner />;
+    return <LoadingScreen />;
   }
 
   return (
