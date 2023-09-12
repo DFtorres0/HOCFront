@@ -1,8 +1,8 @@
 import { Navigate, Route, Routes } from "react-router-dom";
 import { Fragment, Suspense, lazy } from "react";
-import { Spinner, Stack } from "react-bootstrap";
 import GuardRole from "./GuardRole";
 import { useValidateContext } from "./useValidation";
+import { LoadingScreen } from "src/pages/max/Loader";
 
 type RoutesType = {
   id: string;
@@ -71,21 +71,6 @@ const routesConfig: RoutesType[] = [
     component: lazy(() => import("src/pages/createclass/CreateClass")),
   },
 ];
-
-const LoadingScreen = () => {
-  return (
-    <Stack
-      direction="horizontal"
-      style={{
-        justifyContent: "center",
-        alignItems: "center",
-        margin: "0 1rem 0.5rem 0",
-      }}
-    >
-      <Spinner animation="border" variant="primary" />
-    </Stack>
-  );
-};
 
 const renderRoutes = (routes: RoutesType[]) =>
   routes ? (

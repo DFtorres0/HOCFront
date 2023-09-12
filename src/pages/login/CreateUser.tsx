@@ -5,8 +5,9 @@ import FloatingLabel from "react-bootstrap/FloatingLabel";
 import Form from "react-bootstrap/Form";
 import Button from "react-bootstrap/Button";
 import { BsCodeSlash, BsJustify, BsTelephone } from "react-icons/bs";
-import { Container, Spinner } from "react-bootstrap";
+import { Container } from "react-bootstrap";
 import useRegister from "./hooks/useRegister";
+import { LoadingScreen } from "src/pages/max/Loader";
 
 interface CreateUserProps {
   // Define las propiedades requeridas aquí.
@@ -43,7 +44,7 @@ const CreateUser: React.FC<CreateUserProps> = (props) => {
   } = useRegister();
 
   if (registerLoading) {
-    return <Spinner />
+    return <LoadingScreen />;
   }
 
   return (
