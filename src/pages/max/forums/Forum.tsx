@@ -87,67 +87,70 @@ const Forum = ({ isLesson }: { isLesson: boolean }) => {
         )}
         {forumsListSuccess &&
           forumsList &&
-          forumsList.map(
-            (forum, forumIndex) =>
-              !(forum.lesson || forum.lessonId) && (
-                <AccordionItem
-                  eventKey={`${forumIndex}`}
-                  key={forumIndex}
+          forumsList.map((forum, forumIndex) => {
+            const shouldRender = isLesson
+              ? forum.lesson || forum.lessonId
+              : !(forum.lesson || forum.lessonId);
+            if (!shouldRender) return null;
+            return (
+              <AccordionItem
+                eventKey={`${forumIndex}`}
+                key={forumIndex}
+                style={{
+                  marginBottom: "0",
+                  backgroundColor: "transparent",
+                  color: "aliceblue",
+                }}
+              >
+                <AccordionHeader>{forum.forumTitle}</AccordionHeader>
+                {forum.answers?.length ? (
+                  forum.answers.map((answer, answerIndex) =>
+                    answer.forum === forum ? (
+                      <AccordionBody
+                        className="Panel"
+                        key={answerIndex}
+                        style={{ margin: "1rem 1rem 0 1rem" }}
+                      >
+                        {answer.messageContent}
+                        <input
+                          type="button"
+                          value="Respuesta"
+                          className="answer"
+                        ></input>
+                      </AccordionBody>
+                    ) : null
+                  )
+                ) : (
+                  <AccordionBody
+                    className="Panel"
+                    style={{ margin: "1rem 1rem 0 1rem" }}
+                  >
+                    <p>Todavía no hay respuestas</p>
+                  </AccordionBody>
+                )}
+
+                <Stack
+                  direction="horizontal"
+                  gap={3}
                   style={{
-                    marginBottom: "0",
-                    backgroundColor: "transparent",
-                    color: "aliceblue",
+                    justifyContent: "flex-end",
+                    alignItems: "flex-end",
+                    margin: "1rem 1rem 0.5rem 0",
                   }}
                 >
-                  <AccordionHeader>{forum.forumTitle}</AccordionHeader>
-                  {forum.answers?.length ? (
-                    forum.answers.map((answer, answerIndex) =>
-                      answer.forum === forum ? (
-                        <AccordionBody
-                          className="Panel"
-                          key={answerIndex}
-                          style={{ margin: "1rem 1rem 0 1rem" }}
-                        >
-                          {answer.messageContent}
-                          <input
-                            type="button"
-                            value="Respuesta"
-                            className="answer"
-                          ></input>
-                        </AccordionBody>
-                      ) : null
-                    )
-                  ) : (
-                    <AccordionBody
-                      className="Panel"
-                      style={{ margin: "1rem 1rem 0 1rem" }}
-                    >
-                      <p>Todavía no hay respuestas</p>
-                    </AccordionBody>
-                  )}
-
-                  <Stack
-                    direction="horizontal"
-                    gap={3}
-                    style={{
-                      justifyContent: "flex-end",
-                      alignItems: "flex-end",
-                      margin: "1rem 1rem 0.5rem 0",
-                    }}
+                  <Button
+                    id="answer"
+                    variant="primary"
+                    style={{ margin: 0 }}
+                    disabled={!forum.forumId}
+                    onClick={() => handleReplyToForum(forum.forumId)}
                   >
-                    <Button
-                      id="answer"
-                      variant="primary"
-                      style={{ margin: 0 }}
-                      disabled={!forum.forumId}
-                      onClick={() => handleReplyToForum(forum.forumId)}
-                    >
-                      Responder
-                    </Button>
-                  </Stack>
-                </AccordionItem>
-              )
-          )}
+                    Responder
+                  </Button>
+                </Stack>
+              </AccordionItem>
+            );
+          })}
       </Accordion>
       <Modal show={modalOpen} onHide={() => setModalOpen(false)} centered>
         <Modal.Header closeButton>
