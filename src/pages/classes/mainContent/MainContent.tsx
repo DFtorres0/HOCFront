@@ -63,7 +63,7 @@ const MainContent = ({
         style={{
           width: "94vw",
           padding: "0",
-          paddingLeft: "45px",
+          paddingLeft: "60px",
           display: "flex",
           flexDirection: isMobile ? "column" : undefined,
         }}
