@@ -55,7 +55,6 @@ const Forum = ({
 
   const handleSubmitAnswer = () => {
     setModalOpen(false);
-    console.log(currentForumId, currentAnswerId, modalInputValue);
     if (isToForum) {
       if (!currentForumId) return;
       createAnswer({

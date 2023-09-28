@@ -138,6 +138,7 @@ const Login: React.FC = () => {
 
                 <Button
                   onClick={() => authenticateUser({ username, password })}
+                  type="submit"
                   className="mb-5 w-25"
                 >
                   {authenticationLoading ? <Spinner /> : "SIGN IN"}
@@ -184,18 +185,18 @@ const Login: React.FC = () => {
             id="col2"
             className=" other"
           >
-            <div className="d-flex flex-column  justify-content-center h-100 ">
+            <Container className="d-flex flex-column  justify-content-center h-100 ">
               <div className="text-white p-md-5 mx-md-4">
-                <h4 id="textclo2" className="mb-4">
+                <Container id="textclo2" className="mb-4 h4">
                   {" "}
                   HOME OF CODE{" "}
-                </h4>
-                <h4 id="textclo2" className="mb-4">
+                </Container>
+                <Container id="textclo2" className="mb-4 h4">
                   {" "}
                   <BsCodeSlash />{" "}
-                </h4>
+                </Container>
               </div>
-            </div>
+            </Container>
           </Col>
         </Row>
       </div>

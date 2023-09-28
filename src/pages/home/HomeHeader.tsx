@@ -5,8 +5,8 @@ import { FC } from "react";
 
 const HomeHeader: FC = () => {
   return (
-    <div id="header" style={{ height: "100vh" }}>
-      <div className="intro">
+    <div id="header" >
+      <div className="intro" style={{ minHeight: "100vh" }}>
         <Container className="intro-text">
           <h1>Home of code</h1>
           <p>Diseño Web • Aplicaciones • Soluciones TI • Product Design</p>

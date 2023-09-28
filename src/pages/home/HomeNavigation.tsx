@@ -69,31 +69,31 @@ const HomeNavigation = () => {
           title={<BsCodeSlash />}
           style={{ display: isMobile ? "" : "none", paddingRight: "auto" }}
         >
-          <NavDropdown.Item href="/indexmax" id="navhover" className="word">
+          <NavDropdown.Item href="#header" id="navhover" className="word">
             <a href="#header" className="page-scroll">
               {"Home"}
             </a>
           </NavDropdown.Item>
 
-          <NavDropdown.Item href="/testimonials" id="navhover">
+          <NavDropdown.Item href="#about" id="navhover">
             <a href="#about" className="page-scroll">
               SobreNosotros
             </a>
           </NavDropdown.Item>
 
-          <NavDropdown.Item href="/tutorials" id="navhover">
+          <NavDropdown.Item href="#portfolio" id="navhover">
             <a href="#portfolio" className="page-scroll">
               Portafolio
             </a>
           </NavDropdown.Item>
 
-          <NavDropdown.Item href="/indexmax" id="navhover" className="word">
+          <NavDropdown.Item href="#contact" id="navhover" className="word">
             <a href="#contact" className="page-scroll">
               Contactanos
             </a>
           </NavDropdown.Item>
 
-          <NavDropdown.Item href="/testimonials" id="navhover">
+          <NavDropdown.Item href="/login" id="navhover">
             <a onClick={() => handleCloseSessions()} className="page-scroll">
               Salir
             </a>
