@@ -8,12 +8,12 @@
     "start_url": "./login",
     "icons": [
         {
-            "src": "./public/Icons/Icon142.png",
+            "src": "/Icons/Icon142.png",
             "size": "142x142",
             "type": "image/png"
         },
         {
-            "src": "./public/Icons/Icon620.png",
+            "src": "/Icons/Icon620.png",
             "size": "620x620",
             "type": "image/png"
         }
