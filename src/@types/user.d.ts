@@ -18,11 +18,11 @@ type User = {
 };
 
 type AvailableCourses = {
-  availableCourses?: Number;
+  availableCoursesId?: Number;
   userId?: Number;
   courseId?: Number;
-  course: Courses;
-  user: User;
+  course?: Courses;
+  user?: User;
 };
 
 type Instructor = {

@@ -21,6 +21,26 @@ type Module = {
   course?: Course;
   activities: Activity[];
   lessons: Lesson[];
+  quizzes: Quiz[];
+};
+
+type Quiz = {
+  quizId: number;
+  quizName: string;
+  moduleId: number;
+  questions: Question[];
+};
+
+type Questions = {
+  questionId: number;
+  questionQuery: string;
+  questionAnswers: QuestionAnswers[];
+};
+
+type QuestionAnswers = {
+  questionAnswerId: number;
+  questionAnswerText: string;
+  isCorrect: boolean;
 };
 
 type Activity = {
@@ -65,6 +85,6 @@ type CourseLessonProgress = {
   userId?: number;
   lessonId?: number;
   completed?: boolean;
-  lesson: Lesson;
-  user: User;
+  lesson?: Lesson;
+  user?: User;
 };
