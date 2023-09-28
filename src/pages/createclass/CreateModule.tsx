@@ -91,6 +91,7 @@ const CreateModule: React.FC<CreateClassProps> = ({
   const emptyModule: Module = {
     activities: [],
     lessons: [],
+    quizzes: []
   };
 
   const emptyActivities: Activity = {

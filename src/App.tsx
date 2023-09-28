@@ -7,13 +7,13 @@ import RenderedRoutes from "./Routes";
 import UserProvider from "./UserProvider";
 
 const firebaseConfig = {
-  apiKey: "AIzaSyC-y8LYoMEH4BMbWHWi0Drl2pNigl_L7PY",
-  authDomain: "home-of-code.firebaseapp.com",
-  projectId: "home-of-code",
-  storageBucket: "home-of-code.appspot.com",
-  messagingSenderId: "1063074137923",
-  appId: "1:1063074137923:web:fb0513cd180c3151acd1f6",
-  measurementId: "G-KJEB4MKCKZ",
+  apiKey: "AIzaSyANXn-5EyV7Ew3GRBzfNSrD-DfGefxzRQY",
+  authDomain: "home-of-code-d2847.firebaseapp.com",
+  projectId: "home-of-code-d2847",
+  storageBucket: "home-of-code-d2847.appspot.com",
+  messagingSenderId: "922140322810",
+  appId: "1:922140322810:web:fee2cc22ff5b3157059243",
+  measurementId: "G-JHF8TNV6KK",
 };
 
 const app = initializeApp(firebaseConfig);

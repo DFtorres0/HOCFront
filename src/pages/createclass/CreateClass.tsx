@@ -99,6 +99,7 @@ const CreateClass = () => {
   const emptyModule: Module = {
     activities: [],
     lessons: [],
+    quizzes: []
   };
 
   const CreateLessons: Lesson = {
