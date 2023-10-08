@@ -51,9 +51,9 @@ const HomeNavigation = () => {
       style={{
         height: `${height}%`,
         backgroundColor:
-          navbarClass == "transparent" ? "transparent" : "#2d6166",
+          navbarClass == "transparent" ? "transparent" : "#1171ba",
       }}
-      className={`navbar-default ${navbarClass}`}
+      className={`navbar-default homemenu ${navbarClass}`}
     >
       <Container>
         <div className="navbar-header">

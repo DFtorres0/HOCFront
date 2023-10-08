@@ -27,7 +27,7 @@
 }
 #menu.navbar-default .navbar-nav > li > a:hover {
   text-align: right;
-  color: #093f8b;
+  color: #24aae2;
 }
 #menu .navbar-nav {
   margin: 7.5px -15px;
@@ -40,7 +40,13 @@
   cursor: pointer;
 }
 
-.dropdown-menu.show{
+.maxmenu .dropdown-menu.show{
+  margin-top: -80px;
+  margin-right: 0px;
+  position: relative;
+  background: #252525;
+}
+.homemenu .dropdown-menu.show{
   position: relative;
   background: #252525;
   margin-top: 200px;

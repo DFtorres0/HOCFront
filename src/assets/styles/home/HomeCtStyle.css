@@ -9,21 +9,18 @@
   /* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#54d0dd+0,54d0dd+0,54d0dd+0,7fdce6+0,54d0dd+100 */
   background: -moz-linear-gradient(
     top,
-    #3c8faf ,
-    #337a8b ,
-    #2d6166 
+    #1399c6 ,
+    #24aae2 
   ); /* FF3.6-15 */
   background: -webkit-linear-gradient(
     top,
-    #3c8faf ,
-    #337a8b ,
-    #2d6166 
+    #1399c6 ,
+    #24aae2 
   ); /* Chrome10-25,Safari5.1-6*/ 
   background: linear-gradient(
     to bottom,
-    #3c8faf ,
-    #337a8b ,
-    #2d6166 
+    #1399c6 ,
+    #24aae2 
 
   ); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */  
  
@@ -33,7 +30,7 @@
 #contact .btn-default {
   text-transform: uppercase;
   color: aliceblue;
-  background-color: #414a52;
+  background-color: #0e8c7f;
   border: 0;
   padding: 14px 20px;
   margin: 0;
@@ -132,7 +129,7 @@
 .btn-default:active,
 .btn-default.active {
   color: rgb(33, 139, 156);
-  background-color: #414a52;
+  background-color: #0e8c7f;
 }
 #contact .btn-default{
   border-radius: 10px;

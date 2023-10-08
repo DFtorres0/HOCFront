@@ -106,7 +106,7 @@ const Forum = ({
   }, [forumsListIsError, forumsListError]);
 
   return (
-    <div className="Div" style={{ height: "100%" }}>
+    <div className="Div" style={{ height: "100%", marginTop: "10px" }}>
       <Accordion
         style={{ backgroundColor: "transparent", margin: "2rem 1rem 0 1rem" }}
         defaultActiveKey="0"
@@ -146,9 +146,10 @@ const Forum = ({
                     marginBottom: "0",
                     backgroundColor: "transparent",
                     color: "aliceblue",
+                    borderColor: "#0e8c7f"
                   }}
                 >
-                  <AccordionHeader>{forum.forumTitle}</AccordionHeader>
+                  <AccordionHeader style={{backgroundColor: "#1399c6", color: "aliceblue"}}>{forum.forumTitle}</AccordionHeader>
                   {forum.answers?.length ? (
                     forum.answers.map((answer, answerIndex) => (
                       <AccordionBody
@@ -171,7 +172,7 @@ const Forum = ({
                         <Button
                           id="answer"
                           variant="seconday"
-                          style={{ margin: 0 }}
+                          style={{ margin: 0, backgroundColor: "0e8c7f" }}
                           disabled={!forum.forumId}
                           onClick={() => {
                             setCurrentAnswerId(answer.answerId),
@@ -205,7 +206,7 @@ const Forum = ({
                     <Button
                       id="answer"
                       variant="primary"
-                      style={{ margin: 0 }}
+                      style={{ margin: 0, backgroundColor: "0e8c7f" }}
                       disabled={!forum.forumId}
                       onClick={() => {
                         setCurrentForumId(forum.forumId),

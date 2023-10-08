@@ -1,10 +1,22 @@
 import "../../../assets/styles/indexmax/AboutMaxS.css";
-import { DiIllustrator, DiPhotoshop, DiAngularSimple, DiReact } from "react-icons/di";
-import { SiJavascript, SiVuedotjs, SiLinkedin, SiTwitter, SiFacebook } from "react-icons/si";
+import {
+  DiIllustrator,
+  DiPhotoshop,
+  DiAngularSimple,
+  DiReact,
+} from "react-icons/di";
+import {
+  SiJavascript,
+  SiVuedotjs,
+  SiLinkedin,
+  SiTwitter,
+  SiFacebook,
+} from "react-icons/si";
 import { Row, Col, Card } from "react-bootstrap";
 import { useState } from "react";
 import { relative } from "path";
 
+/*
 const Topics = [
   { id: 0, name: "Illustrator" , icon: <DiIllustrator className="my-icon-1" /> },
   { id: 1, name: "Photoshop", icon: <DiPhotoshop className="my-icon-2"/>},
@@ -19,22 +31,22 @@ interface courseInterface {
   name: string;
   icon: JSX.Element;
 }
+*/
 
 const AboutMax = () => {
-
-  const [courses, setCourses] = useState<courseInterface[]>([...Topics]);
+  //const [courses, setCourses] = useState<courseInterface[]>([...Topics]);
   return (
     <div>
       <div
         style={{
-          marginTop: "20%",
+          marginTop: "10%",
         }}
       >
         <h2 className="my-text">BUSCA TU TEMA DE INTERÉS</h2>
-      </div >
+      </div>
       <div className="my-container">
-      <Row className="row">
-        {courses.map((Topics, TopicsIndex) => (
+        <Row className="row">
+          {/*courses?.map((Topics, TopicsIndex) => (
           <Col key={TopicsIndex}>
             <Card
               className="card" style={{padding: ""}}>
@@ -45,9 +57,10 @@ const AboutMax = () => {
               </Card.Body>
             </Card>
           </Col>
-        ))}
-      </Row>
+        ))*/}
+        </Row>
       </div>
+      {/*
       <div>
         <div
           className="row mb-5 align-items-center"
@@ -72,28 +85,9 @@ const AboutMax = () => {
               />
             </form>
           </div>
-          <div className="col-lg-6 text-lg-right">
-            <div className="d-inline-flex align-items-center ml-auto">
-              <span className="mr-4">Compartir: </span>
-              <a rel="preload"
-                href="/home" 
-                className="me-4 my-icon-share"
-                style={{
-                  marginLeft: "10%",
-                }}
-              >
-                <SiTwitter />
-              </a>
-              <a rel="preload" href="/home" className="me-4 my-icon-share">
-                <SiFacebook />
-              </a>
-              <a href="/home" className="my-icon-share">
-                <SiLinkedin />
-              </a>
-            </div>
-          </div>
         </div>
       </div>
+      */}
     </div>
   );
 };

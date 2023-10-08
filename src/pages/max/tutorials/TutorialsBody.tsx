@@ -38,7 +38,6 @@ const TutorialsBody = () => {
               <Card
                 bg="info"
                 style={{ width: "25vw", minHeight: "30vh" }}
-                className="card"
               >
                 <Card.Header>{course.courseName}</Card.Header>
                 <Card.Body>
